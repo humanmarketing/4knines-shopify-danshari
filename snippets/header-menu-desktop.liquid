@@ -12,27 +12,35 @@
           {% render 'icon-chevron-down' %}
         </div>
 
-        <div class="{% if megamenus contains link.title %}header-megamenu{% else %}header-dropdown{% endif %}">
-          <ul class="container">
-            {%- for child in link.links -%}
-              <li>
-                <a href="{{ child.url }}">{{ child.title }}</a>
+        {%- if megamenus contains link.title -%}
+          <div class="header-megamenu">
+            <ul class="container header-megamenu-list">
+              {%- for child in link.links -%}
+                <li>
+                  <a href="{{ child.url }}">{{ child.title }}</a>
 
-                {%- if child.links != blank -%}
-                  <ul>
-                    {%- for grandchild in child.links -%}
-                      <li><a href="{{ grandchild.url }}">{{ grandchild.title }}</a></li>
-                    {%- endfor -%}
-                  </ul>
-                {%- endif -%}
-              </li>
+                  {%- if child.links != blank -%}
+                    <ul>
+                      {%- for grandchild in child.links -%}
+                        <li><a href="{{ grandchild.url }}">{{ grandchild.title }}</a></li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+
+        {%- else -%}
+          <ul class="header-dropdown">
+            {%- for child in link.links -%}
+              <li><a href="{{ child.url }}" class="link accent-2">{{ child.title }}</a></li>
             {%- endfor -%}
           </ul>
-        </div>
+        {%- endif -%}
 
       {%- else -%}
         <a class="header-menu-title" href="{{ link.url }}">{{ link.title }}</a>
-
       {%- endif -%}
     </li>
   {%- endfor -%}

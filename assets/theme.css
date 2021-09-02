@@ -319,7 +319,6 @@ hr {
 
 .header-menu-desktop {
   display: flex;
-  gap: 1rem;
   align-items: stretch;
   height: 100%;
 }
@@ -327,6 +326,7 @@ hr {
 .header-menu-item {
   display: grid;
   place-content: center;
+  padding-inline: 0.5rem;
 }
 
 .header-menu-title {
@@ -334,9 +334,19 @@ hr {
   display: flex;
   align-items: center;
   gap: 0.5ch;
+  padding-block: 0.5rem;
   color: inherit;
   text-decoration: none;
   font-weight: bold;
+  transition:
+    color var(--t),
+    box-shadow var(--t);
+}
+
+.header-menu-item:hover .header-menu-title {
+  color: var(--accent-2);
+  fill: currentColor;
+  box-shadow: 0 0.4ch 0 var(--accent-2);
 }
 
 .header-megamenu,
@@ -359,11 +369,24 @@ hr {
   top: 100%;
   width: 100vw;
   margin-inline: calc(50% - 50vw);
+  padding-block: 2rem;
+}
+
+.header-megamenu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .header-dropdown {
+  padding: 1rem;
   top: calc(100% - 0.5rem);
+  min-width: -webkit-max-content;
+  min-width: max-content;
 }
+
+.header-dropdown > li + li { margin-top: 1rem; }
+
+.header-dropdown a { color: inherit; }
 
 .header-menu-tablet {
   background-color: var(--bg);

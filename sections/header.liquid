@@ -22,7 +22,7 @@
       </a>
     {%- endif -%}
 
-    <a href="{{ routes.cart_url }}" class="header-cart link{% if cart.item_count %} has-items{% endif %}">
+    <a href="{{ routes.cart_url }}" class="header-cart link{% if cart.item_count > 0%} has-items{% endif %}">
       {% render 'icon-cart' %}
     </a>
   </div>
