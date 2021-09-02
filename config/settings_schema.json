@@ -40,10 +40,7 @@
         "label": "Border color",
         "default": "#bbb"
       },
-      {
-        "type": "header",
-        "content": "Accent colors"
-      },
+      { "type": "header", "content": "Accent colors" },
       {
         "type": "color",
         "id": "accent_1",
@@ -90,10 +87,7 @@
   {
     "name": "Layout",
     "settings": [
-      {
-        "type": "header",
-        "content": "Content width"
-      },
+      { "type": "header", "content": "Content width" },
       {
         "type": "range",
         "id": "container_width",
@@ -114,10 +108,7 @@
         "label": "Container (small)",
         "default": 750
       },
-      {
-        "type": "header",
-        "content": "Spacing"
-      },
+      { "type": "header", "content": "Spacing" },
       {
         "type": "range",
         "id": "section_padding",
@@ -134,10 +125,7 @@
   {
     "name": "Miscellaneous",
     "settings": [
-      {
-        "type": "header",
-        "content": "Logos"
-      },
+      { "type": "header", "content": "Logos" },
       {
         "type": "image_picker",
         "id": "logo",
@@ -148,10 +136,28 @@
         "id": "favicon",
         "label": "Favicon"
       },
+      { "type": "header", "content": "Social Accounts" },
       {
-        "type": "header",
-        "content": "Predictive Search"
+        "type": "url",
+        "id": "social_instagram",
+        "label": "Instagram"
       },
+      {
+        "type": "url",
+        "id": "social_facebook",
+        "label": "Facebook"
+      },
+      {
+        "type": "url",
+        "id": "social_pinterest",
+        "label": "Pinterest"
+      },
+      {
+        "type": "url",
+        "id": "social_youtube",
+        "label": "YouTube"
+      },
+      { "type": "header", "content": "Predictive Search" },
       {
         "type": "checkbox",
         "id": "predictive_search_enabled",

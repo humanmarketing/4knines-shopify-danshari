@@ -27,8 +27,34 @@
     </ul>
   {%- endif -%}
 
-  <div class="section-padding text-accent-2">
-    <p>&copy; 2021 {{ shop.name }}</p>
+  <div class="footer-bottom section-padding text-accent-2">
+    <p class="copyright">&copy; 2021 {{ shop.name }}</p>
+
+    <div class="social-links">
+      {%- assign socials = 'instagram,facebook,pinterest,youtube' | split: ',' -%}
+      {% for social in socials %}
+        {%- assign social_acc = 'social_' | append: social -%}
+        {%- assign social_icon = 'icon-' | append: social -%}
+        {%- if settings[social_acc] -%}
+          <a class="link accent-2" href="{{ settings[social_acc] }}" target="_blank" rel="noopener noreferrer">
+            {%- case social -%}
+              {%- when 'instagram' -%}{% render 'icon-instagram' %}
+              {%- when 'facebook' -%}{% render 'icon-facebook' %}
+              {%- when 'pinterest' -%}{% render 'icon-pinterest' %}
+              {%- when 'youtube' -%}{% render 'icon-youtube' %}
+            {%- endcase -%}
+          </a>
+        {%- endif -%}
+      {% endfor %}
+    </div>
+
+    <ul class="bottom-links">
+      {%- for link in section.settings.bottom_links.links -%}
+        <li>
+          <a href="{{ link.url }}" class="link accent-2">{{ link.title }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
   </div>
 </div>
 
@@ -42,6 +68,11 @@
       "id": "navigation",
       "label": "Navigation",
       "default": "footer"
+    },
+    {
+      "type": "link_list",
+      "id": "bottom_links",
+      "label": "Bottom links"
     }
   ]
 }
