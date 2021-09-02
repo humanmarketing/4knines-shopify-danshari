@@ -17,7 +17,7 @@
             <ul class="container header-megamenu-list">
               {%- for child in link.links -%}
                 <li>
-                  <a href="{{ child.url }}" class="child-title link accent-2 with-icon">
+                  <a href="{{ child.url }}" class="child-title link with-icon">
                     {{ child.title }}
                     {% render 'icon-chevron-right' %}
                   </a>
@@ -26,7 +26,7 @@
                     <ul class="child-links">
                       {%- for grandchild in child.links -%}
                         <li>
-                          <a href="{{ grandchild.url }}" class="child-item link accent-2">
+                          <a href="{{ grandchild.url }}" class="child-item link">
                             {%- if grandchild.object.featured_image -%}
                               <figure class="child-item-img">
                                 <img
@@ -50,7 +50,7 @@
         {%- else -%}
           <ul class="header-dropdown">
             {%- for child in link.links -%}
-              <li><a href="{{ child.url }}" class="link accent-2">{{ child.title }}</a></li>
+              <li><a href="{{ child.url }}" class="link">{{ child.title }}</a></li>
             {%- endfor -%}
           </ul>
         {%- endif -%}
@@ -68,7 +68,9 @@
     </div>
 
     <div class="header-megamenu">
-      {% render 'questions-menu' %}
+      <div class="container">
+        {% render 'questions-menu' %}
+      </div>
     </div>
   </li>
 </ul>

@@ -1,11 +1,25 @@
-<p class="h0">.h0</p>
-<p class="h1">.h1</p>
-<p class="h2">.h2</p>
-<p class="h3">.h3</p>
-<p class="h4">.h4</p>
-<p class="h5">.h5</p>
-<p class="h6">.h6</p>
-<p class="font-heading">.font-heading</p>
+<ul class="split">
+  <li>
+    <p class="h0">.h0</p>
+    <p class="h1">.h1</p>
+    <p class="h2">.h2</p>
+    <p class="h3">.h3</p>
+    <p class="h4">.h4</p>
+    <p class="h5">.h5</p>
+    <p class="h6">.h6</p>
+    <p class="font-heading">.font-heading</p>
+  </li>
+  <li>
+    <p class="h0-body">.h0-body</p>
+    <p class="h1-body">.h1-body</p>
+    <p class="h2-body">.h2-body</p>
+    <p class="h3-body">.h3-body</p>
+    <p class="h4-body">.h4-body</p>
+    <p class="h5-body">.h5-body</p>
+    <p class="h6-body">.h6-body</p>
+    <p class="font-body">.font-body</p>
+  </li>
+</ul>
 <br>
 <p>
   <span class="text-dark">.text-dark</span>
@@ -28,6 +42,7 @@
 <br>
 <p>
   <a href="#" class="link">.link</a>
+  <a href="#" class="link accent-1">.link.accent-1</a>
   <a href="#" class="link accent-2">.link.accent-2</a>
   <a href="#" class="link accent-3">.link.accent-3</a>
   <a href="#" class="link-underline">.link-underline</a>
@@ -43,20 +58,26 @@
 <p><span class="action full">.action.full</span></p>
 <p><input class="input" type="email" placeholder=".input" /></p>
 
-{% style %}
-  .section-css-demo > * + * {
+<style>
+  .demo-css > * + * {
     margin-top: 0.25rem;
+  }
+
+  .split {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   .bordered {
     border: 1px dashed var(--border);
   }
-{% endstyle %}
+</style>
 
 {% schema %}
 {
   "name": "CSS Demo",
   "tag": "section",
-  "class": "section-css-demo container section-padding side-padding"
+  "class": "demo-css container section-padding side-padding"
 }
 {% endschema %}

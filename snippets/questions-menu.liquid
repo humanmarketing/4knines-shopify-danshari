@@ -1,7 +1,27 @@
-<div class="container">
-  <ul>
+<div class="questions-menu">
+  <div class="h2-body text-accent-2">Questions?</div>
+
+  <ul class="questions-menu-contact">
+    <li>
+      <a href="/pages/faq" class="h3-body link accent-2">
+        FAQs
+      </a>
+    </li>
+    <li>
+      <a href="tel:{{ shop.phone }}" class="h3-body link accent-2">
+        Call
+      </a>
+    </li>
+    <li>
+      <a href="mailto:{{ shop.email }}" class="h3-body link accent-2">
+        Email
+      </a>
+    </li>
+  </ul>
+
+  <ul class="questions-menu-links">
     {%- for link in linklists['questions'].links -%}
-      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      <li><a href="{{ link.url }}" class="h4-body link">{{ link.title }}</a></li>
     {%- endfor -%}
   </ul>
 </div>

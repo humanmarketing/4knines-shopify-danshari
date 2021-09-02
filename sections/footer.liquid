@@ -1,14 +1,18 @@
-{%- if section.settings.navigation.links != blank -%}
-  <ul>
-    {%- for link in section.settings.navigation.links -%}
-      <li>
-        <a href="{{ link.url }}" class="link">{{ link.title }}</a>
-      </li>
-    {%- endfor -%}
-  </ul>
-{%- endif -%}
+<div class="container section-padding side-padding">
+  {% render 'questions-menu' %}
 
-<p>&copy; 2021 {{ shop.name }}</p>
+  {%- if section.settings.navigation.links != blank -%}
+    <ul>
+      {%- for link in section.settings.navigation.links -%}
+        <li>
+          <a href="{{ link.url }}" class="link">{{ link.title }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+  <p>&copy; 2021 {{ shop.name }}</p>
+</div>
 
 {% schema %}
 {
