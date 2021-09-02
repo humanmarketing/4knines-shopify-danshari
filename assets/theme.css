@@ -77,6 +77,12 @@ hr {
 
 .side-padding { padding-inline: clamp(1rem, 3vw, 2rem); }
 
+.with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5ch;
+}
+
 /* typography */
 
 .font-heading {
@@ -332,9 +338,6 @@ hr {
 
 .header-menu-title {
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5ch;
   padding-block: 0.5rem;
   color: inherit;
   text-decoration: none;
@@ -376,6 +379,37 @@ hr {
 .header-megamenu-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.header-megamenu-list > li:nth-child(2n):not(:last-child) {
+  padding-right: 1rem;
+  border-right: 1px solid var(--border);
+}
+
+.child-title {
+  margin-bottom: 1rem;
+  gap: 1ch;
+  color: inherit;
+  font-weight: bold;
+}
+
+.child-title svg { fill: var(--accent-2); }
+
+.child-links li + li { margin-top: 0.5rem; }
+
+.child-item {
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  color: inherit;
+  height: 36px;
+}
+
+.child-item-img {
+  width: 36px;
+  height: 36px;
 }
 
 .header-dropdown {

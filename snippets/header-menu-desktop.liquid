@@ -7,7 +7,7 @@
   {%- for link in links -%}
     <li class="header-menu-item">
       {%- if link.links != blank -%}
-        <div class="header-menu-title">
+        <div class="header-menu-title with-icon">
           {{ link.title }}
           {% render 'icon-chevron-down' %}
         </div>
@@ -17,12 +17,28 @@
             <ul class="container header-megamenu-list">
               {%- for child in link.links -%}
                 <li>
-                  <a href="{{ child.url }}">{{ child.title }}</a>
+                  <a href="{{ child.url }}" class="child-title link accent-2 with-icon">
+                    {{ child.title }}
+                    {% render 'icon-chevron-right' %}
+                  </a>
 
                   {%- if child.links != blank -%}
-                    <ul>
+                    <ul class="child-links">
                       {%- for grandchild in child.links -%}
-                        <li><a href="{{ grandchild.url }}">{{ grandchild.title }}</a></li>
+                        <li>
+                          <a href="{{ grandchild.url }}" class="child-item link accent-2">
+                            {%- if grandchild.object.featured_image -%}
+                              <figure class="child-item-img">
+                                <img
+                                  {% render 'srcset', image: grandchild.object.featured_image, width: 100 %}
+                                  alt="{{ grandchild.title }}" loading="false"
+                                />
+                              </figure>
+                            {%- endif -%}
+
+                            {{ grandchild.title }}
+                          </a>
+                        </li>
                       {%- endfor -%}
                     </ul>
                   {%- endif -%}
@@ -46,7 +62,7 @@
   {%- endfor -%}
 
   <li class="header-menu-item">
-    <div class="header-menu-title">
+    <div class="header-menu-title with-icon">
       Questions?
       {% render 'icon-chevron-down' %}
     </div>
