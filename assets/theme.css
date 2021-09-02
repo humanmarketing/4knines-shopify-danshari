@@ -50,6 +50,11 @@ hr {
 
 /* layout */
 
+/* tablet */
+@media screen and (max-width: 768px) {
+  .desktop { display: none !important; }
+}
+
 /* desktop-and-up */
 @media screen and (min-width: 769px) {
   .tablet { display: none !important; }

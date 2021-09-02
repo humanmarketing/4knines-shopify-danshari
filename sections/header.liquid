@@ -40,15 +40,22 @@
 
   <input id="header-menu-state" type="checkbox" hidden />
   <div class="header-menu">
-    {%- if section.settings.navigation.links != blank -%}
-      <ul>
-        {%- for link in section.settings.navigation.links -%}
-          <li>
-            <a href="{{ link.url }}" class="link">{{ link.title }}</a>
-          </li>
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
+    <ul class="desktop">
+      {%- for link in section.settings.menu_desktop.links -%}
+        <li>
+          <a href="{{ link.url }}" class="link">{{ link.title }}</a>
+        </li>
+      {%- endfor -%}
+      <li>Questions?</li>
+    </ul>
+
+    <ul class="tablet">
+      {%- for link in section.settings.menu_mobile.links -%}
+        <li>
+          <a href="{{ link.url }}" class="link">{{ link.title }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
   </div>
 </div>
 
@@ -71,9 +78,13 @@
     },
     {
       "type": "link_list",
-      "id": "navigation",
-      "label": "Navigation",
-      "default": "main-menu"
+      "id": "menu_desktop",
+      "label": "Menu (desktop)"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_mobile",
+      "label": "Menu (mobile)"
     }
   ]
 }
