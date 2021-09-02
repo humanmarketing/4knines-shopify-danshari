@@ -1,0 +1,50 @@
+{%- comment -%}
+  links
+  megamenus?
+{%- endcomment -%}
+
+<ul class="header-menu-desktop desktop">
+  {%- for link in links -%}
+    <li class="header-menu-item">
+      {%- if link.links != blank -%}
+        <div class="header-menu-title">
+          {{ link.title }}
+          {% render 'icon-chevron-down' %}
+        </div>
+
+        <div class="{% if megamenus contains link.title %}header-megamenu{% else %}header-dropdown{% endif %}">
+          <ul class="container">
+            {%- for child in link.links -%}
+              <li>
+                <a href="{{ child.url }}">{{ child.title }}</a>
+
+                {%- if child.links != blank -%}
+                  <ul>
+                    {%- for grandchild in child.links -%}
+                      <li><a href="{{ grandchild.url }}">{{ grandchild.title }}</a></li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+
+      {%- else -%}
+        <a class="header-menu-title" href="{{ link.url }}">{{ link.title }}</a>
+
+      {%- endif -%}
+    </li>
+  {%- endfor -%}
+
+  <li class="header-menu-item">
+    <div class="header-menu-title">
+      Questions?
+      {% render 'icon-chevron-down' %}
+    </div>
+
+    <div class="header-megamenu">
+      {% render 'questions-menu' %}
+    </div>
+  </li>
+</ul>

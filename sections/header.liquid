@@ -17,14 +17,7 @@
     </a>
 
     {%- if shop.customer_accounts_enabled -%}
-      {%- liquid
-        if customer
-          assign account_url = routes.account_url
-        else
-          assign account_url = routes.account_login_url
-        endif
-      -%}
-      <a href="{{ account_url }}" class="link">
+      <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="link">
         {% render 'icon-account' %}
       </a>
     {%- endif -%}
@@ -40,22 +33,13 @@
 
   <input id="header-menu-state" type="checkbox" hidden />
   <div class="header-menu">
-    <ul class="desktop">
-      {%- for link in section.settings.menu_desktop.links -%}
-        <li>
-          <a href="{{ link.url }}" class="link">{{ link.title }}</a>
-        </li>
-      {%- endfor -%}
-      <li>Questions?</li>
-    </ul>
+    {%- assign megamenus = section.blocks | where: 'type', 'megamenu' | map: 'settings' | map: 'title' -%}
+    {% render 'header-menu-desktop',
+      links: section.settings.menu_desktop.links
+      megamenus: megamenus
+    %}
 
-    <ul class="tablet">
-      {%- for link in section.settings.menu_mobile.links -%}
-        <li>
-          <a href="{{ link.url }}" class="link">{{ link.title }}</a>
-        </li>
-      {%- endfor -%}
-    </ul>
+    {% render 'header-menu-tablet' %}
   </div>
 </div>
 
@@ -85,6 +69,20 @@
       "type": "link_list",
       "id": "menu_mobile",
       "label": "Menu (mobile)"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Megamenu",
+      "type": "megamenu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Link title",
+          "info": "Exact title of the link to make a megamenu"
+        }
+      ]
     }
   ]
 }

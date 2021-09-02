@@ -1,0 +1,11 @@
+<div class="header-menu-tablet tablet">
+  <ul>
+    {%- for link in section.settings.menu_mobile.links -%}
+      <li>
+        <a href="{{ link.url }}" class="link">{{ link.title }}</a>
+      </li>
+    {%- endfor -%}
+  </ul>
+
+  {% render 'questions-menu' %}
+</div>
