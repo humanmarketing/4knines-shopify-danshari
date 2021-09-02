@@ -1,6 +1,8 @@
 {% style %}
 {{- settings.font_heading | font_face: font_display: 'swap' }}
-{{- settings.font_body | font_face: font_display: 'swap' }}
+/* {{- settings.font_body | font_face: font_display: 'swap' }} */
+
+{% render 'font-pockota.css' %}
 
 :root {
   --text:        {{ settings.text }};
@@ -9,7 +11,7 @@
 
   --bg:       {{ settings.bg }};
   --bg-dark:  {{ settings.bg_dark }};
-  --bg-light: {{ settings.bg | color_lighten: 10 }};
+  --bg-light: {{ settings.bg_light }};
 
   --border:       {{ settings.border }};
   --border-dark:  {{ settings.border | color_darken: 20 }};
@@ -30,7 +32,7 @@
   --error:        {{ settings.error }};
 
   --font-heading: {{ settings.font_heading.family }}, {{ settings.font_heading.fallback_families }};
-  --font-body: {{ settings.font_body.family }}, {{ settings.font_body.fallback_families }};
+  --font-body: 'Pockota', {{ settings.font_body.family }}, {{ settings.font_body.fallback_families }};
 
   --container-width: {{ settings.container_width }}px;
   --container-sm-width: {{ settings.container_sm_width }}px;

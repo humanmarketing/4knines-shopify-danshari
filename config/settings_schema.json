@@ -18,6 +18,12 @@
       },
       {
         "type": "color",
+        "id": "bg_light",
+        "label": "Background color (light)",
+        "default": "#ddd"
+      },
+      {
+        "type": "color",
         "id": "bg",
         "label": "Background color",
         "default": "#ddd"
