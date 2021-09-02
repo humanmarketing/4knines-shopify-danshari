@@ -1,5 +1,28 @@
 .search-form {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding-block: 0.25rem;
+  border-radius: 4em;
+  background-color: #fff;
+  transition: box-shadow var(--t);
+}
+
+.search-form:focus-within {
+  box-shadow: var(--outline-2);
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.25em 0.75em;
+  font: inherit;
+}
+
+.search-button {
+  cursor: pointer;
+  padding: 0.25em 0.75em;
+  fill: var(--accent-2);
 }
 
 .search-suggestions {

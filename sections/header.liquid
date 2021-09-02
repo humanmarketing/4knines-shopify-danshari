@@ -12,23 +12,25 @@
   </div>
 
   <div class="header-actions">
-    <a href="tel:{{ shop.phone }}" class="link">Tel</a>
+    <a href="tel:{{ shop.phone }}" class="link">
+      {% render 'icon-tel' %}
+    </a>
 
     {%- if shop.customer_accounts_enabled -%}
-      {%- if customer -%}
-        <a href="{{ routes.account_url }}" class="link">Account</a>
-      {%- else -%}
-        <a href="{{ routes.account_login_url }}" class="link">Login</a>
-
-        {%- if shop.customer_accounts_optional -%}
-          {{ ' / ' }}
-          <a href="{{ routes.account_register_url }}" class="link">Register</a>
-        {%- endif -%}
-      {%- endif -%}
+      {%- liquid
+        if customer
+          assign account_url = routes.account_url
+        else
+          assign account_url = routes.account_login_url
+        endif
+      -%}
+      <a href="{{ account_url }}" class="link">
+        {% render 'icon-account' %}
+      </a>
     {%- endif -%}
 
-    <a href="{{ routes.cart_url }}" class="link">
-      Cart ({{ cart.item_count }})
+    <a href="{{ routes.cart_url }}" class="header-cart link{% if cart.item_count %} has-items{% endif %}">
+      {% render 'icon-cart' %}
     </a>
   </div>
 

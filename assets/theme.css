@@ -243,6 +243,7 @@ hr {
 #shopify-section-header {
   position: relative;
   z-index: 10;
+  background-color: var(--bg-dark);
 }
 
 .header {
@@ -251,27 +252,58 @@ hr {
   display: grid;
   grid-template-columns: auto 1fr auto auto;
   grid-template-areas: 'logo search menu actions';
+  gap: 1rem 2rem;
   align-items: center;
-  background-color: var(--bg-dark);
+  padding: 0.5rem;
 }
 
 .header-logo {
   grid-area: logo;
   display: inline-block;
-  width: 180px;
+}
+
+.header-logo img {
+  width: auto;
+  max-width: 180px;
+  max-height: 2em;
 }
 
 .header-search {
   grid-area: search;
+  position: relative;
+  z-index: 1;
 }
 
 .header-actions {
   grid-area: actions;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header-actions a {
+  padding: 0.5rem;
+}
+
+.header-cart {
+  position: relative;
+}
+
+.header-cart.has-items::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 0;
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 100%;
+  background-color: currentColor;
 }
 
 .header-trigger {
   grid-area: trigger;
   cursor: pointer;
+  padding: 0.5rem;
+  fill: var(--accent-1);
 }
 
 .header-menu {
@@ -281,11 +313,13 @@ hr {
 /* tablet */
 @media screen and (max-width: 768px) {
   .header {
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: auto 1fr auto;
     grid-template-areas:
       'logo     logo    actions'
       'trigger  search  search'
       'menu     menu    menu';
+    gap: 0.5rem;
+    padding-bottom: 0;
   }
 
   .header-logo {
@@ -294,9 +328,10 @@ hr {
 
   .header-menu {
     position: absolute;
-    left: 0; top: 100%;
-    width: 100%;
-    background-color: inherit;
+    left: -0.5rem;
+    right: -0.5rem;
+    top: 100%;
+    background-color: var(--bg-dark);
     transition:
       opacity var(--t),
       transform var(--t);
