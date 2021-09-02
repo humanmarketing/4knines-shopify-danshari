@@ -1,10 +1,7 @@
 {
   "sections": {
-    "demo_css": {
-      "type": "demo-css"
-    }
   },
   "order": [
-    "demo_css"
+
   ]
 }

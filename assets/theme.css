@@ -52,15 +52,10 @@ svg { fill: currentColor; }
 
 /* layout */
 
-/* tablet */
-@media screen and (max-width: 768px) {
-  .desktop { display: none !important; }
-}
-
-/* desktop-and-up */
-@media screen and (min-width: 769px) {
-  .tablet { display: none !important; }
-}
+@media screen and (max-width: 428px) { .tablet-and-up { display: none !important; } }
+@media screen and (min-width: 429px) { .mobile { display: none !important;} }
+@media screen and (max-width: 768px) { .desktop-and-up { display: none !important; } }
+@media screen and (min-width: 769px) { .tablet { display: none !important; } }
 
 .container {
   max-width: var(--container-width);
@@ -110,6 +105,7 @@ svg { fill: currentColor; }
 .h1, .h1-body { font-size: 2.5rem; }
 .h2, .h2-body { font-size: 2rem; }
 .h3, .h3-body { font-size: 1.5rem; }
+.h4, .h4-body { font-size: 1.2rem; }
 
 .text-center { text-align: center; }
 
@@ -325,7 +321,7 @@ svg { fill: currentColor; }
   width: 0.75em;
   height: 0.75em;
   border-radius: 100%;
-  background-color: currentColor;
+  background-color: var(--accent-1);
 }
 
 .header-trigger {
@@ -390,6 +386,7 @@ svg { fill: currentColor; }
   width: 100vw;
   margin-inline: calc(50% - 50vw);
   padding-block: 2rem;
+  box-shadow: var(--shadow);
 }
 
 .header-megamenu-list {
@@ -431,6 +428,7 @@ svg { fill: currentColor; }
   top: calc(100% - 0.5rem);
   min-width: -webkit-max-content;
   min-width: max-content;
+  box-shadow: var(--shadow);
 }
 
 .header-dropdown > li + li { margin-top: 1rem; }
@@ -513,6 +511,41 @@ svg { fill: currentColor; }
 
 #shopify-section-footer {
   background-color: var(--bg-light);
+}
+
+#shopify-section-footer .questions-menu {
+  padding-block: 4rem;
+  border-bottom: 2px solid var(--accent-2);
+}
+
+.footer-links {
+  display: grid;
+  gap: 2rem;
+  padding-block: 2rem;
+}
+
+.footer-links-title a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1ch;
+  padding-right: 1rem;
+}
+
+.footer-links-child + .footer-links-child {
+  margin-top: 1em;
+}
+
+/* tablet-and-up */
+@media screen and (min-width: 429px) {
+  .footer-links {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .footer-links-title {
+    margin-bottom: 1.5em;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
 }
 
 /* richtext */

@@ -1,17 +1,35 @@
-<div class="container section-padding side-padding">
+<div class="container side-padding">
   {% render 'questions-menu' %}
 
   {%- if section.settings.navigation.links != blank -%}
-    <ul>
+    <ul class="footer-links">
       {%- for link in section.settings.navigation.links -%}
         <li>
-          <a href="{{ link.url }}" class="link">{{ link.title }}</a>
+          <div class="footer-links-title">
+            <a href="{{ link.url }}" class="link accent-2">
+              {{ link.title }}
+              <span class="mobile">{% render 'icon-chevron-right' %}</span>
+            </a>
+          </div>
+
+          {%- if link.links != blank -%}
+            <ul class="tablet-and-up">
+              {%- for child in link.links -%}
+                <li class="footer-links-child">
+                  {%- if child.title == 'Vehicle Fit Guide' -%}<br>{%- endif -%}
+                  <a href="{{ child.url }}" class="link accent-2">{{ child.title }}</a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
         </li>
       {%- endfor -%}
     </ul>
   {%- endif -%}
 
-  <p>&copy; 2021 {{ shop.name }}</p>
+  <div class="section-padding text-accent-2">
+    <p>&copy; 2021 {{ shop.name }}</p>
+  </div>
 </div>
 
 {% schema %}

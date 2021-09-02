@@ -4,16 +4,19 @@
   <ul class="questions-menu-contact">
     <li>
       <a href="/pages/faq" class="h3-body link accent-2">
+        {% render 'icon-question' %}
         FAQs
       </a>
     </li>
     <li>
       <a href="tel:{{ shop.phone }}" class="h3-body link accent-2">
+        {% render 'icon-phone-lg' %}
         Call
       </a>
     </li>
     <li>
       <a href="mailto:{{ shop.email }}" class="h3-body link accent-2">
+
         Email
       </a>
     </li>
@@ -21,7 +24,7 @@
 
   <ul class="questions-menu-links">
     {%- for link in linklists['questions'].links -%}
-      <li><a href="{{ link.url }}" class="h4-body link">{{ link.title }}</a></li>
+      <li><a href="{{ link.url }}" class="h5-body link">{{ link.title }}</a></li>
     {%- endfor -%}
   </ul>
 </div>
