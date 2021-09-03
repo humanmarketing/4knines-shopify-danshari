@@ -34,5 +34,7 @@
     {%- endfor -%}
   </ul>
 
-  {% render 'questions-menu' %}
+  <div class="wave-left-right" style="--wave-left-right: url('{{ 'wave-left-right.png' | asset_url }}');">
+    {% render 'questions-menu' %}
+  </div>
 </div>

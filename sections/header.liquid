@@ -31,7 +31,7 @@
     {% render 'icon-menu' %}
   </label>
 
-  <input id="header-menu-state" type="checkbox" hidden checked />
+  <input id="header-menu-state" type="checkbox" hidden />
   <div class="header-menu">
     {%- assign megamenus = section.blocks | where: 'type', 'megamenu' | map: 'settings' | map: 'title' -%}
     {% render 'header-menu-desktop',
