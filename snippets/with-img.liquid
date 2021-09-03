@@ -1,0 +1,35 @@
+{%- comment -%}
+  item
+  link?
+  placeholder?
+  back?
+{%- endcomment -%}
+
+{%- capture back_icon -%}
+  <span class="back-icon">{% render 'icon-chevron-right' %}</span>
+{%- endcapture -%}
+
+{%- capture content -%}
+  {%- if item.object.featured_image -%}
+    <figure>
+      <img
+        {% render 'srcset', image: item.object.featured_image, width: 100 %}
+        alt="{{ item.title }}" loading="false"
+      />
+      {%- if back -%}{{ back_icon }}{%- endif -%}
+    </figure>
+
+  {%- elsif placeholder -%}
+    <figure>
+      {%- if back -%}{{ back_icon }}{%- endif -%}
+    </figure>
+  {%- endif -%}
+
+  {{ item.title }}
+{%- endcapture -%}
+
+{%- if link -%}
+  <a href="{{ item.url }}" class="link with-img">{{ content }}</a>
+{%- else -%}
+  <div class="with-img">{{ content }}</div>
+{%- endif -%}

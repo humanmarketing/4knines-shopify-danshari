@@ -1,7 +1,7 @@
 <form class="search-form" action="{{ routes.search_url }}">
   <label class="search-form-label">
     <input
-      class="search-input appearance-reset"
+      class="search-input unset"
       name="q"
       value="{% if search.performed -%}{{ search.terms | escape }}{%- endif %}"
       type="search"
@@ -9,7 +9,7 @@
     />
   </label>
 
-  <button class="search-button appearance-reset" type="submit">
+  <button class="search-button unset" type="submit">
     {% render 'icon-search' %}
   </button>
 

@@ -5,9 +5,9 @@
 
 <ul class="header-menu-desktop desktop-and-up">
   {%- for link in links -%}
-    <li class="header-menu-item">
+    <li class="desktop-menu-item">
       {%- if link.links != blank -%}
-        <div class="header-menu-title with-icon">
+        <div class="desktop-menu-title with-icon">
           {{ link.title }}
           {% render 'icon-chevron-down' %}
         </div>
@@ -26,18 +26,7 @@
                     <ul class="child-links">
                       {%- for grandchild in child.links -%}
                         <li>
-                          <a href="{{ grandchild.url }}" class="child-item link">
-                            {%- if grandchild.object.featured_image -%}
-                              <figure class="child-item-img">
-                                <img
-                                  {% render 'srcset', image: grandchild.object.featured_image, width: 100 %}
-                                  alt="{{ grandchild.title }}" loading="false"
-                                />
-                              </figure>
-                            {%- endif -%}
-
-                            {{ grandchild.title }}
-                          </a>
+                          {% render 'with-img', item: grandchild, link: true %}
                         </li>
                       {%- endfor -%}
                     </ul>
@@ -56,13 +45,13 @@
         {%- endif -%}
 
       {%- else -%}
-        <a class="header-menu-title" href="{{ link.url }}">{{ link.title }}</a>
+        <a class="desktop-menu-title" href="{{ link.url }}">{{ link.title }}</a>
       {%- endif -%}
     </li>
   {%- endfor -%}
 
-  <li class="header-menu-item">
-    <div class="header-menu-title with-icon">
+  <li class="desktop-menu-item">
+    <div class="desktop-menu-title with-icon">
       Questions?
       {% render 'icon-chevron-down' %}
     </div>

@@ -1,8 +1,35 @@
-<div class="header-menu-tablet tablet">
+{%- comment -%}
+  links
+{%- endcomment -%}
+
+<div class="header-menu-tablet side-padding tablet">
   <ul>
-    {%- for link in section.settings.menu_mobile.links -%}
+    {%- for link in links -%}
       <li>
-        <a href="{{ link.url }}" class="link">{{ link.title }}</a>
+        {%- if link.links != blank -%}
+          <details class="tablet-menu-item">
+            <summary class="tablet-menu-title with-icon-full unset">
+              {% render 'with-img', item: link, placeholder: true, back: true %}
+              <span class="tablet-menu-title-arrow">
+                {% render 'icon-chevron-right' %}
+                <a href="{{ link.url }}" title="{{ link.title }}"></a>
+              </span>
+            </summary>
+
+            <ul class="tablet-menu-item-contents">
+              {%- for child in link.links -%}
+                <li>
+                  {% render 'with-img', item: child, link: true, placeholder: true %}
+                </li>
+              {%- endfor -%}
+            </ul>
+          </details>
+
+        {%- else -%}
+          <div class="tablet-menu-title">
+            {% render 'with-img', item: link, link: true, placeholder: true %}
+          </div>
+        {%- endif -%}
       </li>
     {%- endfor -%}
   </ul>
