@@ -1,5 +1,7 @@
 <h1 class="h1">Search</h1>
 
+{% render 'search-form' %}
+
 {%- if search.performed %}
   <p>{{ search.results_count }} result{% if search.results_count > 1 %}s{% endif %} found for "{{ search.terms }}"</p>
 {%- endif -%}
@@ -10,7 +12,7 @@
       {%- case result.object_type -%}
         {%- else -%}
           <li>
-            <a href="{{ result.url }}" class="link">
+            <a href="{{ result.url }}" class="link accent-2">
               {{ result.title | highlight: search.terms }}
               ({{ result.object_type | capitalize }})
             </a>
@@ -20,13 +22,17 @@
   </ul>
 {%- endif -%}
 
-{% render 'search-form' %}
+{% stylesheet %}
+  #shopify-section-search .search-form {
+    border: 1px solid var(--border-light);
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
   "name": "Search",
   "tag": "section",
-  "class": "section-search container section-padding side-padding",
+  "class": "container-sm section-padding side-padding richtext",
   "settings": [
 
   ]

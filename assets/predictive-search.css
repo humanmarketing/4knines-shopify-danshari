@@ -5,10 +5,13 @@
   align-items: center;
   border-radius: 4em;
   background-color: #fff;
-  transition: box-shadow var(--t);
+  transition:
+    border-color var(--t),
+    box-shadow var(--t);
 }
 
 .search-form:focus-within {
+  border-color: var(--accent-2);
   box-shadow: var(--outline-2);
 }
 

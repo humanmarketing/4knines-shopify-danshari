@@ -50,6 +50,8 @@ svg { fill: currentColor; }
   all: unset;
 }
 
+summary.unset::-webkit-details-marker { display: none; }
+
 /* layout */
 
 @media screen and (max-width: 428px) { .tablet-and-up { display: none !important; } }
@@ -74,12 +76,22 @@ svg { fill: currentColor; }
 
 .side-padding { padding-inline: clamp(1rem, 3vw, 2rem); }
 
+.col-2 {
+  display: grid;
+  gap: 2rem;
+}
+.col-2.center { align-items: center; }
+
+/* desktop-and-up */
+@media screen and (min-width: 769px) {
+  .col-2 { grid-template-columns: repeat(2, 1fr); }
+}
+
 .with-icon {
   display: inline-flex;
   align-items: center;
   gap: 0.5ch;
 }
-
 .with-icon-full {
   display: grid;
   grid-template-columns: 1fr auto;
