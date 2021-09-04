@@ -1,11 +1,29 @@
-<div class="hero section-padding side-padding">
-  <div class="richtext">
+{%- assign promo = section.blocks | where: 'type', 'promo' | map: 'settings' | first -%}
+
+<div class="section-hero side-padding {% if promo.enabled %}promo-enabled{% endif %}">
+  {%- if section.settings.image_desktop -%}
+    <picture class="section-hero-img">
+      {%- if section.settings.image_mobile -%}
+        <source
+          {% render 'srcset', image: section.settings.image_mobile, width: 800 %}
+          media="(max-width: 768px)"
+        />
+      {%- endif -%}
+      <img
+        {% render 'srcset', image: section.settings.image_desktop, width: 1600 %}
+        alt="{{ section.settings.image_desktop.alt | default: section.settings.heading }}"
+        loading="eager" draggable="false"
+      />
+    </picture>
+  {%- endif -%}
+
+  <div class="section-hero-txt container richtext">
     <h1 class="h2 text-accent-2">{{ section.settings.heading | newline_to_br }}</h1>
     {%- if section.settings.description -%}
       <p>{{ section.settings.description | newline_to_br }}</p>
     {%- endif -%}
     {%- if section.settings.cta_link -%}
-      <div>
+      <p>
         <a href="{{ section.settings.cta_link }}" class="action">
           {%- if section.settings.cta_label != blank -%}
             {{ section.settings.cta_label }}
@@ -13,14 +31,16 @@
             Shop {{ section.settings.cta_link.object.title }}
           {%- endif -%}
         </a>
-      </div>
+      </p>
     {%- endif -%}
   </div>
 </div>
 
-{%- assign promo = section.blocks | where: 'type', 'promo' | map: 'settings' | first -%}
 {%- if promo.enabled -%}
-  <article class="promo section-padding side-padding bg text-center richtext">
+  <article
+    class="section-promo section-padding side-padding bg text-center richtext"
+    style="--bg-img: url('{{ 'wave-right.png' | asset_url }}');"
+  >
     <h2 class="h1">{{ promo.heading }}</h2>
     {%- if promo.description -%}
       <p class="h3-body">{{ promo.description | newline_to_br }}</p>
@@ -38,6 +58,75 @@
     {%- endif -%}
   </article>
 {%- endif -%}
+
+{% stylesheet %}
+  .section-hero {
+    position: relative;
+    padding-block: 4rem;
+    background: var(--bg-img) center/cover no-repeat;
+  }
+
+  .section-hero-img {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .section-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .section-hero-txt {
+    position: relative;
+  }
+
+  .section-promo,
+  .section-promo > * {
+    position: relative;
+  }
+
+  .section-promo::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-img) right/contain no-repeat;
+  }
+
+  /* tablet */
+  @media screen and (max-width: 768px) {
+    .section-hero { padding-block: 2rem; }
+
+    .section-hero.promo-enabled {
+      padding-bottom: 6rem;
+    }
+
+    .section-hero-txt {
+      padding: 2rem 1rem;
+      background-color: hsla(0, 0%, 100%, 0.8);
+      text-align: center;
+    }
+
+    .section-promo {
+      position: relative;
+      z-index: 1;
+      margin: -4rem 2rem 0;
+      overflow: hidden;
+    }
+
+    .section-promo::before {
+      transform: scale(-1.75, 1.75) translateX(-20%);
+      opacity: 0.4;
+    }
+
+    .section-promo h2 { font-size: var(--h3); }
+    .section-promo p { font-size: var(--h4); }
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
@@ -64,6 +153,17 @@
       "id": "cta_label",
       "label": "CTA label",
       "info": "Default: \"Shop <title>\""
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Background image (desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Background image (mobile)",
+      "info": "Only use if a different image is needed"
     }
   ],
   "blocks": [
