@@ -42,6 +42,7 @@
   padding-inline: 1rem;
   box-sizing: border-box;
   background-color: var(--bg-light);
+  box-shadow: var(--shadow);
   max-height: max(200px, 50vh);
   overflow-y: auto;
 }

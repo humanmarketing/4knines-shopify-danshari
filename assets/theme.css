@@ -328,7 +328,7 @@ summary.unset::-webkit-details-marker { display: none; }
 .header-search {
   grid-area: search;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header-actions {

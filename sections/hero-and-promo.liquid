@@ -1,0 +1,106 @@
+<div class="hero section-padding side-padding">
+  <div class="richtext">
+    <h1 class="h2 text-accent-2">{{ section.settings.heading | newline_to_br }}</h1>
+    {%- if section.settings.description -%}
+      <p>{{ section.settings.description | newline_to_br }}</p>
+    {%- endif -%}
+    {%- if section.settings.cta_link -%}
+      <div>
+        <a href="{{ section.settings.cta_link }}" class="action">
+          {%- if section.settings.cta_label != blank -%}
+            {{ section.settings.cta_label }}
+          {%- else -%}
+            Shop {{ section.settings.cta_link.object.title }}
+          {%- endif -%}
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{%- assign promo = section.blocks | where: 'type', 'promo' | map: 'settings' | first -%}
+{%- if promo.enabled -%}
+  <article class="promo section-padding side-padding bg text-center richtext">
+    <h2 class="h1">{{ promo.heading }}</h2>
+    {%- if promo.description -%}
+      <p class="h3-body">{{ promo.description | newline_to_br }}</p>
+    {%- endif -%}
+    {%- if promo.cta_link -%}
+      <div>
+        <a href="{{ promo.cta_link }}" class="action">
+          {%- if promo.cta_label != blank -%}
+            {{ promo.cta_label }}
+          {%- else -%}
+            Shop {{ promo.cta_link.object.title }}
+          {%- endif -%}
+        </a>
+      </div>
+    {%- endif -%}
+  </article>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Hero + Promo",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA link"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA label",
+      "info": "Default: \"Shop <title>\""
+    }
+  ],
+  "blocks": [
+    {
+      "type": "promo",
+      "name": "Promo",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enabled",
+          "label": "Enabled",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "CTA link"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "CTA label",
+          "info": "Default: \"Shop <title>\""
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
