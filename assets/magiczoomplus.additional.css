@@ -197,7 +197,7 @@ div.MagicToolboxSelectorsContainer a {
 }
 
 @media only screen and (max-width: 767px) {
-  
+
   .MagicToolboxContainer {
     padding-left: 0px !important;
     padding-right: 0px !important;
@@ -231,7 +231,7 @@ div.MagicToolboxSelectorsContainer a {
       vertical-align: middle !important;
       font-size: 0px !important;
       line-height: 0px !important;
-  } 
+  }
 
   .MagicToolboxSelectorsContainer.no-magic-scroll a:before
    {
@@ -245,16 +245,16 @@ div.MagicToolboxSelectorsContainer a {
       display: block !important;
       text-indent: -9999px !important;
       background: transparent !important;
-  }  
+  }
 
   .MagicToolboxSelectorsContainer.no-magic-scroll a.active-magic-selector:before,
   .MagicToolboxSelectorsContainer.no-magic-scroll a:hover:before
   {
       background: #fff !important;
-  }  
+  }
 
   .MagicToolboxContainer .MagicToolboxSlides { margin-left:0 !important; margin-right:0 !important; }
-  
+
 }
 
 @media only screen and (min-width: 768px) {

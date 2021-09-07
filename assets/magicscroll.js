@@ -1,7 +1,7 @@
 /*
 
 
-   Magic Scroll v2.0.52 
+   Magic Scroll v2.0.52
    Copyright 2021 Magic Toolbox
    Buy a license: https://www.magictoolbox.com/magicscroll/
    License agreement: https://www.magictoolbox.com/license/

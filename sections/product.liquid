@@ -4,20 +4,18 @@
 <div class="section-product-img">
   {%- unless product.images == empty -%}
     <figure>
-                        {% comment %}magiczoomplus code begins{% endcomment %}
-                        {% capture mzp %}{% render 'magiczoomplus' %}{% endcapture %}
-                        {% if mzp contains 'Liquid error' %}
-      {%- for image in product.images -%}
-        <img
-          {% render 'srcset', image: image, width: 1200 %}
-          alt="{{ image.alt | default: product.title | escape }}"
-          loading="{%- if forloop.first -%}eager{%- else -%}lazy{%- endif -%}"
-        />
-      {%- endfor -%}
-                        {% else %}
-                            {{ mzp }}
-                        {% endif %}
-                        {% comment %}magiczoomplus code ends{% endcomment %}
+      {% capture mzp %}{% render 'magiczoomplus' %}{% endcapture %}
+      {% if mzp contains 'Liquid error' %}
+        {%- for image in product.images -%}
+          <img
+            {% render 'srcset', image: image, width: 1200 %}
+            alt="{{ image.alt | default: product.title | escape }}"
+            loading="{%- if forloop.first -%}eager{%- else -%}lazy{%- endif -%}"
+          />
+        {%- endfor -%}
+      {% else %}
+        {{ mzp }}
+      {% endif %}
     </figure>
   {%- endunless -%}
 </div>
