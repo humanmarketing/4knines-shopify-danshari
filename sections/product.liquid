@@ -1,5 +1,3 @@
-{{ 'section-product.css' | asset_url | stylesheet_tag }}
-
 <!-- TODO: add image carousel + zoom + 360 -->
 <div class="section-product-img">
   {%- unless product.images == empty -%}
@@ -30,6 +28,20 @@
     {% render 'product-form', product: product %}
   </div>
 </div>
+
+{% stylesheet %}
+  .section-product {
+    display: grid;
+    gap: 2rem 4rem;
+  }
+
+  /* desktop-and-up */
+  @media screen and (min-width: 769px) {
+    .section-product {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+{% endstylesheet %}
 
 {% schema %}
 {

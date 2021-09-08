@@ -1,8 +1,7 @@
 # _Danshari_
-
 A blank slate theme for Shopify 2.0
 
-> **_Danshari / <ruby>断捨離<rt>だんしゃり</rt></ruby>_**<br>
+> **_Danshari (<ruby>断捨離<rt>だんしゃり</rt></ruby>)_**<br>
 > _n._ Decluttering, clearing out past accumulation, minimalism.
 
 ## Demo
@@ -22,7 +21,9 @@ Configured in `config/settings_schema.json` and defined as CSS custom properties
   - [Predictive Search](https://shopify.dev/api/ajax/reference/predictive-search) feature enabled by default
 
 ## Default Styles
-Danshari is a blank, minimally styled theme. However, **login/register and account related pages are applied default styles**. Styles are defined in `assets/customers.css` and can be modified.
+Danshari is a minimally styled theme. However, the following pages are applied default styles:
+- Login, Register and Account related pages (/account)
+- Cart page (/cart)
 
 ## Media Queries
 VS Code snippets (defined in `.vscode/danshari.code-snippets`) included for improved developer experience.
@@ -43,11 +44,11 @@ Example usage:
 ```liquid
 <img
   {% render 'srcset', image: section.settings.image, width: 1000 %}
-  alt="..." loading="false"
+  alt="..." loading="lazy"
 />
 ```
 
 | Props | Description |
 | - | - |
-| `image` | Shopify image object. **Required** |
+| `image` | Shopify image object. Required. |
 | `width`? | Max width of the image to display. |
