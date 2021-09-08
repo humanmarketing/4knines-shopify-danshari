@@ -1,6 +1,6 @@
 {
   "sections": {
-    "hero_and_promo": {
+    "hero-and-promo": {
       "type": "hero-and-promo",
       "blocks": {
         "c6bc3884-d619-4698-a1da-7e55ba912483": {
@@ -21,11 +21,115 @@
         "heading": "Durable Dog Seat Covers,\nCargo Liners and Accessories",
         "description": "Bring your dogs on every adventure with durable,\nhigh-quality products built to last.",
         "cta_link": "shopify:\/\/collections\/dog-seat-covers",
-        "cta_label": ""
+        "cta_label": "",
+        "image_desktop": "shopify:\/\/shop_images\/index-hero-desktop.png",
+        "image_mobile": "shopify:\/\/shop_images\/index-hero-mobile.png"
+      }
+    },
+    "featured-collection-1": {
+      "type": "featured-collection",
+      "blocks": {
+        "ab4b3571-6a7e-442d-8542-25b4a242114d": {
+          "type": "subcategory",
+          "settings": {
+            "url": "shopify:\/\/collections\/cargo-liners"
+          }
+        },
+        "e55ba450-2b47-4d13-88ac-aa1235c44e2c": {
+          "type": "subcategory",
+          "settings": {
+            "url": "shopify:\/\/collections\/truck-seat-covers"
+          }
+        },
+        "ca2bb1bc-3c50-4402-a14c-ad6ff82ff499": {
+          "type": "subcategory",
+          "settings": {
+            "url": "shopify:\/\/collections\/front-seat-covers"
+          }
+        },
+        "009f7af1-2973-43fc-9332-f07208ae42c7": {
+          "type": "subcategory",
+          "settings": {
+            "url": "shopify:\/\/collections\/back-seat-covers-for-dogs-pets"
+          }
+        },
+        "a90b6963-9edc-4982-80c7-81c1e6ea7340": {
+          "type": "subcategory",
+          "settings": {
+            "url": "shopify:\/\/collections\/door-covers"
+          }
+        }
+      },
+      "block_order": [
+        "ab4b3571-6a7e-442d-8542-25b4a242114d",
+        "e55ba450-2b47-4d13-88ac-aa1235c44e2c",
+        "ca2bb1bc-3c50-4402-a14c-ad6ff82ff499",
+        "009f7af1-2973-43fc-9332-f07208ae42c7",
+        "a90b6963-9edc-4982-80c7-81c1e6ea7340"
+      ],
+      "settings": {
+        "collection": "dog-seat-covers",
+        "description": "Heavy-duty, functional dog seat covers designed to withstand wear and tear.",
+        "image": "shopify:\/\/shop_images\/ft-coll-1.png"
+      }
+    },
+    "featured-collection-2": {
+      "type": "featured-collection",
+      "blocks": {
+        "961706b6-9bdb-44d6-9c5c-33e7c3c6f76f": {
+          "type": "subcategory",
+          "settings": {
+            "url": "shopify:\/\/products\/4knines-automotive-pet-deterrent-barrier"
+          }
+        },
+        "50b5a6ff-6ea7-4b12-bebd-1412a26f797a": {
+          "type": "subcategory",
+          "settings": {
+            "url": "shopify:\/\/products\/dog-seat-belt"
+          }
+        }
+      },
+      "block_order": [
+        "961706b6-9bdb-44d6-9c5c-33e7c3c6f76f",
+        "50b5a6ff-6ea7-4b12-bebd-1412a26f797a"
+      ],
+      "settings": {
+        "collection": "dog-travel-accessories",
+        "description": "Pet accessories that make traveling with your dog fun and convenient.",
+        "image": "shopify:\/\/shop_images\/ft-coll-2.png"
+      }
+    },
+    "featured-collection-3": {
+      "type": "featured-collection",
+      "blocks": {
+        "c9e4a1a0-d216-4fe9-9379-9ca913e2f64e": {
+          "type": "subcategory",
+          "settings": {
+            "url": "shopify:\/\/collections\/dog-covers"
+          }
+        },
+        "9f05e2f4-7017-4215-bcb8-e03410ceca62": {
+          "type": "subcategory",
+          "settings": {
+            "url": "shopify:\/\/collections\/dog-blankets"
+          }
+        }
+      },
+      "block_order": [
+        "c9e4a1a0-d216-4fe9-9379-9ca913e2f64e",
+        "9f05e2f4-7017-4215-bcb8-e03410ceca62"
+      ],
+      "settings": {
+        "collection": "dog-supplies",
+        "description": "Keep your dog safe, happy, and healthy on every adventure, big or small.",
+        "image": "shopify:\/\/shop_images\/ft-coll-3.png"
       }
     }
   },
   "order": [
-    "hero_and_promo"
+    "hero-and-promo",
+    "featured-collection-1",
+    "featured-collection-2",
+    "featured-collection-3"
   ]
 }

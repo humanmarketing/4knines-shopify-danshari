@@ -1,0 +1,123 @@
+{%- liquid
+  assign ft_collection = section.settings.collection
+  assign subcategories = section.blocks | where: 'type', 'subcategory' | map: 'settings'
+-%}
+
+<figure class="ft-coll-img desktop-and-up">
+  {%- assign ft_coll_img = section.settings.image | default: ft_collection.featured_image -%}
+  {%- if ft_coll_img != blank -%}
+    <img
+      {% render 'srcset', image: ft_coll_img, width: 1000 %}
+      alt="{{ ft_collection.title }}"
+      loading="lazy" draggable="false"
+    />
+  {%- endif -%}
+</figure>
+
+<div class="ft-coll-txt section-padding side-padding richtext">
+  <h2 class="h3">
+    <a href="{{ ft_collection.url }}" class="link accent-2 with-icon">
+      Shop {{ ft_collection.title }}
+      {% render 'icon-chevron-right' %}
+    </a>
+  </h2>
+  <p>{{ section.settings.description | default: ft_collection.description }}</p>
+  <ul class="ft-coll-subcat-list unstyled">
+    {%- for subcategory in subcategories -%}
+      {%- assign object = subcategory.url.object -%}
+      <li>
+        <a href="{{ subcategory.url }}" class="link">
+          <figure>
+            <img
+              {% render 'srcset', image: object.featured_image, width: 200 %}
+              alt="{{ object.title }}"
+            />
+          </figure>
+          <p>{{ object.title }}</p>
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
+
+{% stylesheet %}
+  .ft-coll { gap: 0; }
+
+  /* desktop-and-up */
+  @media screen and (min-width: 769px) {
+    .ft-coll {
+      grid-template-areas: 'img txt';
+    }
+
+    .ft-coll:nth-of-type(2n) {
+      grid-template-areas: 'txt img';
+    }
+
+    .ft-coll-img { grid-area: img; }
+    .ft-coll-txt { grid-area: txt; }
+  }
+
+  .ft-coll-img { align-self: stretch; }
+
+  .ft-coll-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ft-coll-txt {
+    max-width: 400px;
+    margin-inline: auto;
+  }
+
+  .ft-coll-subcat-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .ft-coll-subcat-list > li { flex: 0 1 100px; }
+  .ft-coll-subcat-list img { border-radius: 4px; }
+  .ft-coll-subcat-list p { margin-top: 0.5rem; }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Featured Collection",
+  "tag": "section",
+  "class": "ft-coll col-2 center container",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "subcategory",
+      "name": "subcategory",
+      "settings": [
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Subcategory",
+          "info": "Choose either a Product or Collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -17,6 +17,7 @@ strong, b { font-weight: bold; }
 small { font-size: smaller; }
 
 img {
+  display: block;
   height: auto;
   max-width: 100%;
 }
@@ -73,6 +74,7 @@ summary.unset::-webkit-details-marker { display: none; }
 }
 
 .section-padding { padding-block: var(--section-padding); }
+.section-padding-lg { padding-block: var(--section-padding-lg); }
 
 .side-padding { padding-inline: clamp(1rem, 3vw, 2rem); }
 
@@ -765,12 +767,12 @@ summary.unset::-webkit-details-marker { display: none; }
   margin-top: 2rem;
 }
 
-.richtext > ul {
+.richtext > ul:not(.unstyled) {
   list-style-type: disc;
   padding-left: 2em;
 }
 
-.richtext > ol {
+.richtext > ol:not(.unstyled) {
   list-style-type: decimal;
   padding-left: 2em;
 }

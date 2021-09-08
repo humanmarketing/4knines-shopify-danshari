@@ -88,7 +88,6 @@
 }
 
 .suggestion-item-img img {
-  display: block;
   width: var(--suggestion-img-size);
   height: var(--suggestion-img-size);
   object-fit: contain;
