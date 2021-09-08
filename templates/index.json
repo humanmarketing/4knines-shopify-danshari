@@ -56,7 +56,7 @@
         "a90b6963-9edc-4982-80c7-81c1e6ea7340": {
           "type": "subcategory",
           "settings": {
-            "url": "shopify:\/\/collections\/door-covers"
+            "url": "shopify:\/\/products\/car-door-covers-for-cars-trucks-and-suvs-two-door-guards-one-for-each-side"
           }
         }
       },
@@ -105,7 +105,7 @@
         "c9e4a1a0-d216-4fe9-9379-9ca913e2f64e": {
           "type": "subcategory",
           "settings": {
-            "url": "shopify:\/\/collections\/dog-covers"
+            "url": "shopify:\/\/products\/waterproof-dog-bed-cover"
           }
         },
         "9f05e2f4-7017-4215-bcb8-e03410ceca62": {
@@ -124,12 +124,50 @@
         "description": "Keep your dog safe, happy, and healthy on every adventure, big or small.",
         "image": "shopify:\/\/shop_images\/ft-coll-3.png"
       }
+    },
+    "icon-list-h": {
+      "type": "icon-list-h",
+      "blocks": {
+        "9dc0cbe5-3060-4184-ba12-7c38d1b5fdcd": {
+          "type": "item",
+          "settings": {
+            "heading": "High-Quality Products Built to Last",
+            "description": "Our seat covers are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. We offer a lifetime warranty on every product.",
+            "icon": "shopify:\/\/shop_images\/icon-quality.png"
+          }
+        },
+        "ea5eae33-ad6d-4524-aa8c-d5a2b66f1941": {
+          "type": "item",
+          "settings": {
+            "heading": "Design and Function Meet Convenience",
+            "description": "Our patented technology is easy to maintain and made with colorfast fabrics that won’t fade. Our proprietary design lets you access all your seat belts and move seats without removing the cover.",
+            "icon": "shopify:\/\/shop_images\/icon-design.png"
+          }
+        },
+        "ddbd8804-3e6d-4f9e-9218-0e4ad588bf84": {
+          "type": "item",
+          "settings": {
+            "heading": "Keeping Pets Safe, Happy and Healthy",
+            "description": "Our pet seat covers feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
+            "icon": "shopify:\/\/shop_images\/icon-house.png"
+          }
+        }
+      },
+      "block_order": [
+        "9dc0cbe5-3060-4184-ba12-7c38d1b5fdcd",
+        "ea5eae33-ad6d-4524-aa8c-d5a2b66f1941",
+        "ddbd8804-3e6d-4f9e-9218-0e4ad588bf84"
+      ],
+      "settings": {
+        "heading": "Products That Enable You to Provide the Best Possible Life for Your Best Friend"
+      }
     }
   },
   "order": [
     "hero-and-promo",
     "featured-collection-1",
     "featured-collection-2",
-    "featured-collection-3"
+    "featured-collection-3",
+    "icon-list-h"
   ]
 }

@@ -1,0 +1,114 @@
+<div
+  class="section-icon-list-h container section-padding-lg side-padding text-center"
+  style="
+    --bg-left: url({{ 'wave-left.png' | asset_url }});
+    --bg-right: url({{ 'wave-right.png' | asset_url }});
+  "
+>
+  <h2 class="container-half h2 text-accent-2">{{ section.settings.heading }}</h2>
+
+  {%- assign items = section.blocks | where: 'type', 'item' | map: 'settings' -%}
+  <ul class="icon-list-h multi-col">
+    {%- for item in items -%}
+      <li class="richtext">
+        <figure>
+          <img
+            {% render 'srcset', image: item.icon, width: 120 %}
+            alt="" loading="lazy"
+          />
+        </figure>
+        <h3 class="h4-body">{{ item.heading }}</h3>
+        <p>{{ item.description }}</p>
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
+
+{% stylesheet %}
+  .section-icon-list-h {
+    position: relative;
+    padding-bottom: 6rem;
+  }
+
+  .section-icon-list-h > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .icon-list-h {
+    --col: 3;
+    margin-top: 2rem;
+  }
+
+  .icon-list-h img {
+    margin-inline: auto;
+    width: 70px;
+  }
+
+  .icon-list-h h3 { font-family: var(--font-body); }
+
+  /* tablet */
+  @media screen and (max-width: 768px) {
+    .section-icon-list-h::before,
+    .section-icon-list-h::after {
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      display: inline-block;
+    }
+
+    .section-icon-list-h::before {
+      left: 0; top: 25%;
+      width: 100%;
+      height: 200px;
+      transform: translateY(-50%);
+      background: var(--bg-left) left/contain no-repeat;
+    }
+
+    .section-icon-list-h::after {
+      right: 0; bottom: 25%;
+      width: 100%;
+      height: 200px;
+      transform: translateY(50%);
+      background: var(--bg-right) right/contain no-repeat;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Icon list",
+  "tag": "section",
+  "class": "bg-light",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "List item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
