@@ -161,6 +161,16 @@
       "settings": {
         "heading": "Products That Enable You to Provide the Best Possible Life for Your Best Friend"
       }
+    },
+    "testimonial": {
+      "type": "testimonial",
+      "settings": {
+        "rating": 5,
+        "quote": "Perfectly sized to fit. Love the material;\nseems extremely tough",
+        "author": "Hugh C.",
+        "avatar": "shopify:\/\/shop_images\/testimonial-avatar.png",
+        "show_avatar": true
+      }
     }
   },
   "order": [
@@ -168,6 +178,7 @@
     "featured-collection-1",
     "featured-collection-2",
     "featured-collection-3",
-    "icon-list-h"
+    "icon-list-h",
+    "testimonial"
   ]
 }

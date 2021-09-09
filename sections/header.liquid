@@ -1,7 +1,11 @@
 <div class="header container">
   <a href="{{ routes.root_url }}" class="header-logo">
     {%- if settings.logo -%}
-      <img {% render 'srcset', image: settings.logo, width: 300 %} alt="{{ settings.logo.alt | default: shop.name }}">
+      <img
+        {% render 'srcset', image: settings.logo, width: 300 %}
+        alt="{{ settings.logo.alt | default: shop.name }}"
+        loading="eager"
+      />
     {%- else -%}
       {{- shop.name -}}
     {%- endif -%}
