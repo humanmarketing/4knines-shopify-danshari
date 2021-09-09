@@ -184,6 +184,46 @@
         "cta_link": "shopify:\/\/pages\/about-us",
         "image": "shopify:\/\/shop_images\/jim-and-maggie.png"
       }
+    },
+    "text-card-list": {
+      "type": "text-card-list",
+      "blocks": {
+        "bdac15f1-b04e-4c5e-8700-1a48a248691d": {
+          "type": "card",
+          "settings": {
+            "heading": "Flying Fur Animal Rescue",
+            "description": "Since 2015, Paul has saved over 1600 furry friends from euthanasia by transporting them from from high-kill shelters in the south to no-kill shelters in the northeast.",
+            "image": "shopify:\/\/shop_images\/giving-back-1.png"
+          }
+        },
+        "2b8b4e13-2b08-4837-8b1e-bc638816890f": {
+          "type": "card",
+          "settings": {
+            "heading": "Pets With Disabilities",
+            "description": "Mike and Joyce recognized a great need for a support system for disabled pets, and this grassroots nonprofit was born! It has evolved into a thriving rescue, rehab center, and adoption resource for disabled animals.",
+            "image": "shopify:\/\/shop_images\/giving-back-1.png"
+          }
+        },
+        "d4c662ad-f537-426e-aafd-007d25c3b838": {
+          "type": "card",
+          "settings": {
+            "heading": "Companions for Heroes",
+            "description": "Companions for Heroes’ vision is to help every American hero while saving shelter and rescue animals from euthanasia. Since its inception, C4H has paired over 3,500 heroes with shelter dogs.",
+            "image": "shopify:\/\/shop_images\/giving-back-1.png"
+          }
+        }
+      },
+      "block_order": [
+        "bdac15f1-b04e-4c5e-8700-1a48a248691d",
+        "2b8b4e13-2b08-4837-8b1e-bc638816890f",
+        "d4c662ad-f537-426e-aafd-007d25c3b838"
+      ],
+      "settings": {
+        "heading": "Giving Back To The Animal Community",
+        "description": "As a pet-focused business, we are passionate about giving back to the animal community. We donate returned items and a percentage of each sale to animal advocacy groups.",
+        "cta_label": "Learn more",
+        "cta_link": "shopify:\/\/pages\/giving-back"
+      }
     }
   },
   "order": [
@@ -193,6 +233,7 @@
     "featured-collection-3",
     "icon-list-h",
     "testimonial-and-social",
-    "our-story"
+    "our-story",
+    "text-card-list"
   ]
 }
