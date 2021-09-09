@@ -1,0 +1,94 @@
+<div
+  class="section-our-story container section-padding-lg side-padding multi-col center"
+  style="--bg-img: url({{ 'wave-left-lg.png' | asset_url }});"
+>
+  <figure class="container-half">
+    <img
+      {% render 'srcset', image: section.settings.image, width: 1000 %}
+      alt="{{ section.settings.image.alt | default: section.settings.heading }}" loading="lazy"
+    />
+  </figure>
+
+  <div class="richtext">
+    <p>{{ section.settings.pretitle }}</p>
+    <h2 class="h2 text-accent-2">{{ section.settings.heading }}</h2>
+    {{ section.settings.description }}
+    {%- if section.settings.cta_link -%}
+      <p>
+        <a href="{{ section.settings.cta_link }}" class="link accent-1">
+          {{ section.settings.cta_label }} >
+        </a>
+      </p>
+    {%- endif -%}
+  </div>
+</div>
+
+{% stylesheet %}
+  .section-our-story {
+    position: relative;
+    gap: 2rem 4rem;
+  }
+
+  /* tablet */
+  @media screen and (max-width: 768px) {
+    .section-our-story::before {
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      left: 0; top: 2rem;
+      width: 50%;
+      height: 40%;
+      display: inline-block;
+      background: var(--bg-img) left/contain no-repeat;
+    }
+
+    .section-our-story > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .section-our-story h2 {
+    margin-top: 1rem !important;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Our Story",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "pretitle",
+      "label": "Pretitle"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA label",
+      "default": "Read Our Story"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ]
+}
+{% endschema %}

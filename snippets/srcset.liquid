@@ -21,6 +21,7 @@
   {%- if width >= 900 -%},{{ image | img_url: '900x' }} 900w{%- endif -%}
   {%- if width >= 1200 -%},{{ image | img_url: '1200x' }} 1200w{%- endif -%}
   {%- if width >= 1500 -%},{{ image | img_url: '1500x' }} 1500w{%- endif -%}
+  {%- if width >= 2000 -%},{{ image | img_url: 'master' }} {{ width }}w{%- endif -%}
 {%- endcapture -%}
 
 srcset="{{ srcset }}"

@@ -1,6 +1,6 @@
 {%- assign promo = section.blocks | where: 'type', 'promo' | map: 'settings' | first -%}
 
-<div class="section-hero side-padding {% if promo.enabled %}promo-enabled{% endif %}">
+<div class="section-hero section-padding-lg side-padding {% if promo.enabled %}promo-enabled{% endif %}">
   {%- if section.settings.image_desktop -%}
     <picture class="section-hero-img">
       {%- if section.settings.image_mobile -%}
@@ -62,7 +62,6 @@
 {% stylesheet %}
   .section-hero {
     position: relative;
-    padding-block: 4rem;
     background: var(--bg-img) center/cover no-repeat;
   }
 

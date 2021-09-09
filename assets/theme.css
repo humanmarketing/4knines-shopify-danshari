@@ -148,7 +148,7 @@ summary.unset::-webkit-details-marker { display: none; }
 
 .text-dark { color: var(--text-dark); }
 .text-light { color: var(--text-light); }
-.text-accent { color: var(--accent-1); }
+.text-accent-1 { color: var(--accent-1); }
 .text-accent-2 { color: var(--accent-2); }
 .text-accent-3 { color: var(--accent-3); }
 .text-error { color: var(--error); }
