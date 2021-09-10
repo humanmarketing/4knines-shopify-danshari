@@ -1,0 +1,18 @@
+<div class="section-product-img">
+  {%- unless product.images == empty -%}
+    <figure>
+      {% capture mzp %}{% render 'magiczoomplus' %}{% endcapture %}
+      {% unless mzp contains 'Liquid error' %}
+        {{ mzp }}
+      {% else %}
+        {%- for image in product.images -%}
+          <img
+            {% render 'srcset', image: image, width: 1200 %}
+            alt="{{ image.alt | default: product.title | escape }}"
+            loading="{%- if forloop.first -%}eager{%- else -%}lazy{%- endif -%}"
+          />
+        {%- endfor -%}
+      {% endunless %}
+    </figure>
+  {%- endunless -%}
+</div>

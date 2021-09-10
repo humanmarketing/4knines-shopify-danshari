@@ -1,45 +1,45 @@
-<!-- TODO: add image carousel + zoom + 360 -->
-<div class="section-product-img">
-  {%- unless product.images == empty -%}
-    <figure>
-      {% capture mzp %}{% render 'magiczoomplus' %}{% endcapture %}
-      {% if mzp contains 'Liquid error' %}
-        {%- for image in product.images -%}
-          <img
-            {% render 'srcset', image: image, width: 1200 %}
-            alt="{{ image.alt | default: product.title | escape }}"
-            loading="{%- if forloop.first -%}eager{%- else -%}lazy{%- endif -%}"
-          />
-        {%- endfor -%}
-      {% else %}
-        {{ mzp }}
-      {% endif %}
-    </figure>
-  {%- endunless -%}
-</div>
+{% render 'product-images' %}
 
 <div class="section-product-txt">
-  <div class="sticky">
-    <h1 class="h1">{{ product.title }}</h1>
+  <div class="sticky richtext">
+    <h1 class="h2 text-accent-2">{{ product.title }}</h1>
+
+    {%- comment -%}
     {%- if product.description -%}
-      <div>{{ product.description }}</div>
+      <div class="richtext">{{ product.description }}</div>
     {%- endif -%}
-    {% render 'price', product: product %}
-    {% render 'product-form', product: product %}
+    {%- endcomment -%}
+
+    {% render 'product-form' %}
   </div>
 </div>
 
+{% render 'product-recommendations' %}
+
 {% stylesheet %}
   .section-product {
+    gap: 2rem;
+  }
+
+  .qty-and-price {
     display: grid;
-    gap: 2rem 4rem;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
   }
 
   /* desktop-and-up */
   @media screen and (min-width: 769px) {
     .section-product {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        'img txt'
+        'rec txt';
+      gap: 4rem;
     }
+
+    .section-product-img { grid-area: img; }
+    .section-product-txt { grid-area: txt; }
+    .section-product-rec { grid-area: rec; }
   }
 {% endstylesheet %}
 
@@ -47,7 +47,7 @@
 {
   "name": "Product",
   "tag": "article",
-  "class": "section-product container section-padding side-padding",
+  "class": "section-product container section-padding-lg side-padding multi-col",
   "settings": [
     {
       "type": "checkbox",

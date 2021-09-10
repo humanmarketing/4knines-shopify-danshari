@@ -1,0 +1,42 @@
+<div
+  class="section-product-rec product-recommendations"
+  data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4"
+>
+  {%- if recommendations.performed and recommendations.products_count > 0 -%}
+    <h2 class="h3 text-accent-2">Frequently Bought Together</h2>
+
+    <ul>
+      {%- for product in recommendations.products -%}
+        <li>
+          {% render 'product-item', product: product %}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>
+
+<script defer>
+  const handleIntersection = (entries, observer) => {
+    if (!entries[0].isIntersecting) return
+
+    observer.unobserve(productRecommendationsSection)
+
+    fetch(productRecommendationsSection.dataset.url)
+      .then(response => response.text())
+      .then(text => {
+        const html = document.createElement('div')
+        html.innerHTML = text
+        const recommendations = html.querySelector('.product-recommendations')
+
+        if (recommendations && recommendations.innerHTML.trim().length) {
+          productRecommendationsSection.innerHTML = recommendations.innerHTML
+        }
+      })
+      .catch(console.error)
+  }
+
+  const productRecommendationsSection = document.querySelector('.product-recommendations')
+  const observer = new IntersectionObserver(handleIntersection, {rootMargin: '0px 0px 200px 0px'})
+
+  observer.observe(productRecommendationsSection)
+</script>

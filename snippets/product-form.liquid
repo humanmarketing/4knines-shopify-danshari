@@ -1,36 +1,44 @@
-{%- comment -%}
-  product
-{%- endcomment -%}
-
 {%- liquid
   assign available = product.selected_or_first_available_variant.available
 -%}
 
 {% form 'product', product %}
-  <label>
-    <input class="input" name="quantity" value="1" type="number" min="1" max="10" size="2" />
-  </label>
-
   {%- unless product.has_only_default_variant -%}
-    <select name="id" class="input">
-      {%- for variant in product.variants -%}
-        <option
-          value="{{ variant.id }}"
-          {% if variant == product.selected_or_first_available_variant -%}
-            selected
-          {%- endif %}
-        >
-          {{ variant.title }} ({{ variant.price | money }})
-        </option>
-      {%- endfor -%}
-    </select>
+    <div>
+      <select name="id" class="input">
+        {%- for variant in product.variants -%}
+          <option
+            value="{{ variant.id }}"
+            {% if variant == product.selected_or_first_available_variant -%}
+              selected
+            {%- endif %}
+          >
+            {{ variant.title }} ({{ variant.price | money }})
+          </option>
+        {%- endfor -%}
+      </select>
+    </div>
   {%- endunless -%}
+
+  <div class="qty-and-price">
+    {% render 'quantity-selector'
+      label: 'Quantity:'
+      name: 'quantity'
+    %}
+
+    <div>
+      {%- if product.compare_at_price > product.price -%}
+        <s>{{ product.compare_at_price | money }}</s><br>
+      {%- endif -%}
+      {{ product.price | money }}
+    </div>
+  </div>
 
   <div>
     {%- if available -%}
-      <button class="action">Add to cart</button>
+      <button class="action full">Add to cart</button>
     {%- else -%}
-      <button class="action" disabled>Sold out</button>
+      <button class="action full" disabled>Sold out</button>
     {%- endif -%}
 
     {%- if section.settings.show_dynamic_checkout -%}
