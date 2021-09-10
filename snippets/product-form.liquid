@@ -1,35 +1,49 @@
-{%- liquid
-  assign available = product.selected_or_first_available_variant.available
--%}
+{%- assign available = product.selected_or_first_available_variant.available -%}
 
-{% form 'product', product %}
+{% form 'product', product, class: 'richtext' %}
   {%- unless product.has_only_default_variant -%}
-    <div>
-      <select name="id" class="input">
-        {%- for variant in product.variants -%}
-          <option
-            value="{{ variant.id }}"
-            {% if variant == product.selected_or_first_available_variant -%}
-              selected
-            {%- endif %}
-          >
-            {{ variant.title }} ({{ variant.price | money }})
-          </option>
+    {%- for option in product.options_with_values -%}
+      <fieldset>
+        <legend>{{ option.name }}</legend>
+
+        {%- for value in option.values -%}
+          <input
+            id="{{ option.name }}-{{ forloop.index }}"
+            name="{{ option.name | handleize }}"
+            value="{{ value | escape }}"
+            type="radio"
+            {% if option.selected_value == value %}checked{% endif %}
+          />
+          <label for="{{ option.name }}-{{ forloop.index }}">
+            {{ value }}
+          </label>
         {%- endfor -%}
-      </select>
-    </div>
+      </fieldset>
+    {%- endfor -%}
+
+    <select name="id" class="input" hidden>
+      {%- for variant in product.variants -%}
+        <option
+          value="{{ variant.id }}"
+          {% if variant == product.selected_or_first_available_variant -%}selected{%- endif %}
+          {% unless variant.available %}disabled{% endunless %}
+        >
+          {{ variant.title }} ({{ variant.price | money }})
+        </option>
+      {%- endfor -%}
+    </select>
+
+  {%- else -%}
+    <input name="id" value="{{ product.selected_or_first_available_variant.id }}" type="hidden" />
   {%- endunless -%}
 
   <div class="qty-and-price">
-    {% render 'quantity-selector'
-      label: 'Quantity:'
-      name: 'quantity'
-    %}
+    {% render 'quantity-selector', label: 'Quantity:', name: 'quantity' %}
 
-    <div>
+    <div class="h3 text-right">
       {%- if product.compare_at_price > product.price -%}
-        <s>{{ product.compare_at_price | money }}</s><br>
-      {%- endif -%}
+        <s><small>{{ product.compare_at_price | money }}</small></s>
+      {%- endif %}
       {{ product.price | money }}
     </div>
   </div>

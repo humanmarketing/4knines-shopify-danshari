@@ -148,6 +148,7 @@ summary.unset::-webkit-details-marker { display: none; }
 .h4, .h4-body { font-size: var(--h4); }
 
 .text-center { text-align: center; }
+.text-right { text-align: right; }
 
 /* colors */
 

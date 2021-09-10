@@ -16,6 +16,8 @@
 
 {% render 'product-recommendations' %}
 
+<script src="{{ 'product.min.js' | asset_url }}" defer></script>
+
 {% stylesheet %}
   .section-product {
     gap: 2rem;
@@ -23,9 +25,9 @@
 
   .qty-and-price {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr;
     gap: 2rem;
-    align-items: center;
+    align-items: end;
   }
 
   /* desktop-and-up */

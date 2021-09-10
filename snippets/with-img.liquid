@@ -14,7 +14,7 @@
     <figure>
       <img
         {% render 'srcset', image: item.object.featured_image, width: 100 %}
-        alt="{{ item.title }}" loading="false"
+        alt="{{ item.title }}" loading="lazy"
       />
       {%- if back -%}{{ back_icon }}{%- endif -%}
     </figure>

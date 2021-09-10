@@ -5,20 +5,17 @@
 
 <tr>
   <td>
-    <a href="{{ line_item.url }}" class="link">{{ line_item.title }}</a>
+    <a href="{{ line_item.url }}" class="link">{{ line_item.product.title }}</a>
     {%- unless line_item.product.has_only_default_variant -%}
       <div>{{ line_item.variant.title }}</div>
     {%- endunless -%}
   </td>
 
   <td>
-    <span>
-      {%- if line_item.original_price > line_item.final_price -%}
-        <s>{{ line_item.original_price | money }}</s><br>
-      {%- else -%}
-        {{ line_item.final_price | money }}
-      {%- endif -%}
-    </span>
+    {%- if line_item.original_price > line_item.final_price -%}
+      <s>{{ line_item.original_price | money }}</s><br>
+    {%- endif -%}
+    {{ line_item.final_price | money }}
   </td>
 
   <td>
@@ -27,7 +24,6 @@
       name: "updates[]"
       value: line_item.quantity
     %}
-    </label>
     <a href="{{ line_item.url_to_remove }}" class="link-underline">Remove</a>
   </td>
 

@@ -14,6 +14,7 @@
         </p>
       {%- endif -%}
     </div>
+
     {%- assign cards = section.blocks | where: 'type', 'card' | map: 'settings' -%}
     <ul class="text-card-list">
       {%- for card in cards -%}
