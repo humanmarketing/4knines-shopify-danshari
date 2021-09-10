@@ -33,7 +33,7 @@
               alt="{{ object.title }}"
             />
           </figure>
-          <p>{{ object.title }}</p>
+          <p>{{ subcategory.title | default: object.title }}</p>
         </a>
       </li>
     {%- endfor -%}
@@ -116,6 +116,11 @@
           "id": "url",
           "label": "Subcategory",
           "info": "Choose either a Product or Collection"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
         }
       ]
     }

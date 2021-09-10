@@ -785,6 +785,27 @@ summary.unset::-webkit-details-marker { display: none; }
 
 /* collection + PDP */
 
+.collection-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-block: 1rem;
+  border-block: 1px solid currentColor;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.collection-nav::before,
+.collection-nav::after {
+  content: '';
+  margin: auto;
+}
+
+.collection-nav a { text-decoration: none; }
+.collection-nav a:not(.text-accent-1) { color: inherit; }
+.collection-nav a:hover { color: var(--accent-1); }
+.collection-nav a:active { color: var(--accent-1-dark); }
+
 .product-item-img img {
   width: 100%;
 }

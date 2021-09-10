@@ -1,5 +1,5 @@
 <div
-  class="section-icon-list-h container section-padding-lg side-padding text-center"
+  class="section-icon-list-h container side-padding text-center"
   style="
     --bg-left: url({{ 'wave-left.png' | asset_url }});
     --bg-right: url({{ 'wave-right.png' | asset_url }});
@@ -25,10 +25,7 @@
 </div>
 
 {% stylesheet %}
-  .section-icon-list-h {
-    position: relative;
-    padding-bottom: 6rem;
-  }
+  .section-icon-list-h { position: relative; }
 
   .section-icon-list-h > * {
     position: relative;
@@ -79,7 +76,7 @@
 {
   "name": "Icon list",
   "tag": "section",
-  "class": "bg-light",
+  "class": "bg-light section-padding-lg above-testimonial-and-social",
   "settings": [
     {
       "type": "text",

@@ -1,7 +1,7 @@
 {
   "sections": {
     "collection": {
-      "type": "collection",
+      "type": "collection-dog-seat-covers",
       "settings": {
       }
     },
@@ -17,17 +17,10 @@
       }
     },
     "features-multi-col": {
-      "type": "features-multi-col",
-      "settings": {
-      }
+      "type": "features-multi-col"
     },
     "split-cover-tech": {
-      "type": "split-cover-tech",
-      "settings": {
-        "heading": "Patented Split Cover Technology",
-        "description": "Our patented Split Rear Seat Cover provides access to all three seat belts and allows you to fold down seats without having to remove the cover (60\/40 split, 50\/50 split, center cargo pass-through).",
-        "cta_label": "Do the Split"
-      }
+      "type": "split-cover-tech"
     },
     "3-pack": {
       "type": "3-pack",

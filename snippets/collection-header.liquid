@@ -1,0 +1,17 @@
+<header class="container-sm text-center richtext">
+  <div class="container-half richtext">
+    <h1 class="h1 text-accent-2">{{ collection.title }}</h1>
+    <div>{{ collection.description }}</div>
+  </div>
+
+  {%- assign dog_seat_cover_links = linklists['dog-seat-covers'].links | map: 'url' -%}
+  {%- if dog_seat_cover_links contains collection.url -%}
+    <nav class="collection-nav">
+      {%- for link in linklists['dog-seat-covers'].links -%}
+        <a href="{{ link.url }}" {% if link.active %}class="text-accent-1"{% endif %}>
+          {{ link.title }}
+        </a>
+      {%- endfor -%}
+    </nav>
+  {%- endif -%}
+</header>
