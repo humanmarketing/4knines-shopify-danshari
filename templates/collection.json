@@ -15,10 +15,14 @@
         "avatar": "shopify:\/\/shop_images\/testimonial-avatar.png",
         "show_social": false
       }
+    },
+    "split-cover-tech": {
+      "type": "split-cover-tech"
     }
   },
   "order": [
     "collection",
-    "testimonial-and-social"
+    "testimonial-and-social",
+    "split-cover-tech"
   ]
 }
