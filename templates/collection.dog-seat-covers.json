@@ -1,0 +1,77 @@
+{
+  "sections": {
+    "collection": {
+      "type": "collection",
+      "settings": {
+      }
+    },
+    "testimonial-and-social": {
+      "type": "testimonial-and-social",
+      "settings": {
+        "rating": 5,
+        "quote": "Perfectly sized to fit. Love the material;\nseems extremely tough",
+        "author": "Hugh C.",
+        "show_avatar": false,
+        "avatar": "shopify:\/\/shop_images\/testimonial-avatar.png",
+        "show_social": false
+      }
+    },
+    "features-multi-col": {
+      "type": "features-multi-col",
+      "settings": {
+      }
+    },
+    "split-cover-tech": {
+      "type": "split-cover-tech",
+      "settings": {
+        "heading": "Patented Split Cover Technology",
+        "description": "Our patented Split Rear Seat Cover provides access to all three seat belts and allows you to fold down seats without having to remove the cover (60\/40 split, 50\/50 split, center cargo pass-through).",
+        "cta_label": "Do the Split"
+      }
+    },
+    "3-pack": {
+      "type": "3-pack",
+      "blocks": {
+        "3d40083c-6a02-431a-af98-440f93da66f6": {
+          "type": "item",
+          "settings": {
+            "cta_label": "Dogs",
+            "cta_link": "",
+            "image": "shopify:\/\/shop_images\/3-pack-1.png"
+          }
+        },
+        "145f9fb5-dc12-414c-a649-3d559257d703": {
+          "type": "item",
+          "settings": {
+            "cta_label": "Kids",
+            "cta_link": ""
+          }
+        },
+        "228d8184-2285-41fb-a548-64dd200218e6": {
+          "type": "item",
+          "settings": {
+            "cta_label": "Wear and Tear",
+            "cta_link": "",
+            "image": "shopify:\/\/shop_images\/3-pack-3.png"
+          }
+        }
+      },
+      "block_order": [
+        "3d40083c-6a02-431a-af98-440f93da66f6",
+        "145f9fb5-dc12-414c-a649-3d559257d703",
+        "228d8184-2285-41fb-a548-64dd200218e6"
+      ],
+      "settings": {
+        "heading": "We’ve Got You Covered",
+        "description": "Although we initially intended to make the best car seat covers for dogs on the market, our products provide excellent utility for other applications including messy kids and help to prevent overall wear and tear on your car."
+      }
+    }
+  },
+  "order": [
+    "collection",
+    "testimonial-and-social",
+    "features-multi-col",
+    "split-cover-tech",
+    "3-pack"
+  ]
+}

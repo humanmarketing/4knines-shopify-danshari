@@ -1,0 +1,50 @@
+<figure class="collection-section-img">
+  <img
+    {% render 'srcset', image: section.settings.image, width: 1200 %}
+    alt="{{ section.settings.heading }}" loading="lazy"
+  />
+</figure>
+
+<div class="collection-section-txt section-padding-lg side-padding richtext">
+  <h2 class="h2 text-accent-2">{{ section.settings.heading }}</h2>
+  <p>{{ section.settings.description }}</p>
+</div>
+
+{% stylesheet %}
+  .collection-section-img-txt { gap: 0; }
+
+  /* tablet */
+  @media screen and (max-width: 768px) {
+    .collection-section-img img {
+      max-height: 160px;
+      object-fit: cover;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Image & Text (Collection)",
+  "tag": "section",
+  "class": "collection-section-img-txt multi-col center container",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Perfect for Wear & Tear"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Although we initially intended to make the best car seat covers for dogs on the market, our products provide excellent utility for other applications including messy kids and help to prevent overall wear and tear on your car."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ]
+}
+{% endschema %}

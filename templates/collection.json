@@ -21,12 +21,16 @@
     },
     "split-cover-tech": {
       "type": "split-cover-tech"
+    },
+    "collection-img-and-txt": {
+      "type": "collection-img-and-txt"
     }
   },
   "order": [
     "collection",
     "testimonial-and-social",
     "features-multi-col",
-    "split-cover-tech"
+    "split-cover-tech",
+    "collection-img-and-txt"
   ]
 }
