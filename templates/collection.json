@@ -16,6 +16,9 @@
         "show_social": false
       }
     },
+    "features-multi-col": {
+      "type": "features-multi-col"
+    },
     "split-cover-tech": {
       "type": "split-cover-tech"
     }
@@ -23,6 +26,7 @@
   "order": [
     "collection",
     "testimonial-and-social",
+    "features-multi-col",
     "split-cover-tech"
   ]
 }

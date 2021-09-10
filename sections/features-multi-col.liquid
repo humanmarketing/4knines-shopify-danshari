@@ -1,0 +1,94 @@
+<div class="features-col section-padding-lg side-padding bg">
+  <div class="container-half richtext">
+    <h2 class="h3 text-accent-2">High-Quality Materials Built to Last</h2>
+    <ul class="unstyled">
+      <li>
+        {% render 'icon-layers' %}
+        <div class="richtext">
+          <p class="h4-body">Heavy-Duty</p>
+          <p>All dog seat covers are made with premium fabrics and durable hardware to protect your vehicle.</p>
+        </div>
+      </li>
+      <li>
+        {% render 'icon-clean' %}
+        <div class="richtext">
+          <p class="h4-body">Easy to Clean</p>
+          <p>Hose it down, wipe down with a moist towel or toss it in the washer to keep it looking fresh and clean.</p>
+        </div>
+      </li>
+      <li>
+        {% render 'icon-chemical-free' %}
+        <div class="richtext">
+          <p class="h4-body">Free of Harmful Chemicals</p>
+          <p>Our covers contain no AZO dyes and no heavy metals like lead, arsenic or mercury.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="features-col container-half section-padding-lg side-padding richtext">
+  <h2 class="h3 text-accent-2">Functional and Easy to Use</h2>
+  <ul class="unstyled">
+    <li>
+      {% render 'icon-gear' %}
+      <div class="richtext">
+        <p class="h4-body">Easy to Install</p>
+        <p>Install your seat cover in seconds with quick-release clips.</p>
+      </div>
+    </li>
+    <li>
+      {% render 'icon-seat' %}
+      <div class="richtext">
+        <p class="h4-body">Stays in Place</p>
+        <p>The non-slip backing and seat anchors keep your seat cover securely in place.</p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+{% stylesheet %}
+  .section-features-multi-col {
+    --icon-size: 50px;
+    gap: 0;
+    text-align: center;
+  }
+
+  .section-features-multi-col li {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .section-features-multi-col li svg {
+    color: var(--accent-3);
+    width: 100%;
+  }
+
+  /* tablet-and-up */
+  @media screen and (min-width: 429px) {
+    .section-features-multi-col {
+      text-align: left;
+    }
+
+    .section-features-multi-col h2 {
+      padding-left: calc(var(--icon-size) + 1rem);
+    }
+
+    .section-features-multi-col li {
+      grid-template-columns: var(--icon-size) 1fr;
+    }
+
+    .section-features-multi-col li svg {
+      margin-top: -1rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Features (Multi-column)",
+  "tag": "section",
+  "class": "section-features-multi-col multi-col center"
+}
+{% endschema %}
