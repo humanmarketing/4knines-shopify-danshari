@@ -2,10 +2,23 @@
   "sections": {
     "collection": {
       "type": "collection",
-      "settings": {}
+      "settings": {
+      }
+    },
+    "testimonial-and-social": {
+      "type": "testimonial-and-social",
+      "settings": {
+        "rating": 5,
+        "quote": "Perfectly sized to fit. Love the material;\nseems extremely tough",
+        "author": "Hugh C.",
+        "show_avatar": false,
+        "avatar": "shopify:\/\/shop_images\/testimonial-avatar.png",
+        "show_social": false
+      }
     }
   },
   "order": [
-    "collection"
+    "collection",
+    "testimonial-and-social"
   ]
 }

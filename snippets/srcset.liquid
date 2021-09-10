@@ -1,6 +1,7 @@
 {%- comment -%}
   image
   width?
+  asset?
 {%- endcomment -%}
 
 {%- liquid
@@ -10,20 +11,39 @@
 -%}
 
 {%- capture srcset -%}
-  {%- if width >= 50 -%}{{ image | img_url: '50x' }} 50w{%- endif -%}
-  {%- if width >= 100 -%},{{ image | img_url: '100x' }} 100w{%- endif -%}
-  {%- if width >= 200 -%},{{ image | img_url: '200x' }} 200w{%- endif -%}
-  {%- if width >= 300 -%},{{ image | img_url: '300x' }} 300w{%- endif -%}
-  {%- if width >= 400 -%},{{ image | img_url: '400x' }} 400w{%- endif -%}
-  {%- if width >= 500 -%},{{ image | img_url: '500x' }} 500w{%- endif -%}
-  {%- if width >= 600 -%},{{ image | img_url: '600x' }} 600w{%- endif -%}
-  {%- if width >= 750 -%},{{ image | img_url: '750x' }} 750w{%- endif -%}
-  {%- if width >= 900 -%},{{ image | img_url: '900x' }} 900w{%- endif -%}
-  {%- if width >= 1200 -%},{{ image | img_url: '1200x' }} 1200w{%- endif -%}
-  {%- if width >= 1500 -%},{{ image | img_url: '1500x' }} 1500w{%- endif -%}
-  {%- if width >= 2000 -%},{{ image | img_url: 'master' }} {{ width }}w{%- endif -%}
+  {%- if asset -%}
+    {%- if width >= 50 -%}{{ image | asset_img_url: '50x' }} 50w{%- endif -%}
+    {%- if width >= 100 -%},{{ image | asset_img_url: '100x' }} 100w{%- endif -%}
+    {%- if width >= 200 -%},{{ image | asset_img_url: '200x' }} 200w{%- endif -%}
+    {%- if width >= 300 -%},{{ image | asset_img_url: '300x' }} 300w{%- endif -%}
+    {%- if width >= 400 -%},{{ image | asset_img_url: '400x' }} 400w{%- endif -%}
+    {%- if width >= 500 -%},{{ image | asset_img_url: '500x' }} 500w{%- endif -%}
+    {%- if width >= 600 -%},{{ image | asset_img_url: '600x' }} 600w{%- endif -%}
+    {%- if width >= 750 -%},{{ image | asset_img_url: '750x' }} 750w{%- endif -%}
+    {%- if width >= 900 -%},{{ image | asset_img_url: '900x' }} 900w{%- endif -%}
+    {%- if width >= 1200 -%},{{ image | asset_img_url: '1200x' }} 1200w{%- endif -%}
+    {%- if width >= 1500 -%},{{ image | asset_img_url: '1500x' }} 1500w{%- endif -%}
+    {%- if width >= 2000 -%},{{ image | asset_img_url: 'master' }} {{ width }}w{%- endif -%}
+  {%- else -%}
+    {%- if width >= 50 -%}{{ image | img_url: '50x' }} 50w{%- endif -%}
+    {%- if width >= 100 -%},{{ image | img_url: '100x' }} 100w{%- endif -%}
+    {%- if width >= 200 -%},{{ image | img_url: '200x' }} 200w{%- endif -%}
+    {%- if width >= 300 -%},{{ image | img_url: '300x' }} 300w{%- endif -%}
+    {%- if width >= 400 -%},{{ image | img_url: '400x' }} 400w{%- endif -%}
+    {%- if width >= 500 -%},{{ image | img_url: '500x' }} 500w{%- endif -%}
+    {%- if width >= 600 -%},{{ image | img_url: '600x' }} 600w{%- endif -%}
+    {%- if width >= 750 -%},{{ image | img_url: '750x' }} 750w{%- endif -%}
+    {%- if width >= 900 -%},{{ image | img_url: '900x' }} 900w{%- endif -%}
+    {%- if width >= 1200 -%},{{ image | img_url: '1200x' }} 1200w{%- endif -%}
+    {%- if width >= 1500 -%},{{ image | img_url: '1500x' }} 1500w{%- endif -%}
+    {%- if width >= 2000 -%},{{ image | img_url: 'master' }} {{ width }}w{%- endif -%}
+  {%- endif -%}
 {%- endcapture -%}
 
 srcset="{{ srcset }}"
-src="{{ image | img_url: src }}"
+{%- if asset -%}
+  src="{{ image | asset_img_url: src }}"
+{%- else -%}
+  src="{{ image | img_url: src }}"
+{%- endif -%}
 width="{{ width }}" height="{{ height }}"

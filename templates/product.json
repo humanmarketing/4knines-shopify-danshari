@@ -2,10 +2,24 @@
   "sections": {
     "product": {
       "type": "product",
-      "settings": {}
+      "settings": {
+        "show_dynamic_checkout": false
+      }
+    },
+    "testimonial-and-social": {
+      "type": "testimonial-and-social",
+      "settings": {
+        "rating": 5,
+        "quote": "Perfectly sized to fit. Love the material;\nseems extremely tough",
+        "author": "Hugh C.",
+        "show_avatar": true,
+        "avatar": "shopify:\/\/shop_images\/testimonial-avatar.png",
+        "show_social": false
+      }
     }
   },
   "order": [
-    "product"
+    "product",
+    "testimonial-and-social"
   ]
 }

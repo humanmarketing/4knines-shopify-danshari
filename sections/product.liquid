@@ -21,6 +21,7 @@
 {% stylesheet %}
   .section-product {
     gap: 2rem;
+    padding-bottom: 8rem;
   }
 
   .qty-and-price {
@@ -28,6 +29,12 @@
     grid-template-columns: auto 1fr;
     gap: 2rem;
     align-items: end;
+  }
+
+  .recommendation-product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 2rem 1rem;
   }
 
   /* desktop-and-up */
@@ -42,6 +49,13 @@
     .section-product-img { grid-area: img; }
     .section-product-txt { grid-area: txt; }
     .section-product-rec { grid-area: rec; }
+  }
+
+  /* mobile */
+  @media screen and (max-width: 428px) {
+    .recommendation-product-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 {% endstylesheet %}
 

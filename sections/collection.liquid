@@ -1,18 +1,80 @@
-<h1 class="h1">{{ collection.title }}</h1>
+<header class="container-sm text-center richtext">
+  <div class="container-half richtext">
+    <h1 class="h1 text-accent-2">{{ collection.title }}</h1>
+    <div>{{ collection.description }}</div>
+  </div>
 
-<ul>
+  {%- assign dog_seat_cover_links = linklists['dog-seat-covers'].links | map: 'url' -%}
+  {%- if dog_seat_cover_links contains collection.url -%}
+    <nav class="collection-nav">
+      {%- for link in linklists['dog-seat-covers'].links -%}
+        <a href="{{ link.url }}" {% if link.active %}class="text-accent-1"{% endif %}>
+          {{ link.title }}
+        </a>
+      {%- endfor -%}
+    </nav>
+  {%- endif -%}
+</header>
+
+<ul class="collection-product-list">
+  {%- case collection.handle -%}
+    {%- when 'back-seat-covers-for-dogs-pets' -%}
+      <li>
+        <figure>
+          <img
+            {% render 'srcset', image: 'collection-back-seat-covers.png', width: 600, asset: true %}
+            alt="{{ collection.title }}" loading="lazy" draggable="false"
+          />
+        </figure>
+      </li>
+  {%- endcase -%}
+
   {%- for product in collection.products -%}
     <li>
-      {% render 'product-item', product: product %}
+      {% render 'product-item' product: product %}
     </li>
   {%- endfor -%}
 </ul>
+
+{% stylesheet %}
+  .section-collection {
+    padding-bottom: 8rem;
+  }
+
+  .collection-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-block: 1rem;
+    border-block: 1px solid currentColor;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .collection-nav::before,
+  .collection-nav::after {
+    content: '';
+    margin: auto;
+  }
+
+  .collection-nav a { text-decoration: none; }
+  .collection-nav a:not(.text-accent-1) { color: inherit; }
+  .collection-nav a:hover { color: var(--accent-1); }
+  .collection-nav a:active { color: var(--accent-1-dark); }
+
+  .collection-product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem 1.5rem;
+    margin-top: 3rem;
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
   "name": "Collection",
   "tag": "article",
-  "class": "section-collection container section-padding side-padding",
+  "class": "section-collection container section-padding-lg side-padding",
   "settings": [
 
   ]

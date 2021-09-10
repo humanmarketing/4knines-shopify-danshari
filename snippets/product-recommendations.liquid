@@ -1,14 +1,14 @@
 <div
-  class="section-product-rec product-recommendations"
+  class="section-product-rec product-recommendations richtext"
   data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4"
 >
   {%- if recommendations.performed and recommendations.products_count > 0 -%}
     <h2 class="h3 text-accent-2">Frequently Bought Together</h2>
 
-    <ul>
+    <ul class="recommendationproduct-list unstyled">
       {%- for product in recommendations.products -%}
         <li>
-          {% render 'product-item', product: product %}
+          {% render 'product-item', product: product, small: true %}
         </li>
       {%- endfor -%}
     </ul>

@@ -1,19 +1,33 @@
 {%- comment -%}
   product
+  small?
 {%- endcomment -%}
 
-<article class="product-item">
-  {%- comment -%}
-  <a href="{{ product.url }}">
+{%- liquid
+  if small
+    assign image_width = 200
+  else
+    assign image_width = 400
+  endif
+-%}
+
+<article class="product-item{% if small %} small{% endif %} richtext">
+  <a href="{{ product.url }}" class="product-item-img link richtext">
     <img
-      {% render 'srcset', image: product.featured_image, width: 100 %}
+      {% render 'srcset', image: product.featured_image, width: image_width %}
       alt="{{ product.featured_image.alt | default: product.title | escape }}"
       loading="lazy"
     />
+    <p class="product-item-title h5">{{ product.title }}</p>
   </a>
-  {%- endcomment -%}
-
-  <a href="{{ product.url }}" class="link">
-    {{ product.title }}
-  </a>
+  <div class="product-item-price-rating">
+    <p>
+      {%- if product.compare_at_price > product.price -%}
+        <s><small>{{ product.compare_at_price | money }}</small></s>
+      {%- endif %}
+      {{ product.price | money }}
+    </p>
+    <!-- TODO: add rating -->
+    <p>★</p>
+  </div>
 </article>
