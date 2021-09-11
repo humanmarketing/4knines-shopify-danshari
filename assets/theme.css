@@ -806,6 +806,14 @@ summary.unset::-webkit-details-marker { display: none; }
 .collection-nav a:hover { color: var(--accent-1); }
 .collection-nav a:active { color: var(--accent-1-dark); }
 
+/* mobile */
+@media screen and (max-width: 428px) {
+  .collection-nav {
+    width: 100vw;
+    margin-inline: calc(50% - 50vw);
+  }
+}
+
 .product-item-img img {
   width: 100%;
 }

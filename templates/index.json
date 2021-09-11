@@ -32,31 +32,36 @@
         "ab4b3571-6a7e-442d-8542-25b4a242114d": {
           "type": "subcategory",
           "settings": {
-            "url": "shopify:\/\/collections\/cargo-liners"
+            "url": "shopify:\/\/collections\/cargo-liners",
+            "title": ""
           }
         },
         "e55ba450-2b47-4d13-88ac-aa1235c44e2c": {
           "type": "subcategory",
           "settings": {
-            "url": "shopify:\/\/collections\/truck-seat-covers"
+            "url": "shopify:\/\/collections\/truck-seat-covers",
+            "title": "Truck Seat Covers"
           }
         },
         "ca2bb1bc-3c50-4402-a14c-ad6ff82ff499": {
           "type": "subcategory",
           "settings": {
-            "url": "shopify:\/\/collections\/front-seat-covers"
+            "url": "shopify:\/\/products\/bucket-seat-cover-for-dogs-and-pets-for-cars-trucks-and-suvs",
+            "title": "Front Seat Cover"
           }
         },
         "009f7af1-2973-43fc-9332-f07208ae42c7": {
           "type": "subcategory",
           "settings": {
-            "url": "shopify:\/\/collections\/back-seat-covers-for-dogs-pets"
+            "url": "shopify:\/\/collections\/back-seat-covers-for-dogs-pets",
+            "title": "Back Seat Covers"
           }
         },
         "a90b6963-9edc-4982-80c7-81c1e6ea7340": {
           "type": "subcategory",
           "settings": {
-            "url": "shopify:\/\/products\/car-door-covers-for-cars-trucks-and-suvs-two-door-guards-one-for-each-side"
+            "url": "shopify:\/\/products\/car-door-covers-for-cars-trucks-and-suvs-two-door-guards-one-for-each-side",
+            "title": "Car Door Covers"
           }
         }
       },
@@ -79,13 +84,15 @@
         "961706b6-9bdb-44d6-9c5c-33e7c3c6f76f": {
           "type": "subcategory",
           "settings": {
-            "url": "shopify:\/\/products\/4knines-automotive-pet-deterrent-barrier"
+            "url": "shopify:\/\/products\/4knines-automotive-pet-deterrent-barrier",
+            "title": ""
           }
         },
         "50b5a6ff-6ea7-4b12-bebd-1412a26f797a": {
           "type": "subcategory",
           "settings": {
-            "url": "shopify:\/\/products\/dog-seat-belt"
+            "url": "shopify:\/\/products\/dog-seat-belt",
+            "title": ""
           }
         }
       },
@@ -105,13 +112,15 @@
         "c9e4a1a0-d216-4fe9-9379-9ca913e2f64e": {
           "type": "subcategory",
           "settings": {
-            "url": "shopify:\/\/products\/waterproof-dog-bed-cover"
+            "url": "shopify:\/\/products\/waterproof-dog-bed-cover",
+            "title": ""
           }
         },
         "9f05e2f4-7017-4215-bcb8-e03410ceca62": {
           "type": "subcategory",
           "settings": {
-            "url": "shopify:\/\/collections\/dog-blankets"
+            "url": "shopify:\/\/collections\/dog-blankets",
+            "title": ""
           }
         }
       },
