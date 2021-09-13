@@ -9,11 +9,31 @@
         when 'product'
           assign subcategory = block.settings.product
       endcase
+
+      assign subcategory_description = subcategory.description | strip_html | truncate: 300, '...'
     -%}
 
     <article class="subcategory-item richtext">
-      <h2 class="h3 text-accent-2">{{ subcategory.title }}</h2>
-      <p>{{ subcategory.description | strip_html | truncate: 300, '...' }}</p>
+      <h2>
+        <a href="{{ subcategory.url }}" class="h3 link accent-2">
+          {{ block.settings.title | default: subcategory.title }}
+        </a>
+      </h2>
+      <p>{{ block.settings.description | default: subcategory_description }}</p>
+
+      <ul class="subcategory-products unstyled">
+        {%- if subcategory.products.size > 0 -%}
+          {%- for product in subcategory.products -%}
+            <li>
+              {% render 'product-item', product: product, small: true %}
+            </li>
+          {%- endfor -%}
+        {%- else -%}
+          <li>
+            {% render 'product-item', product: subcategory, small: true %}
+          </li>
+        {%- endif -%}
+      </ul>
     </article>
   {%- endfor -%}
 </div>
@@ -21,13 +41,32 @@
 {% stylesheet %}
   .subcategory-list {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 
   .subcategory-item:nth-child(-n + 2) { grid-column: span 3; }
   .subcategory-item:not(:nth-child(-n + 2)) { grid-column: span 2; }
+
+  .subcategory-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  /* desktop-and-up */
+  @media screen and (min-width: 769px) {
+    .subcategory-list {
+      grid-template-columns: repeat(6, 1fr);
+      gap: 4rem;
+    }
+  }
+
+  /* large */
+  @media screen and (min-width: 1550px) {
+    .subcategory-list { gap: 4rem 6rem; }
+  }
 {% endstylesheet %}
 
 {% schema %}
@@ -44,6 +83,16 @@
           "type": "collection",
           "id": "collection",
           "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
         }
       ]
     },
@@ -55,6 +104,16 @@
           "type": "product",
           "id": "product",
           "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
         }
       ]
     }

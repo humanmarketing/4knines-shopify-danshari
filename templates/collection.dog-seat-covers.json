@@ -6,31 +6,41 @@
         "e2f5cb66-9729-4c09-ba3b-bf217ac9845b": {
           "type": "collection",
           "settings": {
-            "collection": "back-seat-covers-for-dogs-pets"
+            "collection": "back-seat-covers-for-dogs-pets",
+            "title": "Back Seat Covers",
+            "description": ""
           }
         },
         "6b32f599-2a4b-4c92-bb48-85279e357998": {
           "type": "collection",
           "settings": {
-            "collection": "cargo-liners"
+            "collection": "cargo-liners",
+            "title": "",
+            "description": ""
           }
         },
         "5a2e7d0b-ed03-4ab3-b446-723658156ade": {
           "type": "collection",
           "settings": {
-            "collection": "truck-seat-covers"
+            "collection": "truck-seat-covers",
+            "title": "Truck Seat Covers",
+            "description": ""
           }
         },
         "40b3e908-6be9-436e-a090-ac9b5aaa49e0": {
           "type": "product",
           "settings": {
-            "product": "bucket-seat-cover-for-dogs-and-pets-for-cars-trucks-and-suvs"
+            "product": "bucket-seat-cover-for-dogs-and-pets-for-cars-trucks-and-suvs",
+            "title": "Front Seat Covers",
+            "description": "Our premium bucket front seat cover for cars, trucks and SUVs is a must-have accessory for pet owners who want to keep their vehicle clean."
           }
         },
         "8de1b3de-ba3d-48b3-adf2-6575d572722b": {
           "type": "product",
           "settings": {
-            "product": "car-door-covers-for-cars-trucks-and-suvs-two-door-guards-one-for-each-side"
+            "product": "car-door-covers-for-cars-trucks-and-suvs-two-door-guards-one-for-each-side",
+            "title": "Car Door Covers",
+            "description": "4Knines car door covers protect your doors from dog scratches, dirt and other damage. Comes in a set of two."
           }
         }
       },
