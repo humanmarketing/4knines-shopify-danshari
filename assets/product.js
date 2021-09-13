@@ -4,13 +4,33 @@
 
 let form = document.querySelector('form[action="/cart/add"]')
 let variantSelector = form.querySelector('select[name="id"]')
+let variantOptions = ['size', 'color']
+
 form.addEventListener('change', () => {
   let formData = new FormData(form)
-  let size_and_color = [formData.get('size'), formData.get('color')].join` / `
-  let newlySelectedVariant = Array.from(variantSelector.options).find(option => option.text.includes(size_and_color))
+  variantOptions.forEach(option => {
+    let optionPreview = form.querySelector(`[data-option-preview="${ option }"]`)
+    optionPreview && (optionPreview.innerHTML = formData.get(option))
+  })
+
+  let selectedValues = variantOptions.map(option => formData.get(option)).join` / `
+  let newlySelectedVariant = Array.from(variantSelector.options).find(option => option.text.includes(selectedValues))
 
   variantSelector.value = newlySelectedVariant.value
+
+  let { selectedPrice, selectedCompareAtPrice } = newlySelectedVariant.dataset
+  form.querySelector('[data-price]').innerHTML = formatPrice(selectedPrice)
+  if (form.querySelector('[data-compare-at-price]')) {
+    form.querySelector('[data-compare-at-price]').innerHTML = formatPrice(selectedCompareAtPrice)
+  }
+
+  window.history.replaceState(null, null, `?variant=${ newlySelectedVariant.value }`)
 })
+
+function formatPrice(value) {
+  const { format } = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+  return `$${ format(value / 100) }`
+}
 
 /* product recommendations */
 

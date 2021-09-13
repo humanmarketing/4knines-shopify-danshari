@@ -1,0 +1,43 @@
+{%- assign images = section.blocks | where: 'type', 'image' | map: 'settings' | map: 'image' -%}
+
+<figure class="section-image-interlude desktop-and-up" style="--col: {{ images.size }};">
+  {%- for image in images -%}
+    <img
+      {% render 'srcset', image: image, width: 800 %}
+      alt="{{ image.alt }}" loading="lazy" draggable="false"
+    />
+  {%- endfor -%}
+</figure>
+
+{% stylesheet %}
+  .section-image-interlude {
+    display: grid;
+    grid-template-columns: repeat(var(--col), 1fr);
+  }
+
+  .section-image-interlude img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Image interlude",
+  "tag": "section",
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

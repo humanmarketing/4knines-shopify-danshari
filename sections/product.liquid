@@ -4,13 +4,22 @@
   <div class="sticky richtext">
     <h1 class="h2 text-accent-2">{{ product.title }}</h1>
 
-    {%- comment -%}
-    {%- if product.description -%}
-      <div class="richtext">{{ product.description }}</div>
-    {%- endif -%}
-    {%- endcomment -%}
-
     {% render 'product-form' %}
+
+    <ul class="product-mini-features unstyled">
+      <li class="with-icon">
+        <!--  -->
+        Free Shipping
+      </li>
+      <li class="with-icon">
+        <!--  -->
+        Lifetime Warranty
+      </li>
+      <li class="with-icon">
+        <!--  -->
+        30 Day Returns
+      </li>
+    </ul>
   </div>
 </div>
 
@@ -27,6 +36,15 @@
     gap: 2rem;
     align-items: end;
   }
+
+  .product-mini-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .product-mini-features svg { color: var(--accent-3); }
 
   .recommendation-product-list {
     display: grid;

@@ -1,0 +1,25 @@
+{%- comment -%}
+  option
+{%- endcomment -%}
+
+<fieldset>
+  <legend class="font-heading">
+    <small>
+      {{ option.name }}
+      <b data-option-preview="{{ option.name | handleize }}">{{ option.selected_value }}</b>
+    </small>
+  </legend>
+
+  {%- for value in option.values -%}
+    <input
+      id="{{ option.name }}-{{ forloop.index }}"
+      name="{{ option.name | handleize }}"
+      value="{{ value | escape }}"
+      type="radio"
+      {% if option.selected_value == value %}checked{% endif %}
+    />
+    <label for="{{ option.name }}-{{ forloop.index }}">
+      {{ value }}
+    </label>
+  {%- endfor -%}
+</fieldset>

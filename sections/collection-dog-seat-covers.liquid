@@ -45,12 +45,9 @@
     margin-top: 4rem;
   }
 
-  .subcategory-item:nth-child(-n + 2) { grid-column: span 3; }
-  .subcategory-item:not(:nth-child(-n + 2)) { grid-column: span 2; }
-
   .subcategory-products {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-top: 2rem;
   }
@@ -61,6 +58,13 @@
       grid-template-columns: repeat(6, 1fr);
       gap: 4rem;
     }
+
+    .subcategory-products {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .subcategory-item:nth-child(-n + 2) { grid-column: span 3; }
+    .subcategory-item:not(:nth-child(-n + 2)) { grid-column: span 2; }
   }
 
   /* large */

@@ -54,6 +54,29 @@
       "settings": {
       }
     },
+    "image-interlude": {
+      "type": "image-interlude",
+      "blocks": {
+        "d6123a5c-d2ea-4fcb-ac22-3b98e183eada": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dog-seat-cover-hero-1.png"
+          }
+        },
+        "80ef9db5-fbe8-4a29-aa6a-f5913668e0c2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dog-seat-cover-hero-2.png"
+          }
+        }
+      },
+      "block_order": [
+        "d6123a5c-d2ea-4fcb-ac22-3b98e183eada",
+        "80ef9db5-fbe8-4a29-aa6a-f5913668e0c2"
+      ],
+      "settings": {
+      }
+    },
     "testimonial-and-social": {
       "type": "testimonial-and-social",
       "settings": {
@@ -115,6 +138,7 @@
   },
   "order": [
     "collection",
+    "image-interlude",
     "testimonial-and-social",
     "features-multi-col",
     "split-cover-tech",

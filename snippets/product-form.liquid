@@ -2,29 +2,25 @@
 
 {% form 'product', product, class: 'richtext' %}
   {%- unless product.has_only_default_variant -%}
-    {%- for option in product.options_with_values -%}
-      <fieldset>
-        <legend>{{ option.name }}</legend>
-
-        {%- for value in option.values -%}
-          <input
-            id="{{ option.name }}-{{ forloop.index }}"
-            name="{{ option.name | handleize }}"
-            value="{{ value | escape }}"
-            type="radio"
-            {% if option.selected_value == value %}checked{% endif %}
-          />
-          <label for="{{ option.name }}-{{ forloop.index }}">
-            {{ value }}
-          </label>
-        {%- endfor -%}
-      </fieldset>
-    {%- endfor -%}
+    {%- liquid
+      for option in product.options_with_values
+        case option.name
+          when 'Size'
+            render 'variant-selector-size', option: option
+          when 'Color'
+            render 'variant-selector-color', option: option
+          else
+            render 'variant-selector', option: option
+        endcase
+      endfor
+    -%}
 
     <select name="id" class="input" hidden>
       {%- for variant in product.variants -%}
         <option
           value="{{ variant.id }}"
+          data-selected-price="{{ variant.price }}"
+          data-selected-compare-at-price="{{ variant.compare_at_price }}"
           {% if variant == product.selected_or_first_available_variant -%}selected{%- endif %}
           {% unless variant.available %}disabled{% endunless %}
         >
@@ -42,9 +38,9 @@
 
     <div class="h3 text-right">
       {%- if product.compare_at_price > product.price -%}
-        <s><small>{{ product.compare_at_price | money }}</small></s>
+        <s><small data-compare-at-price>{{ product.compare_at_price | money }}</small></s>
       {%- endif %}
-      {{ product.price | money }}
+      <span data-price>{{ product.price | money }}</span>
     </div>
   </div>
 

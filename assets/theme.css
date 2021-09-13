@@ -707,7 +707,8 @@ summary.unset::-webkit-details-marker { display: none; }
 
 /* tablet-and-up */
 @media screen and (min-width: 429px) {
-  .footer:(::before, ::after) {
+  .footer::before,
+  .footer::after {
     content: '';
     top: 0;
   }
@@ -785,7 +786,7 @@ summary.unset::-webkit-details-marker { display: none; }
   }
 }
 
-/* collection + PDP */
+/* collection */
 
 .collection-nav {
   display: flex;
@@ -835,6 +836,49 @@ summary.unset::-webkit-details-marker { display: none; }
 .product-item.small > * + *,
 .product-item.small .richtext > * + * {
   margin-top: 0.5rem;
+}
+
+/* PDP */
+
+.variant-selector-size legend a {
+  margin-left: 1ch;
+}
+
+.size-swatch {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.25em;
+  padding: var(--button-padding);
+  min-width: 5ch;
+  text-align: center;
+  border: 1px solid currentColor;
+  border-radius: 4em;
+}
+
+input:checked + .size-swatch {
+  border-color: var(--accent-1);
+}
+
+.color-swatch {
+  --size: 30px;
+  cursor: pointer;
+  display: inline-block;
+  width: var(--size); height: var(--size);
+  margin-right: 0.25rem;
+  border-radius: 100%;
+  background: var(--bg) center/cover no-repeat;
+  border: 2px solid #fff;
+}
+
+.color-swatch.small { --size: 20px; }
+
+.color-swatch[title="Black"] { background-image: url('//cdn.shopify.com/s/files/1/0711/6333/t/50/assets/black_50x.png'); }
+.color-swatch[title="Grey"] { background-image: url('//cdn.shopify.com/s/files/1/0711/6333/t/50/assets/grey_50x.png'); }
+.color-swatch[title="Tan"] { background-image: url('//cdn.shopify.com/s/files/1/0711/6333/t/50/assets/tan_50x.png'); }
+.color-swatch[title="Camo"] { background-image: url('//cdn.shopify.com/s/files/1/0711/6333/t/50/assets/camo_50x.png'); }
+
+input:checked + .color-swatch {
+  box-shadow: var(--outline);
 }
 
 /* richtext */
