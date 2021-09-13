@@ -1,6 +1,6 @@
 {%- assign promo = section.blocks | where: 'type', 'promo' | map: 'settings' | first -%}
 
-<div class="section-hero section-padding-lg side-padding {% if promo.enabled %}promo-enabled{% endif %}">
+<div class="section-hero padding-lg {% if promo.enabled %}promo-enabled{% endif %}">
   {%- if section.settings.image_desktop -%}
     <picture class="section-hero-img">
       {%- if section.settings.image_mobile -%}
@@ -38,7 +38,7 @@
 
 {%- if promo.enabled -%}
   <article
-    class="section-promo section-padding-lg side-padding bg text-center richtext"
+    class="section-promo padding-lg bg text-center richtext"
     style="--bg-img: url('{{ 'wave-right-top-bottom-lg.png' | asset_url }}');"
   >
     <h2 class="h1">{{ promo.heading }}</h2>

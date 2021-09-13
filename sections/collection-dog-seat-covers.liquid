@@ -20,26 +20,21 @@
 
 {% stylesheet %}
   .subcategory-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
     margin-top: 2rem;
   }
 
-  .subcategory-item:nth-child(-n + 2) {
-
-  }
-
-  .subcategory-item:not(:nth-child(-n + 2)) {
-
-  }
+  .subcategory-item:nth-child(-n + 2) { grid-column: span 3; }
+  .subcategory-item:not(:nth-child(-n + 2)) { grid-column: span 2; }
 {% endstylesheet %}
 
 {% schema %}
 {
   "name": "Collection",
   "tag": "article",
-  "class": "section-collection container section-padding-lg side-padding",
+  "class": "section-collection container padding-lg",
   "blocks": [
     {
       "type": "collection",

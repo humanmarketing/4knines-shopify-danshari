@@ -1,4 +1,4 @@
-<header class="multi-col center container section-padding-lg side-padding" style="--col: 3;">
+<header class="multi-col center container padding-lg" style="--col: 3;">
   <h2 class="h2 text-accent-2">{{ section.settings.heading }}</h2>
   <p class="pack-3-desc">{{ section.settings.description }}</p>
 </header>
@@ -6,7 +6,7 @@
 <ul class="multi-col center" style="--col: 3; gap: 0;">
   {%- assign items = section.blocks | where: 'type', 'item' | map: 'settings' -%}
   {%- for item in items -%}
-    <li class="pack-3-item section-padding side-padding text-center">
+    <li class="pack-3-item padding text-center">
       <img
         {% render 'srcset', image: item.image, width: 800 %}
         alt="{{ item.cta_labe }}" loading="lazy" draggable="false"

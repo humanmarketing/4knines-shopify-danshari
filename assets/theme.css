@@ -74,10 +74,12 @@ summary.unset::-webkit-details-marker { display: none; }
   margin-inline: auto;
 }
 
-.section-padding { padding-block: var(--section-padding); }
-.section-padding-lg { padding-block: var(--section-padding-lg); }
+.padding-x { padding-inline: var(--padding-x) }
+.padding-y { padding-block: var(--padding-y); }
+.padding-y-lg { padding-block: var(--padding-y-lg); }
 
-.side-padding { padding-inline: clamp(1rem, 3vw, 2rem); }
+.padding { padding: var(--padding-y) var(--padding-x); }
+.padding-lg { padding: var(--padding-y-lg) var(--padding-x); }
 
 .multi-col {
   display: grid;

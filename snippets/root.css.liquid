@@ -43,8 +43,9 @@
   --container-width: {{ settings.container_width }}px;
   --container-sm-width: {{ settings.container_sm_width }}px;
 
-  --section-padding: {{ settings.section_padding }}rem;
-  --section-padding-lg: {{ settings.section_padding | times: 2 }}rem;
+  --padding-x: clamp(1rem, 3vw, 2rem);
+  --padding-y: {{ settings.section_padding }}rem;
+  --padding-y-lg: {{ settings.section_padding | times: 2 }}rem;
 
   --button-padding: 0.5em 1em;
   --button-padding-lg: 1em 1.5em;
