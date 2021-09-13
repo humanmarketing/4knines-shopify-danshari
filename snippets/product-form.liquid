@@ -15,7 +15,7 @@
       endfor
     -%}
 
-    <select name="id" class="input" hidden>
+    <select name="id" class="input">
       {%- for variant in product.variants -%}
         <option
           value="{{ variant.id }}"

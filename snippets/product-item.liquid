@@ -20,6 +20,7 @@
     />
     <p class="product-item-title h5">{{ product.title }}</p>
   </a>
+
   <div class="product-item-price-rating">
     <p>
       {%- if product.compare_at_price > product.price -%}
@@ -30,4 +31,20 @@
     <!-- TODO: add rating -->
     <p>★</p>
   </div>
+
+  {%- unless product.has_only_default_variant -%}
+    {%- assign colors = product.options_with_values | where: 'name', 'Color' | map: 'values' | first -%}
+    <div>
+      {%- for color in colors -%}
+        {%- liquid
+          for variant in product.variants
+            if variant.title contains color
+              assign url = variant.url
+            endif
+          endfor
+        -%}
+        <a href="{{ url }}" class="color-swatch small" title="{{ color }}"></a>
+      {%- endfor -%}
+    </div>
+  {%- endunless -%}
 </article>
