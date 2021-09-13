@@ -1,7 +1,4 @@
-{%- liquid
-  assign ft_collection = section.settings.collection
-  assign subcategories = section.blocks | where: 'type', 'subcategory' | map: 'settings'
--%}
+{%- assign ft_collection = section.settings.collection -%}
 
 <figure class="ft-coll-img desktop-and-up">
   {%- assign ft_coll_img = section.settings.image | default: ft_collection.featured_image -%}
@@ -22,18 +19,26 @@
     </a>
   </h2>
   <p>{{ section.settings.description | default: ft_collection.description }}</p>
+
   <ul class="ft-coll-subcat-list unstyled">
-    {%- for subcategory in subcategories -%}
-      {%- assign object = subcategory.url.object -%}
+    {%- for block in section.blocks -%}
+      {%- liquid
+        case block.type
+          when 'collection'
+            assign subcategory = block.settings.collection
+          when 'product'
+            assign subcategory = block.settings.product
+        endcase
+      -%}
       <li>
         <a href="{{ subcategory.url }}" class="link">
           <figure>
             <img
-              {% render 'srcset', image: object.featured_image, width: 200 %}
-              alt="{{ object.title }}"
+              {% render 'srcset', image: subcategory.featured_image, width: 200 %}
+              alt="{{ block.settings.title | default: subcategory.title }}"
             />
           </figure>
-          <p>{{ subcategory.title | default: object.title }}</p>
+          <p>{{ block.settings.title | default: subcategory.title }}</p>
         </a>
       </li>
     {%- endfor -%}
@@ -108,14 +113,29 @@
   ],
   "blocks": [
     {
-      "type": "subcategory",
-      "name": "subcategory",
+      "type": "collection",
+      "name": "Collection",
       "settings": [
         {
-          "type": "url",
-          "id": "url",
-          "label": "Subcategory",
-          "info": "Choose either a Product or Collection"
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    },
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
         },
         {
           "type": "text",
