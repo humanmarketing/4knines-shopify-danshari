@@ -45,6 +45,10 @@
   {%- if settings.predictive_search_enabled -%}
     {% render 'predictive-search' %}
   {%- endif -%}
+
+  {%- if request.page_type == 'collection' or request.page_type == 'product' -%}
+    <script async type="text/javascript" data-api-key="" id="stamped-script-widget" src="https://cdn-stamped-io.azureedge.net/files/widget.min.js"></script>
+  {%- endif -%}
 </body>
 
 </html>

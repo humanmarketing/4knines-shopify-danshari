@@ -4,21 +4,21 @@
   <div class="sticky richtext">
     <h1 class="h2 text-accent-2">{{ product.title }}</h1>
 
+    <div
+      class="stamped-product-reviews-badge stamped-main-badge"
+      data-id="{{ product.id }}"
+      data-product-sku="{{ product.handle }}"
+      data-product-title="{{ product.title }}"
+      data-product-type="{{ product.type }}">
+      {{ product.metafields.stamped.badge }}
+    </div>
+
     {% render 'product-form' %}
 
     <ul class="product-mini-features unstyled">
-      <li class="with-icon">
-        <!--  -->
-        Free Shipping
-      </li>
-      <li class="with-icon">
-        <!--  -->
-        Lifetime Warranty
-      </li>
-      <li class="with-icon">
-        <!--  -->
-        30 Day Returns
-      </li>
+      <li class="with-icon">{% render 'icon-free' %} Free Shipping</li>
+      <li class="with-icon"><!--  --> Lifetime Warranty</li>
+      <li class="with-icon">{% render 'icon-30' %} 30 Day Returns</li>
     </ul>
   </div>
 </div>
@@ -29,6 +29,15 @@
 
 {% stylesheet %}
   .section-product { gap: 2rem; }
+
+  .section-product .stamped-badge {
+    display: flex;
+    align-items: center;
+  }
+
+  .section-product .stamped-badge-caption {
+    margin-left: 1ch;
+  }
 
   .qty-and-price {
     display: grid;
@@ -44,7 +53,10 @@
     margin-top: 2rem;
   }
 
-  .product-mini-features svg { color: var(--accent-3); }
+  .product-mini-features svg {
+    color: var(--accent-3);
+    height: 2em;
+  }
 
   .recommendation-product-list {
     display: grid;

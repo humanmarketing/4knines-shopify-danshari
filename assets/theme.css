@@ -152,6 +152,8 @@ summary.unset::-webkit-details-marker { display: none; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 
+.uppercase { text-transform: uppercase; }
+
 /* colors */
 
 .text-dark { color: var(--text-dark); }
@@ -823,15 +825,27 @@ summary.unset::-webkit-details-marker { display: none; }
   width: 100%;
 }
 
-.product-item-price-rating {
+.product-item .price-rating {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 1rem;
   align-items: center;
 }
 
+.product-item .stamped-product-reviews-badge :is(.stamped-starrating, .stamped-badge-caption) {
+  display: none;
+}
+
+.product-item .stamped-badge {
+  font-size: 0.8em;
+}
+
+.product-item .stamped-badge::before {
+  content: '★'attr(data-rating);
+}
+
 .product-item.small .product-item-title,
-.product-item.small .product-item-price-rating p {
+.product-item.small .price-rating p {
   font-size: 0.8rem;
 }
 

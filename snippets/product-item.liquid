@@ -21,15 +21,22 @@
     <p class="product-item-title h5">{{ product.title }}</p>
   </a>
 
-  <div class="product-item-price-rating">
+  <div class="price-rating">
     <p>
       {%- if product.compare_at_price > product.price -%}
         <s><small>{{ product.compare_at_price | money }}</small></s>
       {%- endif %}
       {{ product.price | money }}
     </p>
-    <!-- TODO: add rating -->
-    <p>★</p>
+
+    <div
+      class="stamped-product-reviews-badge"
+      data-id="{{ product.id }}"
+      data-product-sku="{{ product.handle }}"
+      data-product-type="{{ product.type }}"
+      data-product-title="{{ product.title }}">
+      {{ product.metafields.stamped.badge }}
+    </div>
   </div>
 
   {%- unless product.has_only_default_variant -%}

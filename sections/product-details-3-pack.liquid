@@ -1,0 +1,110 @@
+<div class="pd3 padding-lg" style="--bg-img: url({{ 'wave-top-left-lg.png' | asset_url }});">
+  <header class="container-half text-center richtext">
+    <h2 class="h3">{{ section.settings.heading | default: product.title }}</h2>
+    <p>{{ section.settings.description }}</p>
+    <figure class="pd3-logo">
+      <img
+        {% render 'srcset', image: settings.logo, width: 300 %}
+        alt="{{ shop.name }}" loading="lazy"
+      />
+    </figure>
+    <p class="font-heading uppercase"><small>The 4Knines Difference</small></p>
+  </header>
+
+  <ul class="pd3-list container multi-col" style="--col: 3;">
+    {%- assign cards = section.blocks | where: 'type', 'card' | map: 'settings' -%}
+    {%- for card in cards -%}
+      <li class="richtext">
+        <figure>
+          <img
+            {% render 'srcset', image: card.image, width: 500 %}
+            alt="{{ card.image.alt | default: card.heading }}"
+          >
+        </figure>
+        <h3 class="h3 text-accent-2">{{ card.heading }}</h3>
+        <p>{{ card.description }}</p>
+        {%- if card.cta_link -%}
+          <p><a href="{{ card.cta_link }}" class="link accent-1">{{ card.cta_label }} ></a></p>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
+
+{% stylesheet %}
+  .pd3 { position: relative; }
+
+  .pd3::before {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    left: 0; top: 0;
+    display: inline-block;
+    width: 50%;
+    height: 200px;
+    background: var(--bg-img) top left/contain no-repeat;
+  }
+
+  .pd3 > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .pd3-logo { margin-top: 2rem; }
+  .pd3-logo img { width: 180px; }
+
+  .pd3-list { margin-top: 2rem; }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Product details (3-pack)",
+  "tag": "section",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "CTA label"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "CTA link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

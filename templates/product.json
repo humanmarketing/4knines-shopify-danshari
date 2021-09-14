@@ -16,10 +16,65 @@
         "avatar": "shopify:\/\/shop_images\/testimonial-avatar.png",
         "show_social": false
       }
+    },
+    "product-details-3-pack": {
+      "type": "product-details-3-pack",
+      "blocks": {
+        "44dbb6c5-67ae-444d-8e92-502056070453": {
+          "type": "card",
+          "settings": {
+            "heading": "Design and Function Meet Convenience",
+            "description": "Our unique patented technology lets you fold down seats 60\/40, 50\/50 split, and center armrest pass-through without removing the cover.",
+            "cta_label": "",
+            "cta_link": "",
+            "image": "shopify:\/\/shop_images\/design-and-function-5.png"
+          }
+        },
+        "80d8b4a9-049e-44d0-8d7a-e068bb829ac6": {
+          "type": "card",
+          "settings": {
+            "heading": "High-Quality Products Built to Last",
+            "description": "Our cargo liners are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. The colorfast fabrics won’t fade. We also offer a lifetime warranty on every product.",
+            "cta_label": "Watch the Material Breakdown Comparison",
+            "cta_link": "#",
+            "image": "shopify:\/\/shop_images\/multi-layer-construction.png"
+          }
+        },
+        "26a8eece-a63b-48f4-afca-30948d936e03": {
+          "type": "card",
+          "settings": {
+            "heading": "Keeping Pets Safe, Happy and Healthy",
+            "description": "Our cargo liners feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
+            "cta_label": "",
+            "cta_link": "",
+            "image": "shopify:\/\/shop_images\/keeping-pets-safe-8.png"
+          }
+        }
+      },
+      "block_order": [
+        "44dbb6c5-67ae-444d-8e92-502056070453",
+        "80d8b4a9-049e-44d0-8d7a-e068bb829ac6",
+        "26a8eece-a63b-48f4-afca-30948d936e03"
+      ],
+      "settings": {
+        "heading": "SUV Cargo Liner For Fold Down Seats",
+        "description": "The 4Knines Multi-Function Dog Split SUV Cargo Liner is a must for anyone owning a dog or pet wanting to keep their vehicle nice and tidy."
+      }
+    },
+    "product-details-tabs": {
+      "type": "product-details-tabs"
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "settings": {
+      }
     }
   },
   "order": [
     "product",
-    "testimonial-and-social"
+    "testimonial-and-social",
+    "product-details-3-pack",
+    "product-details-tabs",
+    "product-reviews"
   ]
 }
