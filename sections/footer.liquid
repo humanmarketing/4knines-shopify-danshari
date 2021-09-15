@@ -1,66 +1,64 @@
-<div class="footer" style="
+<div class="footer container padding-x" style="
   --bg-top-left: url({{ 'wave-top-left.png' | asset_url }});
   --bg-top-right: url({{ 'wave-top-right.png' | asset_url }});
   --bg-left-right: url({{ 'wave-left-right.png' | asset_url }});
 ">
-  <div class="container padding-x">
-    {% render 'questions-menu' %}
+  {% render 'questions-menu' %}
 
-    {%- if section.settings.navigation.links != blank -%}
-      <ul class="footer-links">
-        {%- for link in section.settings.navigation.links -%}
-          <li>
-            <div class="footer-links-title">
-              <a href="{{ link.url }}" class="link accent-2 with-icon-full">
-                {{ link.title }}
-                <span class="mobile">{% render 'icon-chevron-right' %}</span>
-              </a>
-            </div>
-
-            {%- if link.links != blank -%}
-              <ul class="tablet-and-up">
-                {%- for child in link.links -%}
-                  <li class="footer-links-child">
-                    {%- if child.title == 'Vehicle Fit Guide' -%}<br>{%- endif -%}
-                    <a href="{{ child.url }}" class="link accent-2">{{ child.title }}</a>
-                  </li>
-                {%- endfor -%}
-              </ul>
-            {%- endif -%}
-          </li>
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
-
-    <div class="footer-bottom padding-y text-accent-2">
-      <p class="copyright">&copy; 2021 {{ shop.name }}</p>
-
-      <div class="social-links">
-        {%- assign socials = 'instagram,facebook,pinterest,youtube' | split: ',' -%}
-        {% for social in socials %}
-          {%- assign social_acc = 'social_' | append: social -%}
-          {%- assign social_icon = 'icon-' | append: social -%}
-          {%- if settings[social_acc] -%}
-            <a class="link accent-2" href="{{ settings[social_acc] }}" target="_blank" rel="noopener noreferrer">
-              {%- case social -%}
-                {%- when 'instagram' -%}{% render 'icon-instagram' %}
-                {%- when 'facebook' -%}{% render 'icon-facebook' %}
-                {%- when 'pinterest' -%}{% render 'icon-pinterest' %}
-                {%- when 'youtube' -%}{% render 'icon-youtube' %}
-              {%- endcase -%}
+  {%- if section.settings.navigation.links != blank -%}
+    <ul class="footer-links">
+      {%- for link in section.settings.navigation.links -%}
+        <li>
+          <div class="footer-links-title">
+            <a href="{{ link.url }}" class="link accent-2 with-icon-full">
+              {{ link.title }}
+              <span class="mobile">{% render 'icon-chevron-right' %}</span>
             </a>
-          {%- endif -%}
-        {% endfor %}
-      </div>
+          </div>
 
-      <ul class="bottom-links">
-        {%- for link in section.settings.bottom_links.links -%}
-          <li>
-            <a href="{{ link.url }}" class="link accent-2">{{ link.title }}</a>
-          </li>
-        {%- endfor -%}
-      </ul>
+          {%- if link.links != blank -%}
+            <ul class="tablet-and-up">
+              {%- for child in link.links -%}
+                <li class="footer-links-child">
+                  {%- if child.title == 'Vehicle Fit Guide' -%}<br>{%- endif -%}
+                  <a href="{{ child.url }}" class="link accent-2">{{ child.title }}</a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+  <div class="footer-bottom padding-y text-accent-2">
+    <p class="copyright">&copy; 2021 {{ shop.name }}</p>
+
+    <div class="social-links">
+      {%- assign socials = 'instagram,facebook,pinterest,youtube' | split: ',' -%}
+      {% for social in socials %}
+        {%- assign social_acc = 'social_' | append: social -%}
+        {%- assign social_icon = 'icon-' | append: social -%}
+        {%- if settings[social_acc] -%}
+          <a class="link accent-2" href="{{ settings[social_acc] }}" target="_blank" rel="noopener noreferrer">
+            {%- case social -%}
+              {%- when 'instagram' -%}{% render 'icon-instagram' %}
+              {%- when 'facebook' -%}{% render 'icon-facebook' %}
+              {%- when 'pinterest' -%}{% render 'icon-pinterest' %}
+              {%- when 'youtube' -%}{% render 'icon-youtube' %}
+            {%- endcase -%}
+          </a>
+        {%- endif -%}
+      {% endfor %}
     </div>
+
+    <ul class="bottom-links">
+      {%- for link in section.settings.bottom_links.links -%}
+        <li>
+          <a href="{{ link.url }}" class="link accent-2">{{ link.title }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
   </div>
 </div>
 

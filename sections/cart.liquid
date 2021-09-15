@@ -1,4 +1,4 @@
-<h1 class="h1 text-center">Cart</h1>
+<h1 class="h1">Cart</h1>
 
 {%- unless cart == empty -%}
   <section>
@@ -60,30 +60,15 @@
   </section>
 
 {%- else -%}
-  <div class="richtext text-center">
-    <p class="text-dark">Cart is empty</p>
-    {%- if section.settings.cta_link -%}
-      <p><a href="{{ section.settings.cta_link }}" class="link accent-1">{{ section.settings.cta_label }} ></a></p>
-    {%- endif -%}
-  </div>
+  <p class="text-dark">Cart is empty</p>
 {%- endunless -%}
 
 {% schema %}
 {
-  "name": "Cart",
-  "class": "section-cart container padding richtext",
+  "name": "Cart line items",
+  "class": "container padding richtext",
   "settings": [
-    {
-      "type": "text",
-      "id": "cta_label",
-      "label": "CTA label",
-      "default": "Continue shopping"
-    },
-    {
-      "type": "url",
-      "id": "cta_link",
-      "label": "CTA link"
-    }
+
   ]
 }
 {% endschema %}
