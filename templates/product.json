@@ -62,7 +62,37 @@
       }
     },
     "product-details-tabs": {
-      "type": "product-details-tabs"
+      "type": "product-details-tabs",
+      "blocks": {
+        "12e582d7-201f-4bd4-86f1-5f8471c19800": {
+          "type": "text",
+          "settings": {
+            "tab_label": "Dimensions & Size",
+            "heading": "Sized to Fit Your SUV"
+          }
+        },
+        "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6": {
+          "type": "video",
+          "settings": {
+            "tab_label": "Features",
+            "heading": "Waterproof & Non-Slip"
+          }
+        },
+        "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
+          "type": "video",
+          "settings": {
+            "tab_label": "Installation & Care",
+            "heading": "Installs in seconds with quick-release clips"
+          }
+        }
+      },
+      "block_order": [
+        "12e582d7-201f-4bd4-86f1-5f8471c19800",
+        "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
+        "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
+      ],
+      "settings": {
+      }
     },
     "product-reviews": {
       "type": "product-reviews",

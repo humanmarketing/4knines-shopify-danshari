@@ -1,15 +1,129 @@
-<div class="container padding-lg">
-  product-details-tabs
+<div class="section-pdp-tabs padding-lg container">
+  <div class="pdp-tabs-list desktop-and-up">
+    {%- for block in section.blocks -%}
+      <label for="pdp-tab-{{ forloop.index }}" class="pdp-tab-item h4">{{ block.settings.tab_label }}</label>
+    {%- endfor -%}
+  </div>
+
+  {%- for block in section.blocks -%}
+    <div class="pdp-tab-group">
+      <input name="pdp-tabs" id="pdp-tab-{{ forloop.index }}" type="radio" hidden{% if forloop.first %} checked{% endif %}>
+      <label for="pdp-tab-{{ forloop.index }}" class="pdp-tab-item h4 tablet">{{ block.settings.tab_label }}</label>
+
+      {%- case block.type -%}
+        {%- when 'text' -%}
+          <div class="pdp-tab-content padding richtext text-center">
+            <h3 class="h3 text-accent-2">{{ block.settings.heading }}</h3>
+          </div>
+        {%- when 'video' -%}
+          <div class="pdp-tab-content padding multi-col">
+            <div>
+              <h3 class="h3 text-accent-2">{{ block.settings.heading }}</h3>
+            </div>
+
+            <figure>
+              video
+            </figure>
+          </div>
+      {%- endcase -%}
+    </div>
+  {%- endfor -%}
 </div>
 
 {% stylesheet %}
+  .pdp-tabs-list {
+    display: flex;
+    gap: 2rem;
+    max-width: -webkit-max-content;
+    max-width: max-content;
+    margin-inline: auto;
+  }
 
+  .pdp-tabs-list .pdp-tab-item:hover {
+    color: var(--accent-1);
+  }
+
+  .pdp-tab-item { cursor: pointer; }
+
+  .pdp-tab-item.tablet {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5ch;
+    align-items: center;
+    padding: 1rem var(--padding-x);
+    color: var(--accent-2);
+  }
+
+  .pdp-tab-item.tablet::after {
+    content: '+';
+    color: var(--accent-1);
+  }
+
+  .pdp-tab-group:not(:first-of-type) .pdp-tab-item.tablet {
+    border-top: 1px solid #fff;
+  }
+
+  .pdp-tab-content {
+    animation: pdp-tab-content var(--t) forwards;
+  }
+
+  @keyframes pdp-tab-content {
+    from {
+      opacity: 0;
+      transform: var(--pdp-tab-content-anim, translateX(-1rem));
+    }
+  }
+
+  input[name="pdp-tabs"]:not(:checked) ~ .pdp-tab-content { display: none; }
+
+  /* tablet */
+  @media screen and (max-width: 768px) {
+    .section-pdp-tabs { padding: 0; }
+
+    .pdp-tab-content {
+      --pdp-tab-content-anim: translateY(-1rem);
+    }
+  }
 {% endstylesheet %}
 
 {% schema %}
 {
   "name": "Product details tabs",
   "tag": "section",
-  "class": "bg"
+  "class": "bg",
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_label",
+          "label": "Tab label"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_label",
+          "label": "Tab label"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}
