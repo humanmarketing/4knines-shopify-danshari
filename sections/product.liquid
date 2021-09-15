@@ -1,7 +1,7 @@
 {% render 'product-images' %}
 
 <div class="section-product-txt">
-  <div class="sticky richtext">
+  <div class="sticky">
     <h1 class="h2 text-accent-2">{{ product.title }}</h1>
 
     <div
@@ -13,11 +13,26 @@
       {{ product.metafields.stamped.badge }}
     </div>
 
+    <ul class="unstyled">
+      {%- assign icon_and_text = section.blocks | where: 'type', 'icon-and-text' | map: 'settings' -%}
+      {%- for item in icon_and_text -%}
+        <li class="product-icon-text">
+          <figure>
+            <img
+              {% render 'srcset', image: item.icon, width: 100 %}
+              alt="{{ item.icon.alt }}" loading="lazy"
+            />
+          </figure>
+          {{ item.description }}
+        </li>
+      {%- endfor -%}
+    </ul>
+
     {% render 'product-form' %}
 
     <ul class="product-mini-features unstyled">
       <li class="with-icon">{% render 'icon-free' %} Free Shipping</li>
-      <li class="with-icon"><!--  --> Lifetime Warranty</li>
+      <li class="with-icon">{% render 'icon-warranty' %} Lifetime Warranty</li>
       <li class="with-icon">{% render 'icon-30' %} 30 Day Returns</li>
     </ul>
   </div>
@@ -26,18 +41,29 @@
 {% render 'product-recommendations' %}
 
 <script src="{{ 'product.min.js' | asset_url }}" defer></script>
+<script src="https://fast.wistia.com/embed/medias/7wnoi46o2c.jsonp" async></script>
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 
 {% stylesheet %}
   .section-product { gap: 2rem; }
+
+  .section-product-txt > div > * + * { margin-top: 2rem; }
 
   .section-product .stamped-badge {
     display: flex;
     align-items: center;
   }
 
-  .section-product .stamped-badge-caption {
-    margin-left: 1ch;
+  .section-product .stamped-badge-caption { margin-left: 1ch; }
+
+  .product-icon-text {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 1rem;
+    align-items: center;
   }
+
+  .product-icon-text + .product-icon-text { margin-top: 1rem; }
 
   .qty-and-price {
     display: grid;
@@ -47,15 +73,13 @@
   }
 
   .product-mini-features {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
   }
 
   .product-mini-features svg {
     color: var(--accent-3);
-    height: 2em;
+    height: 1.7em;
   }
 
   .recommendation-product-list {
@@ -98,6 +122,24 @@
       "label": "Show dynamic checkout buttons",
       "default": false,
       "info": "[More info](https://help.shopify.com/en/manual/online-store/dynamic-checkout?shpxid=504f73d0-655A-4E82-8958-225D920D5247)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon-and-text",
+      "name": "Icon & text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        }
+      ]
     }
   ]
 }

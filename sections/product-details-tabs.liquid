@@ -1,4 +1,4 @@
-<div class="section-pdp-tabs padding-lg container">
+<div id="product-tabs" class="section-pdp-tabs padding-lg container">
   <div class="pdp-tabs-list desktop-and-up">
     {%- for block in section.blocks -%}
       <label for="pdp-tab-{{ forloop.index }}" class="pdp-tab-item h4">{{ block.settings.tab_label }}</label>
@@ -12,17 +12,31 @@
 
       {%- case block.type -%}
         {%- when 'text' -%}
-          <div class="pdp-tab-content padding richtext text-center">
+          <div class="pdp-tab-content padding-x richtext text-center">
             <h3 class="h3 text-accent-2">{{ block.settings.heading }}</h3>
+            {%- if block.settings.cta_link -%}
+              <p><a href="{{ block.settings.cta_link }}" class="link accent-1">{{ block.settings.cta_label }} ></a></p>
+            {%- endif -%}
+            {%- if block.settings.image -%}
+              <figure>
+                <img
+                  {% render 'srcset', image: block.settings.image, width: 1000 %}
+                  alt="{{ block.settings.image.alt }}" loading="lazy"
+                />
+              </figure>
+            {%- endif -%}
+            {{ block.settings.description }}
           </div>
+
         {%- when 'video' -%}
-          <div class="pdp-tab-content padding multi-col">
-            <div>
-              <h3 class="h3 text-accent-2">{{ block.settings.heading }}</h3>
+          <div class="pdp-tab-content padding-x multi-col center">
+            <div class="richtext">
+              <h3 class="h2 text-accent-2">{{ block.settings.heading }}</h3>
+              {{ block.settings.description }}
             </div>
 
-            <figure>
-              video
+            <figure class="video-wrapper">
+              {{ block.settings.video_html }}
             </figure>
           </div>
       {%- endcase -%}
@@ -64,6 +78,7 @@
   }
 
   .pdp-tab-content {
+    margin-top: 2rem;
     animation: pdp-tab-content var(--t) forwards;
   }
 
@@ -73,6 +88,15 @@
       transform: var(--pdp-tab-content-anim, translateX(-1rem));
     }
   }
+
+  .pdp-tab-content a {
+    color: var(--accent-1);
+    text-decoration: none;
+  }
+  .pdp-tab-content a:hover { text-decoration: underline; }
+
+  .pdp-tab-content .video-wrapper { min-width: 0; }
+  .pdp-tab-content .video-wrapper > div { max-width: 100%; }
 
   input[name="pdp-tabs"]:not(:checked) ~ .pdp-tab-content { display: none; }
 
@@ -105,6 +129,27 @@
           "type": "text",
           "id": "heading",
           "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "CTA label",
+          "default": "Watch the Cargo Liner Fit Guide"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "CTA link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
         }
       ]
     },
@@ -121,6 +166,17 @@
           "type": "text",
           "id": "heading",
           "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "html",
+          "id": "video_html",
+          "label": "Video HTML",
+          "info": "Paste Wistia embed code"
         }
       ]
     }

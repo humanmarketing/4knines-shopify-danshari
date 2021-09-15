@@ -2,6 +2,33 @@
   "sections": {
     "product": {
       "type": "product",
+      "blocks": {
+        "25717663-f371-4684-922a-62c61190b671": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Patented Split Technology: 60\/40 or 50\/50 split seat and\/or center cargo pass-through.",
+            "icon": "shopify:\/\/shop_images\/icon-design.png"
+          }
+        },
+        "4b54794b-a38b-4a2f-b23e-764e2b59d075": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Heavy Duty Liner: High quality durable 600 Polyester rated over 190 GSM",
+            "icon": "shopify:\/\/shop_images\/icon-layers.png"
+          }
+        },
+        "e8830d35-af43-4829-b6e8-8adb8bc4a059": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "LOREM IPSUM Bumper Flap: Unfurls to protect your vehicle’s bumper from scratches"
+          }
+        }
+      },
+      "block_order": [
+        "25717663-f371-4684-922a-62c61190b671",
+        "4b54794b-a38b-4a2f-b23e-764e2b59d075",
+        "e8830d35-af43-4829-b6e8-8adb8bc4a059"
+      ],
       "settings": {
         "show_dynamic_checkout": false
       }
@@ -68,21 +95,29 @@
           "type": "text",
           "settings": {
             "tab_label": "Dimensions & Size",
-            "heading": "Sized to Fit Your SUV"
+            "heading": "Sized to Fit Your SUV",
+            "cta_label": "Watch the Cargo Liner Fit Guide",
+            "cta_link": "",
+            "image": "shopify:\/\/shop_images\/dimensions-cargo-liner.png",
+            "description": "<p>Small: 42\" x 78\" (including 20\" bumper flap)<\/p><p>Large: 52\" x 82\" (including 20\" bumper flap) <\/p><p>XL: 55\" x 106\" (including 20\" bumper flap)<\/p><p><strong>Please measure to ensure a great fit.<\/strong><\/p>"
           }
         },
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6": {
           "type": "video",
           "settings": {
             "tab_label": "Features",
-            "heading": "Waterproof & Non-Slip"
+            "heading": "Waterproof & Non-Slip",
+            "description": "<p>Special solid waterproof layer makes the seat bottom completely waterproofed (seams, stitching, and zippers are not watertight).<\/p><p><a href=\"#\" title=\"#\">4Knines vs the Competition: Waterproof Test &gt;<\/a><\/p>",
+            "video_html": "<div class=\"wistia_embed wistia_async_7wnoi46o2c\" style=\"height:500px;position:relative;width:500px\"><\/div>"
           }
         },
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
           "type": "video",
           "settings": {
             "tab_label": "Installation & Care",
-            "heading": "Installs in seconds with quick-release clips"
+            "heading": "Installs in seconds with quick-release clips",
+            "description": "<p><strong>Easy to Clean<\/strong><\/p><p>Hose it down, wipe down with a moist towel, or toss it in the washer to keep it looking fresh and clean.<\/p><p><a href=\"#\" title=\"#\">Watch How To Clean Your Cover &gt;<\/a><\/p><p><strong>Lifetime Warranty<\/strong><\/p><p>No-hassle 100% Customer Satisfaction Guarantee & Lifetime Warranty (defects in materials or workmanship).<\/p>",
+            "video_html": "<div class=\"wistia_embed wistia_async_0gg6oxfii2\" style=\"height:500px;position:relative;width:500px\"><\/div>"
           }
         }
       },
