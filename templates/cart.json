@@ -2,7 +2,10 @@
   "sections": {
     "cart": {
       "type": "cart",
-      "settings": {}
+      "settings": {
+        "cta_label": "Continue shopping",
+        "cta_link": "\/"
+      }
     }
   },
   "order": [

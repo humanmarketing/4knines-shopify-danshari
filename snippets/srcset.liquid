@@ -41,9 +41,9 @@
 {%- endcapture -%}
 
 srcset="{{ srcset }}"
-{%- if asset -%}
+{% if asset -%}
   src="{{ image | asset_img_url: src }}"
-{%- else -%}
+{% else -%}
   src="{{ image | img_url: src }}"
-{%- endif -%}
+{%- endif %}
 width="{{ width }}" height="{{ height }}"
