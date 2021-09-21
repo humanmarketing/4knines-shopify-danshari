@@ -1,0 +1,105 @@
+<h1 class="h1 text-center">{{ page.title }}</h1>
+
+{%- assign press_list = section.blocks | where: 'type', 'press' | map: 'settings' -%}
+
+{%- for press in press_list -%}
+  <article class="press-item">
+    <figure>
+      <img
+        {% render 'srcset', image: press.image, width: 400 %}
+        alt="{{ press.image.alt | default: press.title }}"
+        loading="lazy"
+      />
+    </figure>
+
+    <div class="richtext">
+      <h2 class="h3">
+        {%- if press.link != blank -%}
+          <a href="{{ press.link }}" target="_blank" rel="noopener noreferrer" class="link accent-1">
+            {{ press.title }}
+          </a>
+        {%- else -%}
+          {{ press.title }}
+        {%- endif -%}
+      </h2>
+
+      {%- if press.date != blank -%}
+        <p>
+          <time datetime="{{ press.date }}" class="text-accent-2">
+            {{ press.date | date: '%B %e, %Y' }}
+          </time>
+        </p>
+      {%- endif -%}
+
+      {%- if press.description != blank -%}
+        <blockquote>"{{ press.description }}"</blockquote>
+      {%- endif -%}
+    </div>
+  </article>
+{%- endfor -%}
+
+{% stylesheet %}
+  .press-item {
+    margin-top: 3rem;
+    display: grid;
+    gap: 2rem;
+  }
+
+  .press-item + .press-item {
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .press-item a {
+
+  }
+
+  /* desktop-and-up */
+  @media screen and (min-width: 769px) {
+    .press-item {
+      grid-template-columns: 200px 1fr;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Page (In the Press)",
+  "tag": "section",
+  "class": "container padding-lg",
+  "blocks": [
+    {
+      "type": "press",
+      "name": "Press",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Date",
+          "info": "Format: YYYY-MM-DD"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

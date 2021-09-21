@@ -5,7 +5,7 @@
 
 <ul class="header-menu-desktop desktop-and-up">
   {%- for link in links -%}
-    <li class="desktop-menu-item">
+    <li class="desktop-menu-item{% unless megamenus contains link.title %} is-dropdown{% endunless %}">
       {%- if link.links != blank -%}
         <div class="desktop-menu-title with-icon">
           {{ link.title }}
