@@ -8,12 +8,14 @@
       <li>
         {%- if link.links != blank -%}
           <details class="tablet-menu-item">
-            <summary class="tablet-menu-title with-icon-full unset">
-              {% render 'with-img', item: link, placeholder: true, back: true %}
-              <span class="tablet-menu-title-arrow">
-                {% render 'icon-chevron-right' %}
-                <a href="{{ link.url }}" title="{{ link.title }}"></a>
-              </span>
+            <summary class="tablet-menu-title unset">
+              <div class="with-icon-full">
+                {% render 'with-img', item: link, placeholder: true, back: true %}
+                <span class="tablet-menu-title-arrow">
+                  {% render 'icon-chevron-right' %}
+                  <a href="{{ link.url }}" title="{{ link.title }}"></a>
+                </span>
+              </div>
             </summary>
 
             <ul class="tablet-menu-item-contents">

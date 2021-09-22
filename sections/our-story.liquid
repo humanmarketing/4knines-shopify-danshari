@@ -10,7 +10,7 @@
   </figure>
 
   <div class="richtext">
-    <p>{{ section.settings.pretitle }}</p>
+    <p class="pretitle">{{ section.settings.pretitle }}</p>
     <h2 class="h2 text-accent-2">{{ section.settings.heading }}</h2>
     {{ section.settings.description }}
     {%- if section.settings.cta_link -%}
@@ -46,6 +46,10 @@
       position: relative;
       z-index: 1;
     }
+  }
+
+  .section-our-story .pretitle {
+    text-align: center;
   }
 
   .section-our-story h2 {

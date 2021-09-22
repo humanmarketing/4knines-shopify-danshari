@@ -74,9 +74,18 @@ summary.unset::-webkit-details-marker { display: none; }
   margin-inline: auto;
 }
 
-.padding-x { padding-inline: var(--padding-x) }
-.padding-y { padding-block: var(--padding-y); }
-.padding-y-lg { padding-block: var(--padding-y-lg); }
+.padding-x {
+  padding-left: var(--padding-x);
+  padding-right: var(--padding-x);
+}
+.padding-y {
+  padding-top: var(--padding-y);
+  padding-bottom: var(--padding-y);
+}
+.padding-y-lg {
+  padding-top: var(--padding-y-lg);
+  padding-bottom: var(--padding-y-lg);
+}
 
 .padding { padding: var(--padding-y) var(--padding-x); }
 .padding-lg { padding: var(--padding-y-lg) var(--padding-x); }
@@ -575,7 +584,10 @@ summary.unset::-webkit-details-marker { display: none; }
   margin-top: 2rem;
 }
 
-.tablet-menu-title { cursor: pointer; }
+.tablet-menu-title {
+  cursor: pointer;
+  display: block;
+}
 
 .tablet-menu-title:hover { color: var(--accent-2); }
 .tablet-menu-title:hover a { text-decoration: none; }

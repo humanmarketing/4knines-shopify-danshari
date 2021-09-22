@@ -1,6 +1,9 @@
 <div
   class="section-testimonial{% if section.settings.show_avatar %} show-avatar{% endif %}"
-  style="--bg-img: url({{ 'wave-left-right-white.png' | asset_url }});"
+  style="
+    --bg-img-desktop: url({{ 'wave-left-right-white-lg.png' | asset_url }});
+    --bg-img-mobile: url({{ 'wave-left-right-white.png' | asset_url }});
+  "
 >
   {%- if section.settings.show_avatar -%}
     <figure class="testimonial-avatar">
@@ -54,8 +57,8 @@
     position: relative;
     background:
       var(--accent-2)
-      var(--bg-img)
-      center/cover no-repeat;
+      var(--bg-img-desktop)
+      center/contain no-repeat;
     color: #fff;
   }
 
@@ -86,6 +89,16 @@
     min-width: 100%;
     max-width: initial;
     min-height: 200px;
+  }
+
+  /* mobile */
+  @media screen and (max-width: 428px) {
+    .section-testimonial {
+      position: relative;
+      background-image: var(--bg-img-mobile);
+      background-position-y: 75%;
+      color: #fff;
+    }
   }
 {% endstylesheet %}
 
