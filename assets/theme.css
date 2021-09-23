@@ -29,6 +29,8 @@ hr {
   border-bottom: 1px solid var(--border);
 }
 
+summary { cursor: pointer; }
+
 svg { fill: currentColor; }
 
 [hidden] { display: none; }
@@ -584,10 +586,7 @@ summary.unset::-webkit-details-marker { display: none; }
   margin-top: 2rem;
 }
 
-.tablet-menu-title {
-  cursor: pointer;
-  display: block;
-}
+.tablet-menu-title { display: block; }
 
 .tablet-menu-title:hover { color: var(--accent-2); }
 .tablet-menu-title:hover a { text-decoration: none; }
