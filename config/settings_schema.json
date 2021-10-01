@@ -108,6 +108,16 @@
         "label": "Container (small)",
         "default": 750
       },
+      {
+        "type": "range",
+        "id": "container_lg_width",
+        "min": 800,
+        "max": 2000,
+        "step": 50,
+        "unit": "px",
+        "label": "Container (large)",
+        "default": 1200
+      },
       { "type": "header", "content": "Spacing" },
       {
         "type": "range",

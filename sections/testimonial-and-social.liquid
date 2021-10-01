@@ -22,10 +22,10 @@
       {%- endfor -%}
     </div>
 
-    <blockquote class="container-half h3-body">
+    <blockquote class="container-half h3-body text-outline">
       <p>{{ section.settings.quote | newline_to_br }}</p>
     </blockquote>
-    <p>— {{ section.settings.author }}</p>
+    <p class="text-outline">— {{ section.settings.author }}</p>
 
     {%- if section.settings.show_social -%}
       <div class="on-social-txt">
@@ -54,6 +54,7 @@
   }
 
   .section-testimonial {
+    --text-outline: var(--accent-2);
     position: relative;
     background:
       var(--accent-2)

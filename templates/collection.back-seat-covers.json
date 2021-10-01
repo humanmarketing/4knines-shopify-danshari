@@ -1,0 +1,44 @@
+{
+  "sections": {
+    "collection": {
+      "type": "collection",
+      "settings": {
+      }
+    },
+    "testimonial-and-social": {
+      "type": "testimonial-and-social",
+      "settings": {
+        "rating": 5,
+        "quote": "Perfectly sized to fit. Love the material;\nseems extremely tough",
+        "author": "Hugh C.",
+        "show_avatar": false,
+        "avatar": "shopify:\/\/shop_images\/testimonial-avatar.png",
+        "show_social": false
+      }
+    },
+    "features-multi-col": {
+      "type": "features-multi-col",
+      "settings": {
+      }
+    },
+    "split-cover-tech": {
+      "type": "split-cover-tech",
+      "settings": {
+      }
+    },
+    "collection-img-and-txt": {
+      "type": "collection-img-and-txt",
+      "settings": {
+        "heading": "Messy Kids? We’ve Got You Covered",
+        "description": "Although we initially intended to make the best car seat covers for dogs on the market, our products provide excellent utility for other applications including messy kids and help to prevent overall wear and tear on your car."
+      }
+    }
+  },
+  "order": [
+    "collection",
+    "testimonial-and-social",
+    "features-multi-col",
+    "split-cover-tech",
+    "collection-img-and-txt"
+  ]
+}
