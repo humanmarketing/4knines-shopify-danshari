@@ -11,7 +11,11 @@
         {% render 'srcset', image: item.image, width: 800 %}
         alt="{{ item.cta_labe }}" loading="lazy" draggable="false"
       />
-      <a href="{{ item.cta_link }}" class="action">{{ item.cta_label }}</a>
+      {%- if item.cta_link != blank -%}
+        <a href="{{ item.cta_link }}" class="pack-3-cta action">{{ item.cta_label }}</a>
+      {%- else -%}
+        <span class="pack-3-cta action">{{ item.cta_label }}</span>
+      {%- endif -%}
     </li>
   {%- endfor -%}
 </ul>
@@ -37,7 +41,7 @@
     object-fit: cover;
   }
 
-  .pack-3-item a {
+  .pack-3-cta {
     position: relative;
     z-index: 1;
     font-size: var(--h4);

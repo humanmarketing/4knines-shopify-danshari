@@ -426,16 +426,16 @@ summary.unset::-webkit-details-marker { display: none; }
 .header-actions {
   grid-area: actions;
   display: flex;
-  gap: 0.5rem;
+  gap: 0.25rem;
 }
 
-.header-actions a {
-  padding: 0.5rem;
+.header-actions a { padding: 0.5rem; }
+.header-actions svg {
+  width: 1em;
+  height: 1em;
 }
 
-.header-cart {
-  position: relative;
-}
+.header-cart { position: relative; }
 
 .header-cart.has-items::after {
   content: '';
@@ -483,6 +483,7 @@ summary.unset::-webkit-details-marker { display: none; }
   color: inherit;
   text-decoration: none;
   font-weight: bold;
+  font-size: 14px;
   transition:
     color var(--t),
     box-shadow var(--t);
@@ -541,7 +542,7 @@ summary.unset::-webkit-details-marker { display: none; }
 
 .header-dropdown {
   padding: 1rem;
-  top: calc(100% - 0.5rem);
+  top: calc(100% - 0.25rem);
   min-width: -webkit-max-content;
   min-width: max-content;
   box-shadow: var(--shadow);

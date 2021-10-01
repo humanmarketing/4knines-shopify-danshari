@@ -113,7 +113,8 @@
           "type": "item",
           "settings": {
             "cta_label": "Kids",
-            "cta_link": ""
+            "cta_link": "",
+            "image": "shopify:\/\/shop_images\/3-pack-2.png"
           }
         },
         "228d8184-2285-41fb-a548-64dd200218e6": {

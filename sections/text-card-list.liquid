@@ -19,7 +19,7 @@
     <ul class="text-card-list">
       {%- for card in cards -%}
         <li class="text-card-item richtext">
-          <figure>
+          <figure class="text-card-img">
             <img
               {% render 'srcset', image: card.image, width: 600 %}
               alt="{{ card.image.alt | default: card.heading }}"
@@ -35,9 +35,7 @@
 </div>
 
 {% stylesheet %}
-  .section-text-card-list {
-    position: relative;
-  }
+  .section-text-card-list { position: relative; }
 
   .section-text-card-list::before {
     content: '';
@@ -64,7 +62,14 @@
 
   .text-card-item {
     scroll-snap-align: center;
-    flex: 1 0 250px;
+    flex: 1 0 280px;
+  }
+
+  .text-card-img { margin-bottom: 2rem; }
+
+  .text-card-img img {
+    height: 230px;
+    object-fit: cover;
   }
 
   .text-card-item h3 {

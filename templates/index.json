@@ -22,8 +22,8 @@
         "description": "Bring your dogs on every adventure with durable,\nhigh-quality products built to last.",
         "cta_link": "shopify:\/\/collections\/dog-seat-covers",
         "cta_label": "",
-        "image_desktop": "shopify:\/\/shop_images\/index-hero-desktop.png",
-        "image_mobile": "shopify:\/\/shop_images\/index-hero-mobile.png"
+        "image_desktop": "shopify:\/\/shop_images\/hero-desktop.png",
+        "image_mobile": "shopify:\/\/shop_images\/hero-mobile.png"
       }
     },
     "featured-collection-1": {
@@ -75,7 +75,7 @@
       "settings": {
         "collection": "dog-seat-covers",
         "description": "Heavy-duty, functional dog seat covers designed to withstand wear and tear.",
-        "image": "shopify:\/\/shop_images\/ft-coll-1.png"
+        "image": "shopify:\/\/shop_images\/shop-dog-seat-covers.png"
       }
     },
     "featured-collection-2": {
@@ -103,7 +103,7 @@
       "settings": {
         "collection": "dog-travel-accessories",
         "description": "Pet accessories that make traveling with your dog fun and convenient.",
-        "image": "shopify:\/\/shop_images\/ft-coll-2.png"
+        "image": "shopify:\/\/shop_images\/shop-dog-travel-accessories.png"
       }
     },
     "featured-collection-3": {
@@ -123,7 +123,7 @@
       "settings": {
         "collection": "dog-supplies",
         "description": "Keep your dog safe, happy, and healthy on every adventure, big or small.",
-        "image": "shopify:\/\/shop_images\/ft-coll-3.png"
+        "image": "shopify:\/\/shop_images\/shop-dog-supplies.png"
       }
     },
     "icon-list-h": {
@@ -194,7 +194,7 @@
           "settings": {
             "heading": "Flying Fur Animal Rescue",
             "description": "Since 2015, Paul has saved over 1600 furry friends from euthanasia by transporting them from from high-kill shelters in the south to no-kill shelters in the northeast.",
-            "image": "shopify:\/\/shop_images\/giving-back-1.png"
+            "image": "shopify:\/\/shop_images\/giving-back-rescue.jpg"
           }
         },
         "2b8b4e13-2b08-4837-8b1e-bc638816890f": {
@@ -202,7 +202,7 @@
           "settings": {
             "heading": "Pets With Disabilities",
             "description": "Mike and Joyce recognized a great need for a support system for disabled pets, and this grassroots nonprofit was born! It has evolved into a thriving rescue, rehab center, and adoption resource for disabled animals.",
-            "image": "shopify:\/\/shop_images\/giving-back-1.png"
+            "image": "shopify:\/\/shop_images\/giving-back-disabilities.png"
           }
         },
         "d4c662ad-f537-426e-aafd-007d25c3b838": {
@@ -210,7 +210,7 @@
           "settings": {
             "heading": "Companions for Heroes",
             "description": "Companions for Heroes’ vision is to help every American hero while saving shelter and rescue animals from euthanasia. Since its inception, C4H has paired over 3,500 heroes with shelter dogs.",
-            "image": "shopify:\/\/shop_images\/giving-back-1.png"
+            "image": "shopify:\/\/shop_images\/giving-back-heroes.jpg"
           }
         }
       },

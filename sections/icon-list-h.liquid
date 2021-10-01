@@ -1,5 +1,5 @@
 <div
-  class="section-icon-list-h container padding-x text-center"
+  class="section-icon-list-h container padding-x text-center paragraph"
   style="
     --bg-left: url({{ 'wave-left.png' | asset_url }});
     --bg-right: url({{ 'wave-right.png' | asset_url }});
@@ -11,13 +11,13 @@
   <ul class="icon-list-h multi-col">
     {%- for item in items -%}
       <li class="richtext">
-        <figure>
+        <figure class="icon">
           <img
             {% render 'srcset', image: item.icon, width: 120 %}
             alt="" loading="lazy"
           />
         </figure>
-        <h3 class="h4-body">{{ item.heading }}</h3>
+        <h3 class="h5-body">{{ item.heading }}</h3>
         <p>{{ item.description }}</p>
       </li>
     {%- endfor -%}
@@ -36,6 +36,8 @@
     --col: 3;
     margin-top: 2rem;
   }
+
+  .icon-list-h .icon { margin-bottom: 3rem; }
 
   .icon-list-h img {
     margin-inline: auto;
