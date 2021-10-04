@@ -2,6 +2,32 @@
   "sections": {
     "product": {
       "type": "product",
+      "blocks": {
+        "93b25d18-303c-4c90-8c0c-7659eb22a81c": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Patented Split Technology – 60\/40 or 50\/50 split seat and\/or center cargo pass-through.",
+            "icon": "shopify:\/\/shop_images\/icon-design.png"
+          }
+        },
+        "031b4dcd-cf4f-40c4-a9bb-3bf27f84d796": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Heavy Duty, Easy to Clean Material"
+          }
+        },
+        "7ed663da-c646-4dba-a5b0-90e3c7569b8d": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Non-slip waterproof layer"
+          }
+        }
+      },
+      "block_order": [
+        "93b25d18-303c-4c90-8c0c-7659eb22a81c",
+        "031b4dcd-cf4f-40c4-a9bb-3bf27f84d796",
+        "7ed663da-c646-4dba-a5b0-90e3c7569b8d"
+      ],
       "settings": {
         "show_dynamic_checkout": false
       }
@@ -19,7 +45,6 @@
     },
     "product-details-3-pack": {
       "type": "product-details-3-pack",
-      "disabled": true,
       "blocks": {
         "44dbb6c5-67ae-444d-8e92-502056070453": {
           "type": "card",
@@ -66,7 +91,6 @@
     },
     "product-details-tabs": {
       "type": "product-details-tabs",
-      "disabled": true,
       "blocks": {
         "12e582d7-201f-4bd4-86f1-5f8471c19800": {
           "type": "text",
