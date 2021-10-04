@@ -1,0 +1,67 @@
+{
+  "current": {
+    "text": "#333333",
+    "bg_light": "#fafafa",
+    "bg": "#efefef",
+    "bg_dark": "#b2b2b2",
+    "border": "#b2b2b2",
+    "accent_1": "#ff842b",
+    "accent_2": "#3c5ecc",
+    "accent_3": "#569393",
+    "font_heading": "poppins_n6",
+    "font_body": "serif",
+    "logo": "shopify:\/\/shop_images\/4knines-logo.png",
+    "favicon": "shopify:\/\/shop_images\/favicon-64.png",
+    "social_instagram": "https:\/\/instagram.com\/4knines",
+    "social_facebook": "https:\/\/www.facebook.com\/4knines\/",
+    "social_pinterest": "https:\/\/www.pinterest.com\/4knines\/",
+    "social_youtube": "https:\/\/www.youtube.com\/channel\/UC7p0LrPdsJ0P4WYIRAG5jDw",
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "80a01e6b-8a75-4f56-bdac-02c68cad6767": {
+            "type": "megamenu",
+            "settings": {
+              "title": "Shop"
+            }
+          }
+        },
+        "block_order": [
+          "80a01e6b-8a75-4f56-bdac-02c68cad6767"
+        ],
+        "settings": {
+          "sticky": true,
+          "menu_desktop": "header-desktop",
+          "menu_mobile": "header-mobile"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "navigation": "footer",
+          "bottom_links": "footer-bottom-links"
+        }
+      },
+      "announcement": {
+        "type": "announcement",
+        "settings": {
+          "enabled": true,
+          "content": "<span style=\"display: inline-block;\">Black Friday is in effect! XX% off XXX with code:<\/span> <span style=\"display: inline-block;\">123CODE, offer ends 11\/28<\/span>",
+          "link": "shopify:\/\/collections\/all"
+        }
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "settings": {
+          "heading": "Join the Pack",
+          "description": "Sign up for offers and the latest updates",
+          "submit_label": "Sign up"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}

@@ -2,33 +2,6 @@
   "sections": {
     "product": {
       "type": "product",
-      "blocks": {
-        "25717663-f371-4684-922a-62c61190b671": {
-          "type": "icon-and-text",
-          "settings": {
-            "description": "Patented Split Technology: 60\/40 or 50\/50 split seat and\/or center cargo pass-through.",
-            "icon": "shopify:\/\/shop_images\/icon-design.png"
-          }
-        },
-        "4b54794b-a38b-4a2f-b23e-764e2b59d075": {
-          "type": "icon-and-text",
-          "settings": {
-            "description": "Heavy Duty Liner: High quality durable 600 Polyester rated over 190 GSM",
-            "icon": "shopify:\/\/shop_images\/icon-layers.png"
-          }
-        },
-        "e8830d35-af43-4829-b6e8-8adb8bc4a059": {
-          "type": "icon-and-text",
-          "settings": {
-            "description": "LOREM IPSUM Bumper Flap: Unfurls to protect your vehicle’s bumper from scratches"
-          }
-        }
-      },
-      "block_order": [
-        "25717663-f371-4684-922a-62c61190b671",
-        "4b54794b-a38b-4a2f-b23e-764e2b59d075",
-        "e8830d35-af43-4829-b6e8-8adb8bc4a059"
-      ],
       "settings": {
         "show_dynamic_checkout": false
       }

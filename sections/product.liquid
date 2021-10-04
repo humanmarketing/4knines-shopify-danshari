@@ -13,21 +13,7 @@
       {{ product.metafields.stamped.badge }}
     </div>
 
-    <ul class="unstyled">
-      {%- assign icon_and_text = section.blocks | where: 'type', 'icon-and-text' | map: 'settings' -%}
-      {%- for item in icon_and_text -%}
-        <li class="product-icon-text">
-          <figure>
-            <img
-              {% render 'srcset', image: item.icon, width: 100 %}
-              alt="{{ item.icon.alt }}" loading="lazy"
-            />
-          </figure>
-          {{ item.description }}
-        </li>
-      {%- endfor -%}
-    </ul>
-
+    {% render 'product-description' %}
     {% render 'product-form' %}
 
     <ul class="product-mini-features unstyled">
@@ -57,14 +43,16 @@
 
   .section-product .stamped-badge-caption { margin-left: 1ch; }
 
-  .product-icon-text {
+  .product-description li:not(.product-icon-txt)::before {
+    content: '';
+  }
+
+  .product-description li {
     display: grid;
     grid-template-columns: 50px 1fr;
     gap: 1rem;
     align-items: center;
   }
-
-  .product-icon-text + .product-icon-text { margin-top: 1rem; }
 
   .qty-and-price {
     display: grid;
@@ -123,24 +111,6 @@
       "label": "Show dynamic checkout buttons",
       "default": false,
       "info": "[More info](https://help.shopify.com/en/manual/online-store/dynamic-checkout?shpxid=504f73d0-655A-4E82-8958-225D920D5247)"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "icon-and-text",
-      "name": "Icon & text",
-      "settings": [
-        {
-          "type": "text",
-          "id": "description",
-          "label": "Description"
-        },
-        {
-          "type": "image_picker",
-          "id": "icon",
-          "label": "Icon"
-        }
-      ]
     }
   ]
 }

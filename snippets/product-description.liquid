@@ -1,0 +1,8 @@
+{%- liquid
+  assign product_descriptions = product.description | split: '<!-- product-icon-txt -->'
+  assign product_icon_txt = product_descriptions[1]
+-%}
+
+{%- if product_icon_txt != blank -%}
+  <div class="product-description">{{ product_icon_txt }}</div>
+{%- endif -%}
