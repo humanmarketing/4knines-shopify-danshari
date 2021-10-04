@@ -1,8 +1,14 @@
-{%- liquid
-  assign product_descriptions = product.description | split: '<!-- product-icon-txt -->'
-  assign product_icon_txt = product_descriptions[1]
--%}
-
-{%- if product_icon_txt != blank -%}
-  <div class="product-description">{{ product_icon_txt }}</div>
-{%- endif -%}
+<ul class="product-description">
+  {%- assign icon_and_text = section.blocks | where: 'type', 'icon-and-text' | map: 'settings' -%}
+  {%- for item in icon_and_text -%}
+    <li class="product-icon-txt">
+      <figure>
+        <img
+          {% render 'srcset', image: item.icon, width: 100 %}
+          alt="{{ item.icon.alt }}" loading="lazy"
+        />
+      </figure>
+      {{ item.description }}
+    </li>
+  {%- endfor -%}
+</ul>
