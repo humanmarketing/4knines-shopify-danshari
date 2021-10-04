@@ -162,6 +162,11 @@ summary.unset::-webkit-details-marker { display: none; }
   }
 }
 
+.hide-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
 /* typography */
 
 .font-heading {

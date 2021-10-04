@@ -2,7 +2,7 @@
   <a href="{{ routes.root_url }}" class="header-logo">
     {%- if settings.logo -%}
       <img
-        {% render 'srcset', image: settings.logo, width: 300 %}
+        {% render 'srcset', image: settings.logo, width: 600 %}
         alt="{{ settings.logo.alt | default: shop.name }}"
         loading="eager"
       />
