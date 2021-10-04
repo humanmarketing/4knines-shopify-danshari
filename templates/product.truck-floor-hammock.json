@@ -2,6 +2,31 @@
   "sections": {
     "product": {
       "type": "product",
+      "blocks": {
+        "8a454614-ecee-4678-a3ae-2673383d1ecc": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Novel design specifically for full size crew cab trucks that have fold-up rear seats."
+          }
+        },
+        "bb142447-2e81-4dae-9259-51f6193441b2": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Covers the back of the front seats, the floor, and the folded up seat bottoms."
+          }
+        },
+        "fcbbc18a-302b-4cbe-9610-e7ed39528eb1": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Heavy Duty, Easy to Clean Material"
+          }
+        }
+      },
+      "block_order": [
+        "8a454614-ecee-4678-a3ae-2673383d1ecc",
+        "bb142447-2e81-4dae-9259-51f6193441b2",
+        "fcbbc18a-302b-4cbe-9610-e7ed39528eb1"
+      ],
       "settings": {
         "show_dynamic_checkout": false
       }
@@ -19,23 +44,22 @@
     },
     "product-details-3-pack": {
       "type": "product-details-3-pack",
-      "disabled": true,
       "blocks": {
         "44dbb6c5-67ae-444d-8e92-502056070453": {
           "type": "card",
           "settings": {
             "heading": "Design and Function Meet Convenience",
-            "description": "Our unique patented technology lets you fold down seats 60\/40, 50\/50 split, and center armrest pass-through without removing the cover.",
+            "description": "Novel design specifically for full size crew cab trucks that have fold-up rear seats. Covers the back of the front seats, the floor, and the folded up seat bottoms.",
             "cta_label": "",
             "cta_link": "",
-            "image": "shopify:\/\/shop_images\/design-and-function-5.png"
+            "image": "shopify:\/\/shop_images\/design-and-function-4.png"
           }
         },
         "80d8b4a9-049e-44d0-8d7a-e068bb829ac6": {
           "type": "card",
           "settings": {
             "heading": "High-Quality Products Built to Last",
-            "description": "Our cargo liners are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. The colorfast fabrics won’t fade. We also offer a lifetime warranty on every product.",
+            "description": "Our seat covers are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. The colorfast fabrics won’t fade. We also offer a lifetime warranty on every product.",
             "cta_label": "Watch the Material Breakdown Comparison",
             "cta_link": "#",
             "image": "shopify:\/\/shop_images\/multi-layer-construction.png"
@@ -45,10 +69,10 @@
           "type": "card",
           "settings": {
             "heading": "Keeping Pets Safe, Happy and Healthy",
-            "description": "Our cargo liners feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
+            "description": "Our pet seat covers feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
             "cta_label": "",
             "cta_link": "",
-            "image": "shopify:\/\/shop_images\/keeping-pets-safe-8.png"
+            "image": "shopify:\/\/shop_images\/keeping-pets-safe-7.png"
           }
         }
       },
@@ -58,15 +82,14 @@
         "26a8eece-a63b-48f4-afca-30948d936e03"
       ],
       "settings": {
-        "heading": "SUV Cargo Liner For Fold Down Seats",
-        "description": "The 4Knines Multi-Function Dog Split SUV Cargo Liner is a must for anyone owning a dog or pet wanting to keep their vehicle nice and tidy.",
+        "heading": "Dog Floor Hammock for Crew Cab Trucks with Fold Up Seats",
+        "description": "This 4Knines Floor Hammock was designed from customer requests for this solution. This cover goes down the back of the front seats, along the bottom of the floor and back up the rear seats with the seats folded up. Keep your car clean and your pet safe while driving.",
         "note_header": "",
         "note_description": ""
       }
     },
     "product-details-tabs": {
       "type": "product-details-tabs",
-      "disabled": true,
       "blocks": {
         "12e582d7-201f-4bd4-86f1-5f8471c19800": {
           "type": "text",

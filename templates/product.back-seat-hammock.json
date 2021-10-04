@@ -2,6 +2,31 @@
   "sections": {
     "product": {
       "type": "product",
+      "blocks": {
+        "aad115b5-b60d-407a-9b5b-83cc9987d4b8": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Heavy Duty, easy to clean material"
+          }
+        },
+        "fe600512-04aa-4b18-a651-5dc8ba26dec7": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Waterproof, non-slip seat bottom"
+          }
+        },
+        "6e8275e6-4af8-47f1-83af-a76501251760": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Hammock Option – provides safety and helps stop distracted driving"
+          }
+        }
+      },
+      "block_order": [
+        "aad115b5-b60d-407a-9b5b-83cc9987d4b8",
+        "fe600512-04aa-4b18-a651-5dc8ba26dec7",
+        "6e8275e6-4af8-47f1-83af-a76501251760"
+      ],
       "settings": {
         "show_dynamic_checkout": false
       }
@@ -19,13 +44,12 @@
     },
     "product-details-3-pack": {
       "type": "product-details-3-pack",
-      "disabled": true,
       "blocks": {
         "44dbb6c5-67ae-444d-8e92-502056070453": {
           "type": "card",
           "settings": {
             "heading": "Design and Function Meet Convenience",
-            "description": "Our unique patented technology lets you fold down seats 60\/40, 50\/50 split, and center armrest pass-through without removing the cover.",
+            "description": "The 4Knines premium rear seat cover with hammock provides easy access to seat belts and LATCH systems.",
             "cta_label": "",
             "cta_link": "",
             "image": "shopify:\/\/shop_images\/design-and-function-5.png"
@@ -35,7 +59,7 @@
           "type": "card",
           "settings": {
             "heading": "High-Quality Products Built to Last",
-            "description": "Our cargo liners are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. The colorfast fabrics won’t fade. We also offer a lifetime warranty on every product.",
+            "description": "Our seat covers are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. The colorfast fabrics won’t fade. We also offer a lifetime warranty on every product.",
             "cta_label": "Watch the Material Breakdown Comparison",
             "cta_link": "#",
             "image": "shopify:\/\/shop_images\/multi-layer-construction.png"
@@ -45,10 +69,10 @@
           "type": "card",
           "settings": {
             "heading": "Keeping Pets Safe, Happy and Healthy",
-            "description": "Our cargo liners feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
+            "description": "Our pet seat covers feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
             "cta_label": "",
             "cta_link": "",
-            "image": "shopify:\/\/shop_images\/keeping-pets-safe-8.png"
+            "image": "shopify:\/\/shop_images\/keeping-pets-safe-3.png"
           }
         }
       },
@@ -58,15 +82,14 @@
         "26a8eece-a63b-48f4-afca-30948d936e03"
       ],
       "settings": {
-        "heading": "SUV Cargo Liner For Fold Down Seats",
-        "description": "The 4Knines Multi-Function Dog Split SUV Cargo Liner is a must for anyone owning a dog or pet wanting to keep their vehicle nice and tidy.",
+        "heading": "Premium Dog Back Seat Cover With Hammock",
+        "description": "The 4Knines Premium Dog Back Seat Cover with Hammock for cars, trucks, and SUVs is waterproof, washable, has a hammock option and a great non-slip backing.",
         "note_header": "",
         "note_description": ""
       }
     },
     "product-details-tabs": {
       "type": "product-details-tabs",
-      "disabled": true,
       "blocks": {
         "12e582d7-201f-4bd4-86f1-5f8471c19800": {
           "type": "text",

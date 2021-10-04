@@ -2,6 +2,31 @@
   "sections": {
     "product": {
       "type": "product",
+      "blocks": {
+        "8f5c8897-6cf6-4090-9ebe-a1b4235434fa": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Heavy Duty, Easy to Clean Material"
+          }
+        },
+        "0b81ceca-1034-4132-afe6-298ff36371b7": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Waterproof, non-slip seat bottom"
+          }
+        },
+        "5353aec1-f723-4266-9702-f6ad196c4819": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "UV coated headrest straps"
+          }
+        }
+      },
+      "block_order": [
+        "8f5c8897-6cf6-4090-9ebe-a1b4235434fa",
+        "0b81ceca-1034-4132-afe6-298ff36371b7",
+        "5353aec1-f723-4266-9702-f6ad196c4819"
+      ],
       "settings": {
         "show_dynamic_checkout": false
       }
@@ -19,23 +44,22 @@
     },
     "product-details-3-pack": {
       "type": "product-details-3-pack",
-      "disabled": true,
       "blocks": {
         "44dbb6c5-67ae-444d-8e92-502056070453": {
           "type": "card",
           "settings": {
             "heading": "Design and Function Meet Convenience",
-            "description": "Our unique patented technology lets you fold down seats 60\/40, 50\/50 split, and center armrest pass-through without removing the cover.",
+            "description": "Our bucket front seat covers are heavy-duty and waterproof. Install them in seconds using the quick-release clips.",
             "cta_label": "",
             "cta_link": "",
-            "image": "shopify:\/\/shop_images\/design-and-function-5.png"
+            "image": "shopify:\/\/shop_images\/design-and-function-1.png"
           }
         },
         "80d8b4a9-049e-44d0-8d7a-e068bb829ac6": {
           "type": "card",
           "settings": {
             "heading": "High-Quality Products Built to Last",
-            "description": "Our cargo liners are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. The colorfast fabrics won’t fade. We also offer a lifetime warranty on every product.",
+            "description": "Our seat covers are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. The colorfast fabrics won’t fade. We also offer a lifetime warranty on every product.",
             "cta_label": "Watch the Material Breakdown Comparison",
             "cta_link": "#",
             "image": "shopify:\/\/shop_images\/multi-layer-construction.png"
@@ -45,10 +69,10 @@
           "type": "card",
           "settings": {
             "heading": "Keeping Pets Safe, Happy and Healthy",
-            "description": "Our cargo liners feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
+            "description": "Our pet seat covers feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
             "cta_label": "",
             "cta_link": "",
-            "image": "shopify:\/\/shop_images\/keeping-pets-safe-8.png"
+            "image": "shopify:\/\/shop_images\/keeping-pets-safe-5.png"
           }
         }
       },
@@ -58,15 +82,14 @@
         "26a8eece-a63b-48f4-afca-30948d936e03"
       ],
       "settings": {
-        "heading": "SUV Cargo Liner For Fold Down Seats",
-        "description": "The 4Knines Multi-Function Dog Split SUV Cargo Liner is a must for anyone owning a dog or pet wanting to keep their vehicle nice and tidy.",
-        "note_header": "",
-        "note_description": ""
+        "heading": "Front Seat Covers for Dogs",
+        "description": "The 4Knines Premium Bucket Front Seat Cover for cars, trucks, and SUVs is a must-have accessory for pet owners who want to keep their vehicle clean.",
+        "note_header": "A Note About Airbags",
+        "note_description": "4Knines bucket seat covers do not cover the side of the seat back (where most side airbags are housed), so the cover should work well in most vehicles. The optional strap that goes around the back of the seat (not shown in diagram) should not be used in seats with airbags. All vehicles are different, so we recommend installing the seat cover to ensure it does not cover where your airbag deploys."
       }
     },
     "product-details-tabs": {
       "type": "product-details-tabs",
-      "disabled": true,
       "blocks": {
         "12e582d7-201f-4bd4-86f1-5f8471c19800": {
           "type": "text",

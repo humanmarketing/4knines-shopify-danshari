@@ -2,6 +2,31 @@
   "sections": {
     "product": {
       "type": "product",
+      "blocks": {
+        "316f4450-0aac-4a29-af7f-5ef67f80989a": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Heavy Duty, easy to clean material"
+          }
+        },
+        "e81fa07a-bf1e-4646-b3b3-b81874d743df": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Waterproof, non-slip seat bottom"
+          }
+        },
+        "11216e63-84cd-4ca9-b8cd-4e4e9a16af30": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "No Hammock"
+          }
+        }
+      },
+      "block_order": [
+        "316f4450-0aac-4a29-af7f-5ef67f80989a",
+        "e81fa07a-bf1e-4646-b3b3-b81874d743df",
+        "11216e63-84cd-4ca9-b8cd-4e4e9a16af30"
+      ],
       "settings": {
         "show_dynamic_checkout": false
       }
@@ -19,13 +44,12 @@
     },
     "product-details-3-pack": {
       "type": "product-details-3-pack",
-      "disabled": true,
       "blocks": {
         "44dbb6c5-67ae-444d-8e92-502056070453": {
           "type": "card",
           "settings": {
             "heading": "Design and Function Meet Convenience",
-            "description": "Our unique patented technology lets you fold down seats 60\/40, 50\/50 split, and center armrest pass-through without removing the cover.",
+            "description": "The 4Knines fitted rear seat cover provides easy access to seat belts and LATCH systems, making this a great option for families that frequently haul children or other backseat passengers.",
             "cta_label": "",
             "cta_link": "",
             "image": "shopify:\/\/shop_images\/design-and-function-5.png"
@@ -35,7 +59,7 @@
           "type": "card",
           "settings": {
             "heading": "High-Quality Products Built to Last",
-            "description": "Our cargo liners are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. The colorfast fabrics won’t fade. We also offer a lifetime warranty on every product.",
+            "description": "Our seat covers are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. The colorfast fabrics won’t fade. We also offer a lifetime warranty on every product.",
             "cta_label": "Watch the Material Breakdown Comparison",
             "cta_link": "#",
             "image": "shopify:\/\/shop_images\/multi-layer-construction.png"
@@ -45,10 +69,10 @@
           "type": "card",
           "settings": {
             "heading": "Keeping Pets Safe, Happy and Healthy",
-            "description": "Our cargo liners feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
+            "description": "Our pet seat covers feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
             "cta_label": "",
             "cta_link": "",
-            "image": "shopify:\/\/shop_images\/keeping-pets-safe-8.png"
+            "image": "shopify:\/\/shop_images\/keeping-pets-safe-4.png"
           }
         }
       },
@@ -58,15 +82,14 @@
         "26a8eece-a63b-48f4-afca-30948d936e03"
       ],
       "settings": {
-        "heading": "SUV Cargo Liner For Fold Down Seats",
-        "description": "The 4Knines Multi-Function Dog Split SUV Cargo Liner is a must for anyone owning a dog or pet wanting to keep their vehicle nice and tidy.",
+        "heading": "Premium Dog Back Seat Cover",
+        "description": "Our 4Knines Premium Dog Back Seat Cover for cars, small trucks, and SUVs with no hammock is a fitted version with all the same great features.",
         "note_header": "",
         "note_description": ""
       }
     },
     "product-details-tabs": {
       "type": "product-details-tabs",
-      "disabled": true,
       "blocks": {
         "12e582d7-201f-4bd4-86f1-5f8471c19800": {
           "type": "text",
