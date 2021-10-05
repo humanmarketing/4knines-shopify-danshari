@@ -13,11 +13,14 @@
       {{- shop.name -}}
     {%- endif -%}
   </title>
+
   <meta name="description" content="{{ page_description | escape }}">
   {%- render 'meta-tags' -%}
 
   <link rel="canonical" href="{{ canonical_url }}">
   <link rel="icon" href="{{ settings.favicon | img_url: '32x32' }}">
+
+  <link rel="preload" href="{{ 'Pockota-Regular.woff2' | asset_url }}" type="font/woff2" as="font" crossorigin>
 
   {%- render 'root.css' %}
   {{ 'reset.css' | asset_url | stylesheet_tag }}
@@ -25,7 +28,7 @@
 
   {{ content_for_header }}
 
-	{% include 'magiczoomplus.headers' %}
+  {% render 'magiczoomplus.headers' %}
 </head>
 
 <body>
