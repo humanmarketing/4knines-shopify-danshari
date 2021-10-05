@@ -6,19 +6,22 @@
         "aad115b5-b60d-407a-9b5b-83cc9987d4b8": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Heavy Duty, easy to clean material"
+            "description": "Heavy Duty, easy to clean material",
+            "icon": "shopify:\/\/shop_images\/icon-heavy-duty.png"
           }
         },
         "fe600512-04aa-4b18-a651-5dc8ba26dec7": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Waterproof, non-slip seat bottom"
+            "description": "Waterproof, non-slip seat bottom",
+            "icon": "shopify:\/\/shop_images\/icon-waterproof.png"
           }
         },
         "6e8275e6-4af8-47f1-83af-a76501251760": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Hammock Option – provides safety and helps stop distracted driving"
+            "description": "Hammock Option – provides safety and helps stop distracted driving",
+            "icon": "shopify:\/\/shop_images\/icon-hammock_option.png"
           }
         }
       },

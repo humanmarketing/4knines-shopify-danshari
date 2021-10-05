@@ -24,7 +24,9 @@
         <h3 class="h3 text-accent-2">{{ card.heading }}</h3>
         <p>{{ card.description }}</p>
         {%- if card.cta_link -%}
-          <p><a href="{{ card.cta_link }}" class="link accent-1">{{ card.cta_label }} ></a></p>
+          <p class="pd3-cta">
+            <a href="{{ card.cta_link }}" class="link accent-1">{{ card.cta_label }} ></a>
+          </p>
         {%- endif -%}
       </li>
     {%- endfor -%}
@@ -61,6 +63,8 @@
   .pd3-logo img { width: 180px; }
 
   .pd3-list { margin-top: 2rem; }
+
+  .pd3-cta { max-width: 200px; }
 {% endstylesheet %}
 
 {% schema %}

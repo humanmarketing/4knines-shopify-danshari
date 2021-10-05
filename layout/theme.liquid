@@ -32,7 +32,7 @@
   {% section 'announcement' %}
   {% section 'header' %}
 
-  <main>
+  <main {% if request.page_type == 'captcha' %}class="padding-lg"{% endif %}>
     {{ content_for_layout }}
   </main>
 

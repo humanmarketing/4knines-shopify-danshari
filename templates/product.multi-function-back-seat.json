@@ -6,7 +6,8 @@
         "f3b80908-2d71-4007-8d9d-9c34f81c9eec": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Access to all three seat belts"
+            "description": "Access to all three seat belts",
+            "icon": "shopify:\/\/shop_images\/icon-seatbelts.png"
           }
         },
         "e7b2c416-f027-4d35-8f0f-dd6f14bb900a": {
@@ -19,7 +20,8 @@
         "f8d4ba82-b4df-4560-bbbd-21c879dabb62": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Hammock Option – provides safety and helps stop distracted driving"
+            "description": "Hammock Option – provides safety and helps stop distracted driving",
+            "icon": "shopify:\/\/shop_images\/icon-hammock_option.png"
           }
         }
       },

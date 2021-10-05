@@ -37,14 +37,17 @@
     margin-top: 2rem;
   }
 
-  .icon-list-h .icon { margin-bottom: 3rem; }
-
   .icon-list-h img {
     margin-inline: auto;
     width: 70px;
   }
 
   .icon-list-h h3 { font-family: var(--font-body); }
+
+  /* desktop-and-up */
+  @media screen and (min-width: 769px) {
+    .icon-list-h .icon { margin-bottom: 3rem; }
+  }
 
   /* tablet */
   @media screen and (max-width: 768px) {
@@ -71,6 +74,8 @@
       transform: translateY(50%);
       background: var(--bg-right) right/contain no-repeat;
     }
+
+    .icon-list-h { gap: 3rem; }
   }
 {% endstylesheet %}
 

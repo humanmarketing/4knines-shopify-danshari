@@ -6,19 +6,22 @@
         "8f5c8897-6cf6-4090-9ebe-a1b4235434fa": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Heavy Duty, Easy to Clean Material"
+            "description": "Heavy Duty, Easy to Clean Material",
+            "icon": "shopify:\/\/shop_images\/icon-heavy-duty_cdf40c87-1090-46cf-8b21-f9dbb42c5a5e.png"
           }
         },
         "0b81ceca-1034-4132-afe6-298ff36371b7": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Waterproof, non-slip seat bottom"
+            "description": "Waterproof, non-slip seat bottom",
+            "icon": "shopify:\/\/shop_images\/icon-waterproof.png"
           }
         },
         "5353aec1-f723-4266-9702-f6ad196c4819": {
           "type": "icon-and-text",
           "settings": {
-            "description": "UV coated headrest straps"
+            "description": "UV coated headrest straps",
+            "icon": "shopify:\/\/shop_images\/icon-uv.png"
           }
         }
       },

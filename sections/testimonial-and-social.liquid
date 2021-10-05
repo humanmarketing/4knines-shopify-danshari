@@ -41,7 +41,7 @@
 
 {%- if section.settings.show_social and section.settings.social_image != blank -%}
   {%- comment -%} TODO: add live insta feed {%- endcomment -%}
-  <figure class="on-social-img">
+  <figure class="on-social-img hide-scrollbar">
     <img
       {% render 'srcset', image: section.settings.social_image %}
       alt="Instagram @4knines" loading="lazy" draggable="false"

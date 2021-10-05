@@ -6,19 +6,22 @@
         "316f4450-0aac-4a29-af7f-5ef67f80989a": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Heavy Duty, easy to clean material"
+            "description": "Heavy Duty, easy to clean material",
+            "icon": "shopify:\/\/shop_images\/icon-heavy-duty.png"
           }
         },
         "e81fa07a-bf1e-4646-b3b3-b81874d743df": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Waterproof, non-slip seat bottom"
+            "description": "Waterproof, non-slip seat bottom",
+            "icon": "shopify:\/\/shop_images\/icon-waterproof.png"
           }
         },
         "11216e63-84cd-4ca9-b8cd-4e4e9a16af30": {
           "type": "icon-and-text",
           "settings": {
-            "description": "No Hammock"
+            "description": "No Hammock",
+            "icon": "shopify:\/\/shop_images\/icon-no-hammock.png"
           }
         }
       },

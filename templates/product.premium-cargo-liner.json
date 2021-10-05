@@ -6,19 +6,22 @@
         "8b1edabc-535c-419a-b3fc-4d7289295190": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Heavy Duty, Easy to Clean Material"
+            "description": "Heavy Duty, Easy to Clean Material",
+            "icon": "shopify:\/\/shop_images\/icon-heavy-duty.png"
           }
         },
         "096d3409-3669-4295-9891-e67811468b2c": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Non-slip waterproof layer"
+            "description": "Non-slip waterproof layer",
+            "icon": "shopify:\/\/shop_images\/icon-waterproof.png"
           }
         },
         "179523e8-7f0d-4f82-a10f-00c78bae8867": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Bumper Flap"
+            "description": "Bumper Flap",
+            "icon": "shopify:\/\/shop_images\/icon-bumper-flap.png"
           }
         }
       },

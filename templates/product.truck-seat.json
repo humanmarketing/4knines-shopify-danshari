@@ -6,7 +6,8 @@
         "c7ca6fd9-2716-4353-8631-2aca899ed470": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Access to all three seat belts"
+            "description": "Access to all three seat belts",
+            "icon": "shopify:\/\/shop_images\/icon-seatbelts.png"
           }
         },
         "fc63e61c-b6ca-48c0-9e0a-ccda3d493b7a": {
@@ -19,7 +20,8 @@
         "6348a383-2e03-4fee-98f7-c617de8a9633": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Heavy Duty, Easy to Clean Material"
+            "description": "Heavy Duty, Easy to Clean Material",
+            "icon": "shopify:\/\/shop_images\/icon-heavy-duty.png"
           }
         }
       },

@@ -13,13 +13,15 @@
         "031b4dcd-cf4f-40c4-a9bb-3bf27f84d796": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Heavy Duty, Easy to Clean Material"
+            "description": "Heavy Duty, Easy to Clean Material",
+            "icon": "shopify:\/\/shop_images\/icon-heavy-duty.png"
           }
         },
         "7ed663da-c646-4dba-a5b0-90e3c7569b8d": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Non-slip waterproof layer"
+            "description": "Non-slip waterproof layer",
+            "icon": "shopify:\/\/shop_images\/icon-waterproof.png"
           }
         }
       },

@@ -6,19 +6,22 @@
         "8a454614-ecee-4678-a3ae-2673383d1ecc": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Novel design specifically for full size crew cab trucks that have fold-up rear seats."
+            "description": "Novel design specifically for full size crew cab trucks that have fold-up rear seats.",
+            "icon": "shopify:\/\/shop_images\/icon-novel-design.png"
           }
         },
         "bb142447-2e81-4dae-9259-51f6193441b2": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Covers the back of the front seats, the floor, and the folded up seat bottoms."
+            "description": "Covers the back of the front seats, the floor, and the folded up seat bottoms.",
+            "icon": "shopify:\/\/shop_images\/icon-design.png"
           }
         },
         "fcbbc18a-302b-4cbe-9610-e7ed39528eb1": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Heavy Duty, Easy to Clean Material"
+            "description": "Heavy Duty, Easy to Clean Material",
+            "icon": "shopify:\/\/shop_images\/icon-heavy-duty_cdf40c87-1090-46cf-8b21-f9dbb42c5a5e.png"
           }
         }
       },
