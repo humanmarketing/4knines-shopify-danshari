@@ -998,16 +998,19 @@ input:checked + .color-swatch {
 .article-tag-list li { display: inline; }
 .article-tag-list li:not(:last-child)::after { content: ', '; }
 
-.article-tag-list.show-label::before {
-  content: 'Tags: ';
-}
+.article-tag-list a { color: var(--text-dark); }
+
+.article-tag-list.show-label::before { content: 'Tags: '; }
 
 /* richtext */
 
 .paragraph,
+.paragraph-sm,
 .richtext { line-height: 1.3; }
 
-:is(.paragraph, .richtext) > * + * { margin-top: var(--spacing-y, 1rem); }
+:is(.paragraph, .paragraph-sm, .richtext) > * + * { margin-top: var(--spacing-y, 1rem); }
+
+.paragraph-sm { --spacing-y: 0.5rem; }
 
 .richtext > :is(h1,h2,h3,h4,h5,h6) {
   font-family: var(--font-heading);

@@ -24,7 +24,15 @@
 
   <hr>
 
-  {% render 'article-tags', tags: article.tags, class: 'show-label' %}
+  {%- if article.tags.size > 0 -%}
+    <ul class="article-tag-list show-label">
+      {%- for tag in article.tags -%}
+        <li>
+          {{- tag | link_to_tag: tag -}}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
 
   <p><a href="{{ blog.url }}" class="link accent-1">< Back</a></p>
 </div>

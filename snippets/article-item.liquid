@@ -18,6 +18,12 @@
 
     <h2>{{ article.title }}</h2>
 
-    {% render 'article-tags', tags: article.tags, class: 'line-clamp' %}
+    {%- if article.tags.size > 0 -%}
+      <ul class="article-tag-list line-clamp">
+        {%- for tag in article.tags -%}
+          <li>{{ tag }}</li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
   </a>
 </article>

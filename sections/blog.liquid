@@ -3,28 +3,68 @@
 </header>
 
 {%- unless blog.articles == empty -%}
-  {% paginate blog.articles by 12 %}
-    <div class="article-list">
-      {% render 'article-item' for blog.articles as article %}
-    </div>
+  {%- comment -%}TODO: add blog search{%- endcomment -%}
 
-    <div class="article-pagination">
-      {{ paginate | default_pagination: next: 'Older >', previous: '< Newer' }}
-    </div>
+  {%- assign tag_filters = section.settings.tag_filters | newline_to_br | split: '<br />' -%}
+  <section class="blog-tag-filter paragraph-sm">
+    <p class="text-dark">Tag filters:</p>
+    <ul class="blog-tag-filter-list">
+      {%- for tag in tag_filters -%}
+        {%- assign active_tag = tag | handleize -%}
+        {%- assign current_tag = current_tags | handleize -%}
+
+        {%- if current_tag contains active_tag-%}
+          <li class="active">{{ tag | link_to_remove_tag: active_tag }}</li>
+        {%- else -%}
+          <li>{{ tag | link_to_tag: tag }}</li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </section>
+
+  {% paginate blog.articles by 12 %}
+    <section class="paragraph">
+      <div class="article-list">
+        {% render 'article-item' for blog.articles as article %}
+      </div>
+
+      <div class="article-pagination h4-body text-center">
+        {{ paginate | default_pagination: next: 'Older >', previous: '< Newer' }}
+      </div>
+    </section>
   {% endpaginate %}
+
 {%- else -%}
-  <p>No posts</p>
+  <p class="padding-y text-center text-dark">No posts</p>
 {%- endunless -%}
 
 <style>
+
+</style>
+{% stylesheet %}
+  .blog-tag-filter { margin-block: 2rem; }
+
+  .blog-tag-filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5ch;
+  }
+
+  .blog-tag-filter-list a {
+    padding: var(--button-padding);
+    border-radius: 4em;
+    background-color: var(--accent-2);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .blog-tag-filter-list .active a { background-color: var(--accent-1); }
+
   .article-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem 0;
-  }
-
-  .article-pagination {
-    text-align: center;
+    gap: 1rem 0;
   }
 
   .article-pagination a {
@@ -35,22 +75,25 @@
   .article-pagination a:hover { color: var(--text); }
 
   .article-pagination .page.current { color: var(--accent-1); }
-</style>
-{% stylesheet %}
-
 {% endstylesheet %}
 
 {% schema %}
 {
   "name": "Blog",
-  "tag": "section",
-  "class": "section-blog container padding-lg paragraph",
+  "class": "container padding-lg paragraph",
   "settings": [
     {
       "type": "text",
       "id": "title",
       "label": "Title",
       "default": "Welcome to the 4knines Blog"
+    },
+    {
+      "type": "textarea",
+      "id": "tag_filters",
+      "label": "Tag filters",
+      "default": "Health\nTravel\nBehavior\nPhoto Contest\nCharity Spotlight\nLifestyle\nTraining",
+      "info": "Each tag on its own line"
     }
   ]
 }
