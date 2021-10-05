@@ -1,23 +1,44 @@
-<div class="richtext">
+{%- if article.image -%}
+  <figure class="container">
+    <img
+      {% render 'srcset', image: article.image, width: 1000 %}
+      alt="{{ article.image.alt | default: article.title }}"
+      draggable="false" loading="eager"
+    />
+  </figure>
+{%- endif -%}
+
+<div class="container-sm padding-lg paragraph">
   <h1 class="h1">{{ article.title }}</h1>
 
-  {{ article.content
-    | replace: '<h1>', '<h1 class="h1">'
-    | replace: '<h2>', '<h2 class="h2">'
-    | replace: '<h3>', '<h3 class="h3">'
-    | replace: '<h4>', '<h4 class="h4">'
-    | replace: '<h5>', '<h5 class="h5">'
-    | replace: '<h6>', '<h6 class="h6">'
-  }}
+  <div class="article-content richtext">
+    {{ article.content
+      | replace: '<h1>', '<h1 class="h1">'
+      | replace: '<h2>', '<h2 class="h2">'
+      | replace: '<h3>', '<h3 class="h3">'
+      | replace: '<h4>', '<h4 class="h4">'
+      | replace: '<h5>', '<h5 class="h5">'
+      | replace: '<h6>', '<h6 class="h6">'
+    }}
+  </div>
+
+  <hr>
+
+  {% render 'article-tags', tags: article.tags, class: 'show-label' %}
+
+  <p><a href="{{ blog.url }}" class="link accent-1">< Back</a></p>
 </div>
+
+{% stylesheet %}
+  .article-content a {
+    color: var(--accent-1);
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
   "name": "Article",
   "tag": "article",
-  "class": "section-article container-sm padding",
-  "settings": [
-
-  ]
+  "class": "padding-y paragraph"
 }
 {% endschema %}

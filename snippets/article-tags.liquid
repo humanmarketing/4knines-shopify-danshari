@@ -1,0 +1,13 @@
+{%- comment -%}
+  tags
+  label?
+  class?
+{%- endcomment -%}
+
+{%- if tags.size > 0 -%}
+  <ul class="article-tag-list {{ class }}">
+    {%- for tag in tags -%}
+      <li>{{ tag }}</li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
