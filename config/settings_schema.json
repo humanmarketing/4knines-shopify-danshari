@@ -179,9 +179,9 @@
         "type": "text",
         "id": "predictive_search_types",
         "label": "Suggestion types",
-        "default": "product,collection,page,article",
-        "placeholder": "product,collection,page,article",
-        "info": "Allowed: product, collection, page, article. Separated by commas."
+        "default": "product,collection,article,page",
+        "placeholder": "product,collection,article,page",
+        "info": "Allowed: product, collection, article, page. Separated by commas."
       },
       {
         "type": "number",

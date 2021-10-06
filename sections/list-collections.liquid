@@ -1,6 +1,6 @@
-<h1 class="h1">All Collections</h1>
+<h1 class="h1 text-center text-accent-1">All Collections</h1>
 
-<ul>
+<ul class="multi-col" style="--col: 3; gap: 0 2rem;">
   {% for collection in collections %}
     <li>
       <a href="{{ collection.url }}" class="link">
@@ -14,9 +14,6 @@
 {
   "name": "All Collections",
   "tag": "article",
-  "class": "container padding",
-  "settings": [
-
-  ]
+  "class": "container padding-lg richtext"
 }
 {% endschema %}

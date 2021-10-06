@@ -47,7 +47,7 @@
         "type": "announcement",
         "settings": {
           "enabled": true,
-          "content": "<span style=\"display: inline-block;\">Black Friday is in effect! XX% off XXX with code:<\/span> <span style=\"display: inline-block;\">123CODE, offer ends 11\/28<\/span>",
+          "content": "Free Shipping",
           "link": "shopify:\/\/collections\/all"
         }
       },

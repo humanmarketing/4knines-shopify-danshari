@@ -5,7 +5,7 @@
   value?
 {%- endcomment -%}
 
-<label for="qty{{ id }}" class="qty-selector">
+<label for="qty{{ id }}" class="qty-selector{% if label %} paragraph-sm{% endif %}">
   {% if label %}
     <div class="font-heading">
       <small>{{ label }}</small>

@@ -5,10 +5,10 @@
 let searchForms = document.querySelectorAll('form.search-form')
 
 for (let searchForm of searchForms) {
-  let searchFormInput = searchForm.querySelector('input[name="q"]')
-  let searchSuggestions = searchForm.querySelector('.search-suggestions')
-  let suggestionGroupTemplate = document.querySelector('#suggestion-group-template')
-  let suggestionItemTemplate = document.querySelector('#suggestion-item-template')
+  let searchFormInput = searchForm.querySelector('input[name="q"]'),
+    searchSuggestions = searchForm.querySelector('.search-suggestions'),
+    suggestionGroupTemplate = document.querySelector('#suggestion-group-template'),
+    suggestionItemTemplate = document.querySelector('#suggestion-item-template')
 
   searchFormInput.addEventListener('keyup', delayAfterKeyup(async e => {
     let suggestionResults = await getSuggestions(e.target.value)
@@ -62,7 +62,6 @@ async function getSuggestions(query) {
 
 function resizeImg(url, size) {
   const [before, ext, after] = url.split(/\.(png|jpg|gif)/g)
-
   return `${before}_${size}.${ext}${after}`
 }
 

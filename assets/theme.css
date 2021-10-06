@@ -917,6 +917,10 @@ summary.unset::-webkit-details-marker { display: none; }
 
 /* PDP */
 
+:is(.variant-selector-size, .variant-selector-color) > * + * {
+  margin-top: 0.5rem;
+}
+
 .variant-selector-size legend a { margin-left: 1ch; }
 
 .size-swatch {

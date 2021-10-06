@@ -1,4 +1,14 @@
-<form class="search-form" action="{{ routes.search_url }}">
+{%- comment -%}
+  class?
+  type?
+  disableSuggestions?
+{%- endcomment -%}
+
+<form class="search-form {{ class }}" action="{{ routes.search_url }}">
+  {%- if type -%}
+    <input name="type" value="{{ type }}" type="hidden">
+  {%- endif -%}
+
   <label class="search-form-label">
     <input
       class="search-input unset"
@@ -13,7 +23,7 @@
     {% render 'icon-search' %}
   </button>
 
-  {%- if settings.predictive_search_enabled -%}
+  {%- if settings.predictive_search_enabled and disableSuggestions != true -%}
     <ul class="search-suggestions"></ul>
   {%- endif -%}
 </form>

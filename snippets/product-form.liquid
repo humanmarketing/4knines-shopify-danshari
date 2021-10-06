@@ -4,14 +4,16 @@
   {%- unless product.has_only_default_variant -%}
     {%- liquid
       for option in product.options_with_values
-        case option.name
-          when 'Size'
-            render 'variant-selector-size', option: option
-          when 'Color'
-            render 'variant-selector-color', option: option
-          else
-            render 'variant-selector', option: option
-        endcase
+        if option.values.size > 1
+          case option.name
+            when 'Size'
+              render 'variant-selector.size', option: option
+            when 'Color'
+              render 'variant-selector.color', option: option
+            else
+              render 'variant-selector', option: option
+          endcase
+        endif
       endfor
     -%}
 

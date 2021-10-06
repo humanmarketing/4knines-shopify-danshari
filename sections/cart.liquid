@@ -1,7 +1,7 @@
-<h1 class="h1">Cart</h1>
+<h1 class="h1 text-center">Cart</h1>
 
 {%- unless cart == empty -%}
-  <section>
+  <section class="paragraph">
     <form action="{{ routes.cart_url }}" method="post" id="cart" class="richtext" style="overflow-x: auto;">
       <table class="cart-table">
         <thead>
@@ -51,22 +51,23 @@
               <button class="action" form="cart" name="checkout" type="submit">Checkout</button>
             </td>
           </tr>
-          {% if additional_checkout_buttons %}
-            <tr><td>{{ content_for_additional_checkout_buttons }}</td></tr>
-          {% endif %}
         </tfoot>
       </table>
     </form>
+
+    {% if additional_checkout_buttons %}
+      {{ content_for_additional_checkout_buttons }}
+    {% endif %}
   </section>
 
 {%- else -%}
-  <p class="text-dark">Cart is empty</p>
+  <p class="text-dark text-center">Cart is empty</p>
 {%- endunless -%}
 
 {% schema %}
 {
   "name": "Cart line items",
-  "class": "container padding richtext",
+  "class": "container padding-lg richtext",
   "settings": [
 
   ]

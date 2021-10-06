@@ -3,7 +3,11 @@
 </header>
 
 {%- unless blog.articles == empty -%}
-  {%- comment -%}TODO: add blog search{%- endcomment -%}
+  {% render 'search-form'
+    class: 'container-half'
+    type: 'article'
+    disableSuggestions: true
+  %}
 
   {%- assign tag_filters = section.settings.tag_filters | newline_to_br | split: '<br />' -%}
   <section class="blog-tag-filter paragraph-sm">
@@ -38,10 +42,11 @@
   <p class="padding-y text-center text-dark">No posts</p>
 {%- endunless -%}
 
-<style>
-
-</style>
 {% stylesheet %}
+  .section-blog .search-form {
+    border: 1px solid var(--border-light);
+  }
+
   .blog-tag-filter { margin-block: 2rem; }
 
   .blog-tag-filter-list {
@@ -63,7 +68,7 @@
 
   .article-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem 0;
   }
 
@@ -80,7 +85,7 @@
 {% schema %}
 {
   "name": "Blog",
-  "class": "container padding-lg paragraph",
+  "class": "section-blog container padding-lg paragraph",
   "settings": [
     {
       "type": "text",

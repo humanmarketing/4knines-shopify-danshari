@@ -15,9 +15,7 @@
   box-shadow: var(--outline-2);
 }
 
-.search-form-label {
-  padding-block: 0.5rem;
-}
+.search-form-label { padding-block: 0.5rem; }
 
 .search-input {
   box-sizing: border-box;
@@ -31,22 +29,22 @@
   padding: 0.25em 0.75em;
 }
 
-.search-button:hover {
-  color: var(--accent-2);
-}
+.search-button:hover { color: var(--accent-2); }
 
 .search-suggestions {
   position: absolute;
+  z-index: 2;
   left: 0; top: calc(100% + 2px);
   width: 100%;
   padding-inline: 1rem;
   box-sizing: border-box;
-  background-color: var(--bg-light);
+  background-color: #fff;
   box-shadow: var(--shadow);
   max-height: max(200px, 50vh);
   overflow-y: auto;
 }
 
+.search-form:not(:focus-within) .search-suggestions,
 .search-suggestions:empty { display: none; }
 
 /* group */
@@ -58,7 +56,7 @@
   top: 0;
   padding-block: 1rem;
   border-bottom: 1px solid var(--border-light);
-  background-color: var(--bg-light);
+  background-color: #fff;
   color: var(--text-dark);
   text-transform: uppercase;
 }
