@@ -32,7 +32,7 @@
       -%}
       <li>
         <a href="{{ subcategory.url }}" class="link">
-          <figure>
+          <figure class="aspect-ratio">
             <img
               {% render 'srcset', image: subcategory.featured_image, width: 200 %}
               alt="{{ block.settings.title | default: subcategory.title }}"

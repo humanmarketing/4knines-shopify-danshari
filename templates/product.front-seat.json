@@ -7,7 +7,7 @@
           "type": "icon-and-text",
           "settings": {
             "description": "Heavy Duty, Easy to Clean Material",
-            "icon": "shopify:\/\/shop_images\/icon-heavy-duty_cdf40c87-1090-46cf-8b21-f9dbb42c5a5e.png"
+            "icon": "shopify:\/\/shop_images\/icon-heavy-duty.png"
           }
         },
         "0b81ceca-1034-4132-afe6-298ff36371b7": {
@@ -94,15 +94,10 @@
     "product-details-tabs": {
       "type": "product-details-tabs",
       "blocks": {
-        "12e582d7-201f-4bd4-86f1-5f8471c19800": {
-          "type": "text",
+        "8b38037d-1717-4757-ab5f-15028741f81f": {
+          "type": "dimensions",
           "settings": {
-            "tab_label": "Dimensions & Size",
-            "heading": "Sized to Fit Your SUV",
-            "cta_label": "Watch the Cargo Liner Fit Guide",
-            "cta_link": "",
-            "image": "shopify:\/\/shop_images\/dimensions-cargo-liner.png",
-            "description": "<p>Small: 42\" x 78\" (including 20\" bumper flap)<\/p><p>Large: 52\" x 82\" (including 20\" bumper flap) <\/p><p>XL: 55\" x 106\" (including 20\" bumper flap)<\/p><p><strong>Please measure to ensure a great fit.<\/strong><\/p>"
+            "tab_label": "Dimensions"
           }
         },
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6": {
@@ -125,7 +120,7 @@
         }
       },
       "block_order": [
-        "12e582d7-201f-4bd4-86f1-5f8471c19800",
+        "8b38037d-1717-4757-ab5f-15028741f81f",
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],

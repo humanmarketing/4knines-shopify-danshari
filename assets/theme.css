@@ -927,9 +927,7 @@ summary.unset::-webkit-details-marker { display: none; }
 
 /* PDP */
 
-.variant-selector-size legend a {
-  margin-left: 1ch;
-}
+.variant-selector-size legend a { margin-left: 1ch; }
 
 .size-swatch {
   cursor: pointer;

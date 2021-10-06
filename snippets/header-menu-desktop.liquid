@@ -25,9 +25,7 @@
                   {%- if child.links != blank -%}
                     <ul class="child-links">
                       {%- for grandchild in child.links -%}
-                        <li>
-                          {% render 'with-img', item: grandchild, link: true %}
-                        </li>
+                        <li>{% render 'with-img', item: grandchild, link: true %}</li>
                       {%- endfor -%}
                     </ul>
                   {%- endif -%}

@@ -11,6 +11,9 @@
       <label for="pdp-tab-{{ forloop.index }}" class="pdp-tab-item h4 tablet">{{ block.settings.tab_label }}</label>
 
       {%- case block.type -%}
+        {%- when 'dimensions' -%}
+          {% render 'product-details-tabs.dimensions' %}
+
         {%- when 'text' -%}
           <div class="pdp-tab-content padding-x richtext text-center">
             <h3 class="h3 text-accent-2">{{ block.settings.heading }}</h3>
@@ -116,6 +119,17 @@
   "tag": "section",
   "class": "bg",
   "blocks": [
+    {
+      "type": "dimensions",
+      "name": "Dimensions",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_label",
+          "label": "Tab label"
+        }
+      ]
+    },
     {
       "type": "text",
       "name": "Text",

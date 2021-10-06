@@ -33,7 +33,7 @@
   </ul>
 
   {%- if section.settings.note_header != blank and section.settings.note_description != blank -%}
-    <div class="container-sm richtext text-center">
+    <div class="pd3-notes container-sm richtext text-center">
       <h2>{{ section.settings.note_header }}</h2>
       <p>{{ section.settings.note_description }}</p>
     </div>
@@ -59,12 +59,14 @@
     z-index: 1;
   }
 
-  .pd3-logo { margin-top: 2rem; }
-  .pd3-logo img { width: 180px; }
-
+  .pd3-logo,
   .pd3-list { margin-top: 2rem; }
 
+  .pd3-logo img { width: 180px; }
+
   .pd3-cta { max-width: 200px; }
+
+  .pd3-notes { margin-top: 3rem; }
 {% endstylesheet %}
 
 {% schema %}

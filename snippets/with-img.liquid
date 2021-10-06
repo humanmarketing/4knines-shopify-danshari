@@ -29,7 +29,17 @@
 {%- endcapture -%}
 
 {%- if link -%}
-  <a href="{{ item.url }}" class="link with-img">{{ content }}</a>
+  {%- liquid
+    case item.title
+      when 'Competitor Comparisons'
+        assign item_url = item.url | append: '#competition'
+      when 'How to Install'
+        assign item_url = item.url | append: '#installation'
+      when 'Tips & Tricks'
+        assign item_url = item.url | append: '#tips-tricks'
+    endcase
+  -%}
+  <a href="{{ item_url | default: item.url }}" class="link with-img">{{ content }}</a>
 {%- else -%}
   <div class="with-img">{{ content }}</div>
 {%- endif -%}
