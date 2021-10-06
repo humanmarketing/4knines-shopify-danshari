@@ -95,14 +95,9 @@
       "type": "product-details-tabs",
       "blocks": {
         "12e582d7-201f-4bd4-86f1-5f8471c19800": {
-          "type": "text",
+          "type": "dimensions",
           "settings": {
-            "tab_label": "Dimensions & Size",
-            "heading": "Sized to Fit Your SUV",
-            "cta_label": "Watch the Cargo Liner Fit Guide",
-            "cta_link": "",
-            "image": "shopify:\/\/shop_images\/dimensions-cargo-liner.png",
-            "description": "<p>Small: 42\" x 78\" (including 20\" bumper flap)<\/p><p>Large: 52\" x 82\" (including 20\" bumper flap) <\/p><p>XL: 55\" x 106\" (including 20\" bumper flap)<\/p><p><strong>Please measure to ensure a great fit.<\/strong><\/p>"
+            "tab_label": "Dimensions & Size"
           }
         },
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6": {

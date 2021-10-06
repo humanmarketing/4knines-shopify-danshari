@@ -94,12 +94,6 @@
     "product-details-tabs": {
       "type": "product-details-tabs",
       "blocks": {
-        "8b38037d-1717-4757-ab5f-15028741f81f": {
-          "type": "dimensions",
-          "settings": {
-            "tab_label": "Dimensions"
-          }
-        },
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6": {
           "type": "video",
           "settings": {
@@ -120,7 +114,6 @@
         }
       },
       "block_order": [
-        "8b38037d-1717-4757-ab5f-15028741f81f",
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],
