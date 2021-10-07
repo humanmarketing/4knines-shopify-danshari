@@ -64,7 +64,7 @@
             "heading": "High-Quality Products Built to Last",
             "description": "Our seat covers are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. The colorfast fabrics won’t fade. We also offer a lifetime warranty on every product.",
             "cta_label": "Watch the Material Breakdown Comparison",
-            "cta_link": "/pages/helpful-videos#quality-comparison",
+            "cta_link": "\/pages\/helpful-videos#quality-comparison",
             "image": "shopify:\/\/shop_images\/multi-layer-construction.png"
           }
         },
@@ -94,6 +94,12 @@
     "product-details-tabs": {
       "type": "product-details-tabs",
       "blocks": {
+        "061c9155-6666-498a-bd26-402b289a3523": {
+          "type": "dimensions",
+          "settings": {
+            "tab_label": "Dimensions"
+          }
+        },
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6": {
           "type": "video",
           "settings": {
@@ -114,6 +120,7 @@
         }
       },
       "block_order": [
+        "061c9155-6666-498a-bd26-402b289a3523",
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],

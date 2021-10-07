@@ -12,24 +12,49 @@
   <p><a href="/pages/helpful-videos" class="link accent-1">Watch the Fit Guide ></a></p>
 
   <div class="pdp-tabs-dimensions-list">
-    <figure class="paragraph">
-      <a href="https://cdn.shopify.com/s/files/1/0711/6333/files/dimensions-cargo-liner-sm.png?v=1633479802">
-        <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/dimensions-cargo-liner-sm_800x.png?v=1633479802" alt='Small: 42" x 78" (including 20" bumper flap)'>
-      </a>
-      <figcaption><small>Small: 42" x 78" (including 20" bumper flap)</small></figcaption>
-    </figure>
-    <figure class="paragraph">
-      <a href="https://cdn.shopify.com/s/files/1/0711/6333/files/dimensions-cargo-liner-lg.png?v=1633479802">
-        <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/dimensions-cargo-liner-lg_800x.png?v=1633479802" alt='Large: 52" x 82" (including 20" bumper flap)'>
-      </a>
-      <figcaption><small>Large: 52" x 82" (including 20" bumper flap)</small></figcaption>
-    </figure>
-    <figure class="paragraph">
-      <a href="https://cdn.shopify.com/s/files/1/0711/6333/files/dimensions-cargo-liner-xl.png?v=1633479802">
-        <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/dimensions-cargo-liner-xl_800x.png?v=1633479802" alt='XL: 55" x 106" (including 20" bumper flap)'>
-      </a>
-      <figcaption><small>XL: 55" x 106" (including 20" bumper flap)</small></figcaption>
-    </figure>
+    {%- case product.handle -%}
+      {%- when
+        'suv-cargo-cover-liner-for-dogs-and-pets-large-black' or
+        'suv-60-40-split-cargo-cover-liner-for-dogs-and-pets-large-black'
+      -%}
+        <figure class="paragraph">
+          <a href="https://cdn.shopify.com/s/files/1/0711/6333/files/dimensions-cargo-liner-sm.png?v=1633479802">
+            <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/dimensions-cargo-liner-sm_800x.png?v=1633479802" alt="">
+          </a>
+          <figcaption><small>Small: 42" x 78" (including 20" bumper flap)</small></figcaption>
+        </figure>
+        <figure class="paragraph">
+          <a href="https://cdn.shopify.com/s/files/1/0711/6333/files/dimensions-cargo-liner-lg.png?v=1633479802">
+            <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/dimensions-cargo-liner-lg_800x.png?v=1633479802" alt="">
+          </a>
+          <figcaption><small>Large: 52" x 82" (including 20" bumper flap)</small></figcaption>
+        </figure>
+        <figure class="paragraph">
+          <a href="https://cdn.shopify.com/s/files/1/0711/6333/files/dimensions-cargo-liner-xl.png?v=1633479802">
+            <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/dimensions-cargo-liner-xl_800x.png?v=1633479802" alt="">
+          </a>
+          <figcaption><small>XL: 55" x 106" (including 20" bumper flap)</small></figcaption>
+        </figure>
+
+      {%- when
+        'dog-seat-cover-rear-bench-seat-for-cars-trucks-and-suvs' or
+        '4knines-dog-seat-cover-fitted-rear-bench-for-cars' or
+        'split-rear-car-seat-cover-for-dogs-hammock-option-black-regular' or
+        'split-rear-seat-cover-fitted-black'
+      -%}
+        <figure class="paragraph">
+          <a href="https://cdn.shopify.com/s/files/1/0589/5490/7829/products/Image_6_4K9_Dimensions_pic.jpg?v=1628012243">
+            <img src="https://cdn.shopify.com/s/files/1/0589/5490/7829/products/Image_6_4K9_Dimensions_pic_800x.jpg?v=1628012243" alt="">
+          </a>
+          <figcaption><small>Regular</small></figcaption>
+        </figure>
+        <figure class="paragraph">
+          <a href="https://cdn.shopify.com/s/files/1/0589/5490/7829/products/Image_6_XL_dimensions.jpg?v=1628012243">
+            <img src="https://cdn.shopify.com/s/files/1/0589/5490/7829/products/Image_6_XL_dimensions_800x.jpg?v=1628012243" alt="">
+          </a>
+          <figcaption><small>XL</small></figcaption>
+        </figure>
+    {%- endcase -%}
   </div>
 
   <p><b>Please measure to ensure a great fit.</b></p>
