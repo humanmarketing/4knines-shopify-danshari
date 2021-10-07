@@ -34,7 +34,10 @@
 <body>
   {% section 'announcement' %}
   {% section 'header' %}
-  {% render 'breadcrumbs' %}
+
+  {%- if request.page_type != 'index' -%}
+    {% render 'breadcrumbs' %}
+  {%- endif -%}
 
   <main {% if request.page_type == 'captcha' %}class="padding-lg"{% endif %}>
     {{ content_for_layout }}
