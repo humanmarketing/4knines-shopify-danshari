@@ -1,22 +1,8 @@
 {% render 'collection-header' %}
 
 <ul class="collection-product-list">
-  {%- case collection.handle -%}
-    {%- when 'back-seat-covers-for-dogs-pets' -%}
-      <li class="desktop-and-up">
-        <figure class="collection-img-insert">
-          <img
-            {% render 'srcset', image: 'collection-back-seat-covers.png', width: 600, asset: true %}
-            alt="{{ collection.title }}" loading="lazy" draggable="false"
-          />
-        </figure>
-      </li>
-  {%- endcase -%}
-
   {%- for product in collection.products -%}
-    <li>
-      {% render 'product-item' product: product %}
-    </li>
+    <li>{% render 'product-item' product: product %}</li>
   {%- endfor -%}
 </ul>
 
