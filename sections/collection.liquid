@@ -4,7 +4,7 @@
   {%- case collection.handle -%}
     {%- when 'back-seat-covers-for-dogs-pets' -%}
       <li class="desktop-and-up">
-        <figure>
+        <figure class="collection-img-insert">
           <img
             {% render 'srcset', image: 'collection-back-seat-covers.png', width: 600, asset: true %}
             alt="{{ collection.title }}" loading="lazy" draggable="false"
@@ -26,6 +26,13 @@
     grid-template-columns: repeat(var(--col, 2), 1fr);
     gap: 2rem 1.5rem;
     margin-top: 3rem;
+  }
+
+  .collection-img-insert { height: 100%; }
+  .collection-img-insert img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   /* desktop-and-up */

@@ -6,7 +6,7 @@
 
   {%- assign dog_seat_cover_links = linklists['dog-seat-covers'].links | map: 'url' -%}
   {%- if dog_seat_cover_links contains collection.url -%}
-    <nav class="collection-nav">
+    <nav class="collection-nav hide-scrollbar">
       {%- for link in linklists['dog-seat-covers'].links -%}
         <a href="{{ link.url }}" {% if link.active %}class="text-accent-1"{% endif %}>
           {{ link.title }}

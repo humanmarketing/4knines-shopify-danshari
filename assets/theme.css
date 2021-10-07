@@ -228,6 +228,11 @@ summary.unset::-webkit-details-marker { display: none; }
 .bg-dark { background-color: var(--bg-dark); }
 .bg-light { background-color: var(--bg-light); }
 
+.invert {
+  background-color: var(--accent-2);
+  color: #fff;
+}
+
 /* actions */
 
 .accent-1 {
@@ -897,9 +902,7 @@ summary.unset::-webkit-details-marker { display: none; }
   display: none;
 }
 
-.product-item .stamped-badge {
-  font-size: 0.8em;
-}
+.product-item .stamped-badge { font-size: 0.8em; }
 
 .product-item .stamped-badge::before {
   content: '★'attr(data-rating);
@@ -1002,7 +1005,7 @@ input:checked + .color-swatch {
 
 :is(.paragraph, .paragraph-sm, .richtext) > * + * { margin-top: var(--spacing-y, 1rem); }
 
-.paragraph-sm { --spacing-y: 0.5rem; }
+.paragraph-sm > * + * { margin-top: 0.5rem; }
 
 .richtext > :is(h1,h2,h3,h4,h5,h6) {
   font-family: var(--font-heading);

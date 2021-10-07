@@ -3,7 +3,7 @@
 {% render 'search-form', class: 'container-half' %}
 
 {%- if search.performed %}
-  <p class="text-center">{{ search.results_count }} result{% if search.results_count > 1 %}s{% endif %} found for "{{ search.terms }}"</p>
+  <p class="text-center">Showing results for "{{ search.terms }}"</p>
 {%- endif -%}
 
 {%- if search.performed -%}

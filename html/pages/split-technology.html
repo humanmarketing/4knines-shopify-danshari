@@ -1,0 +1,342 @@
+<style>
+  .hero-img img {
+    width: 100%;
+    height: clamp(30vh, 600px, 60vh);
+    object-fit: cover;
+  }
+
+  .hero-cta { font-size: var(--h4); }
+
+  #features {
+    background:
+      var(--bg-light)
+      url('https://cdn.shopify.com/s/files/1/0711/6333/files/shape-bg_1200x.png?v=1633557047')
+      center/cover no-repeat;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-areas: 'img' 'top' 'middle' 'bottom';
+    gap: 2rem;
+    align-items: center;
+  }
+
+  /* desktop-and-up */
+  @media screen and (min-width: 769px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        'top    img'
+        'middle img'
+        'bottom img';
+    }
+  }
+
+  #feature-top { grid-area: top; }
+  #feature-middle { grid-area: middle; }
+  #feature-bottom { grid-area: bottom; }
+  .features-img {
+    grid-area: img;
+    position: relative;
+  }
+
+  /* tablet */
+  @media screen and (max-width: 768px) {
+    #features .dot {
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 100%;
+      background-color: var(--accent-1);
+      transform: translate(-50%, -50%);
+    }
+
+    .dot.top { left: 60%; top: 10%; }
+    .dot.middle { left: 30%; top: 40%; }
+    .dot.bottom { left: 35%; top: 70%; }
+
+    #features [id]:target h3 { color: var(--accent-1); }
+  }
+
+  /* desktop-and-up */
+  @media screen and (min-width: 769px) {
+    #features h3 {
+      position: relative;
+      max-width: -webkit-max-content;
+      max-width: max-content;
+    }
+
+    #features .indicator {
+      position: absolute;
+      left: calc(100% + 2rem); top: 50%;
+      height: 4px;
+      transform: translateY(-50%);
+      background-color: var(--accent-1);
+    }
+
+    #features .indicator::after {
+      content: '';
+      position: absolute;
+      left: 100%; top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 100%;
+      background-color: var(--accent-1);
+    }
+
+    #feature-top .indicator { width: min(600px, 40vw); }
+    #feature-middle .indicator { width: min(400px, 25vw); }
+    #feature-bottom .indicator { width: min(450px, 20vw); }
+  }
+
+  .testimonial-txt { padding: 1rem; }
+
+  .many-ways-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .many-ways-img { position: relative; }
+  .many-ways-img figcaption {
+    position: absolute;
+    right: 0; bottom: 1rem;
+    padding: var(--button-padding);
+    background-color: var(--accent-2);
+    color: #fff;
+    font-size: smaller;
+  }
+
+  #many-ways h3 {
+    margin-bottom: 1rem;
+    padding: var(--button-padding);
+    background-color: var(--accent-1);
+    color: #fff;
+  }
+
+  #why h3 {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-1);
+    text-decoration-thickness: 2px;
+    text-align: center;
+  }
+</style>
+
+<section id="hero" class="bg-light multi-col center" style="gap: 0;">
+  <figure class="hero-img">
+    <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/IMG_0235f_900x.jpg?v=1621957631" alt="Do the split" width="900" height="929" loading="eager">
+  </figure>
+
+  <div class="container-half padding-lg richtext text-center">
+    <h1 class="h1 text-accent-2">Do the split</h1>
+    <p class="h3-body">The only seat cover that allows you access to the middle seat belt, fold down seats or armrest without removing the cover.</p>
+    <p><a href="/collections/the-best-pet-car-seat-covers-around" class="hero-cta action">Shop now</a></p>
+  </div>
+</section>
+
+<section id="take-a-look" class="container padding-lg paragraph text-center">
+  <h2 class="h2">Take a Look</h2>
+  <p>Find the right size for your car using our <a href="/page/fit-guide" class="link-underline"><b>Fit Guide</b></a>.</p>
+
+  <ul class="multi-col" style="--col: 3;">
+    <li class="paragraph">
+      <a href="/products/split-rear-seat-cover-fitted-black">
+        <figure>
+          <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/4knines_rearSeat_1080_2_600x.gif?v=1619629528" alt="Multi-Function Split Rear Seat Cover" width="600" height="600" loading="lazy">
+        </figure>
+      </a>
+      <p class="h3">Multi-Function Split Rear Seat Cover</p>
+      <p class="h4-body text-accent-1">$89.99</p>
+      <p><a href="/products/split-rear-seat-cover-fitted-black" class="action-alt">View details</a></p>
+    </li>
+
+    <li class="paragraph">
+      <a href="/products/crew-cab-rear-bench-seat-cover-with-hammock">
+        <figure>
+          <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/4knines_CrewCab_1080_d8d1f6cd-878b-4c07-a7bd-231f2250d059_600x.gif?v=1619629547" alt="Multi-Function Crew Cab Truck Seat Cover" width="600" height="600" loading="lazy">
+        </figure>
+      </a>
+      <p class="h3">Multi-Function Crew Cab Truck Seat Cover</p>
+      <p class="h4-body text-accent-1">$139.99</p>
+      <p><a href="/products/crew-cab-rear-bench-seat-cover-with-hammock" class="action-alt">View details</a></p>
+    </li>
+
+    <li class="paragraph">
+      <a href="/products/suv-60-40-split-cargo-cover-liner-for-dogs-and-pets-large-black">
+        <figure>
+          <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/4knines_CargoLiner_1080px_a2daeb5f-f52f-4d71-af04-54c7dd9610c3_600x.gif?v=1619629585" alt="Multi-Function Split Suv Cargo Liner" width="600" height="600" loading="lazy">
+        </figure>
+      </a>
+      <p class="h3">Multi-Function Split Suv Cargo Liner</p>
+      <p class="h4-body text-accent-1">$99.99</p>
+      <p><a href="/products/suv-60-40-split-cargo-cover-liner-for-dogs-and-pets-large-black" class="action-alt">View details</a></p>
+    </li>
+  </ul>
+</section>
+
+<section id="features" class="padding">
+  <div class="features-grid container">
+    <figure class="features-img">
+      <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/features-img_1000x.jpg?v=1633557384" alt="" width="1000" height="1214" loading="lazy">
+      <a href="#feature-top" class="dot top"></a>
+      <a href="#feature-middle" class="dot middle"></a>
+      <a href="#feature-bottom" class="dot bottom"></a>
+    </figure>
+
+    <div id="feature-top" class="paragraph-sm">
+      <h3 class="h3">Multi-function <span class="indicator"></span></h3>
+      <p>Easily access fold-down seats, armrest, and all three seat belts</p>
+      <p><b>Bonus: we use the highest-quality zippers</b></p>
+    </div>
+
+    <div id="feature-middle" class="paragraph-sm">
+      <h3 class="h3">Keeps Your Car Clean <span class="indicator"></span></h3>
+      <p>Cover prevents dog hair from getting caught in nooks and crannies + waterproof layers keep liquids from seeping through the cover. <b>Check out our 7-layer construction.</b></p>
+    </div>
+
+    <div id="feature-bottom" class="paragraph-sm">
+      <h3 class="h3">Heavy Duty, Small Weave <span class="indicator"></span></h3>
+      <p>We use materials made to hold out against the toughest of dogs. The small weave prevents dog hair from getting stuck in the fabric, meaning you can easily wipe down, rinse, or vacuum <b>every kind of mess.</b></p>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="container-lg padding-lg paragraph">
+  <h2 class="h2 text-center">What Others Are Saying</h2>
+  <ul class="multi-col" style="--col: 3;">
+    <li class="bg-light text-center">
+      <figure>
+        <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/Artboard_10_b6b0f8bb-c7ed-4af8-978b-8ded416a036a_600x.png?v=1620421816" alt="" width="600" height="600" loading="lazy">
+      </figure>
+      <div class="testimonial-txt paragraph">
+        <p class="h3 text-accent-1">★ ★ ★ ★ ★</p>
+        <p class="h5">Multi-Function Split <strong>Rear Seat Cover</strong></p>
+        <blockquote>"My favorite part about this cover is the hammock because not only does it prevent our big boy from making his way into the front seat, but it contains all of that flying fur. All I have to do is pull it out and shake it off. Not only does the seat stay clean, but the floor does as well. Such a game changer!"</blockquote>
+        <p><i>— Melissa L.</i></p>
+      </div>
+    </li>
+
+    <li class="bg-light text-center">
+      <figure>
+        <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/Artboard_8_600x.png?v=1620420961" alt="Multi-Function Split Cargo Liner" width="600" height="600" loading="lazy">
+      </figure>
+      <div class="testimonial-txt paragraph">
+        <p class="h3 text-accent-1">★ ★ ★ ★ ★</p>
+        <p class="h5">Multi-Function Split <strong>Cargo Liner</strong></p>
+        <blockquote>"This cargo liner is perfect to store my collapsable ladder and not put wear and tear on the carpet on the seat or cargo space. I wasn't a fan of the bumper skirt at first, but as soon as I put my ladder in the car and I didnt scratch my bumper, I found it very important."</blockquote>
+        <p><i>— Bradley B.</i></p>
+      </div>
+    </li>
+
+    <li class="bg-light text-center">
+      <figure>
+        <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/Artboard_9_600x.png?v=1620420980" alt="Multi-Function Split Truck Seat Cover" width="600" height="600" loading="lazy">
+      </figure>
+      <div class="testimonial-txt paragraph">
+        <p class="h3 text-accent-1">★ ★ ★ ★ ★</p>
+        <p class="h5">Multi-Function Split <strong>Truck Seat Cover</strong></p>
+        <blockquote>"The cover took less than a minute to install and is a perfect fit. No slipping when my dog wanders from window to window. Been looking for something like this for a few years."</blockquote>
+        <p><i>— Don S.</i></p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section id="video" class="container padding-lg  multi-col center">
+  <script src="https://fast.wistia.com/embed/medias/yje5fhehk7.jsonp" async></script>
+  <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+    <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+      <div class="wistia_embed wistia_async_yje5fhehk7 videoFoam=true" style="height:100%;position:relative;width:100%">
+        <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+          <img src="https://fast.wistia.com/embed/medias/yje5fhehk7/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="richtext">
+    <h2 class="h2">The Split-Tech Difference</h2>
+    <p>The 4Knines patented split design allows for the best function over any other covers on the market. Watch as 4Knines Founder, Jim, walks through how the 4Knines split functionality compares to the competition.</p>
+    <p><a href="/pages/helpful-videos" class="link accent-1">More helpful videos ></a></p>
+  </div>
+</section>
+
+<section id="many-ways" class="container-lg padding-lg paragraph text-center">
+  <h2 class="h2">So Many Ways to Split</h2>
+  <ul class="many-ways-list">
+    <li>
+      <figure class="many-ways-img">
+        <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/split-tech-rear-seat-cover_600x.jpg?v=1633564393" alt="Rear Seat Cover no hammock" width="600" height="600" loading="lazy">
+        <figcaption>No hammock</figcaption>
+      </figure>
+      <h3 class="h4">Rear Seat Cover</h3>
+      <p><a href="/products/split-rear-seat-cover-fitted-black" class="action-alt">Shop now</a></p>
+    </li>
+
+    <li>
+      <figure class="many-ways-img">
+        <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/split-tech-cargo-liner_600x.jpg?v=1633564393" alt="Cargo Liner" width="600" height="600" loading="lazy">
+      </figure>
+      <h3 class="h4">Cargo Liner</h3>
+      <p><a href="/products/suv-60-40-split-cargo-cover-liner-for-dogs-and-pets-large-black" class="action-alt">Shop now</a></p>
+    </li>
+
+    <li>
+      <figure class="many-ways-img">
+        <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/split-tech-rear-seat-cover-hammock_600x.jpg?v=1633564393" alt="Rear Seat Cover with Hammock" width="600" height="600" loading="lazy">
+        <figcaption>With hammock</figcaption>
+      </figure>
+      <h3 class="h4">Rear Seat Cover</h3>
+      <p><a href="/products/split-rear-car-seat-cover-for-dogs-hammock-option-black-regular" class="action-alt">Shop now</a></p>
+    </li>
+
+    <li>
+      <figure class="many-ways-img">
+        <img src="https://cdn.shopify.com/s/files/1/0711/6333/files/split-tech-crew-cab-cover_600x.jpg?v=1633564393" alt="Crew Cab Cover" width="600" height="600" loading="lazy">
+      </figure>
+      <h3 class="h4">Crew Cab Cover</h3>
+      <p><a href="/products/crew-cab-rear-bench-seat-cover-with-hammock" class="action-alt">Shop now</a></p>
+    </li>
+  </ul>
+</section>
+
+<section id="why" class="padding-lg bg-light">
+  <div class="container paragraph">
+    <h2 class="h2 text-center">Why <strong class="text-accent-1">4Knines</strong>?</h2>
+
+    <div class="multi-col">
+      <div class="richtext">
+        <h3 class="h3">PROS</h3>
+        <ul>
+          <li>No need to worry about wet paws, spills, mud, urine or the occasional puke ruining your car’s interior</li>
+          <li>Prevents dog hair and dirt from settling into nooks and crannies</li>
+          <li>No AZO dyes or heavy chemicals</li>
+          <li>Easily wipe it clean, shake it out or toss it in the washer</li>
+          <li>Install takes seconds</li>
+          <li>Non-slip backing and seat anchors keep it in place</li>
+          <li>No more unusable “dog” backseat</li>
+          <li>Enjoy peace of mind knowing you won’t have to spend hours cleaning up after your dog’s mess</li>
+          <li>We’re a USA based company with an exceptional customer service team</li>
+          <li>Since 2013 we've been constantly improving our products based on customer feedback</li>
+          <li>Exceptional craftsmanship and attention to detail</li>
+          <li>You never have to worry about buying another seat cover</li>
+        </ul>
+      </div>
+
+      <div class="richtext">
+        <h3 class="h3">CONS</h3>
+        <ul>
+          <li>A little more expensive than some other covers (but worth every penny)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="patent" class="container padding text-center richtext">
+  <p class="h4-body"><u>Split Cover Technology protected by US Patent No.</u> 9,963,086, 9,610,877, 9,815,395, 9,878,646, 9,845,033, 10,343,568, 10,518,676, 10,363,847, 10,647,233, D880198, D902,629</p>
+</section>
+
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
