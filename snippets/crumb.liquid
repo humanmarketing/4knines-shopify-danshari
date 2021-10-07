@@ -1,0 +1,19 @@
+{%- comment -%}
+  text
+  url?
+  position
+{%- endcomment -%}
+
+<span class="crumb" property="itemListElement" typeof="ListItem">
+  {%- if url != blank -%}
+    <a class="link" href="{{ url }}" property="item" typeof="WebPage">
+  {%- endif -%}
+
+  <span property="name">{{ text }}</span>
+
+  {%- if url != blank -%}
+    </a>
+  {%- endif -%}
+
+  <meta property="position" content="{{ position | default: 2 }}" />
+</span>

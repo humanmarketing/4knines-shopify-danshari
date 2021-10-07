@@ -730,6 +730,12 @@ summary.unset::-webkit-details-marker { display: none; }
   }
 }
 
+/* breadcrumb */
+
+.breadcrumbs { padding: 1rem 1rem 0; }
+
+.breadcrumbs .crumb:not(:last-child)::after { content: ' / '; }
+
 /* footer */
 
 #shopify-section-footer {

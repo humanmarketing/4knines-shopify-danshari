@@ -34,6 +34,7 @@
 <body>
   {% section 'announcement' %}
   {% section 'header' %}
+  {% render 'breadcrumbs' %}
 
   <main {% if request.page_type == 'captcha' %}class="padding-lg"{% endif %}>
     {{ content_for_layout }}
@@ -41,7 +42,6 @@
 
   {% section 'newsletter' %}
   {% section 'footer' %}
-
   {% render 'schema' %}
 
   <script src="{{ 'theme.min.js' | asset_url }}" defer></script>

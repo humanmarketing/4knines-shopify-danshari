@@ -1,0 +1,40 @@
+<nav
+  vocab="https://schema.org"
+  typeof="BreadcrumbList"
+  {% case request.page_type %}
+    {% when 'collection' %}
+      class="breadcrumbs container padding text-center font-heading"
+    {% when 'product' %}
+      class="breadcrumbs breadcrumbs-product container font-heading" style="font-size: smaller;"
+    {% else %}
+      hidden
+  {% endcase %}
+>
+  <div class="breadcrumbs-inner page-width">
+    {%- liquid
+      render 'crumb', url: routes.root_url, text: 'Home', position: 1
+
+      case request.page_type
+        when 'collection'
+          assign dog_seat_cover_links = linklists['dog-seat-covers'].links | map: 'url'
+          if dog_seat_cover_links contains collection.url
+            render 'crumb', text: 'Dog Seat Covers', url: '/collections/dog-seat-covers'
+            render 'crumb', text: collection.title, position: 3
+          else
+            render 'crumb', text: collection.title
+          endif
+
+        when 'product'
+          render 'crumb', text: product.title
+
+        when 'page'
+          render 'crumb', text: page.title
+
+        else
+          assign text = request.page_type | capitalize
+          render 'crumb', text: text
+
+      endcase
+    -%}
+  </div>
+</nav>
