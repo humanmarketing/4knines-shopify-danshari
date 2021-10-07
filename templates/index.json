@@ -6,7 +6,7 @@
         "c6bc3884-d619-4698-a1da-7e55ba912483": {
           "type": "promo",
           "settings": {
-            "enabled": true,
+            "enabled": false,
             "heading": "Black Friday Sale",
             "description": "XX% off XXX with code:\n123CODE, offer ends 11\/28",
             "cta_link": "",
@@ -101,7 +101,7 @@
         "c78c7096-39f8-49b1-a0f3-805a8298fc6c"
       ],
       "settings": {
-        "collection": "dog-travel-accessories",
+        "collection": "accessories-for-dogs",
         "description": "Pet accessories that make traveling with your dog fun and convenient.",
         "image": "shopify:\/\/shop_images\/shop-dog-travel-accessories.png"
       }
@@ -115,10 +115,34 @@
             "collection": "dog-blankets",
             "title": ""
           }
+        },
+        "c99f14c0-6dc2-4e40-87fd-51c940b7158d": {
+          "type": "product",
+          "settings": {
+            "product": "waterproof-dog-bed-cover",
+            "title": "Dog Bed Covers"
+          }
+        },
+        "81086311-3097-409a-97af-d2384e1b3408": {
+          "type": "product",
+          "settings": {
+            "product": "dog-bed-cover-liner-waterproof-washable",
+            "title": "Dog Bed Liners"
+          }
+        },
+        "d8faad17-63d7-4d37-92b9-3e41e3cc5bef": {
+          "type": "product",
+          "settings": {
+            "product": "dog-harness",
+            "title": ""
+          }
         }
       },
       "block_order": [
-        "6bacdc1e-e010-43bd-8a82-2ebc2c2a70f5"
+        "6bacdc1e-e010-43bd-8a82-2ebc2c2a70f5",
+        "c99f14c0-6dc2-4e40-87fd-51c940b7158d",
+        "81086311-3097-409a-97af-d2384e1b3408",
+        "d8faad17-63d7-4d37-92b9-3e41e3cc5bef"
       ],
       "settings": {
         "collection": "dog-supplies",
@@ -133,7 +157,7 @@
           "type": "item",
           "settings": {
             "heading": "High-Quality Products Built to Last",
-            "description": "Our seat covers are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. We offer a lifetime warranty on every product.",
+            "description": "Our seat covers are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. We offer a lifetime warranty on all 4Knines seat covers.",
             "icon": "shopify:\/\/shop_images\/icon-quality.png"
           }
         },
