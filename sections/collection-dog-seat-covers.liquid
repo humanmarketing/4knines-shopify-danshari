@@ -23,15 +23,26 @@
 
       <ul class="subcategory-products unstyled">
         {%- if subcategory.products.size > 0 -%}
-          {%- for product in subcategory.products -%}
-            <li>
-              {% render 'product-item', product: product, small: true %}
-            </li>
-          {%- endfor -%}
+          {%- case subcategory.handle -%}
+            {%- when 'truck-seat-covers' -%}
+              {%- comment -%} only display certain products for truck seat covers {%- endcomment -%}
+              {%- for product in subcategory.products -%}
+                {%- if
+                  product.title == 'Multi-Function Crew Cab Truck Seat Cover with Hammock' or
+                  product.title == 'Floor Hammock for Crew Cab Trucks'
+                -%}
+                  <li>{% render 'product-item', product: product, small: true %}</li>
+                {%- endif -%}
+              {%- endfor -%}
+
+            {%- else -%}
+              {%- comment -%} display all products {%- endcomment -%}
+              {%- for product in subcategory.products -%}
+                <li>{% render 'product-item', product: product, small: true %}</li>
+              {%- endfor -%}
+          {%- endcase -%}
         {%- else -%}
-          <li>
-            {% render 'product-item', product: subcategory, small: true %}
-          </li>
+          <li>{% render 'product-item', product: subcategory, small: true %}</li>
         {%- endif -%}
       </ul>
     </article>
