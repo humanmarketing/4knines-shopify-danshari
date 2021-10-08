@@ -14,7 +14,7 @@
       {%- if item.cta_link != blank -%}
         <a href="{{ item.cta_link }}" class="pack-3-cta action">{{ item.cta_label }}</a>
       {%- else -%}
-        <span class="pack-3-cta action">{{ item.cta_label }}</span>
+        <span class="pack-3-cta action" style="pointer-events: none;">{{ item.cta_label }}</span>
       {%- endif -%}
     </li>
   {%- endfor -%}
@@ -46,7 +46,7 @@
     z-index: 1;
     font-size: var(--h4);
   }
-  .pack-3-cta:not[href] { pointer-event: none; }
+
   /* desktop-and-up */
   @media screen and (min-width: 769px) {
     .pack-3-item { min-height: 300px; }
