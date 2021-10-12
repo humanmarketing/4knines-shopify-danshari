@@ -36,7 +36,7 @@
               <td>{{ line_item.quantity }}</td>
               <td>
                 {%- if line_item.original_line_price > line_item.final_line_price -%}
-                  <s>{{ line_item.original_line_price | money }}</s><br>
+                  <s class="compare-at-price">{{ line_item.original_line_price | money }}</s><br>
                 {%- endif -%}
                 {{ line_item.final_line_price | money }}
               </td>

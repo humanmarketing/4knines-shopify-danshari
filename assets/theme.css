@@ -391,7 +391,7 @@ summary.unset::-webkit-details-marker { display: none; }
 
 .qty-value {
   -moz-appearance: textfield;
-  width: 100%;
+  max-width: 6ch;
   padding: var(--button-padding);
   padding-inline: 0;
   text-align: center;
@@ -977,6 +977,10 @@ input:checked + .variant-swatch {
 input:checked + .color-swatch {
   box-shadow: var(--outline);
 }
+
+/* price */
+
+.compare-at-price { opacity: 0.6; }
 
 /* blog */
 

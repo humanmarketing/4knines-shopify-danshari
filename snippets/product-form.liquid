@@ -38,7 +38,7 @@
 
     <div class="h3 text-right">
       {%- if product.compare_at_price > product.price -%}
-        <s><small data-compare-at-price>{{ product.compare_at_price | money }}</small></s>
+        <s class="compare-at-price"><small data-compare-at-price>{{ product.compare_at_price | money }}</small></s>
       {%- endif %}
       <span data-price>{{ product.price | money }}</span>
     </div>
