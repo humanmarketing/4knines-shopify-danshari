@@ -1,3 +1,5 @@
+{%- assign icon_and_text = section.blocks | where: 'type', 'icon-and-text' | map: 'settings' -%}
+
 {% render 'product-images' %}
 
 <div class="section-product-txt">
@@ -13,7 +15,6 @@
       {{ product.metafields.stamped.badge }}
     </div>
 
-    {%- assign icon_and_text = section.blocks | where: 'type', 'icon-and-text' | map: 'settings' -%}
     {%- if icon_and_text.size > 0 -%}
       {% render 'product-icon-text', descriptions: icon_and_text %}
     {%- endif -%}
@@ -25,14 +26,18 @@
       <li class="with-icon">{% render 'icon-warranty' %} Lifetime Warranty</li>
       <li class="with-icon">{% render 'icon-30' %} 30 Day Returns</li>
     </ul>
+
+    {%- unless icon_and_text.size > 0 -%}
+      <div class="product-description richtext">
+        {{ product.description }}
+      </div>
+    {%- endunless -%}
   </div>
 </div>
 
 {% render 'product-recommendations' %}
 
 <script src="{{ 'product.min.js' | asset_url }}" defer></script>
-<script src="https://fast.wistia.com/embed/medias/7wnoi46o2c.jsonp" async></script>
-<script src="https://fast.wistia.com/embed/medias/0gg6oxfii2.jsonp" async></script>
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 
 {% stylesheet %}
@@ -79,6 +84,12 @@
   .product-mini-features svg {
     color: var(--accent-3);
     height: 1.7em;
+  }
+
+  .product-description {
+    padding: 1rem;
+    background-color: var(--bg-light);
+    font-size: 0.9em;
   }
 
   .recommendation-product-list {

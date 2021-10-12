@@ -2,7 +2,7 @@
   option
 {%- endcomment -%}
 
-<fieldset>
+<fieldset class="variant-selector">
   <legend class="font-heading">
     <small>
       {{ option.name }}
@@ -17,8 +17,9 @@
       value="{{ value | escape }}"
       type="radio"
       {% if option.selected_value == value %}checked{% endif %}
+      hidden
     />
-    <label for="{{ option.name }}-{{ forloop.index }}">
+    <label class="variant-swatch" for="{{ option.name }}-{{ forloop.index }}">
       {{ value }}
     </label>
   {%- endfor -%}

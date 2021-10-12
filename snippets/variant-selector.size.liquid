@@ -2,7 +2,7 @@
   option
 {%- endcomment -%}
 
-<fieldset class="variant-selector-size">
+<fieldset class="variant-selector variant-selector-size">
   <legend class="font-heading">
     <small class="">
       {{ option.name }}
@@ -20,8 +20,16 @@
       {% if option.selected_value == value %}checked{% endif %}
       hidden
     />
-    <label class="size-swatch" for="{{ option.name }}-{{ forloop.index }}">
-      {{ value }}
+
+    {%- liquid
+      assign size_name = value | split: '(' | first | strip
+      assign size_dimension = value | split: '(' | last | replace: ')' | strip
+    -%}
+    <label class="variant-swatch" for="{{ option.name }}-{{ forloop.index }}">
+      {{ size_name }}
+      {%- if size_dimension != blank and size_dimension != size_name -%}
+        <small>{{ size_dimension }}</small>
+      {%- endif -%}
     </label>
   {%- endfor -%}
 </fieldset>

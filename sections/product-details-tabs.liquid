@@ -32,16 +32,29 @@
           </div>
 
         {%- when 'video' -%}
-          <div class="pdp-tab-content padding-x multi-col center">
-            <div class="richtext">
-              <h3 class="h2 text-accent-2">{{ block.settings.heading }}</h3>
-              {{ block.settings.description }}
-            </div>
+          {%- if block.settings.description != blank -%}
+            <div class="pdp-tab-content padding-x multi-col center">
+              <div class="richtext">
+                <h3 class="h2 text-accent-2">{{ block.settings.heading }}</h3>
+                {{ block.settings.description }}
+              </div>
 
-            <figure class="video-wrapper">
-              {{ block.settings.video_html }}
-            </figure>
-          </div>
+              <figure class="video-wrapper">
+                {{ block.settings.video_html }}
+              </figure>
+            </div>
+          {%- else -%}
+            <div class="pdp-tab-content padding-x richtext text-center">
+              {%- if block.settings.heading != blank -%}
+                <h3 class="h2 text-accent-2">{{ block.settings.heading }}</h3>
+              {%- endif -%}
+
+              <figure class="video-wrapper">
+                {{ block.settings.video_html }}
+              </figure>
+            </div>
+          {%- endif -%}
+
       {%- endcase -%}
     </div>
   {%- endfor -%}
@@ -95,8 +108,14 @@
   }
   .pdp-tab-content a:hover { text-decoration: underline; }
 
-  .pdp-tab-content .video-wrapper { min-width: 0; }
-  .pdp-tab-content .video-wrapper > div { max-width: 100%; }
+  .pdp-tab-content .video-wrapper {
+    min-width: 0;
+    max-width: 500px;
+  }
+  .pdp-tab-content .video-wrapper > div {
+    max-width: 100%;
+    margin-inline: auto;
+  }
 
   input[name="pdp-tabs"]:not(:checked) ~ .pdp-tab-content { display: none; }
 

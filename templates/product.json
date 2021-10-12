@@ -17,9 +17,6 @@
         "show_social": false
       }
     },
-    "product-description": {
-      "type": "product-description"
-    },
     "icon-list-h": {
       "type": "icon-list-h",
       "blocks": {
@@ -143,7 +140,6 @@
   "order": [
     "product",
     "testimonial-and-social",
-    "product-description",
     "icon-list-h",
     "product-details-3-pack",
     "product-details-tabs",

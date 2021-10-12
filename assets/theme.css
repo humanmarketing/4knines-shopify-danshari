@@ -928,13 +928,13 @@ summary.unset::-webkit-details-marker { display: none; }
 
 /* PDP */
 
-:is(.variant-selector-size, .variant-selector-color) > * + * {
+.variant-selector > * + * {
   margin-top: 0.5rem;
 }
 
 .variant-selector-size legend a { margin-left: 1ch; }
 
-.size-swatch {
+.variant-swatch {
   cursor: pointer;
   display: inline-block;
   margin-right: 0.25em;
@@ -945,7 +945,12 @@ summary.unset::-webkit-details-marker { display: none; }
   border-radius: 4em;
 }
 
-input:checked + .size-swatch {
+.variant-swatch small {
+  display: block;
+  font-size: 0.7em;
+}
+
+input:checked + .variant-swatch {
   border-color: var(--accent-1);
 }
 
