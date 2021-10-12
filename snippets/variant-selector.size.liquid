@@ -4,11 +4,13 @@
 
 <fieldset class="variant-selector variant-selector-size">
   <legend class="font-heading">
-    <small class="">
-      {{ option.name }}
+    <small>
+      {{ option.name }}:
       <b data-option-preview="{{ option.name | handleize }}">{{ option.selected_value }}</b>
     </small>
-    <a href="#product-tabs" class="link accent-1">Details ></a>
+    <a href="#product-tabs" class="link accent-1">
+      <small>Details ></small>
+    </a>
   </legend>
 
   {%- for value in option.values -%}
@@ -27,9 +29,6 @@
     -%}
     <label class="variant-swatch" for="{{ option.name }}-{{ forloop.index }}">
       {{ size_name }}
-      {%- if size_dimension != blank and size_dimension != size_name -%}
-        <small>{{ size_dimension }}</small>
-      {%- endif -%}
     </label>
   {%- endfor -%}
 </fieldset>

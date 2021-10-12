@@ -1,7 +1,9 @@
 <div id="product-tabs" class="section-pdp-tabs padding-lg container">
   <div class="pdp-tabs-list desktop-and-up">
     {%- for block in section.blocks -%}
-      <label for="pdp-tab-{{ forloop.index }}" class="pdp-tab-item h4">{{ block.settings.tab_label }}</label>
+      <label for="pdp-tab-{{ forloop.index }}" class="pdp-tab-item h4{% if forloop.first %} text-accent-1{% endif %}">
+        {{ block.settings.tab_label }}
+      </label>
     {%- endfor -%}
   </div>
 
@@ -32,28 +34,7 @@
           </div>
 
         {%- when 'video' -%}
-          {%- if block.settings.description != blank -%}
-            <div class="pdp-tab-content padding-x multi-col center">
-              <div class="richtext">
-                <h3 class="h2 text-accent-2">{{ block.settings.heading }}</h3>
-                {{ block.settings.description }}
-              </div>
-
-              <figure class="video-wrapper">
-                {{ block.settings.video_html }}
-              </figure>
-            </div>
-          {%- else -%}
-            <div class="pdp-tab-content padding-x richtext text-center">
-              {%- if block.settings.heading != blank -%}
-                <h3 class="h2 text-accent-2">{{ block.settings.heading }}</h3>
-              {%- endif -%}
-
-              <figure class="video-wrapper">
-                {{ block.settings.video_html }}
-              </figure>
-            </div>
-          {%- endif -%}
+          {% render 'product-details-tabs.video', block: block %}
 
       {%- endcase -%}
     </div>
@@ -70,7 +51,10 @@
   }
 
   .pdp-tab-item { cursor: pointer; }
-  .pdp-tab-item:hover { color: var(--accent-1); }
+  .pdp-tab-item:hover {
+    text-decoration: underline;
+    tex-decoration-thickness: 2px;
+  }
 
   .pdp-tab-item.tablet {
     display: grid;
@@ -91,7 +75,6 @@
   }
 
   .pdp-tab-content {
-    margin-top: 2rem;
     animation: pdp-tab-content var(--t) forwards;
   }
 
@@ -111,6 +94,7 @@
   .pdp-tab-content .video-wrapper {
     min-width: 0;
     max-width: 500px;
+    margin-inline: auto;
   }
   .pdp-tab-content .video-wrapper > div {
     max-width: 100%;
@@ -207,6 +191,27 @@
           "id": "video_html",
           "label": "Video HTML",
           "info": "Paste Wistia embed code"
+        },
+        {
+          "type": "select",
+          "id": "metafield",
+          "label": "Metafield",
+          "info": "product.metafields.pdp.<metafield>",
+          "options": [
+            {
+              "value": "",
+              "label": "None (use Video HTML)"
+            },
+            {
+              "value": "features_video_code",
+              "label": "features_video_code"
+            },
+            {
+              "value": "installation_video_code",
+              "label": "installation_video_code"
+            }
+          ],
+          "default": ""
         }
       ]
     }

@@ -58,4 +58,23 @@ const observer = new IntersectionObserver(handleIntersection, {rootMargin: '0px 
 
 observer.observe(productRecommendationsSection)
 
+/* product tabs */
+
+const productTabs = document.querySelectorAll('input[name="pdp-tabs"]')
+const tabItems = document.querySelectorAll('.pdp-tab-item')
+
+function updateSelectedTab() {
+  const selectedTab = document.querySelector('input[name="pdp-tabs"]:checked')
+
+  tabItems.forEach(item => { item.classList.remove('text-accent-1') })
+
+  const targetTab = document.querySelector(`.pdp-tab-item[for="${ selectedTab.id }"]`)
+  targetTab.classList.add('text-accent-1')
+}
+updateSelectedTab()
+
+productTabs.forEach(tab => {
+  tab.addEventListener('change', updateSelectedTab)
+})
+
 })()

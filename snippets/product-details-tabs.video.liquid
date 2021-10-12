@@ -1,0 +1,41 @@
+{%- comment -%}
+  block
+{%- endcomment -%}
+
+{%- liquid
+  case block.settings.metafield
+    when 'features_video_code'
+      assign video_code = product.metafields.pdp.features_video_code
+    when 'installation_video_code'
+      assign video_code = product.metafields.pdp.installation_video_code
+    else
+      assign video_code = block.settings.video_html
+  endcase
+-%}
+
+{%- capture video_content -%}
+  {%- if video_code -%}
+    <figure class="video-wrapper">{{ video_code }}</figure>
+  {%- else -%}
+    <p>For more tips and information about our products, go to our <a href="/pages/helpful-videos">Helpful Videos</a> page.</p>
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- if block.settings.description != blank -%}
+  <div class="pdp-tab-content padding multi-col center">
+    <div class="richtext">
+      <h3 class="h2 text-accent-2">{{ block.settings.heading }}</h3>
+      {{ block.settings.description }}
+    </div>
+
+    {{ video_content }}
+  </div>
+{%- else -%}
+  <div class="pdp-tab-content padding richtext text-center">
+    {%- if block.settings.heading != blank -%}
+      <h3 class="h2 text-accent-2">{{ block.settings.heading }}</h3>
+    {%- endif -%}
+
+    {{ video_content }}
+  </div>
+{%- endif -%}

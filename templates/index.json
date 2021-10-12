@@ -94,11 +94,19 @@
             "product": "dog-seat-belt",
             "title": ""
           }
+        },
+        "12a225ad-9045-4443-b52c-d1d58953c1e0": {
+          "type": "product",
+          "settings": {
+            "product": "dog-crate-mat-travel-bed",
+            "title": ""
+          }
         }
       },
       "block_order": [
         "895b0d60-3577-4683-9467-217317974b59",
-        "c78c7096-39f8-49b1-a0f3-805a8298fc6c"
+        "c78c7096-39f8-49b1-a0f3-805a8298fc6c",
+        "12a225ad-9045-4443-b52c-d1d58953c1e0"
       ],
       "settings": {
         "collection": "accessories-for-dogs",

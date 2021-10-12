@@ -28,7 +28,7 @@
     </ul>
 
     {%- unless icon_and_text.size > 0 -%}
-      <div class="product-description richtext">
+      <div class="richtext" style="font-size: 0.9em;">
         {{ product.description }}
       </div>
     {%- endunless -%}
@@ -84,12 +84,6 @@
   .product-mini-features svg {
     color: var(--accent-3);
     height: 1.7em;
-  }
-
-  .product-description {
-    padding: 1rem;
-    background-color: var(--bg-light);
-    font-size: 0.9em;
   }
 
   .recommendation-product-list {
