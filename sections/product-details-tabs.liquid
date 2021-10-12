@@ -20,7 +20,7 @@
           {% render 'product-details-tabs.dimensions' %}
 
         {%- when 'text' -%}
-          <div class="pdp-tab-content padding-x richtext text-center">
+          <div class="pdp-tab-content padding richtext text-center">
             <h3 class="h3 text-accent-2">{{ block.settings.heading }}</h3>
             {%- if block.settings.cta_link -%}
               <p><a href="{{ block.settings.cta_link }}" class="link accent-1">{{ block.settings.cta_label }} ></a></p>
@@ -94,6 +94,7 @@
   .pdp-tab-content .video-wrapper {
     min-width: 0;
     max-width: 500px;
+    width: 100%;
     margin-inline: auto;
   }
   .pdp-tab-content .video-wrapper > div {

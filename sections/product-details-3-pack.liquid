@@ -16,10 +16,17 @@
     {%- for card in cards -%}
       <li class="richtext">
         <figure>
+          {%- liquid
+            if forloop.first and product.metafields.pdp.split_technology_img != blank
+              assign card_image = product.metafields.pdp.split_technology_img
+            else
+              assign card_image = card.image
+            endif
+          -%}
           <img
-            {% render 'srcset', image: card.image, width: 500 %}
+            {% render 'srcset', image: card_image, width: 500 %}
             alt="{{ card.image.alt | default: card.heading }}"
-          >
+          />
         </figure>
         <h3 class="h3 text-accent-2">{{ card.heading }}</h3>
         <p>{{ card.description }}</p>
