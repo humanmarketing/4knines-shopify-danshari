@@ -1,6 +1,9 @@
-<ul class="product-description paragraph">
-  {%- assign icon_and_text = section.blocks | where: 'type', 'icon-and-text' | map: 'settings' -%}
-  {%- for item in icon_and_text -%}
+{%- comment -%}
+  descriptions
+{%- endcomment -%}
+
+<ul class="product-icon-text paragraph">
+  {%- for item in descriptions -%}
     <li class="product-icon-txt">
       <figure>
         <img

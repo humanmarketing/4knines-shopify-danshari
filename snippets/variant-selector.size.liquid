@@ -3,12 +3,12 @@
 {%- endcomment -%}
 
 <fieldset class="variant-selector-size">
-  <legend>
-    <small class="font-heading">
+  <legend class="font-heading">
+    <small class="">
       {{ option.name }}
       <b data-option-preview="{{ option.name | handleize }}">{{ option.selected_value }}</b>
     </small>
-    <a href="#product-tabs" class="font-body link accent-1">Details ></a>
+    <a href="#product-tabs" class="link accent-1">Details ></a>
   </legend>
 
   {%- for value in option.values -%}

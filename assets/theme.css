@@ -960,7 +960,7 @@ input:checked + .size-swatch {
 }
 
 .color-swatch:not(.small) {
-  --size: 30px;
+  --size: 40px;
   margin-right: 0.25rem;
 }
 
