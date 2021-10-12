@@ -29,6 +29,13 @@
     "featured-collection-1": {
       "type": "featured-collection",
       "blocks": {
+        "07887f63-12fb-475b-b5f1-3bdeae55e38a": {
+          "type": "collection",
+          "settings": {
+            "collection": "back-seat-covers-for-dogs-pets",
+            "title": "Back Seat Covers"
+          }
+        },
         "961223cf-a80a-4b3a-9975-8b6ff1b63dd5": {
           "type": "collection",
           "settings": {
@@ -50,13 +57,6 @@
             "title": "Front Seat Covers"
           }
         },
-        "07887f63-12fb-475b-b5f1-3bdeae55e38a": {
-          "type": "collection",
-          "settings": {
-            "collection": "back-seat-covers-for-dogs-pets",
-            "title": "Back Seat Covers"
-          }
-        },
         "4c482945-061b-4e7b-8384-e819460f9789": {
           "type": "product",
           "settings": {
@@ -66,10 +66,10 @@
         }
       },
       "block_order": [
+        "07887f63-12fb-475b-b5f1-3bdeae55e38a",
         "961223cf-a80a-4b3a-9975-8b6ff1b63dd5",
         "03a4ff7e-87e8-4abb-af30-4666c670a9cd",
         "92025eec-6dd7-4c95-a2a4-3010a4a29e37",
-        "07887f63-12fb-475b-b5f1-3bdeae55e38a",
         "4c482945-061b-4e7b-8384-e819460f9789"
       ],
       "settings": {
@@ -165,7 +165,7 @@
           "type": "item",
           "settings": {
             "heading": "High-Quality Products Built to Last",
-            "description": "Our seat covers are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. We offer a lifetime warranty on all 4Knines seat covers.",
+            "description": "Our seat covers are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. We offer a lifetime warranty on all 4Knines seat covers and cargo liners.",
             "icon": "shopify:\/\/shop_images\/icon-quality.png"
           }
         },
