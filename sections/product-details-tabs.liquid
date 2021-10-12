@@ -13,6 +13,9 @@
       <label for="pdp-tab-{{ forloop.index }}" class="pdp-tab-item h4 tablet">{{ block.settings.tab_label }}</label>
 
       {%- case block.type -%}
+        {%- when 'video' -%}
+          {% render 'product-details-tabs.video', block: block %}
+
         {%- when 'dimensions' -%}
           {% render 'product-details-tabs.dimensions' %}
 
@@ -32,9 +35,6 @@
             {%- endif -%}
             {{ block.settings.description }}
           </div>
-
-        {%- when 'video' -%}
-          {% render 'product-details-tabs.video', block: block %}
 
       {%- endcase -%}
     </div>

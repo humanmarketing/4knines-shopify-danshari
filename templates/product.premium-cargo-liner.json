@@ -6,7 +6,7 @@
         "8b1edabc-535c-419a-b3fc-4d7289295190": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Heavy Duty, Easy to Clean Material",
+            "description": "Heavy duty, easy to clean material",
             "icon": "shopify:\/\/shop_images\/icon-heavy-duty.png"
           }
         },
@@ -64,7 +64,7 @@
             "heading": "High-Quality Products Built to Last",
             "description": "Our cargo liners are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. The colorfast fabrics won’t fade. We also offer a lifetime warranty on every product.",
             "cta_label": "Watch the Material Breakdown Comparison",
-            "cta_link": "/pages/helpful-videos#quality-comparison",
+            "cta_link": "\/pages\/helpful-videos#quality-comparison",
             "image": "shopify:\/\/shop_images\/multi-layer-construction.png"
           }
         },
@@ -94,19 +94,20 @@
     "product-details-tabs": {
       "type": "product-details-tabs",
       "blocks": {
-        "12e582d7-201f-4bd4-86f1-5f8471c19800": {
-          "type": "dimensions",
-          "settings": {
-            "tab_label": "Dimensions & Size"
-          }
-        },
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6": {
           "type": "video",
           "settings": {
             "tab_label": "Features",
             "heading": "Waterproof & Non-Slip",
             "description": "<p>Special solid waterproof layer makes the seat bottom completely waterproofed (seams, stitching, and zippers are not watertight).<\/p>",
-            "video_html": "<div class=\"wistia_embed wistia_async_7wnoi46o2c\" style=\"height:500px;position:relative;width:500px\"><\/div>"
+            "video_html": "<div class=\"wistia_embed wistia_async_7wnoi46o2c\" style=\"height:500px;position:relative;width:500px\"><\/div>",
+            "metafield": ""
+          }
+        },
+        "12e582d7-201f-4bd4-86f1-5f8471c19800": {
+          "type": "dimensions",
+          "settings": {
+            "tab_label": "Dimensions & Size"
           }
         },
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
@@ -115,13 +116,14 @@
             "tab_label": "Installation & Care",
             "heading": "Installs in seconds with quick-release clips",
             "description": "<p><strong>Easy to Clean<\/strong><\/p><p>Hose it down, wipe down with a moist towel, or toss it in the washer to keep it looking fresh and clean.<\/p><p><strong>Lifetime Warranty<\/strong><\/p><p>No-hassle 100% Customer Satisfaction Guarantee & Lifetime Warranty (defects in materials or workmanship).<\/p>",
-            "video_html": "<div class=\"wistia_embed wistia_async_0gg6oxfii2\" style=\"height:500px;position:relative;width:500px\"><\/div>"
+            "video_html": "<div class=\"wistia_embed wistia_async_0gg6oxfii2\" style=\"height:500px;position:relative;width:500px\"><\/div>",
+            "metafield": ""
           }
         }
       },
       "block_order": [
-        "12e582d7-201f-4bd4-86f1-5f8471c19800",
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
+        "12e582d7-201f-4bd4-86f1-5f8471c19800",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],
       "settings": {

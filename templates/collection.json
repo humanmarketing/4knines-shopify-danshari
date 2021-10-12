@@ -5,6 +5,16 @@
       "settings": {
       }
     },
+    "split-cover-tech": {
+      "type": "split-cover-tech",
+      "settings": {
+      }
+    },
+    "features-multi-col": {
+      "type": "features-multi-col",
+      "settings": {
+      }
+    },
     "testimonial-and-social": {
       "type": "testimonial-and-social",
       "settings": {
@@ -14,16 +24,6 @@
         "show_avatar": false,
         "avatar": "shopify:\/\/shop_images\/testimonial-avatar.png",
         "show_social": false
-      }
-    },
-    "features-multi-col": {
-      "type": "features-multi-col",
-      "settings": {
-      }
-    },
-    "split-cover-tech": {
-      "type": "split-cover-tech",
-      "settings": {
       }
     },
     "collection-img-and-txt": {
@@ -37,9 +37,9 @@
   },
   "order": [
     "collection",
-    "testimonial-and-social",
-    "features-multi-col",
     "split-cover-tech",
+    "features-multi-col",
+    "testimonial-and-social",
     "collection-img-and-txt"
   ]
 }

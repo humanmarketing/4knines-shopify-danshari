@@ -6,7 +6,7 @@
         "aad115b5-b60d-407a-9b5b-83cc9987d4b8": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Heavy Duty, easy to clean material",
+            "description": "Heavy duty, easy to clean material",
             "icon": "shopify:\/\/shop_images\/icon-heavy-duty.png"
           }
         },
@@ -94,19 +94,20 @@
     "product-details-tabs": {
       "type": "product-details-tabs",
       "blocks": {
-        "061c9155-6666-498a-bd26-402b289a3523": {
-          "type": "dimensions",
-          "settings": {
-            "tab_label": "Dimensions"
-          }
-        },
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6": {
           "type": "video",
           "settings": {
             "tab_label": "Features",
             "heading": "",
             "description": "",
-            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/uow5fksykk.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_embed wistia_async_uow5fksykk\" style=\"height:500px;position:relative;width:500px\">\n  <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/uow5fksykk\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n<\/div>"
+            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/uow5fksykk.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_embed wistia_async_uow5fksykk\" style=\"height:500px;position:relative;width:500px\">\n  <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/uow5fksykk\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n<\/div>",
+            "metafield": ""
+          }
+        },
+        "061c9155-6666-498a-bd26-402b289a3523": {
+          "type": "dimensions",
+          "settings": {
+            "tab_label": "Dimensions"
           }
         },
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
@@ -115,13 +116,14 @@
             "tab_label": "Installation & Care",
             "heading": "",
             "description": "",
-            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/xakbop5lmx.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_embed wistia_async_xakbop5lmx\" style=\"height:500px;position:relative;width:500px\">\n  <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/xakbop5lmx\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n<\/div>"
+            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/xakbop5lmx.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_embed wistia_async_xakbop5lmx\" style=\"height:500px;position:relative;width:500px\">\n  <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/xakbop5lmx\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n<\/div>",
+            "metafield": ""
           }
         }
       },
       "block_order": [
-        "061c9155-6666-498a-bd26-402b289a3523",
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
+        "061c9155-6666-498a-bd26-402b289a3523",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],
       "settings": {
