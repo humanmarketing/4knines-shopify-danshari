@@ -1,7 +1,7 @@
 <div id="product-tabs" class="section-pdp-tabs padding-lg container">
   <div class="pdp-tabs-list desktop-and-up">
     {%- for block in section.blocks -%}
-      <label for="pdp-tab-{{ forloop.index }}" class="pdp-tab-item h4{% if forloop.first %} text-accent-1{% endif %}">
+      <label for="pdp-tab-{{ forloop.index }}" class="pdp-tab-item h4{% if forloop.first %} is-active{% endif %}">
         {{ block.settings.tab_label }}
       </label>
     {%- endfor -%}
@@ -51,9 +51,10 @@
   }
 
   .pdp-tab-item { cursor: pointer; }
-  .pdp-tab-item:hover {
+  .pdp-tab-item:hover { color: var(--accent-1); }
+  .pdp-tab-item.is-active {
     text-decoration: underline;
-    tex-decoration-thickness: 2px;
+    text-decoration-thickness: 2px;
   }
 
   .pdp-tab-item.tablet {

@@ -66,10 +66,10 @@ const tabItems = document.querySelectorAll('.pdp-tab-item')
 function updateSelectedTab() {
   const selectedTab = document.querySelector('input[name="pdp-tabs"]:checked')
 
-  tabItems.forEach(item => { item.classList.remove('text-accent-1') })
+  tabItems.forEach(item => { item.classList.remove('is-active') })
 
   const targetTab = document.querySelector(`.pdp-tab-item[for="${ selectedTab.id }"]`)
-  targetTab.classList.add('text-accent-1')
+  targetTab.classList.add('is-active')
 }
 updateSelectedTab()
 
