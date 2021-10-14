@@ -10,10 +10,9 @@
       "type": "testimonial-and-social",
       "settings": {
         "rating": 5,
-        "quote": "Perfectly sized to fit. Love the material;\nseems extremely tough",
-        "author": "Hugh C.",
+        "quote": "",
+        "author": "",
         "show_avatar": true,
-        "avatar": "shopify:\/\/shop_images\/testimonial-avatar.png",
         "show_social": false
       }
     },

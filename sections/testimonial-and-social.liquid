@@ -1,52 +1,67 @@
-<div
-  class="section-testimonial{% if section.settings.show_avatar %} show-avatar{% endif %}"
-  style="
-    --bg-img-desktop: url({{ 'wave-left-right-white-lg.png' | asset_url }});
-    --bg-img-mobile: url({{ 'wave-left-right-white.png' | asset_url }});
-  "
->
-  {%- if section.settings.show_avatar -%}
-    <figure class="testimonial-avatar">
+{%- liquid
+  assign testimonial_quote = product.metafields.testimonial.quote | default: section.settings.quote
+  assign testimonial_author = product.metafields.testimonial.author | default: section.settings.author
+  assign testimonial_image = product.metafields.testimonial.image | default: section.settings.avatar
+
+  if section.settings.show_avatar and testimonial_image != blank
+    assign show_avatar = true
+  else
+    assign show_avatar = false
+  endif
+-%}
+
+{%- if testimonial_quote != blank and testimonial_author != blank -%}
+  <div
+    class="section-testimonial{% if show_avatar %} show-avatar{% endif %}"
+    style="
+      --bg-img-desktop: url({{ 'wave-left-right-white-lg.png' | asset_url }});
+      --bg-img-mobile: url({{ 'wave-left-right-white.png' | asset_url }});
+    "
+  >
+    {%- if show_avatar-%}
+      <figure class="testimonial-avatar">
+        <img
+          {% render 'srcset', image: testimonial_image, width: 300 %}
+          alt="{{ section.settings.avatar.alt | escape }}"
+          loading="lazy"
+        />
+      </figure>
+    {%- endif -%}
+
+    <div class="container padding text-center richtext">
+      <div class="text-accent-1">
+        {%- for i in (1..section.settings.rating) -%}
+          {% render 'icon-star' %}
+        {%- endfor -%}
+      </div>
+
+      <blockquote class="container-half h3-body text-outline">
+        <p>{{ testimonial_quote | newline_to_br }}</p>
+      </blockquote>
+
+      <p class="text-outline">— {{ testimonial_author }}</p>
+
+      {%- if section.settings.show_social -%}
+        <div class="on-social-txt">
+          <h2 class="h3">On Social</h2>
+          <p>
+            Send us yours
+            <a href="{{ settings.social_instagram }}" target="_blank" rel="noopener noreferrer">@4knines</a>
+          </p>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  {%- if section.settings.show_social and section.settings.social_image != blank -%}
+    {%- comment -%} TODO: add live insta feed {%- endcomment -%}
+    <figure class="on-social-img hide-scrollbar">
       <img
-        {% render 'srcset', image: section.settings.avatar, width: 300 %}
-        alt="{{ section.settings.avatar.alt | default: section.settings.quote | escape }}"
-        loading="lazy"
+        {% render 'srcset', image: section.settings.social_image %}
+        alt="Instagram @4knines" loading="lazy" draggable="false"
       />
     </figure>
   {%- endif -%}
-
-  <div class="container padding text-center richtext">
-    <div class="text-accent-1">
-      {%- for i in (1..section.settings.rating) -%}
-        {% render 'icon-star' %}
-      {%- endfor -%}
-    </div>
-
-    <blockquote class="container-half h3-body text-outline">
-      <p>{{ section.settings.quote | newline_to_br }}</p>
-    </blockquote>
-    <p class="text-outline">— {{ section.settings.author }}</p>
-
-    {%- if section.settings.show_social -%}
-      <div class="on-social-txt">
-        <h2 class="h3">On Social</h2>
-        <p>
-          Send us yours
-          <a href="{{ settings.social_instagram }}" target="_blank" rel="noopener noreferrer">@4knines</a>
-        </p>
-      </div>
-    {%- endif -%}
-  </div>
-</div>
-
-{%- if section.settings.show_social and section.settings.social_image != blank -%}
-  {%- comment -%} TODO: add live insta feed {%- endcomment -%}
-  <figure class="on-social-img hide-scrollbar">
-    <img
-      {% render 'srcset', image: section.settings.social_image %}
-      alt="Instagram @4knines" loading="lazy" draggable="false"
-    />
-  </figure>
 {%- endif -%}
 
 {% stylesheet %}
@@ -75,6 +90,13 @@
     transform: translate(-50%, -50%);
     width: var(--avatar-size);
     height: var(--avatar-size);
+  }
+
+  .testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
   }
 
   .on-social-txt { margin-top: 4rem; }
