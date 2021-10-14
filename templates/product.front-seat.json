@@ -54,8 +54,7 @@
             "heading": "Design and Function Meet Convenience",
             "description": "Our bucket front seat covers are heavy-duty and waterproof. Install them in seconds using the quick-release clips.",
             "cta_label": "",
-            "cta_link": "",
-            "image": "shopify:\/\/shop_images\/design-and-function-1.png"
+            "cta_link": ""
           }
         },
         "80d8b4a9-049e-44d0-8d7a-e068bb829ac6": {
@@ -100,7 +99,8 @@
             "tab_label": "Features",
             "heading": "",
             "description": "",
-            "video_html": "<script src=\"\/\/fast.wistia.com\/embed\/medias\/ybdpkir92k.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_embed wistia_async_ybdpkir92k\" style=\"height:349px;width:620px\"> <\/div>"
+            "video_html": "<script src=\"\/\/fast.wistia.com\/embed\/medias\/ybdpkir92k.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_embed wistia_async_ybdpkir92k\" style=\"height:349px;width:620px\"> <\/div>",
+            "metafield": ""
           }
         },
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
@@ -109,7 +109,8 @@
             "tab_label": "Installation & Care",
             "heading": "",
             "description": "",
-            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/5r229r7vwn.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_embed wistia_async_5r229r7vwn\" style=\"height:400px;position:relative;width:400px\">\n  <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/5r229r7vwn\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n<\/div>"
+            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/5r229r7vwn.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_embed wistia_async_5r229r7vwn\" style=\"height:400px;position:relative;width:400px\">\n  <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/5r229r7vwn\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n<\/div>",
+            "metafield": ""
           }
         }
       },

@@ -17,8 +17,12 @@
       <li class="richtext">
         <figure>
           {%- liquid
-            if forloop.first and product.metafields.pdp.split_technology_img != blank
-              assign card_image = product.metafields.pdp.split_technology_img
+            if forloop.first
+              if product.metafields.pdp.split_technology_img != blank
+                assign card_image = product.metafields.pdp.split_technology_img
+              else
+                assign card_image = card.image | default: product.featured_image
+              endif
             else
               assign card_image = card.image
             endif
