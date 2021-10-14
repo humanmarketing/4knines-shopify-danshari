@@ -14,7 +14,7 @@
     assign results_pages = search.results | where: 'object_type', 'page'
   -%}
 
-  {%- if results_products.size > 1 -%}
+  {%- if results_products.size > 0 -%}
     <section class="padding-y paragraph">
       <h2 class="h2">Products</h2>
       <ul class="results-products">
@@ -25,7 +25,7 @@
     </section>
   {%- endif -%}
 
-  {%- if results_collections.size > 1 -%}
+  {%- if results_collections.size > 0 -%}
     <section class="padding-y richtext">
       <h2 class="h2">Collections</h2>
       <ul>
@@ -40,7 +40,7 @@
     </section>
   {%- endif -%}
 
-  {%- if results_articles.size > 1 -%}
+  {%- if results_articles.size > 0 -%}
     <section class="padding-y richtext">
       <h2 class="h2">Articles</h2>
       <div class="results-articles">
@@ -49,7 +49,7 @@
     </section>
   {%- endif -%}
 
-  {%- if results_pages.size > 1 -%}
+  {%- if results_pages.size > 0 -%}
     <section class="padding-y richtext">
       <h2 class="h2">Pages</h2>
       <ul>
