@@ -1,45 +1,60 @@
-<div id="product-tabs" class="section-pdp-tabs padding-lg container">
-  <div class="pdp-tabs-list desktop-and-up">
+{%- liquid
+  assign video_blocks = section.blocks | where: 'type', 'video' | map: 'settings'
+  for block in video_blocks
+    if block.video_html != blank
+      assign has_video_html = true
+    endif
+  endfor
+
+  if product.metafields.pdp.features_video_code == blank and product.metafields.pdp.installation_video_code == blank and has_video_html != true
+    assign no_video_code = true
+  endif
+-%}
+
+{%- unless no_video_code -%}
+  <div id="product-tabs" class="section-pdp-tabs padding-lg container">
+    <div class="pdp-tabs-list desktop-and-up">
+      {%- for block in section.blocks -%}
+        <label for="pdp-tab-{{ forloop.index }}" class="pdp-tab-item h4{% if forloop.first %} is-active{% endif %}">
+          {{ block.settings.tab_label }}
+        </label>
+      {%- endfor -%}
+    </div>
+
     {%- for block in section.blocks -%}
-      <label for="pdp-tab-{{ forloop.index }}" class="pdp-tab-item h4{% if forloop.first %} is-active{% endif %}">
-        {{ block.settings.tab_label }}
-      </label>
+      <div class="pdp-tab-group">
+        <input name="pdp-tabs" id="pdp-tab-{{ forloop.index }}" type="radio" hidden{% if forloop.first %} checked{% endif %}>
+        <label for="pdp-tab-{{ forloop.index }}" class="pdp-tab-item h4 tablet">{{ block.settings.tab_label }}</label>
+
+        {%- case block.type -%}
+          {%- when 'video' -%}
+            {% render 'product-details-tabs.video', block: block %}
+
+          {%- when 'dimensions' -%}
+            {% render 'product-details-tabs.dimensions', block: block %}
+
+          {%- when 'text' -%}
+            <div class="pdp-tab-content padding richtext text-center">
+              <h3 class="h3 text-accent-2">{{ block.settings.heading }}</h3>
+              {%- if block.settings.cta_link -%}
+                <p><a href="{{ block.settings.cta_link }}" class="link accent-1">{{ block.settings.cta_label }} ></a></p>
+              {%- endif -%}
+              {%- if block.settings.image -%}
+                <figure>
+                  <img
+                    {% render 'srcset', image: block.settings.image, width: 1000 %}
+                    alt="{{ block.settings.image.alt }}" loading="lazy"
+                  />
+                </figure>
+              {%- endif -%}
+              {{ block.settings.description }}
+            </div>
+
+        {%- endcase -%}
+      </div>
     {%- endfor -%}
   </div>
-
-  {%- for block in section.blocks -%}
-    <div class="pdp-tab-group">
-      <input name="pdp-tabs" id="pdp-tab-{{ forloop.index }}" type="radio" hidden{% if forloop.first %} checked{% endif %}>
-      <label for="pdp-tab-{{ forloop.index }}" class="pdp-tab-item h4 tablet">{{ block.settings.tab_label }}</label>
-
-      {%- case block.type -%}
-        {%- when 'video' -%}
-          {% render 'product-details-tabs.video', block: block %}
-
-        {%- when 'dimensions' -%}
-          {% render 'product-details-tabs.dimensions', block: block %}
-
-        {%- when 'text' -%}
-          <div class="pdp-tab-content padding richtext text-center">
-            <h3 class="h3 text-accent-2">{{ block.settings.heading }}</h3>
-            {%- if block.settings.cta_link -%}
-              <p><a href="{{ block.settings.cta_link }}" class="link accent-1">{{ block.settings.cta_label }} ></a></p>
-            {%- endif -%}
-            {%- if block.settings.image -%}
-              <figure>
-                <img
-                  {% render 'srcset', image: block.settings.image, width: 1000 %}
-                  alt="{{ block.settings.image.alt }}" loading="lazy"
-                />
-              </figure>
-            {%- endif -%}
-            {{ block.settings.description }}
-          </div>
-
-      {%- endcase -%}
-    </div>
-  {%- endfor -%}
-</div>
+{%- endunless -%}
 
 {% stylesheet %}
   .pdp-tabs-list {
