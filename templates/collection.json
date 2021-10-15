@@ -7,11 +7,13 @@
     },
     "split-cover-tech": {
       "type": "split-cover-tech",
+      "disabled": true,
       "settings": {
       }
     },
     "features-multi-col": {
       "type": "features-multi-col",
+      "disabled": true,
       "settings": {
       }
     },
@@ -28,6 +30,7 @@
     },
     "collection-img-and-txt": {
       "type": "collection-img-and-txt",
+      "disabled": true,
       "settings": {
         "heading": "Perfect for Wear & Tear",
         "description": "Although we initially intended to make the best car seat covers on the market for dogs, our products provide excellent utility for other applications including messy kids and help to prevent overall wear and tear on your car.",
