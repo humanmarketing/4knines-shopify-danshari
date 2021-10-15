@@ -1,0 +1,17 @@
+{%- comment -%}
+  diagram
+{%- endcomment -%}
+
+{%- if diagram != blank -%}
+  <figure class="pdp-tabs-dimensions-item paragraph">
+    <a href="{{ diagram | img_url: 'master' }}">
+      <img
+        {% render 'srcset', image: diagram, width: 800 %}
+        alt="{{ diagram.alt }}"
+      />
+    </a>
+    {%- if diagram.alt != blank -%}
+      <figcaption>{{ diagram.alt }}</figcaption>
+    {%- endif -%}
+  </figure>
+{%- endif -%}

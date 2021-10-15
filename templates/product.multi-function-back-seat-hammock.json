@@ -3,32 +3,32 @@
     "product": {
       "type": "product",
       "blocks": {
-        "316f4450-0aac-4a29-af7f-5ef67f80989a": {
+        "f3b80908-2d71-4007-8d9d-9c34f81c9eec": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Heavy duty, easy to clean material",
-            "icon": "shopify:\/\/shop_images\/icon-heavy-duty.png"
+            "description": "Access to all three seat belts",
+            "icon": "shopify:\/\/shop_images\/icon-seatbelts.png"
           }
         },
-        "e81fa07a-bf1e-4646-b3b3-b81874d743df": {
+        "e7b2c416-f027-4d35-8f0f-dd6f14bb900a": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Waterproof, non-slip seat bottom",
-            "icon": "shopify:\/\/shop_images\/icon-waterproof.png"
+            "description": "Patented Split Technology Fold Down Seats and middle armrest",
+            "icon": "shopify:\/\/shop_images\/icon-design.png"
           }
         },
-        "11216e63-84cd-4ca9-b8cd-4e4e9a16af30": {
+        "f8d4ba82-b4df-4560-bbbd-21c879dabb62": {
           "type": "icon-and-text",
           "settings": {
-            "description": "No Hammock",
-            "icon": "shopify:\/\/shop_images\/icon-no-hammock.png"
+            "description": "Hammock Option – provides safety and helps stop distracted driving",
+            "icon": "shopify:\/\/shop_images\/icon-hammock_option.png"
           }
         }
       },
       "block_order": [
-        "316f4450-0aac-4a29-af7f-5ef67f80989a",
-        "e81fa07a-bf1e-4646-b3b3-b81874d743df",
-        "11216e63-84cd-4ca9-b8cd-4e4e9a16af30"
+        "f3b80908-2d71-4007-8d9d-9c34f81c9eec",
+        "e7b2c416-f027-4d35-8f0f-dd6f14bb900a",
+        "f8d4ba82-b4df-4560-bbbd-21c879dabb62"
       ],
       "settings": {
         "show_dynamic_checkout": false
@@ -52,9 +52,10 @@
           "type": "card",
           "settings": {
             "heading": "Design and Function Meet Convenience",
-            "description": "The 4Knines fitted rear seat cover provides easy access to seat belts and LATCH systems, making this a great option for families that frequently haul children or other backseat passengers.",
+            "description": "The 4Knines split rear seat cover features our unique patented technology, which lets you fold down seats 60\/40, 50\/50 split, and center armrest pass-through without removing the cover.\nSplit Cover Technology protected by US Patent No. 9,610,877",
             "cta_label": "",
-            "cta_link": ""
+            "cta_link": "",
+            "image": "shopify:\/\/shop_images\/design-and-function-5.png"
           }
         },
         "80d8b4a9-049e-44d0-8d7a-e068bb829ac6": {
@@ -74,7 +75,7 @@
             "description": "Our pet seat covers feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
             "cta_label": "",
             "cta_link": "",
-            "image": "shopify:\/\/shop_images\/keeping-pets-safe-4.png"
+            "image": "shopify:\/\/shop_images\/keeping-pets-safe-1.png"
           }
         }
       },
@@ -84,8 +85,8 @@
         "26a8eece-a63b-48f4-afca-30948d936e03"
       ],
       "settings": {
-        "heading": "Premium Dog Back Seat Cover",
-        "description": "Our 4Knines Premium Dog Back Seat Cover for cars, small trucks, and SUVs with no hammock is a fitted version with all the same great features.",
+        "heading": "Multi-Function Dog Back Seat Cover With Hammock",
+        "description": "This 4Knines Multi-Function Dog Split Back Seat Cover is equipped with a hammock to keep both you and your pet safe while driving and to keep you car seats clean and looking brand new.",
         "note_header": "",
         "note_description": ""
       }
@@ -97,17 +98,18 @@
           "type": "video",
           "settings": {
             "tab_label": "Features",
-            "heading": "",
+            "heading": "Hammock Strap Trick",
             "description": "",
-            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/viw79sb9nv.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_responsive_padding\" style=\"padding:71.46% 0 0 0;position:relative;\">\n  <div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\">\n    <div class=\"wistia_embed wistia_async_viw79sb9nv videoFoam=true\" style=\"height:100%;position:relative;width:100%\">\n      <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/viw79sb9nv\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/uow5fksykk.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_embed wistia_async_uow5fksykk\" style=\"height:500px;position:relative;width:500px\">\n  <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/uow5fksykk\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n<\/div>",
             "metafield": ""
           }
         },
-        "d2e5a3a9-f6b3-436c-9f16-26e9fe45b535": {
+        "ef33c4b4-534b-41b9-ad3a-5daca4ceb212": {
           "type": "dimensions",
           "settings": {
             "tab_label": "Dimensions",
-            "diagram_1": "shopify:\/\/shop_images\/size-Back-seat-regular-noHammock.jpg"
+            "diagram_1": "shopify:\/\/shop_images\/size-back-split-REG.jpg",
+            "diagram_2": "shopify:\/\/shop_images\/size-back-split-XLARGE.jpg"
           }
         },
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
@@ -123,7 +125,7 @@
       },
       "block_order": [
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
-        "d2e5a3a9-f6b3-436c-9f16-26e9fe45b535",
+        "ef33c4b4-534b-41b9-ad3a-5daca4ceb212",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],
       "settings": {

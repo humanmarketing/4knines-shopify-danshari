@@ -107,7 +107,10 @@
         "12e582d7-201f-4bd4-86f1-5f8471c19800": {
           "type": "dimensions",
           "settings": {
-            "tab_label": "Dimensions & Size"
+            "tab_label": "Dimensions",
+            "diagram_1": "shopify:\/\/shop_images\/size-cargoliner-SM.jpg",
+            "diagram_2": "shopify:\/\/shop_images\/size-cargoliner-LG.jpg",
+            "diagram_3": "shopify:\/\/shop_images\/size-cargoliner-XL.jpg"
           }
         },
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {

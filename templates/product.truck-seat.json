@@ -100,7 +100,15 @@
             "tab_label": "Features",
             "heading": "",
             "description": "",
-            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/3r7ign272b.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\">\n  <div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\">\n    <div class=\"wistia_embed wistia_async_3r7ign272b videoFoam=true\" style=\"height:100%;position:relative;width:100%\">\n      <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/3r7ign272b\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n    <\/div>\n  <\/div>\n<\/div>"
+            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/k8n62rfuye.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\">\n  <div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\">\n    <div class=\"wistia_embed wistia_async_k8n62rfuye videoFoam=true\" style=\"height:100%;position:relative;width:100%\">\n      <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/k8n62rfuye\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+            "metafield": ""
+          }
+        },
+        "1c1ed5fe-72b2-4aea-bbed-b3ab4fcb30ff": {
+          "type": "dimensions",
+          "settings": {
+            "tab_label": "Dimensions",
+            "diagram_1": "shopify:\/\/shop_images\/size-Truck_Seat_Crew_Cab_Cover_with_Hammock.jpg"
           }
         },
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
@@ -109,12 +117,14 @@
             "tab_label": "Installation & Care",
             "heading": "",
             "description": "",
-            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/k8n62rfuye.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\">\n  <div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\">\n    <div class=\"wistia_embed wistia_async_k8n62rfuye videoFoam=true\" style=\"height:100%;position:relative;width:100%\">\n      <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/k8n62rfuye\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n    <\/div>\n  <\/div>\n<\/div>"
+            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/3r7ign272b.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\">\n  <div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\">\n    <div class=\"wistia_embed wistia_async_3r7ign272b videoFoam=true\" style=\"height:100%;position:relative;width:100%\">\n      <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/3r7ign272b\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+            "metafield": ""
           }
         }
       },
       "block_order": [
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
+        "1c1ed5fe-72b2-4aea-bbed-b3ab4fcb30ff",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],
       "settings": {

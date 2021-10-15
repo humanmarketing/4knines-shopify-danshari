@@ -104,6 +104,14 @@
             "metafield": ""
           }
         },
+        "b7518dc8-26b2-44a1-9acb-bf27a8918fa7": {
+          "type": "dimensions",
+          "settings": {
+            "tab_label": "Dimensions",
+            "diagram_1": "shopify:\/\/shop_images\/size-Split_Rear_Seat_Cover_-_No_Hammock-REG.jpg",
+            "diagram_2": "shopify:\/\/shop_images\/size-Split_Rear_Seat_Cover_-_No_Hammock-X-LARGE.jpg"
+          }
+        },
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
           "type": "video",
           "settings": {
@@ -117,6 +125,7 @@
       },
       "block_order": [
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
+        "b7518dc8-26b2-44a1-9acb-bf27a8918fa7",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],
       "settings": {

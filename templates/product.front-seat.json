@@ -103,6 +103,13 @@
             "metafield": ""
           }
         },
+        "d244d277-ecab-41ec-a7f0-a8428ba55e5b": {
+          "type": "dimensions",
+          "settings": {
+            "tab_label": "Dimensions",
+            "diagram_1": "shopify:\/\/shop_images\/size-front-seat-cover.jpg"
+          }
+        },
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
           "type": "video",
           "settings": {
@@ -116,6 +123,7 @@
       },
       "block_order": [
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
+        "d244d277-ecab-41ec-a7f0-a8428ba55e5b",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],
       "settings": {

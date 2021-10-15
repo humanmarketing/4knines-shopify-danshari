@@ -106,7 +106,9 @@
         "061c9155-6666-498a-bd26-402b289a3523": {
           "type": "dimensions",
           "settings": {
-            "tab_label": "Dimensions"
+            "tab_label": "Dimensions",
+            "diagram_1": "shopify:\/\/shop_images\/size-Back-Seat-REG.jpg",
+            "diagram_2": "shopify:\/\/shop_images\/size-Back-Seat-XLARGE_5855aca2-7b59-411e-9b86-1fe2662e51ab.jpg"
           }
         },
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {

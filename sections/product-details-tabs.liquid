@@ -17,7 +17,7 @@
           {% render 'product-details-tabs.video', block: block %}
 
         {%- when 'dimensions' -%}
-          {% render 'product-details-tabs.dimensions' %}
+          {% render 'product-details-tabs.dimensions', block: block %}
 
         {%- when 'text' -%}
           <div class="pdp-tab-content padding richtext text-center">
@@ -129,6 +129,24 @@
           "type": "text",
           "id": "tab_label",
           "label": "Tab label"
+        },
+        {
+          "type": "image_picker",
+          "id": "diagram_1",
+          "label": "Diagram 1",
+          "info": "Alt text will appear below the image."
+        },
+        {
+          "type": "image_picker",
+          "id": "diagram_2",
+          "label": "Diagram 2",
+          "info": "Alt text will appear below the image."
+        },
+        {
+          "type": "image_picker",
+          "id": "diagram_3",
+          "label": "Diagram 3",
+          "info": "Alt text will appear below the image."
         }
       ]
     },
