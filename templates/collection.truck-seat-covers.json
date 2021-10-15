@@ -1,0 +1,45 @@
+{
+  "sections": {
+    "collection": {
+      "type": "collection",
+      "settings": {
+      }
+    },
+    "split-cover-tech": {
+      "type": "split-cover-tech",
+      "settings": {
+      }
+    },
+    "features-multi-col": {
+      "type": "features-multi-col",
+      "settings": {
+      }
+    },
+    "testimonial-and-social": {
+      "type": "testimonial-and-social",
+      "settings": {
+        "rating": 5,
+        "quote": "Perfect to keep the truck clean and the dogs comfortable. It is very durable and easy to install.",
+        "author": "Renee R.",
+        "show_avatar": true,
+        "avatar": "shopify:\/\/shop_images\/testimonial-crew-cab-floor-hammock.jpg",
+        "show_social": false
+      }
+    },
+    "collection-img-and-txt": {
+      "type": "collection-img-and-txt",
+      "settings": {
+        "heading": "Messy Kids? We’ve Got You Covered",
+        "description": "Although we initially intended to make the best car seat covers for dogs on the market, our products provide excellent utility for other applications including messy kids and help to prevent overall wear and tear on your car.",
+        "image": "shopify:\/\/shop_images\/3-pack-2.png"
+      }
+    }
+  },
+  "order": [
+    "collection",
+    "split-cover-tech",
+    "features-multi-col",
+    "testimonial-and-social",
+    "collection-img-and-txt"
+  ]
+}
