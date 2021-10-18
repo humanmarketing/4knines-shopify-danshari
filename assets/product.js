@@ -1,8 +1,10 @@
 (function() {
+  const $ = document.querySelector.bind(document)
+  const $$ = document.querySelectorAll.bind(document)
 
 /* variant selector */
 
-let form = document.querySelector('form[action="/cart/add"]')
+let form = $('form[action="/cart/add"]')
 let variantSelector = form.querySelector('select[name="id"]')
 let variantOptions = ['size', 'color']
 
@@ -53,28 +55,34 @@ const handleIntersection = (entries, observer) => {
     .catch(console.error)
 }
 
-const productRecommendationsSection = document.querySelector('.product-recommendations')
+const productRecommendationsSection = $('.product-recommendations')
 const observer = new IntersectionObserver(handleIntersection, {rootMargin: '0px 0px 200px 0px'})
 
 observer.observe(productRecommendationsSection)
 
 /* product tabs */
 
-const productTabs = document.querySelectorAll('input[name="pdp-tabs"]')
-const tabItems = document.querySelectorAll('.pdp-tab-item')
+const productTabs = $$('input[name="pdp-tabs"]')
+const tabItems = $$('.pdp-tab-item')
 
 function updateSelectedTab() {
-  const selectedTab = document.querySelector('input[name="pdp-tabs"]:checked')
+  tabItems?.forEach(item => { item.classList.remove('is-active') })
 
-  tabItems.forEach(item => { item.classList.remove('is-active') })
-
-  const targetTab = document.querySelector(`.pdp-tab-item[for="${ selectedTab.id }"]`)
-  targetTab.classList.add('is-active')
+  const selectedTab = $('input[name="pdp-tabs"]:checked')
+  $(`.pdp-tab-item[for="${ selectedTab?.id }"]`)?.classList.add('is-active')
 }
 updateSelectedTab()
 
-productTabs.forEach(tab => {
+productTabs?.forEach(tab => {
   tab.addEventListener('change', updateSelectedTab)
+})
+
+/* show link to size dimensions */
+
+tabItems?.forEach(item => {
+  if (item.innerText.includes('Dimensions')) {
+    $('.link-to-sizes')?.removeAttribute('hidden')
+  }
 })
 
 })()
