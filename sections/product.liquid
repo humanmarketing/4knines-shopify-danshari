@@ -27,11 +27,9 @@
       <li class="with-icon">{% render 'icon-30' %} 30 Day Returns</li>
     </ul>
 
-    {%- unless icon_and_text.size > 0 -%}
-      <div class="product-description richtext" style="font-size: 0.9em;">
-        {{ product.description }}
-      </div>
-    {%- endunless -%}
+    <div class="product-description richtext" style="font-size: 0.9em;">
+      {{ product.description }}
+    </div>
   </div>
 </div>
 

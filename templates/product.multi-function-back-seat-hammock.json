@@ -3,18 +3,18 @@
     "product": {
       "type": "product",
       "blocks": {
-        "f3b80908-2d71-4007-8d9d-9c34f81c9eec": {
-          "type": "icon-and-text",
-          "settings": {
-            "description": "Access to all three seat belts",
-            "icon": "shopify:\/\/shop_images\/icon-seatbelts.png"
-          }
-        },
         "e7b2c416-f027-4d35-8f0f-dd6f14bb900a": {
           "type": "icon-and-text",
           "settings": {
             "description": "Patented Split Technology Fold Down Seats and middle armrest",
             "icon": "shopify:\/\/shop_images\/icon-design.png"
+          }
+        },
+        "f3b80908-2d71-4007-8d9d-9c34f81c9eec": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Access to all three seat belts",
+            "icon": "shopify:\/\/shop_images\/icon-seatbelts.png"
           }
         },
         "f8d4ba82-b4df-4560-bbbd-21c879dabb62": {
@@ -26,8 +26,8 @@
         }
       },
       "block_order": [
-        "f3b80908-2d71-4007-8d9d-9c34f81c9eec",
         "e7b2c416-f027-4d35-8f0f-dd6f14bb900a",
+        "f3b80908-2d71-4007-8d9d-9c34f81c9eec",
         "f8d4ba82-b4df-4560-bbbd-21c879dabb62"
       ],
       "settings": {
