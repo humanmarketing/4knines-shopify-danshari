@@ -34,15 +34,44 @@
         "show_dynamic_checkout": false
       }
     },
-    "testimonial-and-social": {
-      "type": "testimonial-and-social",
+    "product-details-tabs": {
+      "type": "product-details-tabs",
+      "blocks": {
+        "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6": {
+          "type": "video",
+          "settings": {
+            "tab_label": "Features",
+            "heading": "",
+            "description": "",
+            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/2r6090o6vd.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\">\n  <div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\">\n    <div class=\"wistia_embed wistia_async_2r6090o6vd videoFoam=true\" style=\"height:100%;position:relative;width:100%\">\n      <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/2r6090o6vd\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n    <\/div>\n  <\/div>\n<\/div>",
+            "metafield": ""
+          }
+        },
+        "ef33c4b4-534b-41b9-ad3a-5daca4ceb212": {
+          "type": "dimensions",
+          "settings": {
+            "tab_label": "Dimensions",
+            "diagram_1": "shopify:\/\/shop_images\/size-back-split-REG.jpg",
+            "diagram_2": "shopify:\/\/shop_images\/size-back-split-XLARGE.jpg"
+          }
+        },
+        "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
+          "type": "video",
+          "settings": {
+            "tab_label": "Installation & Care",
+            "heading": "",
+            "description": "",
+            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/xakbop5lmx.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_embed wistia_async_xakbop5lmx\" style=\"height:500px;position:relative;width:500px\">\n  <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/xakbop5lmx\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n<\/div>",
+            "metafield": ""
+          }
+        }
+      },
+      "block_order": [
+        "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
+        "ef33c4b4-534b-41b9-ad3a-5daca4ceb212",
+        "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
+      ],
       "settings": {
-        "rating": 5,
-        "quote": "They are wonderful. We have had several other brands in the past and these, by far, are the most well made.",
-        "author": "Kelly A.",
-        "show_avatar": true,
-        "avatar": "shopify:\/\/shop_images\/testimonial-rear-seat-cover.jpg",
-        "show_social": false
       }
     },
     "product-details-3-pack": {
@@ -91,44 +120,15 @@
         "note_description": ""
       }
     },
-    "product-details-tabs": {
-      "type": "product-details-tabs",
-      "blocks": {
-        "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6": {
-          "type": "video",
-          "settings": {
-            "tab_label": "Features",
-            "heading": "",
-            "description": "",
-            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/2r6090o6vd.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\">\n  <div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\">\n    <div class=\"wistia_embed wistia_async_2r6090o6vd videoFoam=true\" style=\"height:100%;position:relative;width:100%\">\n      <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/2r6090o6vd\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n    <\/div>\n  <\/div>\n<\/div>",
-            "metafield": ""
-          }
-        },
-        "ef33c4b4-534b-41b9-ad3a-5daca4ceb212": {
-          "type": "dimensions",
-          "settings": {
-            "tab_label": "Dimensions",
-            "diagram_1": "shopify:\/\/shop_images\/size-back-split-REG.jpg",
-            "diagram_2": "shopify:\/\/shop_images\/size-back-split-XLARGE.jpg"
-          }
-        },
-        "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
-          "type": "video",
-          "settings": {
-            "tab_label": "Installation & Care",
-            "heading": "",
-            "description": "",
-            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/xakbop5lmx.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_embed wistia_async_xakbop5lmx\" style=\"height:500px;position:relative;width:500px\">\n  <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/xakbop5lmx\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n<\/div>",
-            "metafield": ""
-          }
-        }
-      },
-      "block_order": [
-        "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
-        "ef33c4b4-534b-41b9-ad3a-5daca4ceb212",
-        "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
-      ],
+    "testimonial-and-social": {
+      "type": "testimonial-and-social",
       "settings": {
+        "rating": 5,
+        "quote": "They are wonderful. We have had several other brands in the past and these, by far, are the most well made.",
+        "author": "Kelly A.",
+        "show_avatar": true,
+        "avatar": "shopify:\/\/shop_images\/testimonial-rear-seat-cover.jpg",
+        "show_social": false
       }
     },
     "product-reviews": {
@@ -139,9 +139,9 @@
   },
   "order": [
     "product",
-    "testimonial-and-social",
-    "product-details-3-pack",
     "product-details-tabs",
+    "product-details-3-pack",
+    "testimonial-and-social",
     "product-reviews"
   ]
 }

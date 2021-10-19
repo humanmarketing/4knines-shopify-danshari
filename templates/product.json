@@ -6,16 +6,6 @@
         "show_dynamic_checkout": false
       }
     },
-    "testimonial-and-social": {
-      "type": "testimonial-and-social",
-      "settings": {
-        "rating": 5,
-        "quote": "",
-        "author": "",
-        "show_avatar": true,
-        "show_social": false
-      }
-    },
     "icon-list-h": {
       "type": "icon-list-h",
       "blocks": {
@@ -51,6 +41,37 @@
       ],
       "settings": {
         "heading": "Products That Enable You to Provide the Best Possible Life for Your Best Friend"
+      }
+    },
+    "product-details-tabs": {
+      "type": "product-details-tabs",
+      "blocks": {
+        "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6": {
+          "type": "video",
+          "settings": {
+            "tab_label": "Features",
+            "heading": "",
+            "description": "",
+            "video_html": "",
+            "metafield": "features_video_code"
+          }
+        },
+        "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
+          "type": "video",
+          "settings": {
+            "tab_label": "Installation & Care",
+            "heading": "",
+            "description": "",
+            "video_html": "",
+            "metafield": "installation_video_code"
+          }
+        }
+      },
+      "block_order": [
+        "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
+        "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
+      ],
+      "settings": {
       }
     },
     "product-details-3-pack": {
@@ -100,35 +121,14 @@
         "note_description": ""
       }
     },
-    "product-details-tabs": {
-      "type": "product-details-tabs",
-      "blocks": {
-        "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6": {
-          "type": "video",
-          "settings": {
-            "tab_label": "Features",
-            "heading": "",
-            "description": "",
-            "video_html": "",
-            "metafield": "features_video_code"
-          }
-        },
-        "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
-          "type": "video",
-          "settings": {
-            "tab_label": "Installation & Care",
-            "heading": "",
-            "description": "",
-            "video_html": "",
-            "metafield": "installation_video_code"
-          }
-        }
-      },
-      "block_order": [
-        "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
-        "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
-      ],
+    "testimonial-and-social": {
+      "type": "testimonial-and-social",
       "settings": {
+        "rating": 5,
+        "quote": "",
+        "author": "",
+        "show_avatar": true,
+        "show_social": false
       }
     },
     "product-reviews": {
@@ -139,10 +139,10 @@
   },
   "order": [
     "product",
-    "testimonial-and-social",
     "icon-list-h",
-    "product-details-3-pack",
     "product-details-tabs",
+    "product-details-3-pack",
+    "testimonial-and-social",
     "product-reviews"
   ]
 }
