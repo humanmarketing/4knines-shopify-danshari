@@ -81,7 +81,11 @@ productTabs?.forEach(tab => {
 
 tabItems?.forEach(item => {
   if (item.innerText.includes('Dimensions')) {
-    $('.link-to-sizes')?.removeAttribute('hidden')
+    let linkToSizes = $('.link-to-sizes')
+    linkToSizes?.removeAttribute('hidden')
+    linkToSizes?.addEventListener('click', () => {
+      $('.pdp-tab-item[for="pdp-tab-2"]')?.click()
+    })
   }
 })
 

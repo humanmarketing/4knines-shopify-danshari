@@ -65,11 +65,9 @@
     margin-inline: auto;
   }
 
-  .pdp-tab-item { cursor: pointer; }
-  .pdp-tab-item:hover { color: var(--accent-1); }
-  .pdp-tab-item.is-active {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
+  .pdp-tab-item {
+    cursor: pointer;
+    color: var(--accent-2);
   }
 
   .pdp-tab-item.tablet {
@@ -120,6 +118,25 @@
 
   input[name="pdp-tabs"]:not(:checked) ~ .pdp-tab-content { display: none; }
 
+  /* tablet-and-up */
+  @media screen and (min-width: 429px) {
+    .pdp-tab-item {
+      padding: var(--button-padding);
+      border: 2px solid transparent;
+      border-radius: 4em;
+    }
+
+    .pdp-tab-item:hover {
+      border-color: var(--accent-2);
+    }
+
+    .pdp-tab-item.is-active {
+      border-color: var(--accent-2);
+      background-color: var(--accent-2);
+      color: #fff;
+    }
+  }
+
   /* tablet */
   @media screen and (max-width: 768px) {
     .section-pdp-tabs { padding: 0; }
@@ -134,7 +151,7 @@
 {
   "name": "Product details tabs",
   "tag": "section",
-  "class": "bg",
+  "class": "bg-light",
   "blocks": [
     {
       "type": "dimensions",
