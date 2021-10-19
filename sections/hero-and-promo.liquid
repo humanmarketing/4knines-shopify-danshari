@@ -38,24 +38,26 @@
 
 {%- if promo.enabled -%}
   <article
-    class="section-promo padding-lg bg text-center richtext"
+    class="section-promo padding-lg bg"
     style="--bg-img: url('{{ 'wave-right-top-bottom-lg.png' | asset_url }}');"
   >
-    <h2 class="h1">{{ promo.heading }}</h2>
-    {%- if promo.description -%}
-      <p class="h3-body">{{ promo.description | newline_to_br }}</p>
-    {%- endif -%}
-    {%- if promo.cta_link -%}
-      <div>
-        <a href="{{ promo.cta_link }}" class="action">
-          {%- if promo.cta_label != blank -%}
-            {{ promo.cta_label }}
-          {%- else -%}
-            Shop {{ promo.cta_link.object.title }}
-          {%- endif -%}
-        </a>
-      </div>
-    {%- endif -%}
+    <div class="container-half text-center richtext">
+      <h2 class="h2 text-accent-2">{{ promo.heading }}</h2>
+      {%- if promo.description -%}
+        <p class="h4-body">{{ promo.description | newline_to_br }}</p>
+      {%- endif -%}
+      {%- if promo.cta_link -%}
+        <div>
+          <a href="{{ promo.cta_link }}" class="action">
+            {%- if promo.cta_label != blank -%}
+              {{ promo.cta_label }}
+            {%- else -%}
+              Shop {{ promo.cta_link.object.title }}
+            {%- endif -%}
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
   </article>
 {%- endif -%}
 
@@ -123,7 +125,6 @@
 
     .section-promo h2 {
       font-size: var(--h3);
-      color: var(--accent-2);
     }
     .section-promo p { font-size: var(--h4); }
   }

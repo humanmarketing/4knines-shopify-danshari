@@ -6,9 +6,9 @@
         "c6bc3884-d619-4698-a1da-7e55ba912483": {
           "type": "promo",
           "settings": {
-            "enabled": false,
-            "heading": "Black Friday Sale",
-            "description": "XX% off XXX with code:\n123CODE, offer ends 11\/28",
+            "enabled": true,
+            "heading": "Welcome to the new 4knines!",
+            "description": "Welcome to the 4Knines pack! We’re on a mission to bring you the most innovative products that allow you to provide the best possible life for your best friend.",
             "cta_link": "",
             "cta_label": ""
           }
