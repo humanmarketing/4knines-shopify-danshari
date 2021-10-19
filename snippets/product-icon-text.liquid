@@ -1,10 +1,36 @@
 {%- comment -%}
-  descriptions
+  list?
+  descriptions?
 {%- endcomment -%}
 
+<style>
+  .product-icon-text li:not(.icon-txt-item)::before {
+    content: '• ';
+  }
+
+  .product-icon-text .icon-txt-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .product-icon-text img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+</style>
+
+{%- assign bullets = list | newline_to_br | split: '<br />' -%}
+
 <ul class="product-icon-text paragraph">
+  {%- for item in bullets -%}
+    <li>{{ item | strip }}</li>
+  {%- endfor -%}
+
   {%- for item in descriptions -%}
-    <li class="product-icon-txt">
+    <li class="icon-txt-item">
       <figure>
         <img
           {% render 'srcset', image: item.icon, width: 100 %}

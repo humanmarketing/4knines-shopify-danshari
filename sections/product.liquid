@@ -15,8 +15,11 @@
       {{ product.metafields.stamped.badge }}
     </div>
 
-    {%- if icon_and_text.size > 0 -%}
-      {% render 'product-icon-text', descriptions: icon_and_text %}
+    {%- if section.settings.description_list != blank or icon_and_text.size > 0 -%}
+      {% render 'product-icon-text'
+        list: section.settings.description_list
+        descriptions: icon_and_text
+      %}
     {%- endif -%}
 
     {% render 'product-form' %}
@@ -27,9 +30,11 @@
       <li class="with-icon">{% render 'icon-30' %} 30 Day Returns</li>
     </ul>
 
-    <div class="product-description richtext" style="font-size: 0.9em;">
-      {{ product.description }}
-    </div>
+    {%- if product.description != blank-%}
+      <div class="product-description richtext" style="font-size: 0.9em;">
+        {{ product.description }}
+      </div>
+    {%- endif -%}
   </div>
 </div>
 
@@ -49,23 +54,6 @@
   }
 
   .section-product .stamped-badge-caption { margin-left: 1ch; }
-
-  .product-icon-text li:not(.product-icon-txt)::before {
-    content: '';
-  }
-
-  .product-icon-text li {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  .product-icon-text img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-  }
 
   .qty-and-price {
     display: grid;
@@ -129,6 +117,12 @@
   "tag": "article",
   "class": "section-product container padding-lg multi-col",
   "settings": [
+    {
+      "type": "textarea",
+      "id": "description_list",
+      "label": "Description list",
+      "info": "Separate items with line breaks."
+    },
     {
       "type": "checkbox",
       "id": "show_dynamic_checkout",

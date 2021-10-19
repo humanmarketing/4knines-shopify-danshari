@@ -1,0 +1,66 @@
+{%- unless section.blocks.size == 0 -%}
+  <div class="section-details-simple container padding-lg{% if section.blocks.size > 1 %} multi-col center{% endif %}">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'image' -%}
+          <figure class="container-half">
+            <img
+              {% render 'srcset', image: block.settings.image, width: 1000 %}
+              alt="{{ block.settings.image.alt }}" loading="lazy"
+            />
+          </figure>
+
+        {%- when 'text' -%}
+          <div class="container-half richtext">
+            <h2 class="h2 text-accent-2">{{ block.settings.heading }}</h2>
+            {{ block.settings.description }}
+          </div>
+
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+{%- endunless -%}
+
+{% stylesheet %}
+  .section-details-simple { border-top: 1px solid var(--accent-2); }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Product Details Simple",
+  "tag": "section",
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 2
+}
+{% endschema %}
