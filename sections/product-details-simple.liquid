@@ -15,7 +15,7 @@
             </figure>
 
           {%- when 'video' -%}
-            <figure class="wistia-video-wrapper">{{ video_code }}</figure>
+            <figure class="wistia-video-wrapper">{{ block.settings.video_html }}</figure>
 
           {%- when 'text' -%}
             <div class="container-half richtext">

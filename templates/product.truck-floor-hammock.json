@@ -31,6 +31,7 @@
         "fcbbc18a-302b-4cbe-9610-e7ed39528eb1"
       ],
       "settings": {
+        "description_list": "",
         "show_dynamic_checkout": false
       }
     },
@@ -92,6 +93,8 @@
           "settings": {
             "heading": "High-Quality Products Built to Last",
             "description": "Our seat covers are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. The colorfast fabrics won’t fade. We also offer a lifetime warranty on all 4Knines seat covers and cargo liners.",
+            "cta_label": "",
+            "cta_link": "",
             "image": "shopify:\/\/shop_images\/multi-layer-construction.png"
           }
         },
@@ -122,10 +125,10 @@
       "type": "testimonial-and-social",
       "settings": {
         "rating": 5,
-        "quote": "Perfectly sized to fit. Love the material;\nseems extremely tough",
-        "author": "Hugh C.",
+        "quote": "Perfect to keep the truck clean and the dogs comfortable. It is very durable and easy to install.",
+        "author": "Renee R.",
         "show_avatar": true,
-        "avatar": "shopify:\/\/shop_images\/testimonial-avatar.png",
+        "avatar": "shopify:\/\/shop_images\/testimonial-crew-cab-floor-hammock.jpg",
         "show_social": false
       }
     },

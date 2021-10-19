@@ -1,0 +1,176 @@
+{
+  "sections": {
+    "product": {
+      "type": "product",
+      "settings": {
+        "description_list": "Heavy Duty and Durable\nWaterproof\nMachine Washable",
+        "show_dynamic_checkout": false
+      }
+    },
+    "product-details-tabs": {
+      "type": "product-details-tabs",
+      "disabled": true,
+      "blocks": {
+        "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6": {
+          "type": "video",
+          "settings": {
+            "tab_label": "Features",
+            "heading": "",
+            "description": "",
+            "video_html": "",
+            "metafield": "features_video_code"
+          }
+        },
+        "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
+          "type": "video",
+          "settings": {
+            "tab_label": "Installation & Care",
+            "heading": "",
+            "description": "",
+            "video_html": "",
+            "metafield": "installation_video_code"
+          }
+        }
+      },
+      "block_order": [
+        "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
+        "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
+      ],
+      "settings": {
+      }
+    },
+    "product-details-simple": {
+      "type": "product-details-simple",
+      "blocks": {
+        "2f616149-e825-4152-842b-f252dd65a62d": {
+          "type": "video",
+          "settings": {
+            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/00cs5th41z.jsonp\" async=\"\"><\/script> <script src=\"https:\/\/fast.wistia.com\/assets\/external\/E-v1.js\" async=\"\"><\/script> <div class=\"wistia_embed wistia_async_00cs5th41z\" style=\"height:500px;position:relative;width:500px\">   <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/00cs5th41z\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div> <\/div>"
+          }
+        },
+        "d5218f2a-bd17-4f2e-bf6f-c16c90f19329": {
+          "type": "text",
+          "settings": {
+            "heading": "Keep Your Pet Comfy for All Occasions",
+            "description": "<p><strong>Heavy Duty<\/strong><br\/>This durable blanket with a nonslip backing is great for pups who like to root and dig before they lay down. Measures 60 x 40\".<\/p><p><strong>Waterproof<\/strong><br\/>Waterproof to protect from wet dogs, drool, or accidents.<\/p><p><strong>Machine Washable<\/strong><br\/>Easy to clean, holds up well to washing. *Not recommended for aggressive chewers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "2f616149-e825-4152-842b-f252dd65a62d",
+        "d5218f2a-bd17-4f2e-bf6f-c16c90f19329"
+      ],
+      "settings": {
+      }
+    },
+    "product-details-3-pack": {
+      "type": "product-details-3-pack",
+      "disabled": true,
+      "blocks": {
+        "44dbb6c5-67ae-444d-8e92-502056070453": {
+          "type": "card",
+          "settings": {
+            "heading": "Design and Function Meet Convenience",
+            "description": "Our unique patented technology lets you fold down seats 60\/40, 50\/50 split, and center armrest pass-through without removing the cover.",
+            "cta_label": "",
+            "cta_link": "",
+            "image": "shopify:\/\/shop_images\/design-and-function-5.png"
+          }
+        },
+        "80d8b4a9-049e-44d0-8d7a-e068bb829ac6": {
+          "type": "card",
+          "settings": {
+            "heading": "High-Quality Products Built to Last",
+            "description": "Our cargo liners are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. The colorfast fabrics won’t fade. We also offer a lifetime warranty on all 4Knines seat covers and cargo liners.",
+            "cta_label": "",
+            "cta_link": "",
+            "image": "shopify:\/\/shop_images\/multi-layer-construction.png"
+          }
+        },
+        "26a8eece-a63b-48f4-afca-30948d936e03": {
+          "type": "card",
+          "settings": {
+            "heading": "Keeping Pets Safe, Happy and Healthy",
+            "description": "Our cargo liners feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
+            "cta_label": "",
+            "cta_link": "",
+            "image": "shopify:\/\/shop_images\/keeping-pets-safe-8.png"
+          }
+        }
+      },
+      "block_order": [
+        "44dbb6c5-67ae-444d-8e92-502056070453",
+        "80d8b4a9-049e-44d0-8d7a-e068bb829ac6",
+        "26a8eece-a63b-48f4-afca-30948d936e03"
+      ],
+      "settings": {
+        "heading": "SUV Cargo Liner For Fold Down Seats",
+        "description": "The 4Knines Multi-Function Dog Split SUV Cargo Liner is a must for anyone owning a dog or pet wanting to keep their vehicle nice and tidy.",
+        "note_header": "",
+        "note_description": ""
+      }
+    },
+    "icon-list-h": {
+      "type": "icon-list-h",
+      "blocks": {
+        "9dc0cbe5-3060-4184-ba12-7c38d1b5fdcd": {
+          "type": "item",
+          "settings": {
+            "heading": "High-Quality Products Built to Last",
+            "description": "Our seat covers are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. We offer a lifetime warranty on all 4Knines seat covers and cargo liners.",
+            "icon": "shopify:\/\/shop_images\/icon-quality.png"
+          }
+        },
+        "ea5eae33-ad6d-4524-aa8c-d5a2b66f1941": {
+          "type": "item",
+          "settings": {
+            "heading": "Design and Function Meet Convenience",
+            "description": "Our patented technology is easy to maintain and made with colorfast fabrics that won’t fade. Our proprietary design lets you access all your seat belts and move seats without removing the cover.",
+            "icon": "shopify:\/\/shop_images\/icon-design.png"
+          }
+        },
+        "ddbd8804-3e6d-4f9e-9218-0e4ad588bf84": {
+          "type": "item",
+          "settings": {
+            "heading": "Keeping Pets Safe, Happy and Healthy",
+            "description": "Our pet seat covers feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
+            "icon": "shopify:\/\/shop_images\/icon-house.png"
+          }
+        }
+      },
+      "block_order": [
+        "9dc0cbe5-3060-4184-ba12-7c38d1b5fdcd",
+        "ea5eae33-ad6d-4524-aa8c-d5a2b66f1941",
+        "ddbd8804-3e6d-4f9e-9218-0e4ad588bf84"
+      ],
+      "settings": {
+        "heading": "Products That Enable You to Provide the Best Possible Life for Your Best Friend"
+      }
+    },
+    "testimonial-and-social": {
+      "type": "testimonial-and-social",
+      "settings": {
+        "rating": 5,
+        "quote": "We absolutely love this blanket! We love the quality and the backside that stays down.",
+        "author": "Mountain M.",
+        "show_avatar": true,
+        "avatar": "shopify:\/\/shop_images\/testimonial-heavy-duty-blanket.jpg",
+        "show_social": false
+      }
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "product",
+    "product-details-tabs",
+    "product-details-simple",
+    "product-details-3-pack",
+    "icon-list-h",
+    "testimonial-and-social",
+    "product-reviews"
+  ]
+}
