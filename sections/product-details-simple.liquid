@@ -1,23 +1,31 @@
 {%- unless section.blocks.size == 0 -%}
-  <div class="section-details-simple container padding-lg{% if section.blocks.size > 1 %} multi-col center{% endif %}">
-    {%- for block in section.blocks -%}
-      {%- case block.type -%}
-        {%- when 'image' -%}
-          <figure class="container-half">
-            <img
-              {% render 'srcset', image: block.settings.image, width: 1000 %}
-              alt="{{ block.settings.image.alt }}" loading="lazy"
-            />
-          </figure>
+  <div class="section-details-simple">
+    <div
+      class="container padding-lg{% if section.blocks.size > 1 %} multi-col center{% endif %}"
+      style="gap: 2rem 4rem;"
+    >
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'image' -%}
+            <figure class="container-half">
+              <img
+                {% render 'srcset', image: block.settings.image, width: 1000 %}
+                alt="{{ block.settings.image.alt | default: product.name }}" loading="lazy"
+              />
+            </figure>
 
-        {%- when 'text' -%}
-          <div class="container-half richtext">
-            <h2 class="h2 text-accent-2">{{ block.settings.heading }}</h2>
-            {{ block.settings.description }}
-          </div>
+          {%- when 'video' -%}
+            <figure class="wistia-video-wrapper">{{ video_code }}</figure>
 
-      {%- endcase -%}
-    {%- endfor -%}
+          {%- when 'text' -%}
+            <div class="container-half richtext">
+              <h2 class="h2 text-accent-2">{{ block.settings.heading }}</h2>
+              {{ block.settings.description }}
+            </div>
+
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
   </div>
 {%- endunless -%}
 
@@ -41,6 +49,18 @@
           "type": "image_picker",
           "id": "image",
           "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "html",
+          "id": "video_html",
+          "label": "Video HTML",
+          "info": "Paste Wistia embed code"
         }
       ]
     },

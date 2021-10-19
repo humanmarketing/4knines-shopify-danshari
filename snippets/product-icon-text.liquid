@@ -24,7 +24,7 @@
 
 {%- assign bullets = list | newline_to_br | split: '<br />' -%}
 
-<ul class="product-icon-text paragraph">
+<ul class="product-icon-text paragraph-sm">
   {%- for item in bullets -%}
     <li>{{ item | strip }}</li>
   {%- endfor -%}

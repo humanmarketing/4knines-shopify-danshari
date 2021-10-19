@@ -1082,3 +1082,17 @@ input:checked + .color-swatch {
 .richtext.styled h4 { font-size: var(--h4); }
 
 .richtext.styled a:not(.action) { color: var(--accent-1); }
+
+/* wistia videos */
+
+.wistia-video-wrapper {
+  min-width: 0;
+  max-width: 500px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.wistia-video-wrapper > * {
+  max-width: 100%;
+  margin-inline: auto;
+}
