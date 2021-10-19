@@ -3,7 +3,7 @@
     "product": {
       "type": "product",
       "settings": {
-        "description_list": "Heavy duty, easy to clean material\nEasy to Install\nMatches 4Knines Covers",
+        "description_list": "Heavy duty, easy to clean material\nEasy to Install\nHelps keep your pup in the back seat",
         "show_dynamic_checkout": false
       }
     },
@@ -45,14 +45,14 @@
         "50e93222-8884-4d90-86c5-77351e7c18aa": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/details-car-door-covers.png"
+            "image": "shopify:\/\/shop_images\/details-deterrent-barrier.png"
           }
         },
         "d5218f2a-bd17-4f2e-bf6f-c16c90f19329": {
           "type": "text",
           "settings": {
-            "heading": "Protect Your Car Doors",
-            "description": "<p><strong>Slides into Window<\/strong><\/p><p>Attached tabs slide into the window well. Optional Velcro tabs also included.<\/p><p><strong>Easy to Clean<\/strong><\/p><p>Hose them down, wipe down with a moist towel, or toss in the washer to keep covers looking fresh and clean.<\/p>"
+            "heading": "Safety First",
+            "description": "<p><strong>Sturdy Mesh Center<\/strong><\/p><p>Helps keep your pet safely in the rear seat. Sturdy mesh center provides good visibility and airflow. Our heavy-duty material and components are designed to last a lifetime.<\/p><p><strong>Installs in seconds<\/strong><\/p><p>with quick-release clips and adjustable straps. Measures approximately 19 x 22 inches.<\/p>"
           }
         }
       },
@@ -151,8 +151,8 @@
       "type": "testimonial-and-social",
       "settings": {
         "rating": 5,
-        "quote": "Fits perfect, easy install, super durable material.",
-        "author": "Lynn W.",
+        "quote": "Easy to use straps, light weight and easy to store when not using.",
+        "author": "Curtis V.",
         "show_avatar": true,
         "show_social": false
       }

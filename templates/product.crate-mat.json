@@ -3,7 +3,7 @@
     "product": {
       "type": "product",
       "settings": {
-        "description_list": "Heavy duty, easy to clean material\nEasy to Install\nMatches 4Knines Covers",
+        "description_list": "Plush Microfiber with special foam padding\nWaterproof Bottom\nMachine Washable",
         "show_dynamic_checkout": false
       }
     },
@@ -45,14 +45,14 @@
         "50e93222-8884-4d90-86c5-77351e7c18aa": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/details-car-door-covers.png"
+            "image": "shopify:\/\/shop_images\/details-crate-mat.png"
           }
         },
         "d5218f2a-bd17-4f2e-bf6f-c16c90f19329": {
           "type": "text",
           "settings": {
-            "heading": "Protect Your Car Doors",
-            "description": "<p><strong>Slides into Window<\/strong><\/p><p>Attached tabs slide into the window well. Optional Velcro tabs also included.<\/p><p><strong>Easy to Clean<\/strong><\/p><p>Hose them down, wipe down with a moist towel, or toss in the washer to keep covers looking fresh and clean.<\/p>"
+            "heading": "Keep Your Pet Comfy for All Occasions",
+            "description": "<p><strong>Waterproof Backing<\/strong><br\/>Helps contain any accidents.<\/p><p><strong>Anti-Slip<\/strong><br\/>Helps keep the mat in place.<\/p><p><strong>Microfiber Top<\/strong><br\/>Soft, warm, easy to clean.<\/p><p><strong>Special Foam Padding<\/strong><br\/>For extra comfort.<\/p>"
           }
         }
       },
@@ -151,8 +151,8 @@
       "type": "testimonial-and-social",
       "settings": {
         "rating": 5,
-        "quote": "Fits perfect, easy install, super durable material.",
-        "author": "Lynn W.",
+        "quote": "We love our crate mat! Very soft and was very easy to clean.",
+        "author": "AJ",
         "show_avatar": true,
         "show_social": false
       }
