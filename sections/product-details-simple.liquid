@@ -18,7 +18,7 @@
             <figure class="wistia-video-wrapper">{{ block.settings.video_html }}</figure>
 
           {%- when 'text' -%}
-            <div class="container-half richtext">
+            <div class="details-simple-txt container-half richtext">
               <h2 class="h2 text-accent-2">{{ block.settings.heading }}</h2>
               {{ block.settings.description }}
             </div>
@@ -31,6 +31,8 @@
 
 {% stylesheet %}
   .section-details-simple { border-top: 1px solid var(--accent-2); }
+
+  .details-simple-txt strong { font-size: 1.3em; }
 {% endstylesheet %}
 
 {% schema %}

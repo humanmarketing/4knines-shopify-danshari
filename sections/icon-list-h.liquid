@@ -5,7 +5,7 @@
     --bg-right: url({{ 'wave-right.png' | asset_url }});
   "
 >
-  <h2 class="container-half h2 text-accent-2">{{ section.settings.heading }}</h2>
+  <h2 class="h2 text-accent-2">{{ section.settings.heading }}</h2>
 
   {%- assign items = section.blocks | where: 'type', 'item' | map: 'settings' -%}
   <ul class="icon-list-h multi-col">
@@ -30,6 +30,11 @@
   .section-icon-list-h > * {
     position: relative;
     z-index: 1;
+  }
+
+  .section-icon-list-h h2 {
+    max-width: 450px;
+    margin-inline: auto;
   }
 
   .icon-list-h {
