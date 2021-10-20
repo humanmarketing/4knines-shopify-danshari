@@ -993,6 +993,12 @@ input:checked + .color-swatch {
   box-shadow: var(--outline);
 }
 
+.error-msg {
+  padding: 0.5em;
+  font-size: 0.8em;
+  color: var(--error);
+}
+
 /* price */
 
 .compare-at-price { opacity: 0.6; }

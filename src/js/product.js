@@ -7,8 +7,14 @@
 let form = $('form[action="/cart/add"]')
 let variantSelector = form.querySelector('select[name="id"]')
 let variantOptions = ['size', 'color']
+let addToCartBtn = form.querySelector('.add-to-cart-btn')
+let soldOutBtn = form.querySelector('.sold-out-btn')
+let errMsg = form.querySelector('.error-msg')
 
-form.addEventListener('change', () => {
+// on variant change
+form.addEventListener('change', updateProductForm)
+
+function updateProductForm() {
   let formData = new FormData(form)
   variantOptions.forEach(option => {
     let optionPreview = form.querySelector(`[data-option-preview="${ option }"]`)
@@ -16,26 +22,43 @@ form.addEventListener('change', () => {
   })
 
   let selectedValues = variantOptions.map(option => formData.get(option)).join` / `
+
+  // update <select> with selected variant
   let newlySelectedVariant = Array.from(variantSelector.options).find(option => option.text.includes(selectedValues))
 
-  variantSelector.value = newlySelectedVariant.value
+  if (!!newlySelectedVariant) {
+    addToCartBtn.removeAttribute('disabled')
+    errMsg.setAttribute('hidden', true)
 
-  let { selectedPrice, selectedCompareAtPrice, selectedAvailable } = newlySelectedVariant.dataset
-  form.querySelector('[data-price]').innerHTML = formatPrice(selectedPrice)
-  if (form.querySelector('[data-compare-at-price]')) {
-    form.querySelector('[data-compare-at-price]').innerHTML = formatPrice(selectedCompareAtPrice)
-  }
+    variantSelector.value = newlySelectedVariant.value
 
-  if (selectedAvailable === 'true') {
-    form.querySelector('.add-to-cart-btn').removeAttribute('hidden')
-    form.querySelector('.sold-out-btn').setAttribute('hidden', true)
+    let { selectedPrice, selectedCompareAtPrice, selectedAvailable } = newlySelectedVariant.dataset
+    form.querySelector('[data-price]').innerHTML = formatPrice(selectedPrice)
+    if (form.querySelector('[data-compare-at-price]')) {
+      form.querySelector('[data-compare-at-price]').innerHTML = formatPrice(selectedCompareAtPrice)
+    }
+
+    if (selectedAvailable === 'true') {
+      addToCartBtn.removeAttribute('hidden')
+      soldOutBtn.setAttribute('hidden', true)
+    } else {
+      addToCartBtn.setAttribute('hidden', true)
+      soldOutBtn.removeAttribute('hidden')
+    }
+
+    window.history.replaceState(null, null, `?variant=${ newlySelectedVariant.value }`)
   } else {
-    form.querySelector('.add-to-cart-btn').setAttribute('hidden', true)
-    form.querySelector('.sold-out-btn').removeAttribute('hidden')
+    // variant does not exist
+    showError('This configuration does not exist')
   }
+}
+updateProductForm()
 
-  window.history.replaceState(null, null, `?variant=${ newlySelectedVariant.value }`)
-})
+function showError(msg) {
+  addToCartBtn.setAttribute('disabled', true)
+  errMsg.removeAttribute('hidden')
+  errMsg.innerHTML = msg
+}
 
 function formatPrice(value) {
   const { format } = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
