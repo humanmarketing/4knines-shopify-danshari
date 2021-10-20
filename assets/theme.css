@@ -654,9 +654,10 @@ summary.unset::-webkit-details-marker { display: none; }
 
 .tablet-menu-title-arrow a {
   position: absolute;
-  left: 50%; top: 50%;
-  transform: translate(-50%, -50%);
-  width: 36px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100vw - 2rem - 45px);
   height: 36px;
   display: inline-block;
 }
