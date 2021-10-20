@@ -31,6 +31,7 @@
         "f8d4ba82-b4df-4560-bbbd-21c879dabb62"
       ],
       "settings": {
+        "description_list": "",
         "show_dynamic_checkout": false
       }
     },
@@ -71,8 +72,7 @@
         "ef33c4b4-534b-41b9-ad3a-5daca4ceb212",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "product-details-3-pack": {
       "type": "product-details-3-pack",
@@ -84,7 +84,7 @@
             "description": "The 4Knines split rear seat cover features our unique patented technology, which lets you fold down seats 60\/40, 50\/50 split, and center armrest pass-through without removing the cover.\nSplit Cover Technology protected by US Patent No. 9,610,877",
             "cta_label": "",
             "cta_link": "",
-            "image": "shopify:\/\/shop_images\/design-and-function-5.png"
+            "image": "shopify:\/\/shop_images\/split-tech-rear-seat-cover.gif"
           }
         },
         "80d8b4a9-049e-44d0-8d7a-e068bb829ac6": {
@@ -131,8 +131,7 @@
     },
     "product-reviews": {
       "type": "product-reviews",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
