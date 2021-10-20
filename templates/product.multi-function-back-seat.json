@@ -20,8 +20,8 @@
         "f8d4ba82-b4df-4560-bbbd-21c879dabb62": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Hammock Option – provides safety and helps stop distracted driving",
-            "icon": "shopify:\/\/shop_images\/icon-hammock_option.png"
+            "description": "No Hammock",
+            "icon": "shopify:\/\/shop_images\/icon-no-hammock.png"
           }
         }
       },
@@ -31,6 +31,7 @@
         "f8d4ba82-b4df-4560-bbbd-21c879dabb62"
       ],
       "settings": {
+        "description_list": "",
         "show_dynamic_checkout": false
       }
     },
@@ -71,8 +72,7 @@
         "b7518dc8-26b2-44a1-9acb-bf27a8918fa7",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "product-details-3-pack": {
       "type": "product-details-3-pack",
@@ -131,8 +131,7 @@
     },
     "product-reviews": {
       "type": "product-reviews",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [

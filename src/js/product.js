@@ -49,16 +49,12 @@ function updateProductForm() {
     window.history.replaceState(null, null, `?variant=${ newlySelectedVariant.value }`)
   } else {
     // variant does not exist
-    showError('This configuration does not exist')
+    addToCartBtn.setAttribute('disabled', true)
+    errMsg.removeAttribute('hidden')
+    errMsg.innerHTML = 'This configuration does not exist'
   }
 }
 updateProductForm()
-
-function showError(msg) {
-  addToCartBtn.setAttribute('disabled', true)
-  errMsg.removeAttribute('hidden')
-  errMsg.innerHTML = msg
-}
 
 function formatPrice(value) {
   const { format } = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })

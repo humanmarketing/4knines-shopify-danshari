@@ -1,7 +1,8 @@
 {
   "sections": {
     "page": {
-      "type": "page"
+      "type": "page",
+      "settings": {}
     }
   },
   "order": [
