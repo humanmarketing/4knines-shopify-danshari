@@ -1,16 +1,12 @@
 {%- liquid
-  assign testimonial_quote = product.metafields.testimonial.quote | default: section.settings.quote
-  assign testimonial_author = product.metafields.testimonial.author | default: section.settings.author
-  assign testimonial_image = product.metafields.testimonial.image | default: section.settings.avatar
-
-  if section.settings.show_avatar and testimonial_image != blank
+  if section.settings.show_avatar and section.settings.avatar != blank
     assign show_avatar = true
   else
     assign show_avatar = false
   endif
 -%}
 
-{%- if testimonial_quote != blank and testimonial_author != blank -%}
+{%- if section.settings.quote != blank and section.settings.author != blank -%}
   <div
     class="section-testimonial{% if show_avatar %} show-avatar{% endif %}"
     style="
@@ -21,7 +17,7 @@
     {%- if show_avatar-%}
       <figure class="testimonial-avatar">
         <img
-          {% render 'srcset', image: testimonial_image, width: 300 %}
+          {% render 'srcset', image: section.settings.avatar, width: 300 %}
           alt="{{ section.settings.avatar.alt | escape }}"
           loading="lazy"
         />
@@ -36,10 +32,10 @@
       </div>
 
       <blockquote class="container-half h3-body text-outline">
-        <p>{{ testimonial_quote | newline_to_br }}</p>
+        <p>{{ section.settings.quote | newline_to_br }}</p>
       </blockquote>
 
-      <p class="text-outline">— {{ testimonial_author }}</p>
+      <p class="text-outline">— {{ section.settings.author }}</p>
 
       {%- if section.settings.show_social -%}
         <div class="on-social-txt">
