@@ -1,0 +1,21 @@
+{
+  "name": "4knines-shopify-danshari",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/humanmarketing/4knines-shopify-danshari.git",
+  "author": "Mitchell Christ <mitchell@human.marketing>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "shopify:switch": "shopify switch --store=4knines-sandbo.myshopify.com",
+    "start": "yarn shopify:switch && shopify theme serve",
+    "dev": "run-p dev:*",
+    "dev:js": "esbuild src/js/*.js --outdir=assets --out-extension:.js=.min.js --watch",
+    "build": "run-s build:*",
+    "build:js": "esbuild src/js/*.js --outdir=assets --out-extension:.js=.min.js --minify"
+  },
+  "devDependencies": {
+    "esbuild": "^0.13.8",
+    "npm-run-all": "^4.1.5"
+  }
+}
