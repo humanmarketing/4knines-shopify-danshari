@@ -44,7 +44,6 @@
   overflow-y: auto;
 }
 
-.search-form:not(:focus-within) .search-suggestions,
 .search-suggestions:empty { display: none; }
 
 /* group */

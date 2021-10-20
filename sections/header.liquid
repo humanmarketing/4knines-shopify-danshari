@@ -12,7 +12,7 @@
   </a>
 
   <div class="header-search">
-   {% render 'search-form' %}
+   {% render 'search-form', type: 'product,collection' %}
   </div>
 
   <div class="header-actions">
@@ -28,6 +28,9 @@
 
     <a href="{{ routes.cart_url }}" class="header-cart link{% if cart.item_count > 0%} has-items{% endif %}">
       {% render 'icon-cart' %}
+      {%- if cart.item_count > 0 -%}
+        <span class="cart-count">{{ cart.item_count }}</span>
+      {%- endif -%}
     </a>
   </div>
 

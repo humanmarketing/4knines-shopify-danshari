@@ -34,7 +34,7 @@ summary { cursor: pointer; }
 
 svg { fill: currentColor; }
 
-[hidden] { display: none; }
+[hidden] { display: none !important; }
 
 [disabled] {
   cursor: not-allowed;
@@ -456,15 +456,20 @@ summary.unset::-webkit-details-marker { display: none; }
 
 .header-cart { position: relative; }
 
-.header-cart.has-items::after {
-  content: '';
+.header-cart:not(.has-items) .cart-count { display: none; }
+.header-cart.has-items .cart-count {
   position: absolute;
   right: 0; top: 0;
-  display: inline-block;
-  width: 0.75em;
-  height: 0.75em;
+  transform: translate(25%, -25%);
+  display: grid;
+  place-content: center;
+  width: 1.5em;
+  height: 1.5em;
   border-radius: 100%;
   background-color: var(--accent-1);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 0.8em;
 }
 
 .header-trigger {

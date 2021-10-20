@@ -20,10 +20,18 @@ form.addEventListener('change', () => {
 
   variantSelector.value = newlySelectedVariant.value
 
-  let { selectedPrice, selectedCompareAtPrice } = newlySelectedVariant.dataset
+  let { selectedPrice, selectedCompareAtPrice, selectedAvailable } = newlySelectedVariant.dataset
   form.querySelector('[data-price]').innerHTML = formatPrice(selectedPrice)
   if (form.querySelector('[data-compare-at-price]')) {
     form.querySelector('[data-compare-at-price]').innerHTML = formatPrice(selectedCompareAtPrice)
+  }
+
+  if (selectedAvailable === 'true') {
+    form.querySelector('.add-to-cart-btn').removeAttribute('hidden')
+    form.querySelector('.sold-out-btn').setAttribute('hidden', true)
+  } else {
+    form.querySelector('.add-to-cart-btn').setAttribute('hidden', true)
+    form.querySelector('.sold-out-btn').removeAttribute('hidden')
   }
 
   window.history.replaceState(null, null, `?variant=${ newlySelectedVariant.value }`)

@@ -12,7 +12,7 @@
 -%}
 
 <article class="product-item{% if small %} small{% endif %} richtext">
-  <a href="{{ product.url }}" class="product-item-img link richtext">
+  <a href="{{ product.selected_or_first_available_variant.url }}" class="product-item-img link richtext">
     <img
       {% render 'srcset', image: product.featured_image, width: image_width %}
       alt="{{ product.featured_image.alt | default: product.title | escape }}"

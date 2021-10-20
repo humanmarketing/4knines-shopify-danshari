@@ -5,7 +5,7 @@
 {%- endcomment -%}
 
 <form class="search-form {{ class }}" action="{{ routes.search_url }}">
-  {%- if type -%}
+  {%- if type != blank -%}
     <input name="type" value="{{ type }}" type="hidden">
   {%- endif -%}
 
@@ -15,6 +15,7 @@
       name="q"
       value="{% if search.performed -%}{{ search.terms | escape }}{%- endif %}"
       type="search"
+      autocomplete="off"
       placeholder="Search"
     />
   </label>

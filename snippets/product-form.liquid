@@ -21,6 +21,7 @@
           value="{{ variant.id }}"
           data-selected-price="{{ variant.price }}"
           data-selected-compare-at-price="{{ variant.compare_at_price }}"
+          data-selected-available="{{ variant.available }}"
           {% if variant == product.selected_or_first_available_variant -%}selected{%- endif %}
           {% unless variant.available %}disabled{% endunless %}
         >
@@ -45,11 +46,8 @@
   </div>
 
   <div>
-    {%- if available -%}
-      <button class="action full">Add to cart</button>
-    {%- else -%}
-      <button class="action full" disabled>Sold out</button>
-    {%- endif -%}
+    <button class="add-to-cart-btn action full" {% unless available %}hidden{% endunless %}>Add to cart</button>
+    <button class="sold-out-btn action full" {% if available %}hidden{% endif %} disabled>Sold out</button>
 
     {%- if section.settings.show_dynamic_checkout -%}
       {{ form | payment_button }}
