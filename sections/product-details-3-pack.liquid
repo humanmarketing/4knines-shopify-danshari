@@ -42,13 +42,6 @@
       </li>
     {%- endfor -%}
   </ul>
-
-  {%- if section.settings.note_header != blank and section.settings.note_description != blank -%}
-    <div class="pd3-notes container-sm padding-lg richtext text-center">
-      <h2>{{ section.settings.note_header }}</h2>
-      <p>{{ section.settings.note_description }}</p>
-    </div>
-  {%- endif -%}
 </div>
 
 {% stylesheet %}
@@ -93,17 +86,6 @@
       "type": "textarea",
       "id": "description",
       "label": "Description"
-    },
-    { "type": "header", "content": "Note" },
-    {
-      "type": "text",
-      "id": "note_header",
-      "label": "Note header"
-    },
-    {
-      "type": "textarea",
-      "id": "note_description",
-      "label": "Note description"
     }
   ],
   "blocks": [
