@@ -41,7 +41,7 @@
     class="section-promo padding-lg bg"
     style="--bg-img: url('{{ 'wave-right-top-bottom-lg.png' | asset_url }}');"
   >
-    <div class="container-half text-center richtext">
+    <div class="{{ promo.container_size | default: 'container_half' }} text-center richtext">
       <h2 class="h2 text-accent-2">{{ promo.heading }}</h2>
       {%- if promo.description -%}
         <p class="h4-body">{{ promo.description | newline_to_br }}</p>
@@ -200,6 +200,16 @@
           "id": "cta_label",
           "label": "CTA label",
           "info": "Default: \"Shop <title>\""
+        },
+        {
+          "type": "select",
+          "id": "container_size",
+          "label": "Container size",
+          "options": [
+            { "value": "container", "label": "large" },
+            { "value": "container-sm", "label": "small" },
+            { "value": "container-half", "label": "half" }
+          ]
         }
       ]
     }

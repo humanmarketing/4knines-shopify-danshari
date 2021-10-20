@@ -7,10 +7,11 @@
           "type": "promo",
           "settings": {
             "enabled": true,
-            "heading": "Welcome to the new 4Knines!",
-            "description": "Welcome to the 4Knines pack! We’re on a mission to bring you the most innovative products that allow you to provide the best possible life for your best friend.",
+            "heading": "Welcome to the new 4Knines website!",
+            "description": "We’ve got a new look and an easier, faster shopping experience. We’re on a mission to bring you the most innovative products that allow you to experience life with your best friend.",
             "cta_link": "",
-            "cta_label": ""
+            "cta_label": "",
+            "container_size": "container-sm"
           }
         }
       },
