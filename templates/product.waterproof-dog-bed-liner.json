@@ -3,7 +3,7 @@
     "product": {
       "type": "product",
       "settings": {
-        "description_list": "Soft Quiet Material\nMachine washable\nGreat for dogs with incontinence",
+        "description_list": "Soft, Quiet Material\nMachine washable\nGreat for dogs with incontinence",
         "show_dynamic_checkout": false
       }
     },
@@ -52,7 +52,7 @@
           "type": "text",
           "settings": {
             "heading": "Protect Your Dog’s Bed",
-            "description": "<p><strong>Soft Quiet Material<\/strong><br\/>Soft, quiet liner protects the interior of your dog's bed from accidents and other wet messes. *Not recommended for aggressive chewers.<\/p><p><strong>Machine washable<\/strong><br\/>Machine washable; hang to dry.<\/p><p><strong>Great for dogs with incontinence <\/strong><br\/>Protect your dog’s entire bed from household allergens, dust mites, mold, mildew, and odors.<\/p>"
+            "description": "<p><strong>Soft, Quiet Material<\/strong><br\/>Soft, quiet liner protects the interior of your dog's bed from accidents and other wet messes. *Not recommended for aggressive chewers.<\/p><p><strong>Machine washable<\/strong><br\/>Machine washable; hang to dry.<\/p><p><strong>Great for dogs with incontinence <\/strong><br\/>Protect your dog’s entire bed from household allergens, dust mites, mold, mildew, and odors.<\/p>"
           }
         }
       },
@@ -144,7 +144,7 @@
         "ddbd8804-3e6d-4f9e-9218-0e4ad588bf84"
       ],
       "settings": {
-        "heading": "Products That Enable You to Provide the Best Possible Life for Your Best Friend"
+        "heading": "Products to Provide the Best Possible Life for Your Best Friend"
       }
     },
     "testimonial-and-social": {
