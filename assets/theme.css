@@ -216,10 +216,19 @@ summary.unset::-webkit-details-marker { display: none; }
 
 .text-outline {
   text-shadow:
-    -1px -1px 0 var(--text-outline, #fff),
-    1px -1px 0 var(--text-outline, #fff),
-    -1px 1px 0 var(--text-outline, #fff),
-    1px 1px 0 var(--text-outline, #fff);
+    -1px -1px 1px var(--text-outline, #fff),
+    1px -1px 1px var(--text-outline, #fff),
+    -1px 1px 1px var(--text-outline, #fff),
+    1px 1px 1px var(--text-outline, #fff),
+    -2px -2px 2px var(--text-outline, #fff),
+    2px -2px 2px var(--text-outline, #fff),
+    -2px 2px 2px var(--text-outline, #fff),
+    2px 2px 2px var(--text-outline, #fff),
+    -3px -3px 3px var(--text-outline, #fff),
+    3px -3px 3px var(--text-outline, #fff),
+    -3px 3px 3px var(--text-outline, #fff),
+    3px 3px 3px var(--text-outline, #fff)
+  ;
 }
 
 .bg { background-color: var(--bg); }
