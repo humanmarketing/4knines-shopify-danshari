@@ -19,7 +19,12 @@
           assign dog_seat_cover_links = linklists['dog-seat-covers'].links | map: 'url'
           if dog_seat_cover_links contains collection.url
             render 'crumb', text: 'Dog Seat Covers', url: '/collections/dog-seat-covers'
-            render 'crumb', text: collection.title, position: 3
+            if collection.title == 'Dog Seat Covers'
+              assign text = 'All'
+            else
+              assign text = collection.title
+            endif
+            render 'crumb', text: text, position: 3
           else
             render 'crumb', text: collection.title
           endif
