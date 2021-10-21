@@ -64,6 +64,20 @@
   <p class="text-dark text-center">Cart is empty</p>
 {%- endunless -%}
 
+{% stylesheet %}
+  .line-item-link {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+    align-items: center;
+    max-width: -webkit-max-content;
+    max-width: max-content;
+    margin-inline: auto;
+  }
+
+  .line-item-img img { width: 60px; }
+{% endstylesheet %}
+
 {% schema %}
 {
   "name": "Cart line items",

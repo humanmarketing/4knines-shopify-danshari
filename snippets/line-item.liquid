@@ -5,10 +5,21 @@
 
 <tr>
   <td>
-    <a href="{{ line_item.url }}" class="link">{{ line_item.product.title }}</a>
-    {%- unless line_item.product.has_only_default_variant -%}
-      <div>{{ line_item.variant.title }}</div>
-    {%- endunless -%}
+    <a href="{{ line_item.url }}" class="line-item-link link">
+      <figure class="line-item-img">
+        <img
+          {% render 'srcset', image: line_item.product.featured_image, width: 120 %}
+          alt="{{ line_item.product.title }}" loading="lazy"
+        />
+      </figure>
+
+      <div>
+        <div>{{ line_item.product.title }}</div>
+        {%- unless line_item.product.has_only_default_variant -%}
+          <div>{{ line_item.variant.title }}</div>
+        {%- endunless -%}
+      </div>
+    </a>
   </td>
 
   <td>
