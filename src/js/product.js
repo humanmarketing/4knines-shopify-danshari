@@ -6,16 +6,19 @@
 
 let form = $('form[action="/cart/add"]')
 let variantSelector = form.querySelector('select[name="id"]')
-let variantOptions = ['size', 'color']
 let addToCartBtn = form.querySelector('.add-to-cart-btn')
 let soldOutBtn = form.querySelector('.sold-out-btn')
 let errMsg = form.querySelector('.error-msg')
+
+let variantOptions = Array.from(form.querySelectorAll('.variant-selector'))
+  .map(item => item.dataset.optionName)
 
 // on variant change
 form.addEventListener('change', updateProductForm)
 
 function updateProductForm() {
   let formData = new FormData(form)
+
   variantOptions.forEach(option => {
     let optionPreview = form.querySelector(`[data-option-preview="${ option }"]`)
     optionPreview && (optionPreview.innerHTML = formData.get(option))

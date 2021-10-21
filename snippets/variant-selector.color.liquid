@@ -3,7 +3,7 @@
   small?
 {%- endcomment -%}
 
-<fieldset class="variant-selector variant-selector-color">
+<fieldset class="variant-selector variant-selector-color" data-option-name="{{ option.name | handleize }}">
   {%- unless small -%}
     <legend class="font-heading">
       <small>
