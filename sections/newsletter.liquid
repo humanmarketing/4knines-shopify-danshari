@@ -5,13 +5,25 @@
   </div>
 
   {% form 'customer', class: 'newsletter-form' %}
-    <label>
-      <input class="input" name="contact[email]" value="" autocomplete="email" type="email" placeholder="Email" required />
-    </label>
+    <div class="newsletter-form">
+      <label>
+        <input class="input" name="contact[email]" value="" autocomplete="email" type="email" placeholder="Email" required />
+      </label>
+      <button class="action accent-2">Sign up</button>
+    </div>
 
-    <button class="action">{{ section.settings.submit_label }}</button>
+    <p class="newsletter-form-success text-center" {% unless form.postted_successfully %}hidden{% endunless %}>
+      Thanks for signing up!
+    </p>
   {% endform %}
 </div>
+
+<script>
+  let urlParams = new URLSearchParams(window.location.search)
+  if (!!urlParams.get('customer_posted')) {
+    document.querySelector('.newsletter-form-success').removeAttribute('hidden')
+  }
+</script>
 
 {% stylesheet %}
   #shopify-section-newsletter {
@@ -44,6 +56,8 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
+
+  .newsletter-form-success { margin-top: 1rem; }
 {% endstylesheet %}
 
 {% schema %}
