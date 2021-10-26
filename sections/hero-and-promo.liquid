@@ -1,4 +1,11 @@
-{%- assign promo = section.blocks | where: 'type', 'promo' | map: 'settings' | first -%}
+{%- liquid
+  assign promo = section.blocks | where: 'type', 'promo' | map: 'settings' | first
+  assign banner = section.blocks | where: 'type', 'banner' | map: 'settings' | first
+
+  assign today_date = 'now' | replace: '-0500', '-0800' | date: '%s' | plus: 3600
+  assign start_date = banner.start_datetime | append: ' -0800' | date: '%s' | times: 1
+  assign end_date = banner.end_datetime | append: ' -0800' | date: '%s' | times: 1
+-%}
 
 <div class="section-hero padding-lg {% if promo.enabled %}promo-enabled{% endif %}">
   {%- if section.settings.image_desktop -%}
@@ -61,6 +68,32 @@
   </article>
 {%- endif -%}
 
+{%- if banner.enabled -%}
+  {%- capture banner_image -%}
+    <picture class="banner-img">
+      {%- if banner.image_mobile -%}
+        <source
+          {% render 'srcset', image: banner.image_mobile, width: 1200 %}
+          media="(max-width: 768px)"
+        />
+      {%- endif -%}
+      <img
+        {% render 'srcset', image: banner.image_desktop, width: 2000 %}
+        alt="{{ banner.image_desktop.alt }}"
+        loading="eager" draggable="false"
+      />
+    </picture>
+  {%- endcapture -%}
+
+  {%- if today_date >= start_date and today_date <= end_date -%}
+    {%- if banner.link != blank -%}
+      <a href="{{ banner.link }}" class="banner-link container-lg">{{ banner_image }}</a>
+    {%- else -%}
+      <div class="container-lg">{{ banner_image }}</div>
+    {%- endif -%}
+  {%- endif -%}
+{%- endif -%}
+
 {% stylesheet %}
   .section-hero {
     position: relative;
@@ -95,6 +128,8 @@
     height: 100%;
     background: var(--bg-img) right/contain no-repeat;
   }
+
+  .banner-link { display: block; }
 
   /* tablet */
   @media screen and (max-width: 768px) {
@@ -210,6 +245,46 @@
             { "value": "container-sm", "label": "small" },
             { "value": "container-half", "label": "half" }
           ]
+        }
+      ]
+    },
+    {
+      "type": "banner",
+      "name": "Banner",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enabled",
+          "label": "Enabled",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "start_datetime",
+          "label": "Start datetime",
+          "info": "Format Example: 2021-01-31 18:00:00"
+        },
+        {
+          "type": "text",
+          "id": "end_datetime",
+          "label": "End datetime",
+          "info": "Format Example: 2021-01-31 23:59:59"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_desktop",
+          "label": "Image (desktop)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image (mobile)"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
         }
       ]
     }
