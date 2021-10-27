@@ -14,8 +14,6 @@
     assign results_pages = search.results | where: 'object_type', 'page'
   -%}
 
-  <script>console.log({{ search.results | json }})</script>
-
   {%- if results_products.size > 0 -%}
     <section class="padding-y paragraph">
       <h2 class="h2">Products</h2>
