@@ -71,6 +71,12 @@
 {%- if banner.enabled -%}
   {%- capture banner_image -%}
     <picture class="banner-img">
+      {%- if banner.image_large -%}
+        <source
+          {% render 'srcset', image: banner.image_large, width: 2400 %}
+          media="(min-width: 1400px)"
+        />
+      {%- endif -%}
       {%- if banner.image_mobile -%}
         <source
           {% render 'srcset', image: banner.image_mobile, width: 1200 %}
@@ -87,9 +93,9 @@
 
   {%- if today_date >= start_date and today_date <= end_date -%}
     {%- if banner.link != blank -%}
-      <a href="{{ banner.link }}" class="banner-link container-lg">{{ banner_image }}</a>
+      <a href="{{ banner.link }}" class="promo-banner">{{ banner_image }}</a>
     {%- else -%}
-      <div class="container-lg">{{ banner_image }}</div>
+      <div class="promo-banner">{{ banner_image }}</div>
     {%- endif -%}
   {%- endif -%}
 {%- endif -%}
@@ -129,7 +135,11 @@
     background: var(--bg-img) right/contain no-repeat;
   }
 
-  .banner-link { display: block; }
+  .promo-banner {
+    display: block;
+    margin-inline: auto;
+  }
+  .promo-banner img { width: 100%; }
 
   /* tablet */
   @media screen and (max-width: 768px) {
@@ -162,6 +172,10 @@
       font-size: var(--h3);
     }
     .section-promo p { font-size: var(--h5); }
+  }
+
+  @media screen and (max-width: 1399px) {
+    .promo-banner { max-width: 1400px; }
   }
 {% endstylesheet %}
 
@@ -280,6 +294,11 @@
           "type": "image_picker",
           "id": "image_mobile",
           "label": "Image (mobile)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_large",
+          "label": "Image (large)"
         },
         {
           "type": "url",
