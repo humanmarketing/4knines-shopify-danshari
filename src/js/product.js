@@ -49,7 +49,12 @@ function updateProductForm() {
       soldOutBtn.removeAttribute('hidden')
     }
 
-    window.history.replaceState(null, null, `?variant=${ newlySelectedVariant.value }`)
+    // update URL params
+    let urlParams = new URLSearchParams(window.location.search)
+    // add new url params
+    urlParams.set('variant', newlySelectedVariant.value)
+    // replace url with new params without refresh
+    window.history.replaceState({}, '', `?${ urlParams.toString() }`)
   } else {
     // variant does not exist
     addToCartBtn.setAttribute('disabled', true)
