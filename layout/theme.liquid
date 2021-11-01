@@ -26,7 +26,7 @@
   {{ 'reset.css' | asset_url | stylesheet_tag }}
   {{ 'theme.css' | asset_url | stylesheet_tag }}
 
-  {{ content_for_header }}
+  {% render 'header-scripts.zipifypages', renderctx: 'thm' %}{{ content_for_header }}
 
   {% render 'magiczoomplus.headers' %}
 
@@ -45,6 +45,7 @@
   <!-- END Growth Affiliate in theme.liquid -->
 
   <script src="//staticxx.s3.amazonaws.com/aio_stats_lib_v1.min.js?v=1.0" defer></script>
+{% render 'minmaxify-head' %}
 </head>
 
 <body>
@@ -71,6 +72,6 @@
   {%- if request.page_type == 'collection' or request.page_type == 'product' -%}
     <script async type="text/javascript" data-api-key="" id="stamped-script-widget" src="https://cdn-stamped-io.azureedge.net/files/widget.min.js"></script>
   {%- endif -%}
-</body>
+{% render 'page-footer.zipifypages', renderctx: 'thm', ocuapp: ocuapp %}</body>
 
 </html>

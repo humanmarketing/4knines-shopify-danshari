@@ -1,5 +1,9 @@
 {
   "sections": {
+    "zp-product-header-content": {
+      "type": "product-header-content-zipifypages",
+      "settings": {}
+    },
     "product": {
       "type": "product",
       "blocks": {
@@ -132,13 +136,19 @@
     "product-reviews": {
       "type": "product-reviews",
       "settings": {}
+    },
+    "zp-product-footer-content": {
+      "type": "product-footer-content-zipifypages",
+      "settings": {}
     }
   },
   "order": [
+    "zp-product-header-content",
     "product",
     "product-details-tabs",
     "product-details-3-pack",
     "testimonial-and-social",
-    "product-reviews"
+    "product-reviews",
+    "zp-product-footer-content"
   ]
 }
