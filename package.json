@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "shopify:switch": "shopify switch --store=4knines-sandbox.myshopify.com",
+    "shopify:switch": "shopify switch --store=4knines.myshopify.com",
     "start": "yarn shopify:switch && shopify theme serve",
     "dev": "run-p dev:*",
     "dev:js": "esbuild src/js/*.js --outdir=assets --out-extension:.js=.min.js --watch",

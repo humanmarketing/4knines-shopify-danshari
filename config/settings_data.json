@@ -1,7 +1,7 @@
 {
   "current": {
     "text": "#333333",
-    "bg_light": "#f8f8f8",
+    "bg_light": "#fafafa",
     "bg": "#efefef",
     "bg_dark": "#b2b2b2",
     "border": "#b2b2b2",
@@ -11,11 +11,12 @@
     "font_heading": "poppins_n6",
     "font_body": "serif",
     "logo": "shopify:\/\/shop_images\/4knines-logo.png",
-    "favicon": "shopify:\/\/shop_images\/favicon-64.png",
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
     "social_instagram": "https:\/\/instagram.com\/4knines",
     "social_facebook": "https:\/\/www.facebook.com\/4knines\/",
     "social_pinterest": "https:\/\/www.pinterest.com\/4knines\/",
     "social_youtube": "https:\/\/www.youtube.com\/channel\/UC7p0LrPdsJ0P4WYIRAG5jDw",
+    "predictive_search_limit": 10,
     "sections": {
       "header": {
         "type": "header",
@@ -46,9 +47,9 @@
       "announcement": {
         "type": "announcement",
         "settings": {
-          "enabled": true,
-          "content": "Free Shipping",
-          "link": "shopify:\/\/collections\/all"
+          "enabled": false,
+          "content": "",
+          "link": "shopify:\/\/collections\/dog-seat-covers"
         }
       },
       "newsletter": {
