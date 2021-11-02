@@ -58,6 +58,10 @@
       />
     </figure>
   {%- endif -%}
+
+  {%- if section.settings.show_instagram_feed -%}
+    <div id="stamped-reviews-widget" data-widget-type="instagram-feed" data-feed-type="carousel" data-auto-play="true"></div>
+  {%- endif -%}
 {%- endif -%}
 
 {% stylesheet %}
@@ -159,18 +163,12 @@
       "id": "avatar",
       "label": "Avatar"
     },
-    { "type": "header", "content": "Social" },
     {
       "type": "checkbox",
-      "id": "show_social",
-      "label": "Show social",
-      "default": false
-    },
-    {
-      "type": "image_picker",
-      "id": "social_image",
-      "label": "Social image",
-      "info": "A wide image is recommended"
+      "id": "show_instagram_feed",
+      "label": "Show Instagram feed",
+      "default": false,
+      "info": "Stamped.io"
     }
   ]
 }

@@ -217,8 +217,8 @@
         "author": "Hugh C.",
         "show_avatar": true,
         "avatar": "shopify:\/\/shop_images\/testimonial-avatar.png",
-        "show_social": true,
-        "social_image": "shopify:\/\/shop_images\/instagram-photos.png"
+        "show_instagram_feed": true,
+        "show_social": false
       }
     },
     "our-story": {

@@ -17,6 +17,10 @@
     "social_pinterest": "https:\/\/www.pinterest.com\/4knines\/",
     "social_youtube": "https:\/\/www.youtube.com\/channel\/UC7p0LrPdsJ0P4WYIRAG5jDw",
     "predictive_search_limit": 10,
+    "checkout_logo_image": "shopify:\/\/shop_images\/4knines-logo.png",
+    "checkout_logo_size": "small",
+    "checkout_accent_color": "#3c5ecc",
+    "checkout_button_color": "#ff842b",
     "sections": {
       "header": {
         "type": "header",

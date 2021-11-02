@@ -7,10 +7,17 @@
   {%- for link in links -%}
     <li class="desktop-menu-item{% unless megamenus contains link.title %} is-dropdown{% endunless %}">
       {%- if link.links != blank -%}
-        <div class="desktop-menu-title with-icon">
-          {{ link.title }}
-          {% render 'icon-chevron-down' %}
-        </div>
+        {%- if link.title == 'Shop' -%}
+          <a href="{{ link.url }}" class="desktop-menu-title with-icon">
+            {{ link.title }}
+            {% render 'icon-chevron-down' %}
+          </a>
+        {%- else -%}
+          <div class="desktop-menu-title with-icon">
+            {{ link.title }}
+            {% render 'icon-chevron-down' %}
+          </div>
+        {%- endif -%}
 
         {%- if megamenus contains link.title -%}
           <div class="header-megamenu">
