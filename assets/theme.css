@@ -407,7 +407,8 @@ summary.unset::-webkit-details-marker { display: none; }
   -moz-appearance: textfield;
   max-width: 6ch;
   padding: var(--button-padding);
-  padding-inline: 0;
+  padding-left: 0;
+  padding-right: 0;
   text-align: center;
 }
 
@@ -427,7 +428,8 @@ summary.unset::-webkit-details-marker { display: none; }
   grid-template-areas: 'logo search menu actions';
   gap: 1rem 2rem;
   align-items: center;
-  padding-inline: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .header-logo {
@@ -502,7 +504,8 @@ summary.unset::-webkit-details-marker { display: none; }
 .desktop-menu-item {
   display: grid;
   place-content: center;
-  padding-inline: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .desktop-menu-item.is-dropdown {
