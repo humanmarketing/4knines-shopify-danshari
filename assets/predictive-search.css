@@ -15,7 +15,10 @@
   box-shadow: var(--outline-2);
 }
 
-.search-form-label { padding-block: 0.5rem; }
+.search-form-label {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
 
 .search-input {
   box-sizing: border-box;
@@ -54,7 +57,8 @@
 .suggestion-group-title {
   position: sticky;
   top: 0;
-  padding-block: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid var(--border-light);
   background-color: #fff;
   color: var(--text-dark);
