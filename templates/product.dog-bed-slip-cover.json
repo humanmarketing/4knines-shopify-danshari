@@ -2,7 +2,8 @@
   "sections": {
     "zp-product-header-content": {
       "type": "product-header-content-zipifypages",
-      "settings": {}
+      "settings": {
+      }
     },
     "product": {
       "type": "product",
@@ -40,7 +41,8 @@
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "product-details-simple": {
       "type": "product-details-simple",
@@ -63,7 +65,8 @@
         "6d659bb4-4b94-43c5-b020-a3c27e7c6f9b",
         "d5218f2a-bd17-4f2e-bf6f-c16c90f19329"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "product-details-3-pack": {
       "type": "product-details-3-pack",
@@ -154,17 +157,18 @@
         "quote": "They’re soft and so easy to clean!",
         "author": "Tatiana W.",
         "show_avatar": true,
-        "avatar": "shopify:\/\/shop_images\/testimonial-slip-cover.jpg",
-        "show_social": false
+        "avatar": "shopify:\/\/shop_images\/testimonial-slip-cover.jpg"
       }
     },
     "product-reviews": {
       "type": "product-reviews",
-      "settings": {}
+      "settings": {
+      }
     },
     "zp-product-footer-content": {
       "type": "product-footer-content-zipifypages",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [

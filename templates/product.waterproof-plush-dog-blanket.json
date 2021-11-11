@@ -2,7 +2,8 @@
   "sections": {
     "zp-product-header-content": {
       "type": "product-header-content-zipifypages",
-      "settings": {}
+      "settings": {
+      }
     },
     "product": {
       "type": "product",
@@ -40,7 +41,8 @@
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "product-details-simple": {
       "type": "product-details-simple",
@@ -63,7 +65,8 @@
         "648a9b3c-2ce3-4f10-ab38-47795949883f",
         "d5218f2a-bd17-4f2e-bf6f-c16c90f19329"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "product-details-3-pack": {
       "type": "product-details-3-pack",
@@ -154,17 +157,18 @@
         "quote": "My dog loves this blanket. Super soft and plush. Best part is it's waterproof!",
         "author": "Yvette H.",
         "show_avatar": true,
-        "avatar": "shopify:\/\/shop_images\/testimonial-plush-blanket.jpg",
-        "show_social": false
+        "avatar": "shopify:\/\/shop_images\/testimonial-plush-blanket.jpg"
       }
     },
     "product-reviews": {
       "type": "product-reviews",
-      "settings": {}
+      "settings": {
+      }
     },
     "zp-product-footer-content": {
       "type": "product-footer-content-zipifypages",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [

@@ -2,7 +2,8 @@
   "sections": {
     "zp-product-header-content": {
       "type": "product-header-content-zipifypages",
-      "settings": {}
+      "settings": {
+      }
     },
     "product": {
       "type": "product",
@@ -74,7 +75,8 @@
         "d244d277-ecab-41ec-a7f0-a8428ba55e5b",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "product-details-3-pack": {
       "type": "product-details-3-pack",
@@ -126,17 +128,18 @@
         "quote": "I really appreciate how well this bucket seat cover fits and stays in place.",
         "author": "Charlene H.",
         "show_avatar": true,
-        "avatar": "shopify:\/\/shop_images\/testimonial-bucket-seat-cover.jpg",
-        "show_social": false
+        "avatar": "shopify:\/\/shop_images\/testimonial-bucket-seat-cover.jpg"
       }
     },
     "product-reviews": {
       "type": "product-reviews",
-      "settings": {}
+      "settings": {
+      }
     },
     "zp-product-footer-content": {
       "type": "product-footer-content-zipifypages",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [

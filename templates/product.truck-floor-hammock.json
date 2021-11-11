@@ -2,7 +2,8 @@
   "sections": {
     "zp-product-header-content": {
       "type": "product-header-content-zipifypages",
-      "settings": {}
+      "settings": {
+      }
     },
     "product": {
       "type": "product",
@@ -76,7 +77,8 @@
         "56d36070-77e1-47c0-b426-2d8f814908e3",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "product-details-3-pack": {
       "type": "product-details-3-pack",
@@ -129,17 +131,18 @@
         "quote": "Perfect to keep the truck clean and the dogs comfortable. It is very durable and easy to install.",
         "author": "Renee R.",
         "show_avatar": true,
-        "avatar": "shopify:\/\/shop_images\/testimonial-crew-cab-floor-hammock.jpg",
-        "show_social": false
+        "avatar": "shopify:\/\/shop_images\/testimonial-crew-cab-floor-hammock.jpg"
       }
     },
     "product-reviews": {
       "type": "product-reviews",
-      "settings": {}
+      "settings": {
+      }
     },
     "zp-product-footer-content": {
       "type": "product-footer-content-zipifypages",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [

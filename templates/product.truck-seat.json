@@ -2,7 +2,8 @@
   "sections": {
     "zp-product-header-content": {
       "type": "product-header-content-zipifypages",
-      "settings": {}
+      "settings": {
+      }
     },
     "product": {
       "type": "product",
@@ -76,7 +77,8 @@
         "1c1ed5fe-72b2-4aea-bbed-b3ab4fcb30ff",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "product-details-3-pack": {
       "type": "product-details-3-pack",
@@ -129,17 +131,18 @@
         "quote": "We absolutely LOVE this seat cover. The quality is the best and the fit is perfect.",
         "author": "Samantha",
         "show_avatar": true,
-        "avatar": "shopify:\/\/shop_images\/testimonial-crew-cab-seat-cover.jpg",
-        "show_social": false
+        "avatar": "shopify:\/\/shop_images\/testimonial-crew-cab-seat-cover.jpg"
       }
     },
     "product-reviews": {
       "type": "product-reviews",
-      "settings": {}
+      "settings": {
+      }
     },
     "zp-product-footer-content": {
       "type": "product-footer-content-zipifypages",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [

@@ -2,7 +2,8 @@
   "sections": {
     "zp-product-header-content": {
       "type": "product-header-content-zipifypages",
-      "settings": {}
+      "settings": {
+      }
     },
     "product": {
       "type": "product",
@@ -40,7 +41,8 @@
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "product-details-simple": {
       "type": "product-details-simple",
@@ -63,7 +65,8 @@
         "50e93222-8884-4d90-86c5-77351e7c18aa",
         "d5218f2a-bd17-4f2e-bf6f-c16c90f19329"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "product-details-3-pack": {
       "type": "product-details-3-pack",
@@ -153,17 +156,18 @@
         "rating": 5,
         "quote": "We love our crate mat! Very soft and was very easy to clean.",
         "author": "AJ",
-        "show_avatar": true,
-        "show_social": false
+        "show_avatar": true
       }
     },
     "product-reviews": {
       "type": "product-reviews",
-      "settings": {}
+      "settings": {
+      }
     },
     "zp-product-footer-content": {
       "type": "product-footer-content-zipifypages",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [

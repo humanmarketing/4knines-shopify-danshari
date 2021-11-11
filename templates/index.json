@@ -8,7 +8,7 @@
           "settings": {
             "enabled": true,
             "heading": "Welcome to the new 4Knines website!",
-            "description": "We’ve got a new look and an easier, faster shopping experience. We’re on a mission to bring you the most innovative products that allow you to experience life with your best friend.",
+            "description": "We’ve got a new look and an easier, faster shopping experience. We’re on a mission to bring you innovative, high-quality products that will withstand any adventure and last for years to come.",
             "cta_link": "",
             "cta_label": "",
             "container_size": "container-sm"
@@ -206,7 +206,7 @@
         "ddbd8804-3e6d-4f9e-9218-0e4ad588bf84"
       ],
       "settings": {
-        "heading": "Products to Provide the Best Possible Life for Your Best Friend"
+        "heading": "Nothing but the best for your best friend."
       }
     },
     "testimonial-and-social": {
@@ -217,8 +217,7 @@
         "author": "Hugh C.",
         "show_avatar": true,
         "avatar": "shopify:\/\/shop_images\/testimonial-avatar.png",
-        "show_instagram_feed": true,
-        "show_social": false
+        "show_instagram_feed": true
       }
     },
     "our-story": {
