@@ -946,27 +946,41 @@ summary.unset::-webkit-details-marker { display: none; }
 }
 
 .product-item .price-rating {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 1rem;
+  display: flex;
+  gap: 0 0.5rem;
   align-items: center;
 }
 
-.product-item .stamped-product-reviews-badge .stamped-starrating,
-.product-item .stamped-product-reviews-badge .stamped-badge-caption {
-  display: none;
+.product-item .price-rating .price { white-space: nowrap; }
+
+.product-item:not(.small) .stamped-product-reviews-badge {
+  border-left: 1px solid currentColor;
+  padding-left: 0.5rem;
 }
 
-.product-item .stamped-badge { font-size: 0.8em; }
-
-.product-item .stamped-badge::before {
-  content: '★'attr(data-rating);
+.product-item .stamped-badge {
+  display: flex;
+  gap: 0.25em;
+  align-items: center;
+  font-size: 0.8em;
 }
 
-.product-item.small .product-item-title,
-.product-item.small .price-rating p {
-  font-size: 0.8rem;
+.product-item .stamped-badge-starrating { display: inline-flex; }
+.product-item .stamped-badge-caption { font-size: 1rem; }
+.product-item .stamped-badge-caption::before { content: '('; }
+.product-item .stamped-badge-caption[data-reviews][data-label][data-version="2"]::after {
+  content: ')' !important;
 }
+
+.product-item .stamped-badge-caption[data-reviews][data-label][data-version="2"] > span,
+.product-item.small .stamped-badge-caption {
+  display: none !important;
+}
+
+.product-item.small .stamped-badge-starrating i::before { font-size: inherit; }
+
+.product-item.small .product-item-title { font-size: 0.8rem; }
+.product-item.small .price-rating p { font-size: 0.7rem; }
 
 .product-item.small > * + *,
 .product-item.small .richtext > * + * {
