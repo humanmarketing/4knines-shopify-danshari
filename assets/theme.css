@@ -949,6 +949,7 @@ summary.unset::-webkit-details-marker { display: none; }
   display: flex;
   gap: 0 0.5rem;
   align-items: center;
+  font-size: 0.9em;
 }
 
 .product-item .price-rating .price { white-space: nowrap; }
@@ -962,12 +963,10 @@ summary.unset::-webkit-details-marker { display: none; }
   display: flex;
   gap: 0.25em;
   align-items: center;
-  font-size: 0.8em;
 }
 
 .product-item .stamped-badge-starrating { display: inline-flex; }
-.product-item .stamped-badge-caption { font-size: 1rem; }
-.product-item .stamped-badge-caption::before { content: '('; }
+.product-item .stamped-badge-caption::before { content: ZZ'('; }
 .product-item .stamped-badge-caption[data-reviews][data-label][data-version="2"]::after {
   content: ')' !important;
 }
@@ -977,7 +976,7 @@ summary.unset::-webkit-details-marker { display: none; }
   display: none !important;
 }
 
-.product-item.small .stamped-badge-starrating i::before { font-size: inherit; }
+.product-item.small .stamped-badge-starrating i::before { font-size: 12px; }
 
 .product-item.small .product-item-title { font-size: 0.8rem; }
 .product-item.small .price-rating p { font-size: 0.7rem; }
