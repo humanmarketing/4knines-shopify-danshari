@@ -72,6 +72,13 @@
   {%- if request.page_type == 'collection' or request.page_type == 'product' -%}
     <script async type="text/javascript" data-api-key="" id="stamped-script-widget" src="https://cdn-stamped-io.azureedge.net/files/widget.min.js"></script>
   {%- endif -%}
-{% render 'page-footer.zipifypages', renderctx: 'thm', ocuapp: ocuapp %}</body>
+
+  {% render 'page-footer.zipifypages', renderctx: 'thm', ocuapp: ocuapp %}
+
+  <!--Gorgias Chat Widget Start-->
+  <script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=2562"></script>
+  <script id="gorgias-chat-shopify-install">!function(_){_.SHOPIFY_PERMANENT_DOMAIN="{{shop.permanent_domain}}",_.SHOPIFY_CUSTOMER_ID="{{customer.id}}",_.SHOPIFY_CUSTOMER_EMAIL="{{customer.email}}"}(window||{});</script>
+  <!--Gorgias Chat Widget End-->
+</body>
 
 </html>
