@@ -50,14 +50,14 @@
         "50e93222-8884-4d90-86c5-77351e7c18aa": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/details-harness.png"
+            "image": "shopify:\/\/shop_images\/4Knines_Dog_Poop_Bags_3.jpg"
           }
         },
         "d5218f2a-bd17-4f2e-bf6f-c16c90f19329": {
           "type": "text",
           "settings": {
-            "heading": "Keep Your Pet Secure",
-            "description": "<p><strong>No Pull\/ No Choke Design<\/strong><br\/>2 Sturdy Metal Attachment Points, Front leash attachment discourages pulling and Back leash attachment for relaxed walks. No-Choke design helps evenly distribute pressure to prevent choking.   <\/p><p><strong>Quick Release Buckles<\/strong><br\/>Allows for Easy On and Off. Adjustable straps with metal fittings, Durable Material, and Soft Padding allow for a comfortable fit. Measure your dog before purchase to ensure proper fit.<\/p><p><strong>Reflective Straps<\/strong><br\/>Nylon Webbing with Reflective Material for nighttime visibility. Handle on back for added control.<\/p><p><strong>Sizing<\/strong><br\/>Large: 27 - 32 inches<br\/>XL: 32 - 42 inches<\/p>"
+            "heading": "Extra Thick Bags",
+            "description": "<p>Ready for Action.  No duty too big or small.  These unscented bags will keep odor and contents inside and off your hands.  <\/p>"
           }
         }
       },
@@ -152,12 +152,14 @@
     },
     "testimonial-and-social": {
       "type": "testimonial-and-social",
+      "disabled": true,
       "settings": {
         "rating": 5,
         "quote": "Best dog harness so far. Very well made, totally worth the money!",
         "author": "William P.",
         "show_avatar": true,
-        "avatar": "shopify:\/\/shop_images\/testimonial-dog-harness.jpg"
+        "avatar": "shopify:\/\/shop_images\/testimonial-dog-harness.jpg",
+        "show_instagram_feed": false
       }
     },
     "product-reviews": {
