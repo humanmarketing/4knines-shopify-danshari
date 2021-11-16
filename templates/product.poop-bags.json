@@ -1,0 +1,185 @@
+{
+  "sections": {
+    "zp-product-header-content": {
+      "type": "product-header-content-zipifypages",
+      "settings": {
+      }
+    },
+    "product": {
+      "type": "product",
+      "settings": {
+        "description_list": "No Pull\/ No Choke Design\nQuick Release buckles\nReflective Straps",
+        "show_dynamic_checkout": false
+      }
+    },
+    "product-details-tabs": {
+      "type": "product-details-tabs",
+      "disabled": true,
+      "blocks": {
+        "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6": {
+          "type": "video",
+          "settings": {
+            "tab_label": "Features",
+            "heading": "",
+            "description": "",
+            "video_html": "",
+            "metafield": "features_video_code"
+          }
+        },
+        "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
+          "type": "video",
+          "settings": {
+            "tab_label": "Installation & Care",
+            "heading": "",
+            "description": "",
+            "video_html": "",
+            "metafield": "installation_video_code"
+          }
+        }
+      },
+      "block_order": [
+        "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
+        "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
+      ],
+      "settings": {
+      }
+    },
+    "product-details-simple": {
+      "type": "product-details-simple",
+      "blocks": {
+        "50e93222-8884-4d90-86c5-77351e7c18aa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/details-harness.png"
+          }
+        },
+        "d5218f2a-bd17-4f2e-bf6f-c16c90f19329": {
+          "type": "text",
+          "settings": {
+            "heading": "Keep Your Pet Secure",
+            "description": "<p><strong>No Pull\/ No Choke Design<\/strong><br\/>2 Sturdy Metal Attachment Points, Front leash attachment discourages pulling and Back leash attachment for relaxed walks. No-Choke design helps evenly distribute pressure to prevent choking.   <\/p><p><strong>Quick Release Buckles<\/strong><br\/>Allows for Easy On and Off. Adjustable straps with metal fittings, Durable Material, and Soft Padding allow for a comfortable fit. Measure your dog before purchase to ensure proper fit.<\/p><p><strong>Reflective Straps<\/strong><br\/>Nylon Webbing with Reflective Material for nighttime visibility. Handle on back for added control.<\/p><p><strong>Sizing<\/strong><br\/>Large: 27 - 32 inches<br\/>XL: 32 - 42 inches<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "50e93222-8884-4d90-86c5-77351e7c18aa",
+        "d5218f2a-bd17-4f2e-bf6f-c16c90f19329"
+      ],
+      "settings": {
+      }
+    },
+    "product-details-3-pack": {
+      "type": "product-details-3-pack",
+      "disabled": true,
+      "blocks": {
+        "44dbb6c5-67ae-444d-8e92-502056070453": {
+          "type": "card",
+          "settings": {
+            "heading": "Design and Function Meet Convenience",
+            "description": "Our unique patented technology lets you fold down seats 60\/40, 50\/50 split, and center armrest pass-through without removing the cover.",
+            "cta_label": "",
+            "cta_link": "",
+            "image": "shopify:\/\/shop_images\/design-and-function-5.png"
+          }
+        },
+        "80d8b4a9-049e-44d0-8d7a-e068bb829ac6": {
+          "type": "card",
+          "settings": {
+            "heading": "High-Quality Products Built to Last",
+            "description": "Our cargo liners are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. The colorfast fabrics won’t fade. We also offer a lifetime warranty on all 4Knines seat covers and cargo liners.",
+            "cta_label": "Watch the Material Breakdown Comparison",
+            "cta_link": "\/pages\/helpful-videos#quality-comparison",
+            "image": "shopify:\/\/shop_images\/multi-layer-construction.png"
+          }
+        },
+        "26a8eece-a63b-48f4-afca-30948d936e03": {
+          "type": "card",
+          "settings": {
+            "heading": "Keeping Pets Safe, Happy and Healthy",
+            "description": "Our cargo liners feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
+            "cta_label": "",
+            "cta_link": "",
+            "image": "shopify:\/\/shop_images\/keeping-pets-safe-8.png"
+          }
+        }
+      },
+      "block_order": [
+        "44dbb6c5-67ae-444d-8e92-502056070453",
+        "80d8b4a9-049e-44d0-8d7a-e068bb829ac6",
+        "26a8eece-a63b-48f4-afca-30948d936e03"
+      ],
+      "settings": {
+        "heading": "SUV Cargo Liner For Fold Down Seats",
+        "description": "The 4Knines Multi-Function Dog Split SUV Cargo Liner is a must for anyone owning a dog or pet wanting to keep their vehicle nice and tidy."
+      }
+    },
+    "icon-list-h": {
+      "type": "icon-list-h",
+      "blocks": {
+        "9dc0cbe5-3060-4184-ba12-7c38d1b5fdcd": {
+          "type": "item",
+          "settings": {
+            "heading": "High-Quality Products Built to Last",
+            "description": "Our seat covers are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. We offer a lifetime warranty on all 4Knines seat covers and cargo liners.",
+            "icon": "shopify:\/\/shop_images\/icon-quality.png"
+          }
+        },
+        "ea5eae33-ad6d-4524-aa8c-d5a2b66f1941": {
+          "type": "item",
+          "settings": {
+            "heading": "Design and Function Meet Convenience",
+            "description": "Our patented technology is easy to maintain and made with colorfast fabrics that won’t fade. Our proprietary design lets you access all your seat belts and move seats without removing the cover.",
+            "icon": "shopify:\/\/shop_images\/icon-design.png"
+          }
+        },
+        "ddbd8804-3e6d-4f9e-9218-0e4ad588bf84": {
+          "type": "item",
+          "settings": {
+            "heading": "Keeping Pets Safe, Happy and Healthy",
+            "description": "Our pet seat covers feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
+            "icon": "shopify:\/\/shop_images\/icon-house.png"
+          }
+        }
+      },
+      "block_order": [
+        "9dc0cbe5-3060-4184-ba12-7c38d1b5fdcd",
+        "ea5eae33-ad6d-4524-aa8c-d5a2b66f1941",
+        "ddbd8804-3e6d-4f9e-9218-0e4ad588bf84"
+      ],
+      "settings": {
+        "heading": "Products to Provide the Best Possible Life for Your Best Friend"
+      }
+    },
+    "testimonial-and-social": {
+      "type": "testimonial-and-social",
+      "settings": {
+        "rating": 5,
+        "quote": "Best dog harness so far. Very well made, totally worth the money!",
+        "author": "William P.",
+        "show_avatar": true,
+        "avatar": "shopify:\/\/shop_images\/testimonial-dog-harness.jpg"
+      }
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "settings": {
+      }
+    },
+    "zp-product-footer-content": {
+      "type": "product-footer-content-zipifypages",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "zp-product-header-content",
+    "product",
+    "product-details-tabs",
+    "product-details-simple",
+    "product-details-3-pack",
+    "icon-list-h",
+    "testimonial-and-social",
+    "product-reviews",
+    "zp-product-footer-content"
+  ]
+}
