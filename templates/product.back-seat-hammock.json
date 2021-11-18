@@ -40,7 +40,9 @@
       }
     },
     "fbt": {
-      "type": "frequently-bought-together"
+      "type": "frequently-bought-together",
+      "settings": {
+      }
     },
     "product-details-tabs": {
       "type": "product-details-tabs",
