@@ -18,11 +18,11 @@
           "type": "banner",
           "settings": {
             "enabled": true,
-            "start_datetime": "2021-10-28 08:00:00",
-            "end_datetime": "2021-10-31 22:59:59",
-            "image_desktop": "shopify:\/\/shop_images\/Concept_4_2.png",
-            "image_mobile": "shopify:\/\/shop_images\/Slice_1_7.png",
-            "image_large": "shopify:\/\/shop_images\/Concept_4_2.png",
+            "start_datetime": "2021-11-19 00:00:00",
+            "end_datetime": "2021-11-22 00:00:00",
+            "image_desktop": "shopify:\/\/shop_images\/KN-143-BFCM-ebf-desktop-banner.png",
+            "image_mobile": "shopify:\/\/shop_images\/Slice_1_9.png",
+            "image_large": "shopify:\/\/shop_images\/KN-143-BFCM-ebf-desktop-wide-banner.png",
             "link": "shopify:\/\/collections\/dog-seat-covers"
           }
         }
