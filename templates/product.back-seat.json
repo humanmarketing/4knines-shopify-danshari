@@ -39,6 +39,9 @@
         "show_dynamic_checkout": false
       }
     },
+    "fbt": {
+      "type": "frequently-bought-together"
+    },
     "product-details-tabs": {
       "type": "product-details-tabs",
       "blocks": {
@@ -145,6 +148,7 @@
   "order": [
     "zp-product-header-content",
     "product",
+    "fbt",
     "product-details-tabs",
     "product-details-3-pack",
     "testimonial-and-social",
