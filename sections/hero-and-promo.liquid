@@ -1,10 +1,22 @@
 {%- liquid
   assign promo = section.blocks | where: 'type', 'promo' | map: 'settings' | first
-  assign banner = section.blocks | where: 'type', 'banner' | map: 'settings' | first
+  assign banner_list = section.blocks | where: 'type', 'banner' | map: 'settings'
+  for banner in banner_list
+    if banner.summer_time
+      assign add_time = 3600
+    else
+      assign add_time = 0
+    endif
 
-  assign today_date = 'now' | replace: '-0500', '-0800' | date: '%s' | plus: 3600
-  assign start_date = banner.start_datetime | append: ' -0800' | date: '%s' | times: 1
-  assign end_date = banner.end_datetime | append: ' -0800' | date: '%s' | times: 1
+    assign today_date = 'now' | replace: '-0500', '-0800' | date: '%s' | plus: add_time
+    assign start_date = banner.start_datetime | append: ' -0800' | date: '%s' | times: 1
+    assign end_date = banner.end_datetime | append: ' -0800' | date: '%s' | times: 1
+
+    if today_date >= start_date and today_date <= end_date
+      assign show_banner = true
+      assign active_banner = banner
+    endif
+  endfor
 -%}
 
 <div class="section-hero padding-lg {% if promo.enabled %}promo-enabled{% endif %}">
@@ -43,7 +55,7 @@
   </div>
 </div>
 
-{%- if promo.enabled -%}
+{%- if promo != blank -%}
   <article
     class="section-promo padding-lg bg"
     style="--bg-img: url('{{ 'wave-right-top-bottom-lg.png' | asset_url }}');"
@@ -68,35 +80,33 @@
   </article>
 {%- endif -%}
 
-{%- if banner.enabled -%}
+{%- if show_banner and active_banner != blank -%}
   {%- capture banner_image -%}
     <picture class="banner-img">
-      {%- if banner.image_large -%}
+      {%- if active_banner.image_large -%}
         <source
-          {% render 'srcset', image: banner.image_large, width: 2400 %}
+          {% render 'srcset', image: active_banner.image_large, width: 2400 %}
           media="(min-width: 1400px)"
         />
       {%- endif -%}
-      {%- if banner.image_mobile -%}
+      {%- if active_banner.image_mobile -%}
         <source
-          {% render 'srcset', image: banner.image_mobile, width: 1200 %}
+          {% render 'srcset', image: active_banner.image_mobile, width: 1200 %}
           media="(max-width: 768px)"
         />
       {%- endif -%}
       <img
-        {% render 'srcset', image: banner.image_desktop, width: 2000 %}
-        alt="{{ banner.image_desktop.alt }}"
+        {% render 'srcset', image: active_banner.image_desktop, width: 2000 %}
+        alt="{{ active_banner.image_desktop.alt }}"
         loading="eager" draggable="false"
       />
     </picture>
   {%- endcapture -%}
 
-  {%- if today_date >= start_date and today_date <= end_date -%}
-    {%- if banner.link != blank -%}
-      <a href="{{ banner.link }}" class="promo-banner">{{ banner_image }}</a>
-    {%- else -%}
-      <div class="promo-banner">{{ banner_image }}</div>
-    {%- endif -%}
+  {%- if active_banner.link != blank -%}
+    <a href="{{ active_banner.link }}" class="promo-banner">{{ banner_image }}</a>
+  {%- else -%}
+    <div class="promo-banner">{{ banner_image }}</div>
   {%- endif -%}
 {%- endif -%}
 
@@ -229,12 +239,6 @@
       "limit": 1,
       "settings": [
         {
-          "type": "checkbox",
-          "id": "enabled",
-          "label": "Enabled",
-          "default": true
-        },
-        {
           "type": "text",
           "id": "heading",
           "label": "Heading"
@@ -269,15 +273,8 @@
     },
     {
       "type": "banner",
-      "name": "Banner",
-      "limit": 1,
+      "name": "Scheduled banner",
       "settings": [
-        {
-          "type": "checkbox",
-          "id": "enabled",
-          "label": "Enabled",
-          "default": true
-        },
         {
           "type": "text",
           "id": "start_datetime",
