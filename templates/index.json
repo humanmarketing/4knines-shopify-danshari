@@ -49,7 +49,6 @@
     },
     "promo": {
       "type": "promo",
-      "disabled": true,
       "settings": {
         "heading": "Welcome to the new 4Knines website!",
         "description": "We’ve got a new look and an easier, faster shopping experience. We’re on a mission to bring you innovative, high-quality products that will withstand any adventure and last for years to come.",
