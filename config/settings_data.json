@@ -51,8 +51,8 @@
       "announcement": {
         "type": "announcement",
         "settings": {
-          "enabled": false,
-          "content": "15% Off Early Black Friday Sale | Code: HOLIDAY15",
+          "enabled": true,
+          "content": "15% Off Sitewide Early Black Friday Sale | Code: HOLIDAY15",
           "link": "shopify:\/\/collections\/dog-seat-covers"
         }
       },
