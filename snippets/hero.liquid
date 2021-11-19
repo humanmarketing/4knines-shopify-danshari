@@ -1,0 +1,99 @@
+{%- comment -%}
+  data
+{%- endcomment -%}
+
+<style>
+  .section-hero-img {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .section-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .section-hero-txt {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #fff;
+    max-width: 550px;
+    margin: 0 auto;
+    text-shadow: 0 0 2em hsla(0, 0%, 0%, 0.5);
+  }
+
+  .hero-description strong { text-decoration: underline; }
+
+  /* large */
+  @media screen and (min-width: 1400px) {
+    .section-hero { padding: 6rem var(--padding-x); }
+  }
+
+  /* tablet */
+  @media screen and (max-width: 768px) {
+    .section-hero-txt br { display: none; }
+
+    .section-hero-txt > * { order: 0; }
+
+    .hero-title { margin-bottom: 8rem; }
+
+    .hero-sub-description { order: 1; }
+  }
+</style>
+
+{%- if data.image_desktop -%}
+  <picture class="section-hero-img">
+    {%- if data.image_large != blank -%}
+      <source
+        {% render 'srcset', image: data.image_large, width: 2400 %}
+        media="(min-width: 1400px)"
+      />
+    {%- endif -%}
+    {%- if data.image_mobile != blank -%}
+      <source
+        {% render 'srcset', image: data.image_mobile, width: 1200 %}
+        media="(max-width: 768px)"
+      />
+    {%- endif -%}
+    <img
+      {% render 'srcset', image: data.image_desktop, width: 1600 %}
+      alt="{{ data.image_desktop.alt | default: data.heading }}"
+      loading="eager" draggable="false"
+    />
+  </picture>
+{%- endif -%}
+
+<div class="container">
+  <div class="section-hero-txt text-center" style="margin-{{ data.align }}: 0;">
+    {%- if data.pretitle -%}
+      <p class="h4 uppercase">{{ data.pretitle }}</p>
+    {%- endif -%}
+
+    <h1 class="hero-title h2-body">{{ data.heading | newline_to_br }}</h1>
+
+    {%- if data.description -%}
+      <div class="hero-description font-heading">{{ data.description }}</div>
+    {%- endif -%}
+
+    {%- if data.sub_description -%}
+      <p class="hero-sub-description">{{ data.sub_description }}</p>
+    {%- endif -%}
+
+    {%- if data.cta_link -%}
+      <p>
+        <a href="{{ data.cta_link }}" class="action">
+          {%- if data.cta_label != blank -%}
+            {{ data.cta_label }}
+          {%- else -%}
+            Shop {{ data.cta_link.object.title }}
+          {%- endif -%}
+        </a>
+      </p>
+    {%- endif -%}
+  </div>
+</div>

@@ -1,58 +1,33 @@
 {%- liquid
-  assign promo = section.blocks | where: 'type', 'promo' | map: 'settings' | first
-  assign banner_list = section.blocks | where: 'type', 'banner' | map: 'settings'
-  for banner in banner_list
-    if banner.summer_time
+  assign scheduled_list = section.blocks | where: 'type', 'scheduled' | map: 'settings'
+  for scheduled in scheduled_list
+    if scheduled.summer_time
       assign add_time = 3600
     else
       assign add_time = 0
     endif
 
     assign today_date = 'now' | replace: '-0500', '-0800' | date: '%s' | plus: add_time
-    assign start_date = banner.start_datetime | append: ' -0800' | date: '%s' | times: 1
-    assign end_date = banner.end_datetime | append: ' -0800' | date: '%s' | times: 1
+    assign start_date = scheduled.start_datetime | append: ' -0800' | date: '%s' | times: 1
+    assign end_date = scheduled.end_datetime | append: ' -0800' | date: '%s' | times: 1
 
     if today_date >= start_date and today_date <= end_date
-      assign show_banner = true
-      assign active_banner = banner
+      assign show_scheduled = true
+      assign active_scheduled = scheduled
     endif
   endfor
+
+  assign promo = section.blocks | where: 'type', 'promo' | map: 'settings' | first
 -%}
 
 <div class="section-hero padding-lg {% if promo != blank %}promo-enabled{% endif %}">
-  {%- if section.settings.image_desktop -%}
-    <picture class="section-hero-img">
-      {%- if section.settings.image_mobile -%}
-        <source
-          {% render 'srcset', image: section.settings.image_mobile, width: 800 %}
-          media="(max-width: 768px)"
-        />
-      {%- endif -%}
-      <img
-        {% render 'srcset', image: section.settings.image_desktop, width: 1600 %}
-        alt="{{ section.settings.image_desktop.alt | default: section.settings.heading }}"
-        loading="eager" draggable="false"
-      />
-    </picture>
-  {%- endif -%}
-
-  <div class="section-hero-txt container richtext">
-    <h1 class="h2 text-accent-2">{{ section.settings.heading | newline_to_br }}</h1>
-    {%- if section.settings.description -%}
-      <p>{{ section.settings.description | newline_to_br }}</p>
-    {%- endif -%}
-    {%- if section.settings.cta_link -%}
-      <p>
-        <a href="{{ section.settings.cta_link }}" class="action">
-          {%- if section.settings.cta_label != blank -%}
-            {{ section.settings.cta_label }}
-          {%- else -%}
-            Shop {{ section.settings.cta_link.object.title }}
-          {%- endif -%}
-        </a>
-      </p>
-    {%- endif -%}
-  </div>
+  {%- liquid
+    if show_scheduled and active_scheduled != blank
+      render 'hero', data: active_scheduled
+    else
+      render 'hero', data: section.settings
+    endif
+  -%}
 </div>
 
 {%- if promo != blank -%}
@@ -80,56 +55,11 @@
   </article>
 {%- endif -%}
 
-{%- if show_banner and active_banner != blank -%}
-  {%- capture banner_image -%}
-    <picture class="banner-img">
-      {%- if active_banner.image_large -%}
-        <source
-          {% render 'srcset', image: active_banner.image_large, width: 2400 %}
-          media="(min-width: 1400px)"
-        />
-      {%- endif -%}
-      {%- if active_banner.image_mobile -%}
-        <source
-          {% render 'srcset', image: active_banner.image_mobile, width: 1200 %}
-          media="(max-width: 768px)"
-        />
-      {%- endif -%}
-      <img
-        {% render 'srcset', image: active_banner.image_desktop, width: 2000 %}
-        alt="{{ active_banner.image_desktop.alt }}"
-        loading="eager" draggable="false"
-      />
-    </picture>
-  {%- endcapture -%}
-
-  {%- if active_banner.link != blank -%}
-    <a href="{{ active_banner.link }}" class="promo-banner">{{ banner_image }}</a>
-  {%- else -%}
-    <div class="promo-banner">{{ banner_image }}</div>
-  {%- endif -%}
-{%- endif -%}
-
 {% stylesheet %}
   .section-hero {
     position: relative;
     background: var(--bg-img) center/cover no-repeat;
   }
-
-  .section-hero-img {
-    position: absolute;
-    left: 0; top: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .section-hero-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .section-hero-txt { position: relative; }
 
   .section-promo,
   .section-promo > * {
@@ -145,13 +75,6 @@
     background: var(--bg-img) right/contain no-repeat;
   }
 
-  .promo-banner {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .promo-banner img { width: 100%; }
-
   /* tablet */
   @media screen and (max-width: 768px) {
     .section-hero {
@@ -160,14 +83,6 @@
     }
 
     .section-hero.promo-enabled { padding-bottom: 6rem; }
-
-    .section-hero-txt {
-      padding: 2rem 1rem;
-      background-color: hsla(0, 0%, 100%, 0.8);
-      text-align: center;
-    }
-
-    .section-hero-txt br { display: none; }
 
     .section-promo {
       position: relative;
@@ -188,10 +103,6 @@
     }
     .section-promo p { font-size: var(--h5); }
   }
-
-  @media screen and (max-width: 1399px) {
-    .promo-banner { max-width: 1400px; }
-  }
 {% endstylesheet %}
 
 {% schema %}
@@ -200,14 +111,34 @@
   "tag": "section",
   "settings": [
     {
+      "type": "select",
+      "id": "align",
+      "label": "Align",
+      "default": "right",
+      "options": [
+        { "value": "left", "label": "left" },
+        { "value": "right", "label": "right" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "pretitle",
+      "label": "Pretitle"
+    },
+    {
       "type": "textarea",
       "id": "heading",
       "label": "Heading"
     },
     {
-      "type": "textarea",
+      "type": "richtext",
       "id": "description",
       "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "sub_description",
+      "label": "Sub description"
     },
     {
       "type": "url",
@@ -224,6 +155,12 @@
       "type": "image_picker",
       "id": "image_desktop",
       "label": "Background image (desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_large",
+      "label": "Background image (large)",
+      "info": "Displayed at >1400px"
     },
     {
       "type": "image_picker",
@@ -272,9 +209,16 @@
       ]
     },
     {
-      "type": "banner",
-      "name": "Scheduled banner",
+      "type": "scheduled",
+      "name": "Scheduled hero",
       "settings": [
+        {
+          "type": "checkbox",
+          "id": "summer_time",
+          "label": "Summer time",
+          "default": false,
+          "info": "Daylight savings"
+        },
         {
           "type": "text",
           "id": "start_datetime",
@@ -288,24 +232,61 @@
           "info": "Format Example: 2021-01-31 23:59:59"
         },
         {
-          "type": "image_picker",
-          "id": "image_desktop",
-          "label": "Image (desktop)"
+          "type": "select",
+          "id": "align",
+          "label": "Align",
+          "options": [
+            { "value": "left", "label": "left" },
+            { "value": "right", "label": "right" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "pretitle",
+          "label": "Pretitle"
+        },
+        {
+          "type": "textarea",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "sub_description",
+          "label": "Sub description"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "CTA link"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "CTA label",
+          "info": "Default: \"Shop <title>\""
         },
         {
           "type": "image_picker",
-          "id": "image_mobile",
-          "label": "Image (mobile)"
+          "id": "image_desktop",
+          "label": "Background image (desktop)"
         },
         {
           "type": "image_picker",
           "id": "image_large",
-          "label": "Image (large)"
+          "label": "Background image (large)",
+          "info": "Displayed at >1400px"
         },
         {
-          "type": "url",
-          "id": "link",
-          "label": "Link"
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Background image (mobile)",
+          "info": "Only use if a different image is needed"
         }
       ]
     }
