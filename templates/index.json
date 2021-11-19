@@ -2,7 +2,6 @@
   "sections": {
     "main-hero": {
       "type": "main-hero",
-      "disabled": true,
       "settings": {
         "align": "right",
         "pretitle": "Early Black Friday Sale",
@@ -18,6 +17,7 @@
     },
     "simple-hero": {
       "type": "simple-hero",
+      "disabled": true,
       "settings": {
         "heading": "Durable Dog Seat Covers,\nCargo Liners and Accessories",
         "description": "Bring your dogs on every adventure with durable,\nhigh-quality products built to last.",
@@ -29,6 +29,7 @@
     },
     "promo": {
       "type": "promo",
+      "disabled": true,
       "settings": {
         "heading": "Welcome to the new 4Knines website!",
         "description": "We’ve got a new look and an easier, faster shopping experience. We’re on a mission to bring you innovative, high-quality products that will withstand any adventure and last for years to come.",
