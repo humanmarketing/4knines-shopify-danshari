@@ -38,12 +38,10 @@
   </div>
 </div>
 
-{% render 'product-recommendations' %}
-
 <script src="{{ 'product.min.js' | asset_url }}" defer></script>
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 
-{% stylesheet %}
+<style>
   .section-product { gap: 2rem; }
 
   .section-product-txt > div > * + * { margin-top: 2rem; }
@@ -72,9 +70,7 @@
     height: 1.7em;
   }
 
-  .product-description h1 {
-    font-size: var(--h3);
-  }
+  .product-description h1 { font-size: var(--h3); }
 
   .recommendation-product-list {
     display: grid;
@@ -85,16 +81,9 @@
   /* desktop-and-up */
   @media screen and (min-width: 769px) {
     .section-product {
-      grid-template-areas:
-        'img txt'
-        'rec txt';
       grid-template-rows: auto 1fr;
       gap: 4rem;
     }
-
-    .section-product-img { grid-area: img; }
-    .section-product-txt { grid-area: txt; }
-    .section-product-rec { grid-area: rec; }
   }
 
   /* mobile */
@@ -109,7 +98,7 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
-{% endstylesheet %}
+</style>
 
 {% schema %}
 {

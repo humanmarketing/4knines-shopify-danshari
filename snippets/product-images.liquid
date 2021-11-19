@@ -1,6 +1,6 @@
 <div class="section-product-img">
   {%- unless product.images == empty -%}
-    <figure>
+    <figure class="sticky">
       {% capture mzp %}{% render 'magiczoomplus' %}{% endcapture %}
       {% unless mzp contains 'Liquid error' %}
         {{ mzp }}
