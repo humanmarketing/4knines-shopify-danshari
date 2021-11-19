@@ -1,0 +1,99 @@
+<div
+  class="section-promo padding-lg bg"
+  style="--bg-img: url('{{ 'wave-right-top-bottom-lg.png' | asset_url }}');"
+>
+  <div class="{{ section.settings.container_size | default: 'container_half' }} text-center richtext">
+    <h2 class="h2 text-accent-2">{{ section.settings.heading }}</h2>
+
+    {%- if section.settings.description -%}
+      <p class="h4-body">{{ section.settings.description | newline_to_br }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.cta_link -%}
+      <div>
+        <a href="{{ section.settings.cta_link }}" class="action">
+          {%- if section.settings.cta_label != blank -%}
+            {{ section.settings.cta_label }}
+          {%- else -%}
+            Shop {{ section.settings.cta_link.object.title }}
+          {%- endif -%}
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+<style>
+  .section-promo,
+  .section-promo > * {
+    position: relative;
+  }
+
+  .section-promo::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-img) right/contain no-repeat;
+  }
+
+  /* tablet */
+  @media screen and (max-width: 768px) {
+    .section-promo {
+      position: relative;
+      z-index: 1;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      overflow: hidden;
+    }
+
+    .section-promo::before {
+      transform: scale(-1.75, 1.75) translateX(-20%);
+      opacity: 0.4;
+    }
+
+    .section-promo h2 { font-size: var(--h3); }
+    .section-promo p { font-size: var(--h5); }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Promo",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA link"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA label",
+      "info": "Default: \"Shop <title>\""
+    },
+    {
+      "type": "select",
+      "id": "container_size",
+      "label": "Container size",
+      "options": [
+        { "value": "container", "label": "large" },
+        { "value": "container-sm", "label": "small" },
+        { "value": "container-half", "label": "half" }
+      ]
+    }
+  ]
+}
+{% endschema %}

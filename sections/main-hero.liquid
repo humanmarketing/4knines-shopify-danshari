@@ -17,98 +17,72 @@
     endif
   endfor
 
-  assign promo = section.blocks | where: 'type', 'promo' | map: 'settings' | first
+  if show_scheduled and active_scheduled != blank
+    render 'hero', data: active_scheduled
+  else
+    render 'hero', data: section.settings
+  endif
 -%}
 
-<div class="section-hero padding-lg {% if promo != blank %}promo-enabled{% endif %}">
-  {%- liquid
-    if show_scheduled and active_scheduled != blank
-      render 'hero', data: active_scheduled
-    else
-      render 'hero', data: section.settings
-    endif
-  -%}
-</div>
-
-{%- if promo != blank -%}
-  <article
-    class="section-promo padding-lg bg"
-    style="--bg-img: url('{{ 'wave-right-top-bottom-lg.png' | asset_url }}');"
-  >
-    <div class="{{ promo.container_size | default: 'container_half' }} text-center richtext">
-      <h2 class="h2 text-accent-2">{{ promo.heading }}</h2>
-      {%- if promo.description -%}
-        <p class="h4-body">{{ promo.description | newline_to_br }}</p>
-      {%- endif -%}
-      {%- if promo.cta_link -%}
-        <div>
-          <a href="{{ promo.cta_link }}" class="action">
-            {%- if promo.cta_label != blank -%}
-              {{ promo.cta_label }}
-            {%- else -%}
-              Shop {{ promo.cta_link.object.title }}
-            {%- endif -%}
-          </a>
-        </div>
-      {%- endif -%}
-    </div>
-  </article>
-{%- endif -%}
-
-{% stylesheet %}
-  .section-hero {
+<style>
+  .section-main-hero {
     position: relative;
     background: var(--bg-img) center/cover no-repeat;
   }
 
-  .section-promo,
-  .section-promo > * {
-    position: relative;
-  }
-
-  .section-promo::before {
-    content: '';
+  .section-hero-img {
     position: absolute;
     left: 0; top: 0;
     width: 100%;
     height: 100%;
-    background: var(--bg-img) right/contain no-repeat;
+  }
+
+  .section-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .section-hero-txt {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #fff;
+    max-width: 550px;
+    margin: 0 auto;
+    text-shadow: 0 0 2em hsla(0, 0%, 0%, 0.5);
+  }
+
+  .hero-description strong { text-decoration: underline; }
+
+  /* large */
+  @media screen and (min-width: 1400px) {
+    .section-hero { padding: 6rem var(--padding-x); }
   }
 
   /* tablet */
   @media screen and (max-width: 768px) {
-    .section-hero {
+    .section-main-hero {
       padding-top: 2rem;
       padding-bottom: 2rem;
     }
 
-    .section-hero.promo-enabled { padding-bottom: 6rem; }
+    .section-hero-txt br { display: none; }
 
-    .section-promo {
-      position: relative;
-      z-index: 1;
-      margin: -4rem 2rem 0;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-      overflow: hidden;
-    }
+    .section-hero-txt > * { order: 0; }
 
-    .section-promo::before {
-      transform: scale(-1.75, 1.75) translateX(-20%);
-      opacity: 0.4;
-    }
+    .hero-title { margin-bottom: 8rem; }
 
-    .section-promo h2 {
-      font-size: var(--h3);
-    }
-    .section-promo p { font-size: var(--h5); }
+    .hero-sub-description { order: 1; }
   }
-{% endstylesheet %}
+</style>
 
 {% schema %}
 {
-  "name": "Hero + Promo",
+  "name": "Main hero",
   "tag": "section",
+  "class": "section-main-hero padding-lg",
   "settings": [
     {
       "type": "select",
@@ -171,46 +145,8 @@
   ],
   "blocks": [
     {
-      "type": "promo",
-      "name": "Promo",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "Heading"
-        },
-        {
-          "type": "textarea",
-          "id": "description",
-          "label": "Description"
-        },
-        {
-          "type": "url",
-          "id": "cta_link",
-          "label": "CTA link"
-        },
-        {
-          "type": "text",
-          "id": "cta_label",
-          "label": "CTA label",
-          "info": "Default: \"Shop <title>\""
-        },
-        {
-          "type": "select",
-          "id": "container_size",
-          "label": "Container size",
-          "options": [
-            { "value": "container", "label": "large" },
-            { "value": "container-sm", "label": "small" },
-            { "value": "container-half", "label": "half" }
-          ]
-        }
-      ]
-    },
-    {
       "type": "scheduled",
-      "name": "Scheduled hero",
+      "name": "Scheduled",
       "settings": [
         {
           "type": "checkbox",
