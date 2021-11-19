@@ -19,7 +19,7 @@
   endfor
 -%}
 
-<div class="section-hero padding-lg {% if promo.enabled %}promo-enabled{% endif %}">
+<div class="section-hero padding-lg {% if promo != blank %}promo-enabled{% endif %}">
   {%- if section.settings.image_desktop -%}
     <picture class="section-hero-img">
       {%- if section.settings.image_mobile -%}

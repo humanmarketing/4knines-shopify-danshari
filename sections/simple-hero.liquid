@@ -1,0 +1,113 @@
+{%- if section.settings.image_desktop -%}
+  <picture class="section-simple-hero-img">
+    {%- if section.settings.image_mobile -%}
+      <source
+        {% render 'srcset', image: section.settings.image_mobile, width: 800 %}
+        media="(max-width: 768px)"
+      />
+    {%- endif -%}
+    <img
+      {% render 'srcset', image: section.settings.image_desktop, width: 1600 %}
+      alt="{{ section.settings.image_desktop.alt | default: section.settings.heading }}"
+      loading="eager" draggable="false"
+    />
+  </picture>
+{%- endif -%}
+
+<div class="section-simple-hero-txt container richtext">
+  <h1 class="h2 text-accent-2">{{ section.settings.heading | newline_to_br }}</h1>
+  {%- if section.settings.description -%}
+    <p>{{ section.settings.description | newline_to_br }}</p>
+  {%- endif -%}
+  {%- if section.settings.cta_link -%}
+    <p>
+      <a href="{{ section.settings.cta_link }}" class="action">
+        {%- if section.settings.cta_label != blank -%}
+          {{ section.settings.cta_label }}
+        {%- else -%}
+          Shop {{ section.settings.cta_link.object.title }}
+        {%- endif -%}
+      </a>
+    </p>
+  {%- endif -%}
+</div>
+
+{% stylesheet %}
+  .section-simple-hero {
+    position: relative;
+    background: var(--bg-img) center/cover no-repeat;
+  }
+
+  .section-simple-hero-img {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .section-simple-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .section-simple-hero-txt { position: relative; }
+
+  /* tablet */
+  @media screen and (max-width: 768px) {
+    .section-simple-hero {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .section-simple-hero-txt {
+      padding: 2rem 1rem;
+      background-color: hsla(0, 0%, 100%, 0.8);
+      text-align: center;
+    }
+
+    .section-simple-hero-txt br { display: none; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Simple hero",
+  "tag": "section",
+  "class": "section-simple-hero padding-lg",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA link"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA label",
+      "info": "Default: \"Shop <title>\""
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Background image (desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Background image (mobile)",
+      "info": "Only use if a different image is needed"
+    }
+  ]
+}
+{% endschema %}
