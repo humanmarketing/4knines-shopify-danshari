@@ -1,9 +1,39 @@
+{%- liquid
+  assign scheduled_list = section.blocks | where: 'type', 'scheduled' | map: 'settings'
+  for scheduled in scheduled_list
+    if scheduled.summer_time
+      assign add_time = 3600
+    else
+      assign add_time = 0
+    endif
+
+    assign today_date = 'now' | replace: '-0500', '-0800' | date: '%s' | plus: add_time
+    assign start_date = scheduled.start_datetime | append: ' -0800' | date: '%s' | times: 1
+    assign end_date = scheduled.end_datetime | append: ' -0800' | date: '%s' | times: 1
+
+    if today_date >= start_date and today_date <= end_date
+      assign show_scheduled = true
+      assign active_scheduled = scheduled
+    endif
+  endfor
+-%}
+
 {%- if section.settings.enabled -%}
-  {%- if section.settings.link -%}
-    <a href="{{ section.settings.link }}"><p>{{ section.settings.content }}</p></a>
+  {%- if show_scheduled and active_scheduled != blank -%}
+    {%- if active_scheduled.link != blank -%}
+      <a href="{{ active_scheduled.link }}"><p>{{ active_scheduled.content }}</p></a>
+    {%- else -%}
+      <p>{{ active_scheduled.content }}</p>
+    {%- endif -%}
+
   {%- else -%}
-    <p>{{ section.settings.content }}</p>
+    {%- if section.settings.link != blank -%}
+      <a href="{{ section.settings.link }}"><p>{{ section.settings.content }}</p></a>
+    {%- else -%}
+      <p>{{ section.settings.content }}</p>
+    {%- endif -%}
   {%- endif -%}
+
 {%- endif -%}
 
 {% stylesheet %}
@@ -56,6 +86,45 @@
       "id": "link",
       "label": "Link",
       "info": "Optional"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "scheduled",
+      "name": "Scheduled",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "summer_time",
+          "label": "Summer time",
+          "default": false,
+          "info": "Daylight savings"
+        },
+        {
+          "type": "text",
+          "id": "start_datetime",
+          "label": "Start datetime",
+          "info": "Format Example: 2021-01-31 18:00:00"
+        },
+        {
+          "type": "text",
+          "id": "end_datetime",
+          "label": "End datetime",
+          "info": "Format Example: 2021-01-31 23:59:59"
+        },
+        {
+          "type": "html",
+          "id": "content",
+          "label": "Content",
+          "info": "HTML allowed"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link",
+          "info": "Optional"
+        }
+      ]
     }
   ]
 }
