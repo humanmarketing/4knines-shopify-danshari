@@ -5,6 +5,7 @@
       "blocks": {
         "c6bc3884-d619-4698-a1da-7e55ba912483": {
           "type": "promo",
+          "disabled": true,
           "settings": {
             "enabled": true,
             "heading": "Welcome to the new 4Knines website!",
