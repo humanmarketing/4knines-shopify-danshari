@@ -966,8 +966,8 @@ summary.unset::-webkit-details-marker { display: none; }
 }
 
 .product-item .stamped-badge-starrating { display: inline-flex; }
-.product-item .stamped-badge-caption::before { content: '('; }
-.product-item .stamped-badge-caption[data-reviews][data-label][data-version="2"]::after {
+.product-item .stamped-badge-caption:not(:empty)::before { content: '('; }
+.product-item .stamped-badge-caption[data-reviews][data-label][data-version="2"]:not(:empty)::after {
   content: ')' !important;
 }
 
