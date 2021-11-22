@@ -50,6 +50,21 @@
       },
       "announcement": {
         "type": "announcement",
+        "blocks": {
+          "f95d0f96-c86e-41bf-a506-7127bc866f4d": {
+            "type": "scheduled",
+            "settings": {
+              "summer_time": false,
+              "start_datetime": "2021-11-19 00:00:00:00",
+              "end_datetime": "2021-11-22 00:00:00",
+              "content": "15% Off Sitewide Early Black Friday Sale | Code: HOLIDAY15",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "f95d0f96-c86e-41bf-a506-7127bc866f4d"
+        ],
         "settings": {
           "enabled": true,
           "content": "15% Off Sitewide Early Black Friday Sale | Code: HOLIDAY15",
