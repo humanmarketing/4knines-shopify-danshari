@@ -197,7 +197,6 @@ summary.unset::-webkit-details-marker { display: none; }
 .h5-body,
 .h6-body {
   font-family: var(--font-body);
-  font-weight: bold;
 }
 
 .h0, .h0-body { font-size: var(--h0) }

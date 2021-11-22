@@ -26,7 +26,7 @@
     url({{ 'Pockota-Medium.woff2' | asset_url }}) format('woff2'),
     url({{ 'Pockota-Medium.woff' | asset_url }}) format('woff'),
     url({{ 'Pockota-Medium.ttf' | asset_url }}) format('truetype');
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -37,7 +37,29 @@
     url({{ 'Pockota-Medium-Italic.woff2' | asset_url }}) format('woff2'),
     url({{ 'Pockota-Medium-Italic.woff' | asset_url }}) format('woff'),
     url({{ 'Pockota-Medium-Italic.ttf' | asset_url }}) format('truetype');
-  font-weight: bold;
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pockota';
+  src:
+    url({{ 'Pockota-Bold.woff2' | asset_url }}) format('woff2'),
+    url({{ 'Pockota-Bold.woff' | asset_url }}) format('woff'),
+    url({{ 'Pockota-Bold.ttf' | asset_url }}) format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pockota';
+  src:
+    url({{ 'Pockota-Bold-Italic.woff2' | asset_url }}) format('woff2'),
+    url({{ 'Pockota-Bold-Italic.woff' | asset_url }}) format('woff'),
+    url({{ 'Pockota-Bold-Italic.ttf' | asset_url }}) format('truetype');
+  font-weight: 900;
   font-style: italic;
   font-display: swap;
 }
