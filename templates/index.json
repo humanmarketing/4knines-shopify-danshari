@@ -50,8 +50,8 @@
     "promo": {
       "type": "promo",
       "settings": {
-        "heading": "Welcome to the new 4Knines website!",
-        "description": "We’ve got a new look and an easier, faster shopping experience. We’re on a mission to bring you innovative, high-quality products that will withstand any adventure and last for years to come.",
+        "heading": "Our Mission is simple",
+        "description": "Bring you innovative, high-quality products that will withstand any adventure and back them with exceptional customer service.",
         "cta_link": "",
         "cta_label": "",
         "container_size": "container"
