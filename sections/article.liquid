@@ -37,15 +37,11 @@
   <p><a href="{{ blog.url }}" class="link accent-1">< Back</a></p>
 </div>
 
-{% stylesheet %}
-  .article-content a {
-    color: var(--accent-1);
-  }
+<style>
+  .article-content a { color: var(--accent-1); }
 
-  .article-content iframe {
-    max-width: 100%;
-  }
-{% endstylesheet %}
+  .article-content iframe { max-width: 100%; }
+</style>
 
 {% schema %}
 {
