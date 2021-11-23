@@ -94,8 +94,8 @@
           "settings": {
             "heading": "Design and Function Meet Convenience",
             "description": "Our unique patented technology lets you fold down seats 60\/40, 50\/50 split, and center armrest pass-through without removing the cover.",
-            "cta_label": "",
-            "cta_link": "",
+            "cta_label": "Learn About Our Patented Split Cover Technology",
+            "cta_link": "shopify:\/\/pages\/split-technology",
             "image": "shopify:\/\/shop_images\/split-tech-cargo-liner.gif"
           }
         },
@@ -137,7 +137,8 @@
         "quote": "The quality of the material is amazing, the best cover I've ever owned.",
         "author": "Kevin P.",
         "show_avatar": true,
-        "avatar": "shopify:\/\/shop_images\/testimonial-cargo-liner.jpg"
+        "avatar": "shopify:\/\/shop_images\/testimonial-cargo-liner.jpg",
+        "show_instagram_feed": false
       }
     },
     "product-reviews": {
