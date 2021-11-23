@@ -93,8 +93,8 @@
           "settings": {
             "heading": "Design and Function Meet Convenience",
             "description": "The 4Knines split crew cab truck seat cover features our unique patented technology, which lets you fold down seats 60\/40 and access all three seat belts.",
-            "cta_label": "",
-            "cta_link": "",
+            "cta_label": "Learn About Our Patented Split Cover Technology",
+            "cta_link": "shopify:\/\/pages\/split-technology",
             "image": "shopify:\/\/shop_images\/split-tech-crew-cab.gif"
           }
         },
@@ -136,7 +136,8 @@
         "quote": "We absolutely LOVE this seat cover. The quality is the best and the fit is perfect.",
         "author": "Samantha",
         "show_avatar": true,
-        "avatar": "shopify:\/\/shop_images\/testimonial-crew-cab-seat-cover.jpg"
+        "avatar": "shopify:\/\/shop_images\/testimonial-crew-cab-seat-cover.jpg",
+        "show_instagram_feed": false
       }
     },
     "product-reviews": {
