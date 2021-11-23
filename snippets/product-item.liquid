@@ -21,8 +21,8 @@
     <p class="product-item-title h5">{{ product.title }}</p>
   </a>
 
-  <div class="price-rating">
-    <p>
+  <div class="price-rating font-heading">
+    <p class="price">
       {%- if product.compare_at_price > product.price -%}
         <s class="compare-at-price"><small>{{ product.compare_at_price | money }}</small></s>
       {%- endif %}
