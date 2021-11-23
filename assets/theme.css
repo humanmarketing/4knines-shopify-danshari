@@ -563,6 +563,8 @@ summary.unset::-webkit-details-marker { display: none; }
   box-sizing: border-box;
 }
 
+.header-megamenu-title { margin-bottom: 2rem; }
+
 .header-megamenu-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -654,6 +656,12 @@ summary.unset::-webkit-details-marker { display: none; }
 
 .tablet-menu-title:hover { color: var(--accent-2); }
 .tablet-menu-title:hover a { text-decoration: none; }
+
+.tablet-menu-title img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .tablet-menu-title svg { fill: var(--accent-2); }
 

@@ -7,38 +7,41 @@
   {%- for link in links -%}
     <li class="desktop-menu-item{% unless megamenus contains link.title %} is-dropdown{% endunless %}">
       {%- if link.links != blank -%}
-        {%- if link.title == 'Shop' -%}
-          <a href="{{ link.url }}" class="desktop-menu-title with-icon">
-            {{ link.title }}
-            {% render 'icon-chevron-down' %}
-          </a>
-        {%- else -%}
-          <div class="desktop-menu-title with-icon">
-            {{ link.title }}
-            {% render 'icon-chevron-down' %}
-          </div>
-        {%- endif -%}
+        <div class="desktop-menu-title with-icon">
+          {{ link.title }}
+          {% render 'icon-chevron-down' %}
+        </div>
 
         {%- if megamenus contains link.title -%}
           <div class="header-megamenu">
-            <ul class="container header-megamenu-list">
-              {%- for child in link.links -%}
-                <li>
-                  <a href="{{ child.url }}" class="child-title link with-icon">
-                    {{ child.title }}
+            <div class="container">
+              {%- if link.title == 'Shop' -%}
+                <div class="header-megamenu-title">
+                  <a class="h3 link accent-2 with-icon" href="{{ link.url }}">
+                    Shop 4Knines
                     {% render 'icon-chevron-right' %}
                   </a>
+                </div>
+              {%- endif -%}
 
-                  {%- if child.links != blank -%}
-                    <ul class="child-links">
-                      {%- for grandchild in child.links -%}
-                        <li>{% render 'with-img', item: grandchild, link: true %}</li>
-                      {%- endfor -%}
-                    </ul>
-                  {%- endif -%}
-                </li>
-              {%- endfor -%}
-            </ul>
+              <ul class="header-megamenu-list">
+                {%- for child in link.links -%}
+                  <li>
+                    <a href="{{ child.url }}" class="child-title link with-icon">
+                      {{ child.title }}
+                      {% render 'icon-chevron-right' %}
+                    </a>
+                    {%- if child.links != blank -%}
+                      <ul class="child-links">
+                        {%- for grandchild in child.links -%}
+                          <li>{% render 'with-img', item: grandchild, link: true %}</li>
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
           </div>
 
         {%- else -%}

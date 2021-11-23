@@ -10,7 +10,7 @@
 {%- endcapture -%}
 
 {%- capture content -%}
-  {%- if item.object.featured_image -%}
+  {%- if item.object.featured_image and no_image != true -%}
     <figure>
       <img
         {% render 'srcset', image: item.object.featured_image, width: 100 %}
