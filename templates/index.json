@@ -40,15 +40,18 @@
           "type": "scheduled",
           "settings": {
             "summer_time": false,
-            "start_datetime": "",
-            "end_datetime": "",
+            "start_datetime": "2021-11-28 00:00:00",
+            "end_datetime": "2021-12-1 00:00:00",
             "align": "left",
-            "pretitle": "",
-            "heading": "",
-            "description": "",
-            "sub_description": "",
-            "cta_link": "",
-            "cta_label": ""
+            "pretitle": "Cyber Monday Sale",
+            "heading": "15% Off Sitewide",
+            "description": "<p>Use Code: HOLIDAY15<\/p>",
+            "sub_description": "Ends 11\/30",
+            "cta_link": "shopify:\/\/collections\/dog-seat-covers",
+            "cta_label": "Shop Dog Seat Covers",
+            "image_desktop": "shopify:\/\/shop_images\/KN-143-BFCM-cm-desktop-banner.png",
+            "image_large": "shopify:\/\/shop_images\/KN-143-BFCM-cm-desktop-wide-banner.png",
+            "image_mobile": "shopify:\/\/shop_images\/KN-143-BFCM-cm-mobile-banner.png"
           }
         }
       },
