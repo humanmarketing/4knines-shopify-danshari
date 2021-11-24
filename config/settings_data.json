@@ -55,9 +55,9 @@
             "type": "scheduled",
             "settings": {
               "summer_time": false,
-              "start_datetime": "2021-11-19 00:00:00:00",
-              "end_datetime": "2021-11-22 00:00:00",
-              "content": "15% Off Sitewide Early Black Friday Sale | Code: HOLIDAY15",
+              "start_datetime": "2021-11-24 00:00:00:00",
+              "end_datetime": "2021-11-28 00:00:00",
+              "content": "15% Off Sitewide Black Friday Sale | Code: HOLIDAY15",
               "link": "shopify:\/\/collections\/dog-seat-covers"
             }
           }

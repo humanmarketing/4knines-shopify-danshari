@@ -2,7 +2,6 @@
   "sections": {
     "main-hero": {
       "type": "main-hero",
-      "disabled": true,
       "blocks": {
         "42fe6071-67c3-47cc-8ed4-77447f43424d": {
           "type": "scheduled",
@@ -18,10 +17,29 @@
             "cta_link": "",
             "cta_label": ""
           }
+        },
+        "b65dcf1d-0098-4792-a0ed-06a24335231b": {
+          "type": "scheduled",
+          "settings": {
+            "summer_time": false,
+            "start_datetime": "2021-11-24 00:00:00",
+            "end_datetime": "2021-11-27 00:00:00:00",
+            "align": "left",
+            "pretitle": "Black Friday Sale",
+            "heading": "15% Off Sitewide",
+            "description": "<p>Use Code: <strong>HOLIDAY15<\/strong><\/p>",
+            "sub_description": "Ends 11\/27",
+            "cta_link": "shopify:\/\/collections\/dog-seat-covers",
+            "cta_label": "Shop Dog Seat Covers",
+            "image_desktop": "shopify:\/\/shop_images\/KN-143-BFCM-bf-desktop-banner_1.png",
+            "image_large": "shopify:\/\/shop_images\/KN-143-BFCM-bf-desktop-wide-banner.png",
+            "image_mobile": "shopify:\/\/shop_images\/KN-143-BFCM-bf-mobile-banner.png"
+          }
         }
       },
       "block_order": [
-        "42fe6071-67c3-47cc-8ed4-77447f43424d"
+        "42fe6071-67c3-47cc-8ed4-77447f43424d",
+        "b65dcf1d-0098-4792-a0ed-06a24335231b"
       ],
       "settings": {
         "align": "right",
@@ -38,6 +56,7 @@
     },
     "simple-hero": {
       "type": "simple-hero",
+      "disabled": true,
       "settings": {
         "heading": "Durable Dog Seat Covers,\nCargo Liners and Accessories",
         "description": "Bring your dogs on every adventure with durable,\nhigh-quality products built to last.",
