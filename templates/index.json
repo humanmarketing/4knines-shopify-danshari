@@ -23,7 +23,7 @@
           "settings": {
             "summer_time": false,
             "start_datetime": "2021-11-24 00:00:00",
-            "end_datetime": "2021-11-27 00:00:00:00",
+            "end_datetime": "2021-11-28 00:00:00:00",
             "align": "left",
             "pretitle": "Black Friday Sale",
             "heading": "15% Off Sitewide",
@@ -35,11 +35,27 @@
             "image_large": "shopify:\/\/shop_images\/KN-143-BFCM-bf-desktop-wide-banner.png",
             "image_mobile": "shopify:\/\/shop_images\/KN-143-BFCM-bf-mobile-banner.png"
           }
+        },
+        "d3f140d3-f11f-4727-a7f1-a2d9631458fc": {
+          "type": "scheduled",
+          "settings": {
+            "summer_time": false,
+            "start_datetime": "",
+            "end_datetime": "",
+            "align": "left",
+            "pretitle": "",
+            "heading": "",
+            "description": "",
+            "sub_description": "",
+            "cta_link": "",
+            "cta_label": ""
+          }
         }
       },
       "block_order": [
         "42fe6071-67c3-47cc-8ed4-77447f43424d",
-        "b65dcf1d-0098-4792-a0ed-06a24335231b"
+        "b65dcf1d-0098-4792-a0ed-06a24335231b",
+        "d3f140d3-f11f-4727-a7f1-a2d9631458fc"
       ],
       "settings": {
         "align": "right",
