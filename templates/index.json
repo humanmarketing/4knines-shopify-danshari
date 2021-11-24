@@ -3,21 +3,6 @@
     "main-hero": {
       "type": "main-hero",
       "blocks": {
-        "42fe6071-67c3-47cc-8ed4-77447f43424d": {
-          "type": "scheduled",
-          "settings": {
-            "summer_time": false,
-            "start_datetime": "",
-            "end_datetime": "",
-            "align": "left",
-            "pretitle": "",
-            "heading": "",
-            "description": "",
-            "sub_description": "",
-            "cta_link": "",
-            "cta_label": ""
-          }
-        },
         "b65dcf1d-0098-4792-a0ed-06a24335231b": {
           "type": "scheduled",
           "settings": {
@@ -25,13 +10,14 @@
             "start_datetime": "2021-11-24 00:00:00",
             "end_datetime": "2021-11-28 00:00:00:00",
             "align": "left",
+            "width": 350,
             "pretitle": "Black Friday Sale",
             "heading": "15% Off Sitewide",
             "description": "<p>Use Code: <strong>HOLIDAY15<\/strong><\/p>",
             "sub_description": "Ends 11\/27",
             "cta_link": "shopify:\/\/collections\/dog-seat-covers",
             "cta_label": "Shop Dog Seat Covers",
-            "image_desktop": "shopify:\/\/shop_images\/KN-143-BFCM-bf-desktop-banner_2_50faba5f-a6bc-4a22-ad28-a89e4911664e.png",
+            "image_desktop": "shopify:\/\/shop_images\/image.png",
             "image_large": "shopify:\/\/shop_images\/KN-143-BFCM-bf-desktop-wide-banner_dark_hd.png",
             "image_mobile": "shopify:\/\/shop_images\/KN-143-BFCM-bf-mobile-banner.png"
           }
@@ -43,6 +29,7 @@
             "start_datetime": "2021-11-28 00:00:00",
             "end_datetime": "2021-12-1 00:00:00",
             "align": "left",
+            "width": 350,
             "pretitle": "Cyber Monday Sale",
             "heading": "15% Off Sitewide",
             "description": "<p>Use Code: HOLIDAY15<\/p>",
@@ -56,12 +43,12 @@
         }
       },
       "block_order": [
-        "42fe6071-67c3-47cc-8ed4-77447f43424d",
         "b65dcf1d-0098-4792-a0ed-06a24335231b",
         "d3f140d3-f11f-4727-a7f1-a2d9631458fc"
       ],
       "settings": {
         "align": "right",
+        "width": 450,
         "pretitle": "Early Black Friday Sale",
         "heading": "15% Off Sitewide",
         "description": "<p>Use Code: <strong>HOLIDAY15<\/strong><\/p>",
