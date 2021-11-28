@@ -26,7 +26,7 @@
           "type": "scheduled",
           "settings": {
             "summer_time": false,
-            "start_datetime": "2021-11-28 00:00:00",
+            "start_datetime": "2021-11-27 21:00:00",
             "end_datetime": "2021-12-1 00:00:00",
             "align": "left",
             "width": 350,
