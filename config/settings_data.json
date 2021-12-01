@@ -56,7 +56,7 @@
             "settings": {
               "summer_time": false,
               "start_datetime": "2021-11-24 00:00:00:00",
-              "end_datetime": "2021-12-1 00:00:00",
+              "end_datetime": "2021-11-30 23:00:00",
               "content": "15% Off Sitewide Cyber Monday Sale | Code: HOLIDAY15",
               "link": "shopify:\/\/collections\/dog-seat-covers"
             }
