@@ -187,6 +187,7 @@ summary.unset::-webkit-details-marker { display: none; }
 
 .h0,.h1,.h2,.h3,.h4,.h5,.h6 {
   font-family: var(--font-heading);
+  font-weight: bold;
 }
 
 .h0-body,
@@ -314,7 +315,7 @@ summary.unset::-webkit-details-marker { display: none; }
 .action.lg,
 .action-alt.lg { padding: var(--button-padding-lg); }
 
-.action.full
+.action.full,
 .action-alt.full {
   box-sizing: border-box;
   width: 100%;
@@ -1019,6 +1020,7 @@ summary.unset::-webkit-details-marker { display: none; }
 
 input:checked + .variant-swatch {
   border-color: var(--accent-1);
+  box-shadow: 0 0 0 2px var(--accent-1);
 }
 
 .color-swatch {
