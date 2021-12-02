@@ -200,13 +200,21 @@
             "product": "dog-harness",
             "title": ""
           }
+        },
+        "a9586857-bba2-455c-8d29-e40e16368101": {
+          "type": "product",
+          "settings": {
+            "product": "plant-based-dog-poop-bags",
+            "title": ""
+          }
         }
       },
       "block_order": [
         "6bacdc1e-e010-43bd-8a82-2ebc2c2a70f5",
         "c99f14c0-6dc2-4e40-87fd-51c940b7158d",
         "81086311-3097-409a-97af-d2384e1b3408",
-        "d8faad17-63d7-4d37-92b9-3e41e3cc5bef"
+        "d8faad17-63d7-4d37-92b9-3e41e3cc5bef",
+        "a9586857-bba2-455c-8d29-e40e16368101"
       ],
       "settings": {
         "collection": "dog-supplies",
