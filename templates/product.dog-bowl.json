@@ -7,6 +7,18 @@
     },
     "product": {
       "type": "product",
+      "blocks": {
+        "678ebab3-4da3-4e4f-8f41-5b3acc394803": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Durable Heavy Duty 18\/8 Stainless Steel",
+            "icon": "shopify:\/\/shop_images\/durable_icon_938c9f71-3cae-40d3-ad29-5ecabf6c92d3.png"
+          }
+        }
+      },
+      "block_order": [
+        "678ebab3-4da3-4e4f-8f41-5b3acc394803"
+      ],
       "settings": {
         "description_list": "",
         "show_dynamic_checkout": false
@@ -141,7 +153,8 @@
         "rating": 5,
         "quote": "",
         "author": "",
-        "show_avatar": true
+        "show_avatar": true,
+        "show_instagram_feed": false
       }
     },
     "product-reviews": {
