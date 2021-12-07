@@ -47,6 +47,7 @@
     },
     "product-details-tabs": {
       "type": "product-details-tabs",
+      "disabled": true,
       "blocks": {
         "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6": {
           "type": "video",
@@ -78,6 +79,18 @@
     },
     "product-details-simple": {
       "type": "product-details-simple",
+      "blocks": {
+        "a98594d4-1259-40a6-88a1-c8fbad23e0e6": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "a98594d4-1259-40a6-88a1-c8fbad23e0e6"
+      ],
       "settings": {
       }
     },
