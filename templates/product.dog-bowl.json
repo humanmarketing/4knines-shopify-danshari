@@ -12,12 +12,19 @@
           "type": "icon-and-text",
           "settings": {
             "description": "Durable Heavy Duty 18\/8 Stainless Steel",
-            "icon": "shopify:\/\/shop_images\/durable_icon_938c9f71-3cae-40d3-ad29-5ecabf6c92d3.png"
+            "icon": "shopify:\/\/shop_images\/Durable_Icon_1.png"
+          }
+        },
+        "aae9caa4-c958-414c-b54a-9c86f6e1cfc4": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Non Slip \/ No Spill Design"
           }
         }
       },
       "block_order": [
-        "678ebab3-4da3-4e4f-8f41-5b3acc394803"
+        "678ebab3-4da3-4e4f-8f41-5b3acc394803",
+        "aae9caa4-c958-414c-b54a-9c86f6e1cfc4"
       ],
       "settings": {
         "description_list": "",
