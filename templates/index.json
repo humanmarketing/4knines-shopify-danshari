@@ -8,23 +8,24 @@
           "type": "scheduled",
           "settings": {
             "summer_time": false,
-            "start_datetime": "2021-11-24 00:00:00",
-            "end_datetime": "2021-11-28 00:00:00:00",
-            "align": "left",
-            "width": 350,
-            "pretitle": "Black Friday Sale",
+            "start_datetime": "2021-12-9 00:00:00",
+            "end_datetime": "2021-12-13 00:00:00:00",
+            "align": "right",
+            "width": 450,
+            "pretitle": "Order In Time for The Howlidays",
             "heading": "15% Off Sitewide",
-            "description": "<p>Use Code: <strong>HOLIDAY15<\/strong><\/p>",
-            "sub_description": "Ends 11\/27",
+            "description": "<p>Use Code: <strong>JOLLY15<\/strong><\/p>",
+            "sub_description": "Ends 12\/12",
             "cta_link": "shopify:\/\/collections\/dog-seat-covers",
             "cta_label": "Shop Dog Seat Covers",
-            "image_desktop": "shopify:\/\/shop_images\/image.png",
-            "image_large": "shopify:\/\/shop_images\/KN-143-BFCM-bf-desktop-wide-banner_dark_hd.png",
-            "image_mobile": "shopify:\/\/shop_images\/KN-143-BFCM-bf-mobile-banner.png"
+            "image_desktop": "shopify:\/\/shop_images\/KN-191-Howlidays-desktop-banner.png",
+            "image_large": "shopify:\/\/shop_images\/KN-191-Howlidays-desktop-wide-banner.png",
+            "image_mobile": "shopify:\/\/shop_images\/KN-191-Howlidays-mobile-banner.png"
           }
         },
         "d3f140d3-f11f-4727-a7f1-a2d9631458fc": {
           "type": "scheduled",
+          "disabled": true,
           "settings": {
             "summer_time": false,
             "start_datetime": "2021-11-27 21:00:00",
