@@ -18,13 +18,22 @@
         "aae9caa4-c958-414c-b54a-9c86f6e1cfc4": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Non Slip \/ No Spill Design"
+            "description": "Non Slip \/ No Spill Design",
+            "icon": "shopify:\/\/shop_images\/no_spill_icon_1.png"
+          }
+        },
+        "cbc6d7e3-ec49-4ef8-9f87-febb1a22d620": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Large Capacity  Holds 64 oz \/ 8 cups Food or Water",
+            "icon": "shopify:\/\/shop_images\/Large_Capacity_icon_18e2e207-2c1b-4352-8d0d-5a2e9949d172.png"
           }
         }
       },
       "block_order": [
         "678ebab3-4da3-4e4f-8f41-5b3acc394803",
-        "aae9caa4-c958-414c-b54a-9c86f6e1cfc4"
+        "aae9caa4-c958-414c-b54a-9c86f6e1cfc4",
+        "cbc6d7e3-ec49-4ef8-9f87-febb1a22d620"
       ],
       "settings": {
         "description_list": "",
