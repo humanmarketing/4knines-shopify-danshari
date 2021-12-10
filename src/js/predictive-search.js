@@ -10,7 +10,7 @@ for (let searchForm of searchForms) {
     suggestionGroupTemplate = document.querySelector('#suggestion-group-template'),
     suggestionItemTemplate = document.querySelector('#suggestion-item-template')
 
-  searchFormInput.addEventListener('keyup', delayAfterKeyup(async e => {
+  searchFormInput.addEventListener('keyup', delayAfterEvent(async e => {
     let suggestionResults = await getSuggestions(e.target.value)
 
     searchSuggestions.innerHTML = ''
@@ -65,7 +65,7 @@ function resizeImg(url, size) {
   return `${before}_${size}.${ext}${after}`
 }
 
-function delayAfterKeyup(fn, ms) {
+function delayAfterEvent(fn, ms) {
   let timer = 0
   return function(...args) {
     clearTimeout(timer)
