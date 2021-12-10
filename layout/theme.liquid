@@ -17,7 +17,12 @@
   <meta name="description" content="{{ page_description | escape }}">
   {%- render 'meta-tags' -%}
 
-  <link rel="canonical" href="{{ canonical_url }}">
+  {%- if request.page_type == 'blog' -%}
+    <link rel="canonical" href="{{ shop.url }}{{ request.path }}">
+  {%- else -%}
+    <link rel="canonical" href="{{ canonical_url }}">
+  {%- endif -%}
+
   <link rel="icon" href="{{ settings.favicon | img_url: '32x32' }}">
 
   <link rel="preload" href="{{ 'Pockota-Regular.woff2' | asset_url }}" type="font/woff2" as="font" crossorigin>
@@ -27,9 +32,7 @@
   {{ 'theme.css' | asset_url | stylesheet_tag }}
 
   {% render 'header-scripts.zipifypages', renderctx: 'thm' %}{{ content_for_header }}
-
   {% render 'magiczoomplus.headers' %}
-
   <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=4d8cdf5c"></script>
 
   <!-- Google Tag Manager -->
@@ -64,14 +67,9 @@
   {% section 'newsletter' %}
   {% section 'footer' %}
 
-    <script src="//cdn.codeblackbelt.com/js/modules/frequently-bought-together/main.min.js?shop=4knines.myshopify.com" defer></script>
-
-    
-
-    
-
-    
   {% render 'schema' %}
+
+  <script src="//cdn.codeblackbelt.com/js/modules/frequently-bought-together/main.min.js?shop=4knines.myshopify.com" defer></script>
 
   <script src="{{ 'theme.min.js' | asset_url }}" defer></script>
   {%- if settings.predictive_search_enabled -%}
