@@ -55,20 +55,19 @@
         "50e93222-8884-4d90-86c5-77351e7c18aa": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/4Knines_Dog_Poop_Bags_3.jpg"
+            "image": "shopify:\/\/shop_images\/poop-small.gif"
           }
         },
-        "d5218f2a-bd17-4f2e-bf6f-c16c90f19329": {
-          "type": "text",
+        "09d50850-0a9f-491a-ba4c-57dc0866f8d1": {
+          "type": "image",
           "settings": {
-            "heading": "Extra Thick Bags",
-            "description": "<p>Ready for Action.  No duty too big or small.  These unscented bags will keep odor and contents inside and off your hands.  <\/p><p>Say goodbye to traditional plastic poop bags, helping Mother Earth one bag at a time.  <\/p><p>When you take your dog out for a walk, there's one thing you always need: poop bags. <\/p><p>And if you're like us, sometimes the best ones are hard to find! We know it can be tough, but we've solved that problem for you with this 12-roll set of 180 unscented bags. <\/p>"
+            "image": "shopify:\/\/shop_images\/poop-large.gif"
           }
         }
       },
       "block_order": [
         "50e93222-8884-4d90-86c5-77351e7c18aa",
-        "d5218f2a-bd17-4f2e-bf6f-c16c90f19329"
+        "09d50850-0a9f-491a-ba4c-57dc0866f8d1"
       ],
       "settings": {
       }
