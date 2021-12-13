@@ -52,22 +52,22 @@
     "product-details-simple": {
       "type": "product-details-simple",
       "blocks": {
-        "50e93222-8884-4d90-86c5-77351e7c18aa": {
+        "6911b700-e323-458a-8ba2-f9701c622677": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/poop-small.gif"
+            "image": "shopify:\/\/shop_images\/poop-sm.gif"
           }
         },
-        "09d50850-0a9f-491a-ba4c-57dc0866f8d1": {
+        "e573f22b-5ada-45b6-a779-6e478b980360": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/poop-large.gif"
+            "image": "shopify:\/\/shop_images\/poop-lg.gif"
           }
         }
       },
       "block_order": [
-        "50e93222-8884-4d90-86c5-77351e7c18aa",
-        "09d50850-0a9f-491a-ba4c-57dc0866f8d1"
+        "6911b700-e323-458a-8ba2-f9701c622677",
+        "e573f22b-5ada-45b6-a779-6e478b980360"
       ],
       "settings": {
         "heading": "Durable for Dogs of Any Size"
