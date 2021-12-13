@@ -7,7 +7,7 @@
     {%- endif -%}
 
     <div
-      class="{% if section.blocks.size > 1 %}multi-col center{% endif %}"
+      class="details-simple-content{% if section.blocks.size > 1 %} multi-col center{% endif %}"
       style="gap: 2rem 4rem;"
     >
       {%- for block in section.blocks -%}
@@ -15,6 +15,9 @@
           {%- when 'image' -%}
             <figure class="container-half">
               <img
+                {% if block.settings.height != blank %}
+                  style="width: auto; height: {{ block.settings.height }}px;"
+                {% endif %}
                 {% render 'srcset', image: block.settings.image, width: 1000 %}
                 alt="{{ block.settings.image.alt | default: product.name }}" loading="lazy"
               />
@@ -37,6 +40,14 @@
 
 <style>
   .section-details-simple-heading { margin-bottom: 2rem; }
+
+  .details-simple-content {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin-inline: auto;
+  }
+
   .details-simple-txt strong { font-size: 1.3em; }
 </style>
 
@@ -60,6 +71,11 @@
           "type": "image_picker",
           "id": "image",
           "label": "Image"
+        },
+        {
+         "type": "number",
+         "id": "height",
+         "label": "Height (px)"
         }
       ]
     },
