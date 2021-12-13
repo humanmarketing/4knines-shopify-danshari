@@ -55,13 +55,15 @@
         "6911b700-e323-458a-8ba2-f9701c622677": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/poop-sm.gif"
+            "image": "shopify:\/\/shop_images\/poop-sm.gif",
+            "height": 400
           }
         },
         "e573f22b-5ada-45b6-a779-6e478b980360": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/poop-lg.gif"
+            "image": "shopify:\/\/shop_images\/poop-lg.gif",
+            "height": 400
           }
         }
       },
