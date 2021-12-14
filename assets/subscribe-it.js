@@ -2132,7 +2132,7 @@ function deferBisProductPageButton (callback) {
             "main_button_height": "",
             "main_caption_size": "",
             "main_margin_top": "",
-            "main_margin_bottom": "",
+            "main_margin_bottom": "10",
             "main_margin_left": "",
             "main_margin_right": "",
             "main_text_color": "",
