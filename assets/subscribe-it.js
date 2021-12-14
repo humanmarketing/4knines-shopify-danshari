@@ -2111,7 +2111,7 @@ function deferBisProductPageButton (callback) {
                 "corner_offset": 100,
                 "background_color": "#000000",
                 "selected_selector": ".add-to-cart-btn",
-                "placement": "AFTER",
+                "placement": "BEFORE",
                 "text_color": "#ffffff",
                 "border_color": "#000000",
                 "border_width": 1,
