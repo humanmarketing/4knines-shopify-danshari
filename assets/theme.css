@@ -1044,9 +1044,9 @@ input:checked + .variant-swatch {
 .color-swatch[title="Camo"] { background-image: url('//cdn.shopify.com/s/files/1/0711/6333/t/50/assets/camo_50x.png'); }
 
 .color-swatch[data-sku="9800-SS"] { background-image: linear-gradient(-60deg, #8f8a8c, #e8e4e5, #8f8a8c); }
-.color-swatch[data-sku="9800-LV"] { background-color: #aa9ab8; }
-.color-swatch[data-sku="9800-PK"] { background-color: #b7a3ac; }
-.color-swatch[data-sku="9800-BL"] { background-color: #2e3b4b; }
+.color-swatch[data-sku="9800-LV"] { background-color: #c3a8db; }
+.color-swatch[data-sku="9800-PK"] { background-color: #c396aa; }
+.color-swatch[data-sku="9800-BL"] { background-color: #274466; }
 .color-swatch[data-sku="9800-BK"] { background: #1a1c1e; }
 
 input:checked + .color-swatch {

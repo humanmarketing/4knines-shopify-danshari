@@ -77,10 +77,10 @@
     <script async type="text/javascript" data-api-key="" id="stamped-script-widget" src="https://cdn-stamped-io.azureedge.net/files/widget.min.js"></script>
   {%- endif -%}
 
-  
-{% render 'oneclickupsellapp-theme', oneclickupsellapp: oneclickupsellapp %}
-{% assign oneclickupsellapp = true %}
-{% render 'page-footer.zipifypages', renderctx: 'thm', ocuapp: ocuapp %}
+  {% render 'oneclickupsellapp-theme', oneclickupsellapp: oneclickupsellapp %}
+  {% assign oneclickupsellapp = true %}
+
+  {% render 'page-footer.zipifypages', renderctx: 'thm', ocuapp: ocuapp %}
   {% render 'subscribe-it-helper' %}
 
   <!--Gorgias Chat Widget Start-->
