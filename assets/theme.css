@@ -1029,7 +1029,7 @@ input:checked + .variant-swatch {
   display: inline-block;
   width: var(--size); height: var(--size);
   border-radius: 100%;
-  background: var(--bg) center/cover no-repeat;
+  background: center/cover no-repeat;
   border: 2px solid #fff;
 }
 
@@ -1043,10 +1043,11 @@ input:checked + .variant-swatch {
 .color-swatch[title="Tan"] { background-image: url('//cdn.shopify.com/s/files/1/0711/6333/t/50/assets/tan_50x.png'); }
 .color-swatch[title="Camo"] { background-image: url('//cdn.shopify.com/s/files/1/0711/6333/t/50/assets/camo_50x.png'); }
 
-.color-swatch[title="Stainless Steel"] { background-image: linear-gradient(-60deg, #8f8a8c, #e8e4e5, #8f8a8c); }
-.color-swatch[title="Lavender"] { background-color: #aa9ab8; }
-.color-swatch[title="Pink"] { background-color: #b7a3ac; }
-.color-swatch[title="Blue"] { background-color: #2e3b4b; }
+.color-swatch[data-sku="9800-SS"] { background-image: linear-gradient(-60deg, #8f8a8c, #e8e4e5, #8f8a8c); }
+.color-swatch[data-sku="9800-LV"] { background-color: #aa9ab8; }
+.color-swatch[data-sku="9800-PK"] { background-color: #b7a3ac; }
+.color-swatch[data-sku="9800-BL"] { background-color: #2e3b4b; }
+.color-swatch[data-sku="9800-BK"] { background: #1a1c1e; }
 
 input:checked + .color-swatch {
   box-shadow: var(--outline);

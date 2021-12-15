@@ -14,6 +14,14 @@
   {%- endunless -%}
 
   {%- for value in option.values -%}
+    {%- liquid
+      for variant in product.variants
+        if variant.title contains value
+          assign sku = variant.sku
+        endif
+      endfor
+    -%}
+
     <input
       id="{{ option.name }}-{{ forloop.index }}"
       name="{{ option.name | handleize }}"
@@ -25,7 +33,7 @@
     <label
       class="color-swatch{% if small %} small{% endif %}"
       for="{{ option.name }}-{{ forloop.index }}"
-      title="{{ value }}"
+      title="{{ value }}" data-sku="{{ sku }}"
     ></label>
   {%- endfor -%}
 </fieldset>

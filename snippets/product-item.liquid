@@ -46,11 +46,14 @@
         {%- liquid
           for variant in product.variants
             if variant.title contains color
-              assign url = variant.url
+              assign variant = variant
             endif
           endfor
         -%}
-        <a href="{{ url }}" class="color-swatch small" title="{{ color }}"></a>
+        <a
+          href="{{ variant.url }}" class="color-swatch small"
+          title="{{ color }}" data-sku="{{ variant.sku }}"
+        ></a>
       {%- endfor -%}
     </div>
   {%- endunless -%}
