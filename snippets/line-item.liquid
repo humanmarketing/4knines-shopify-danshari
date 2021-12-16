@@ -3,7 +3,7 @@
   index
 {%- endcomment -%}
 
-<tr>
+<tr class="line-item">
   <td>
     <a href="{{ line_item.url }}" class="line-item-link link">
       <figure class="line-item-img">
@@ -23,10 +23,13 @@
   </td>
 
   <td>
-    {%- if line_item.original_price > line_item.final_price -%}
-      <s class="compare-at-price">{{ line_item.original_price | money }}</s><br>
-    {%- endif -%}
-    {{ line_item.final_price | money }}
+    <small class="text-dark tablet">Price:</small>
+    <span>
+      {%- if line_item.original_price > line_item.final_price -%}
+        <s class="compare-at-price">{{ line_item.original_price | money }}</s><br>
+      {%- endif -%}
+      {{ line_item.final_price | money }}
+    </span>
   </td>
 
   <td>
@@ -39,10 +42,13 @@
   </td>
 
   <td>
-    {%- if line_item.original_line_price > line_item.final_line_price -%}
-      <s class="compare-at-price">{{ line_item.original_line_price | money }}</s><br>
-    {%- else -%}
-      {{ line_item.final_line_price | money }}
-    {%- endif -%}
+    <small class="text-dark tablet">Total:</small>
+    <span>
+      {%- if line_item.original_line_price > line_item.final_line_price -%}
+        <s class="compare-at-price">{{ line_item.original_line_price | money }}</s><br>
+      {%- else -%}
+        {{ line_item.final_line_price | money }}
+      {%- endif -%}
+    </span>
   </td>
 </tr>
