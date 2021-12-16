@@ -6,6 +6,7 @@
       "blocks": {
         "b65dcf1d-0098-4792-a0ed-06a24335231b": {
           "type": "scheduled",
+          "disabled": true,
           "settings": {
             "summer_time": false,
             "start_datetime": "2021-12-08 21:00:00",

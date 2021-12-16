@@ -18,11 +18,66 @@
   endfor
 
   if show_scheduled and active_scheduled != blank
-    render 'main-hero', data: active_scheduled
+    assign data = active_scheduled
   else
-    render 'main-hero', data: section.settings
+    assign data = section.settings
   endif
 -%}
+
+{%- if data.image_desktop -%}
+  <picture class="section-hero-img">
+    {%- if data.image_large != blank -%}
+      <source
+        {% render 'srcset', image: data.image_large, width: 2400 %}
+        media="(min-width: 1400px)"
+      />
+    {%- endif -%}
+    {%- if data.image_mobile != blank -%}
+      <source
+        {% render 'srcset', image: data.image_mobile, width: 1200 %}
+        media="(max-width: 768px)"
+      />
+    {%- endif -%}
+    <img
+      {% render 'srcset', image: data.image_desktop, width: 1600 %}
+      alt="{{ data.image_desktop.alt | default: data.heading }}"
+      loading="eager" draggable="false"
+    />
+  </picture>
+{%- endif -%}
+
+<div class="container">
+  <div
+    class="section-hero-txt text-center"
+    style="margin-{{ data.align }}: 0; max-width: {{ data.width | default: 550 }}px;"
+  >
+    {%- if data.pretitle -%}
+      <p class="h4 uppercase">{{ data.pretitle }}</p>
+    {%- endif -%}
+
+    <h1 class="hero-title h2-body">{{ data.heading | newline_to_br }}</h1>
+
+    {%- if data.description -%}
+      <div class="hero-description font-heading">{{ data.description }}</div>
+    {%- endif -%}
+
+    {%- if data.sub_description -%}
+      <p class="hero-sub-description">{{ data.sub_description }}</p>
+    {%- endif -%}
+
+    {%- if data.cta_link -%}
+      <p>
+        <a href="{{ data.cta_link }}" class="action">
+          {%- if data.cta_label != blank -%}
+            {{ data.cta_label }}
+          {%- else -%}
+            Shop {{ data.cta_link.object.title }}
+          {%- endif -%}
+        </a>
+      </p>
+    {%- endif -%}
+  </div>
+</div>
 
 <style>
   .section-main-hero {
@@ -233,7 +288,7 @@
           "type": "image_picker",
           "id": "image_mobile",
           "label": "Background image (mobile)",
-          "info": "Only use if a different image is needed"
+          "info": "Displayed at <768px"
         }
       ]
     }
