@@ -1,6 +1,4 @@
-(function() {
-  const $ = document.querySelector.bind(document)
-  const $$ = document.querySelectorAll.bind(document)
+import { $, $$, formatPrice } from './utils'
 
 /* variant selector */
 
@@ -64,11 +62,6 @@ function updateProductForm() {
 }
 updateProductForm()
 
-function formatPrice(value) {
-  const { format } = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
-  return `$${ format(value / 100) }`
-}
-
 /* product recommendations */
 
 const handleIntersection = (entries, observer) => {
@@ -123,5 +116,3 @@ tabItems?.forEach(item => {
     })
   }
 })
-
-})()

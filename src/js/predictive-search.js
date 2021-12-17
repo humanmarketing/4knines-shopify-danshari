@@ -1,14 +1,16 @@
+import { $, $$, delayAfterEvent} from './utils'
+
 /*
   predictiveSearchOptions defined in `predictive-search.liquid`
 */
 
-let searchForms = document.querySelectorAll('form.search-form')
+let searchForms = $$('form.search-form')
 
 for (let searchForm of searchForms) {
   let searchFormInput = searchForm.querySelector('input[name="q"]'),
     searchSuggestions = searchForm.querySelector('.search-suggestions'),
-    suggestionGroupTemplate = document.querySelector('#suggestion-group-template'),
-    suggestionItemTemplate = document.querySelector('#suggestion-item-template')
+    suggestionGroupTemplate = $('#suggestion-group-template'),
+    suggestionItemTemplate = $('#suggestion-item-template')
 
   searchFormInput.addEventListener('keyup', delayAfterEvent(async e => {
     let suggestionResults = await getSuggestions(e.target.value)
@@ -63,12 +65,4 @@ async function getSuggestions(query) {
 function resizeImg(url, size) {
   const [before, ext, after] = url.split(/\.(png|jpg|gif)/g)
   return `${before}_${size}.${ext}${after}`
-}
-
-function delayAfterEvent(fn, ms) {
-  let timer = 0
-  return function(...args) {
-    clearTimeout(timer)
-    timer = setTimeout(fn.bind(this, ...args), ms || 0)
-  }
 }
