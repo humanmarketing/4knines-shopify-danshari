@@ -1,0 +1,64 @@
+{%- assign images = section.blocks | where: 'type', 'image' | map: 'settings' | map: 'image' -%}
+
+<h2 class="h4-body">{{ section.settings.heading }}</h2>
+
+<ul class="as-seen-in-list">
+  {%- for image in images -%}
+    <figure class="as-seen-in-image">
+      <img
+        {% render 'srcset', image: image, width: 1000 %}
+        alt="{{ image.alt }}"
+      />
+    </figure>
+  {%- endfor -%}
+</ul>
+
+<style>
+  .as-seen-in-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 4rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .as-seen-in-image img {
+    width: auto;
+    max-height: 80px;
+  }
+
+  /* tablet */
+  @media screen and (max-width: 768px) {
+    .as-seen-in-image img { max-height: 60px; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "As seen in",
+  "tag": "section",
+  "class": "container padding-lg text-center",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "As Seen In"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

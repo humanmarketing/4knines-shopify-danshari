@@ -268,12 +268,44 @@
         "quote": "Perfectly sized to fit. Love the material;\nseems extremely tough",
         "author": "Hugh C.",
         "show_avatar": true,
-        "avatar": "shopify:\/\/shop_images\/testimonial-avatar.png",
-        "show_instagram_feed": true
+        "avatar": "shopify:\/\/shop_images\/testimonial-avatar.png"
+      }
+    },
+    "as-seen-in": {
+      "type": "as-seen-in",
+      "blocks": {
+        "70ee907c-5741-43ad-8fc9-f374441a24b9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/as-seen-in-fido-friendly.png"
+          }
+        },
+        "ff2aacc5-473d-4cab-8ac0-2df9b7b593a7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/as-seen-in-modern-dog.png"
+          }
+        },
+        "88f53961-e8f2-42af-acee-3b1e6544d093": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/as-seen-in-editors-choice-2021.png"
+          }
+        }
+      },
+      "block_order": [
+        "70ee907c-5741-43ad-8fc9-f374441a24b9",
+        "ff2aacc5-473d-4cab-8ac0-2df9b7b593a7",
+        "88f53961-e8f2-42af-acee-3b1e6544d093"
+      ],
+      "settings": {
+        "heading": "As Seen In"
       }
     },
     "instagram-feed": {
-      "type": "instagram-feed"
+      "type": "instagram-feed",
+      "settings": {
+      }
     },
     "our-story": {
       "type": "our-story",
@@ -336,6 +368,7 @@
     "featured-collection-3",
     "icon-list-h",
     "testimonial-and-social",
+    "as-seen-in",
     "instagram-feed",
     "our-story",
     "text-card-list"
