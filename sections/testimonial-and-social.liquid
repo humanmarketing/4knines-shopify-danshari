@@ -50,17 +50,12 @@
   </div>
 
   {%- if section.settings.show_social and section.settings.social_image != blank -%}
-    {%- comment -%} TODO: add live insta feed {%- endcomment -%}
     <figure class="on-social-img hide-scrollbar">
       <img
         {% render 'srcset', image: section.settings.social_image %}
         alt="Instagram @4knines" loading="lazy" draggable="false"
       />
     </figure>
-  {%- endif -%}
-
-  {%- if section.settings.show_instagram_feed -%}
-    <div id="stamped-reviews-widget" data-widget-type="instagram-feed" data-feed-type="carousel" data-auto-play="true"></div>
   {%- endif -%}
 {%- endif -%}
 
@@ -162,13 +157,6 @@
       "type": "image_picker",
       "id": "avatar",
       "label": "Avatar"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_instagram_feed",
-      "label": "Show Instagram feed",
-      "default": false,
-      "info": "Stamped.io"
     }
   ]
 }
