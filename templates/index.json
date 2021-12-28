@@ -6,22 +6,21 @@
       "blocks": {
         "b65dcf1d-0098-4792-a0ed-06a24335231b": {
           "type": "scheduled",
-          "disabled": true,
           "settings": {
             "summer_time": false,
-            "start_datetime": "2021-12-08 21:00:00",
-            "end_datetime": "2021-12-13 00:00:00:00",
+            "start_datetime": "2021-12-29 21:00:00",
+            "end_datetime": "2022-01-05 00:00:00:00",
             "align": "right",
             "width": 450,
-            "pretitle": "Order In Time for The Howlidays",
+            "pretitle": "New Year, New Adventures",
             "heading": "15% Off Sitewide",
-            "description": "<p>Use Code: <strong>JOLLY15<\/strong><\/p>",
-            "sub_description": "Ends 12\/12",
+            "description": "<p>Use Code: <strong>NEWYEAR15<\/strong><\/p>",
+            "sub_description": "Ends 1\/4",
             "cta_link": "shopify:\/\/collections\/dog-seat-covers",
             "cta_label": "Shop Dog Seat Covers",
-            "image_desktop": "shopify:\/\/shop_images\/KN-191-Howlidays-desktop-banner.png",
-            "image_large": "shopify:\/\/shop_images\/KN-191-Howlidays-desktop-wide-banner_7f81807f-dbf5-4936-a06f-8e740f3d2ce5.png",
-            "image_mobile": "shopify:\/\/shop_images\/KN-191-Howlidays-mobile-banner_223a0bd8-f246-4aa3-88da-57f46dfae7ae.png"
+            "image_desktop": "shopify:\/\/shop_images\/wideDesktop-banner.png",
+            "image_large": "shopify:\/\/shop_images\/wideDesktop-banner.png",
+            "image_mobile": "shopify:\/\/shop_images\/mobile-banner.png"
           }
         },
         "d3f140d3-f11f-4727-a7f1-a2d9631458fc": {

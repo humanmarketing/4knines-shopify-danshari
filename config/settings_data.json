@@ -55,9 +55,9 @@
             "type": "scheduled",
             "settings": {
               "summer_time": false,
-              "start_datetime": "2021-12-8 22:00:00:00",
-              "end_datetime": "2021-12-12 23:00:00",
-              "content": "15% Off Order in Time for the Howlidays Sale | Code: JOLLY15",
+              "start_datetime": "2021-12-30 00:00:00:00",
+              "end_datetime": "2022-01-04 23:00:00",
+              "content": "15% Off New Year, New Adventures Sale | Code: NEWYEAR15",
               "link": "shopify:\/\/collections\/dog-seat-covers"
             }
           }
