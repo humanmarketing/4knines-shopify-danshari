@@ -2,7 +2,6 @@
   "sections": {
     "main-hero": {
       "type": "main-hero",
-      "disabled": true,
       "blocks": {
         "b65dcf1d-0098-4792-a0ed-06a24335231b": {
           "type": "scheduled",
@@ -64,6 +63,7 @@
     },
     "simple-hero": {
       "type": "simple-hero",
+      "disabled": true,
       "settings": {
         "heading": "Durable Dog Seat Covers,\nCargo Liners and Accessories",
         "description": "Bring your dogs on every adventure with durable,\nhigh-quality products built to last.",
