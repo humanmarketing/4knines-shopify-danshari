@@ -3,17 +3,17 @@
     <h2 class="h3 text-accent-2">High-Quality Materials Built to Last</h2>
     <ul class="unstyled">
       <li>
+        {% render 'icon-craftsmanship' %}
+        <div class="richtext">
+          <p class="h4-body">Quality Craftsmanship</p>
+          <p>We've fine tuned our product design and manufacturing through multiple revisions based on customer feedback and reviews.</p>
+        </div>
+      </li>
+      <li>
         {% render 'icon-layers' %}
         <div class="richtext">
           <p class="h4-body">Heavy-Duty</p>
           <p>All dog seat covers are made with premium fabrics and durable hardware to protect your vehicle.</p>
-        </div>
-      </li>
-      <li>
-        {% render 'icon-clean' %}
-        <div class="richtext">
-          <p class="h4-body">Easy to Clean</p>
-          <p>Hose it down, wipe down with a moist towel or toss it in the washer to keep it looking fresh and clean.</p>
         </div>
       </li>
       <li>
@@ -42,6 +42,13 @@
         </div>
       </li>
       <li>
+        {% render 'icon-clean' %}
+        <div class="richtext">
+          <p class="h4-body">Easy to Clean</p>
+          <p>Hose it down, wipe down with a moist towel or toss it in the washer to keep it looking fresh and clean.</p>
+        </div>
+      </li>
+      <li>
         {% render 'icon-seat' %}
         <div class="richtext">
           <p class="h4-body">Stays in Place</p>
@@ -59,6 +66,11 @@
     text-align: center;
   }
 
+  .section-features-multi-col > div {
+    display: grid;
+    place-content: center;
+  }
+
   .section-features-multi-col li {
     display: grid;
     gap: 1rem;
@@ -73,6 +85,7 @@
   /* tablet-and-up */
   @media screen and (min-width: 429px) {
     .section-features-multi-col {
+      align-items: stretch;
       text-align: left;
     }
 
@@ -109,6 +122,6 @@
 {
   "name": "Features (Multi-column)",
   "tag": "section",
-  "class": "section-features-multi-col multi-col center"
+  "class": "section-features-multi-col multi-col"
 }
 {% endschema %}
