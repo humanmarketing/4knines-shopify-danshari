@@ -1,5 +1,5 @@
 {% comment %}
-  Updated: 2021/12/07
+  Updated: 2022/01/12
 {% endcomment %}
 
 {% unless oneclickupsellapp %}
@@ -567,8 +567,54 @@ PrecheckoutIntegrations.prototype = {
                 }
             }
         }
+    },
+
+    get bundlerBuilder() {
+        return {
+            selector: '/apps/bundles',
+            get bundleBuilderInput () {
+                return document.querySelector('#bb_proxy_prefix');
+            },
+            get present() {
+                return this.bundleBuilderInput &&
+                    this.bundleBuilderInput.value === this.selector &&
+                    this.bundlerForm &&
+                    !!this.bundlerForm.querySelector(`[formaction="${this.selector}/cart"]`);
+            },
+            get bundlerForm() {
+                return this.bundleBuilderInput.closest(`form[action*="${this.selector}"]`);
+            },
+            submit() {
+                this.bundlerForm.submit();
+            }
+        }
     }
 };
+
+if (!window.OCUApi) window.OCUApi = {};
+const FALSE_REDIRECT = { redirect_url: null };
+window.OCUApi = Object.assign(OCUApi, {
+    showUpsell: function(params) {
+        const dispatcher = this.context.popupDispatcher;
+        dispatcher.context = this.context;
+        dispatcher.target = params.form;
+
+        return new Promise(function(resolve, reject) {
+            const callback = function(res) {
+                resolve(res.detail.response || FALSE_REDIRECT);
+            };
+
+            if (!lqd.is_precheckout) resolve(FALSE_REDIRECT);
+
+            dispatcher.listenCustomEvent(callback);
+            dispatcher._show(null, true);
+        });
+    },
+
+    initialize: function(params) {
+        this.context = params.context;
+    }
+});
 
 function PopupDispatcher() {}
 
@@ -627,12 +673,11 @@ PopupDispatcher.prototype = {
     },
 
     show: function(event, target) {
-        const self = this.context;
-        self.prevent(event);
+        this.context.prevent(event);
 
         if (utils.store.get('amazonPayInitiated')) return null;
         const form = target.closest('[action="/cart"], [action="/checkout"]');
-        if (form && !self.validate(form)) {
+        if (form && !this.context.validate(form)) {
             clearTimeout(utils.store.get('fallback').id);
             utils.store.set('submitted', false);
             return form.reportValidity();
@@ -640,8 +685,14 @@ PopupDispatcher.prototype = {
 
         if (window.disableBodyScroll) disableBodyScroll(); // fix locked scroll at mobile for themes with libs.min.js
 
-        const isRechargeEnabled = lqd.integrate_with_recharge && !lqd.disabled_by_subscription_app;
+        return this._show(event, false);
+    },
 
+    _show: function (event, apiMode) {
+        this.apiMode = apiMode;
+
+        const self = this.context;
+        const isRechargeEnabled = lqd.integrate_with_recharge && !lqd.disabled_by_subscription_app;
         const precheckoutConfig = {
             utils: utils,
             Updater: Updater,
@@ -661,7 +712,7 @@ PopupDispatcher.prototype = {
                 OCUIncart._is_product_action = this.isProductAction;
                 return this._upsellAppInstance().setData(precheckoutConfig);
             }.bind(this))
-            .catch(this.checkout.bind(this));
+            .catch(this[apiMode ? '_finalizeEvent' : 'checkout'].bind(this));
     },
 
     getIncartConfig: function() {
@@ -681,7 +732,7 @@ PopupDispatcher.prototype = {
         if (isShownOfferIdPresent) query += 'split_test_weight=' + isShownOfferIdPresent;
 
         try {
-            this._endLoading();
+            if (!this.apiMode) this._endLoading();
             const payload = this._incartPayload();
             return axios.post(endpoint + query, payload, { headers: headers });
         } catch (e) {
@@ -790,9 +841,10 @@ PopupDispatcher.prototype = {
             .catch(this.checkout.bind(this));
     },
 
-    listenCustomEvent: function() {
+    listenCustomEvent: function(callback) {
         // this.removeCustomEvents();
-        document.addEventListener('ocuNativeClick', this.checkout.bind(this), { once: true });
+        const cb = callback ? callback : this.checkout;
+        document.addEventListener('ocuNativeClick', cb.bind(this), { once: true });
     },
 
     removeCustomEvents: function() {
@@ -866,6 +918,10 @@ PopupDispatcher.prototype = {
 
     _emptyResolve: function(response) {
         return new Promise(function(resolve) { resolve(response); });
+    },
+
+    _finalizeEvent: function(response) {
+        document.dispatchEvent(new CustomEvent('ocuNativeClick', { detail: { redirect_url: null } }));
     },
 
     _clearFlow() {
@@ -1058,50 +1114,52 @@ CartDispatcher.prototype = {
 };
 
 class Currency {
-    currenciesWithoutDec = [
-        'BYR',
-        'XAF',
-        'XPF',
-        'CLP',
-        'KMF',
-        'JPY',
-        'PYG',
-        'RWF',
-        'KRW',
-        'VND',
-        'VUV',
-        'XOF',
-        'MGA',
-        'UGX',
-        'ISK'
-    ];
+    constructor() {
+        this.currenciesWithoutDec = [
+            'BYR',
+            'XAF',
+            'XPF',
+            'CLP',
+            'KMF',
+            'JPY',
+            'PYG',
+            'RWF',
+            'KRW',
+            'VND',
+            'VUV',
+            'XOF',
+            'MGA',
+            'UGX',
+            'ISK'
+        ];
 
-    entities = {
-        '&nbsp;': ' ',
-        '&pound;': '£',
-        '&euro;': '€',
-        '&dollar;': '$'
-    };
+        this.entities = {
+            '&nbsp;': ' ',
+            '&pound;': '£',
+            '&euro;': '€',
+            '&dollar;': '$'
+        };
 
-    types = {
-        amount: [2, ',', '.'],
-        amount_no_decimals: [2, ',', '.'],
-        amount_with_comma_separator: [2, '.', ','],
-        amount_no_decimals_with_comma_separator: [2, '.', ','],
-        amount_with_space_separator: [2, ' ', ','],
-        amount_no_decimals_with_space_separator: [2, ' ', ','],
-        amount_with_apostrophe_separator: [2, '\'', '.'],
-        get default() {
-            return this.amount;
-        }
-    };
+        this.types = {
+            amount: [2, ',', '.'],
+            amount_no_decimals: [2, ',', '.'],
+            amount_with_comma_separator: [2, '.', ','],
+            amount_no_decimals_with_comma_separator: [2, '.', ','],
+            amount_with_space_separator: [2, ' ', ','],
+            amount_no_decimals_with_space_separator: [2, ' ', ','],
+            amount_with_apostrophe_separator: [2, '\'', '.'],
+            get default() {
+                return this.amount;
+            }
+        };
+    }
 
-    round = (x, precision = 1) => {
+    round(x, precision = 1) {
         let m = 10 ** precision;
         return Number.isInteger(x) ? (x * m) / m :  Math.round(x * m) / m;
-    };
+    }
 
-    thousand = (x) => {
+    thousand(x) {
         if (isNaN(x)) return x;
         if (x === 0) return x;
         if (x < 999) return (Math.round(x * 100) / 100);
@@ -1110,25 +1168,25 @@ class Currency {
         if (x < 10000000) return this.round((Math.round(x * 10) / 10000000), 0) + 'm';
         if (x < 1000000000) return this.round(Math.round((x * 10 / 10000000)), 0) + 'm';
         if (x >= 1000000000) return this.round(Math.round((x * 10 / 10000000000)), 0) + 'b';
-    };
+    }
 
-    replaceCharEntity = (text) => {
+    replaceCharEntity(text) {
         const replacer = (key) => this.entities[key] !== null && this.entities[key] !== undefined ? this.entities[key] : key;
         return text && text.replace(/(&\w+;)/g, replacer) !== null && text.replace(/(&\w+;)/g, replacer) !== undefined ? text.replace(/(&\w+;)/g, replacer) : text;
-    };
+    }
 
-    type = (key) => {
+    type(key) {
         const match = /\{\{\s*(\w+)\s*\}\}/.exec(key) && /\{\{\s*(\w+)\s*\}\}/.exec(key)[1];
         return this.types[match] !== null && this.types[match] !== undefined ? this.types[match] : this.types.default;
-    };
+    }
 
-    toFixed = (value, precision) => {
+    toFixed(value, precision) {
         let power = Math.pow(10, precision);
 
         return (Math.round((value + 1e-8) * power) / power).toFixed(precision);
-    };
+    }
 
-    formatNumber = (number, opts, args) => {
+    formatNumber(number, opts, args) {
         if (!+number && +number !== 0) return '&mdash;';
         let suffix;
         let k = args.includes('thousand');
@@ -1160,9 +1218,9 @@ class Currency {
         if (suffix) formatted = formatted.replace(/([,.]00|0)$/, '') + suffix;
 
         return currencyCode && !suffix ? formatted.split(opts.decimal)[0] : formatted;
-    };
+    }
 
-    formatNumberForView = (amount, format, ...args) => {
+    formatNumberForView(amount, format, ...args) {
         format = this.replaceCharEntity(format);
 
         const noCurrency = args.includes('noCurrency');
@@ -1173,7 +1231,9 @@ class Currency {
         return format && format.replace(reg, this.formatNumber(amount, this.type(format), args));
     }
 
-    currency = (amount, format, ...args) => this.formatNumberForView(amount, format, ...args);
+    currency(amount, format, ...args) {
+        return this.formatNumberForView(amount, format, ...args);
+    }
 }
 
 if (!window.OCUApi) window.OCUApi = {};
@@ -3040,6 +3100,8 @@ function PublicMethod() {
 
     this.redirect = function(result) {
         const recharge = self.integrations.recharge;
+        const bundlerBuilder = integrations.bundlerBuilder;
+        if (bundlerBuilder.present) return bundlerBuilder.submit();
         if (recharge.isSubscription(lqd)) return recharge.redirect(null, null, result.checkout_url);
         if (result.destination === 'checkout' || lqd.skip_cart) return location.assign(result.checkout_url);
         location.assign('/' + result.destination);
@@ -3320,6 +3382,7 @@ function Helpers() {
     };
 
     this.isBuyNow = function(e) {
+        if (!e) return false;
         const selectors = utils.store.get('classList');
         return e.target.classList.contains(selectors.buyNow) && !e.target.classList.contains(selectors.buyNowBranded);
     };
@@ -3475,12 +3538,19 @@ function ApplicationsUtils() {
 const script = document.createElement('script');
 document.head.appendChild(script);
 script.src = ocuCdn + '/vendor/axios.min.js';
+
+function initApplication() {
+    const application = new Application();
+    OCUApi.initialize({ context: application });
+    return application;
+}
+
 script.onload = function() {
-    if (window.axios) return new Application();
+    if (window.axios) return initApplication()
     if (window.require) {
         require([ocuCdn + '/vendor/axios.min.js'], function(e) {
             window.axios = e;
-            new Application();
+            initApplication()
         });
     }
 };
