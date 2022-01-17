@@ -4,7 +4,9 @@
 
 <div class="section-product-txt">
   <div class="sticky">
-    <h1 class="h2 text-accent-2">{{ product.title }}</h1>
+    <h1 class="h2 text-accent-2">
+      {{ section.settings.h1 | default: product.title }}
+    </h1>
 
     <div
       class="stamped-product-reviews-badge stamped-main-badge"
@@ -112,6 +114,12 @@
   "tag": "article",
   "class": "section-product container padding-lg multi-col",
   "settings": [
+    {
+      "type": "text",
+      "id": "h1",
+      "label": "H1 overwrite",
+      "info": "Defaults to product title"
+    },
     {
       "type": "textarea",
       "id": "description_list",
