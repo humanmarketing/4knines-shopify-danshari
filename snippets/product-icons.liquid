@@ -1,0 +1,50 @@
+{%- liquid
+  assign products_with_lifetime_warranty = linklists['dog-seat-covers'].links | map: 'object'
+
+  for object in products_with_lifetime_warranty
+    if object.handle == product.handle
+      assign has_lifetime_warranty = true
+    endif
+
+    assign handles = object.products | map: 'handle'
+    for handle in handles
+      if handle == product.handle
+        assign has_lifetime_warranty = true
+      endif
+    endfor
+  endfor
+-%}
+
+<ul class="product-icons unstyled">
+  <li class="with-icon">{% render 'icon-free' %} Free Shipping</li>
+  {%- if has_lifetime_warranty -%}
+    <li class="with-icon">{% render 'icon-warranty' %} Lifetime Warranty</li>
+  {%- else -%}
+    <li class="with-icon">{% render 'icon-dog' %} Supports animal charities</li>
+  {%- endif -%}
+  <li class="with-icon">{% render 'icon-30' %} 30 Day Returns</li>
+</ul>
+
+<style>
+  .product-icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5ch;
+    font-size: 14px;
+  }
+
+  .product-icons svg {
+    flex-shrink: 0;
+    color: var(--accent-3);
+    height: 1.7em;
+  }
+
+  @media screen and (max-width: 428px) {
+    .product-mini-features {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .product-mini-features svg { min-width: 3em; }
+  }
+</style>
