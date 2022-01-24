@@ -7,15 +7,15 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "shopify:switch": "shopify switch --store=4knines.myshopify.com",
-    "start": "yarn shopify:switch && shopify theme serve",
+    "shopify": "shopify login; shopify login --store=4knines.myshopify.com",
+    "start": "yarn shopify && shopify theme serve",
     "dev": "run-p dev:*",
     "dev:js": "node esbuild.config.js",
     "build": "run-s build:*",
     "build:js": "node esbuild.config.js"
   },
   "devDependencies": {
-    "esbuild": "^0.13.8",
+    "esbuild": "^0.14.13",
     "npm-run-all": "^4.1.5"
   },
   "dependencies": {}
