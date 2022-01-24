@@ -11,21 +11,21 @@
         "678ebab3-4da3-4e4f-8f41-5b3acc394803": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Durable Heavy Duty 18\/8 Stainless Steel",
+            "description": "Durable, Heavy-Duty 18\/8 Stainless Steel",
             "icon": "shopify:\/\/shop_images\/Durable_Icon_1.png"
           }
         },
         "aae9caa4-c958-414c-b54a-9c86f6e1cfc4": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Non Slip \/ No Spill Design",
+            "description": "Non-Slip \/ No-Spill Design",
             "icon": "shopify:\/\/shop_images\/no_spill_icon_1.png"
           }
         },
         "cbc6d7e3-ec49-4ef8-9f87-febb1a22d620": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Large Capacity  Holds 64 oz \/ 8 cups Food or Water",
+            "description": "Large Capacity Holds 64 oz \/ 8 cups Food or Water",
             "icon": "shopify:\/\/shop_images\/Large_Capacity_icon_18e2e207-2c1b-4352-8d0d-5a2e9949d172.png"
           }
         }
@@ -92,6 +92,7 @@
         "a98594d4-1259-40a6-88a1-c8fbad23e0e6"
       ],
       "settings": {
+        "heading": ""
       }
     },
     "product-details-3-pack": {
@@ -182,8 +183,7 @@
         "rating": 5,
         "quote": "",
         "author": "",
-        "show_avatar": true,
-        "show_instagram_feed": false
+        "show_avatar": true
       }
     },
     "product-reviews": {
