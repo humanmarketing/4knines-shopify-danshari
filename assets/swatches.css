@@ -63,7 +63,6 @@
 /* black */
 
 .color-swatch[data-sku="9800-BK"],
-.color-swatch[data-sku="9100-BK"],
 .color-swatch[data-sku="9002-BK"],
 .color-swatch[data-sku="7548-BK"],
 .color-swatch[data-sku="9540-BK"] {
@@ -72,7 +71,6 @@
 
 /* grey */
 
-.color-swatch[data-sku="9100-GY"],
 .color-swatch[data-sku="7548-GY"],
 .color-swatch[data-sku="7100-GY"],
 .color-swatch[data-sku="7150-GY"] {
@@ -94,8 +92,7 @@
 
 /* pink */
 
-.color-swatch[data-sku="9800-PK"],
-.color-swatch[data-sku="9100-PK"] {
+.color-swatch[data-sku="9800-PK"] {
   background-color: #c396aa;
 }
 
