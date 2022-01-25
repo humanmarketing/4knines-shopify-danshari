@@ -1,0 +1,112 @@
+/*
+  swatch images
+*/
+
+/* black */
+
+.color-swatch[data-sku="3345"],
+.color-swatch[data-sku="11"],
+.color-swatch[data-sku="6622"],
+.color-swatch[data-sku="6666"],
+.color-swatch[data-sku="6677"],
+.color-swatch[data-sku="8889"],
+.color-swatch[data-sku="6CCX-B2"],
+.color-swatch[data-sku="6FHD-B"],
+.color-swatch[data-sku="5524"],
+.color-swatch[data-sku="9001-BK"] {
+  background-image: url('https://cdn.shopify.com/s/files/1/0711/6333/t/50/assets/black_50x.png');
+}
+
+/* grey */
+
+.color-swatch[data-sku="4456"],
+.color-swatch[data-sku="33"],
+.color-swatch[data-sku="6691"],
+.color-swatch[data-sku="6635"],
+.color-swatch[data-sku="6645-GY"],
+.color-swatch[data-sku="8779"],
+.color-swatch[data-sku="6CCX-G2"],
+.color-swatch[data-sku="5525"],
+.color-swatch[data-sku="9001-GY"] {
+  background-image: url('https://cdn.shopify.com/s/files/1/0711/6333/t/50/assets/grey_50x.png');
+}
+
+/* tan */
+
+.color-swatch[data-sku="2245"],
+.color-swatch[data-sku="22"],
+.color-swatch[data-sku="6601"],
+.color-swatch[data-sku="6637"],
+.color-swatch[data-sku="6625-TN"],
+.color-swatch[data-sku="8669"],
+.color-swatch[data-sku="6CCX-T2"],
+.color-swatch[data-sku="5523"],
+.color-swatch[data-sku="9001-TN"] {
+  background-image: url('https://cdn.shopify.com/s/files/1/0711/6333/t/50/assets/tan_50x.png');
+}
+
+/* camo */
+
+.color-swatch[data-sku="6611-CB"],
+.color-swatch[data-sku="6633-CB"],
+.color-swatch[data-sku="6677-CB"],
+.color-swatch[data-sku="6CCX-CB"],
+.color-swatch[data-sku="6FHD-CB"],
+.color-swatch[data-sku="5524-CB"] {
+  background-image: url('https://cdn.shopify.com/s/files/1/0711/6333/t/50/assets/camo_50x.png');
+}
+
+/*
+  swatch solid colors & gradients
+*/
+
+/* black */
+
+.color-swatch[data-sku="9800-BK"],
+.color-swatch[data-sku="9100-BK"],
+.color-swatch[data-sku="9002-BK"],
+.color-swatch[data-sku="7548-BK"],
+.color-swatch[data-sku="9540-BK"] {
+  background-color: #1a1c1e;
+}
+
+/* grey */
+
+.color-swatch[data-sku="9100-GY"],
+.color-swatch[data-sku="7548-GY"],
+.color-swatch[data-sku="7100-GY"],
+.color-swatch[data-sku="7150-GY"] {
+  background-color: #8e908e;
+}
+
+/* tan */
+
+.color-swatch[data-sku="7766"],
+.color-swatch[data-sku="7733"] {
+  background-color: #e1d0c7;
+}
+
+/* lavender */
+
+.color-swatch[data-sku="9800-LV"] {
+  background-color: #c3a8db;
+}
+
+/* pink */
+
+.color-swatch[data-sku="9800-PK"],
+.color-swatch[data-sku="9100-PK"] {
+  background-color: #c396aa;
+}
+
+/* blue */
+
+.color-swatch[data-sku="9800-BL"] {
+  background-color: #274466;
+}
+
+/* stainless steel */
+
+.color-swatch[data-sku="9800-SS"] {
+  background-image: linear-gradient(-60deg, #8f8a8c, #e8e4e5, #8f8a8c);
+}

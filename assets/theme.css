@@ -1,3 +1,5 @@
+@import './swatches.css';
+
 /* root */
 
 html {
@@ -1030,6 +1032,7 @@ input:checked + .variant-swatch {
   width: var(--size); height: var(--size);
   border-radius: 100%;
   background: center/cover no-repeat;
+  background-color: hsla(0, 0%, 0%, 0.05);
   border: 2px solid #fff;
 }
 
@@ -1038,20 +1041,7 @@ input:checked + .variant-swatch {
   margin-right: 0.25rem;
 }
 
-.color-swatch[title="Black"] { background-image: url('//cdn.shopify.com/s/files/1/0711/6333/t/50/assets/black_50x.png'); }
-.color-swatch[title="Grey"] { background-image: url('//cdn.shopify.com/s/files/1/0711/6333/t/50/assets/grey_50x.png'); }
-.color-swatch[title="Tan"] { background-image: url('//cdn.shopify.com/s/files/1/0711/6333/t/50/assets/tan_50x.png'); }
-.color-swatch[title="Camo"] { background-image: url('//cdn.shopify.com/s/files/1/0711/6333/t/50/assets/camo_50x.png'); }
-
-.color-swatch[data-sku="9800-SS"] { background-image: linear-gradient(-60deg, #8f8a8c, #e8e4e5, #8f8a8c); }
-.color-swatch[data-sku="9800-LV"] { background-color: #c3a8db; }
-.color-swatch[data-sku="9800-PK"] { background-color: #c396aa; }
-.color-swatch[data-sku="9800-BL"] { background-color: #274466; }
-.color-swatch[data-sku="9800-BK"] { background: #1a1c1e; }
-
-input:checked + .color-swatch {
-  box-shadow: var(--outline);
-}
+input:checked + .color-swatch { box-shadow: var(--outline); }
 
 .error-msg {
   padding: 0.5em;
