@@ -1,0 +1,212 @@
+{
+  "sections": {
+    "zp-product-header-content": {
+      "type": "product-header-content-zipifypages",
+      "settings": {
+      }
+    },
+    "product": {
+      "type": "product",
+      "blocks": {
+        "678ebab3-4da3-4e4f-8f41-5b3acc394803": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Durable, Heavy-Duty 18\/8 Stainless Steel",
+            "icon": "shopify:\/\/shop_images\/Durable_Icon_1.png"
+          }
+        },
+        "aae9caa4-c958-414c-b54a-9c86f6e1cfc4": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Non-Slip \/ No-Spill Design",
+            "icon": "shopify:\/\/shop_images\/no_spill_icon_1.png"
+          }
+        },
+        "cbc6d7e3-ec49-4ef8-9f87-febb1a22d620": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Large Capacity Holds 64 oz \/ 8 cups Food or Water",
+            "icon": "shopify:\/\/shop_images\/Large_Capacity_icon_18e2e207-2c1b-4352-8d0d-5a2e9949d172.png"
+          }
+        }
+      },
+      "block_order": [
+        "678ebab3-4da3-4e4f-8f41-5b3acc394803",
+        "aae9caa4-c958-414c-b54a-9c86f6e1cfc4",
+        "cbc6d7e3-ec49-4ef8-9f87-febb1a22d620"
+      ],
+      "settings": {
+        "description_list": "",
+        "show_dynamic_checkout": false
+      }
+    },
+    "fbt": {
+      "type": "frequently-bought-together",
+      "settings": {
+      }
+    },
+    "product-details-tabs": {
+      "type": "product-details-tabs",
+      "disabled": true,
+      "blocks": {
+        "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6": {
+          "type": "video",
+          "settings": {
+            "tab_label": "Features",
+            "heading": "",
+            "description": "",
+            "video_html": "",
+            "metafield": "features_video_code"
+          }
+        },
+        "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
+          "type": "video",
+          "settings": {
+            "tab_label": "Installation & Care",
+            "heading": "",
+            "description": "",
+            "video_html": "",
+            "metafield": "installation_video_code"
+          }
+        }
+      },
+      "block_order": [
+        "d2aca623-6fe8-44ab-8964-18cfbf3ad4f6",
+        "6e4f335d-b9a2-47dc-bd45-8b6b98e52859"
+      ],
+      "settings": {
+      }
+    },
+    "product-details-simple": {
+      "type": "product-details-simple",
+      "blocks": {
+        "a98594d4-1259-40a6-88a1-c8fbad23e0e6": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "a98594d4-1259-40a6-88a1-c8fbad23e0e6"
+      ],
+      "settings": {
+        "heading": ""
+      }
+    },
+    "product-details-3-pack": {
+      "type": "product-details-3-pack",
+      "disabled": true,
+      "blocks": {
+        "44dbb6c5-67ae-444d-8e92-502056070453": {
+          "type": "card",
+          "settings": {
+            "heading": "Design and Function Meet Convenience",
+            "description": "Our unique patented technology lets you fold down seats 60\/40, 50\/50 split, and center armrest pass-through without removing the cover.",
+            "cta_label": "",
+            "cta_link": "",
+            "image": "shopify:\/\/shop_images\/design-and-function-5.png"
+          }
+        },
+        "80d8b4a9-049e-44d0-8d7a-e068bb829ac6": {
+          "type": "card",
+          "settings": {
+            "heading": "High-Quality Products Built to Last",
+            "description": "Our cargo liners are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. The colorfast fabrics won’t fade. We also offer a lifetime warranty on all 4Knines seat covers and cargo liners.",
+            "cta_label": "Watch the Material Breakdown Comparison",
+            "cta_link": "\/pages\/helpful-videos#quality-comparison",
+            "image": "shopify:\/\/shop_images\/multi-layer-construction.png"
+          }
+        },
+        "26a8eece-a63b-48f4-afca-30948d936e03": {
+          "type": "card",
+          "settings": {
+            "heading": "Keeping Pets Safe, Happy and Healthy",
+            "description": "Our cargo liners feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
+            "cta_label": "",
+            "cta_link": "",
+            "image": "shopify:\/\/shop_images\/keeping-pets-safe-8.png"
+          }
+        }
+      },
+      "block_order": [
+        "44dbb6c5-67ae-444d-8e92-502056070453",
+        "80d8b4a9-049e-44d0-8d7a-e068bb829ac6",
+        "26a8eece-a63b-48f4-afca-30948d936e03"
+      ],
+      "settings": {
+        "heading": "SUV Cargo Liner For Fold Down Seats",
+        "description": "The 4Knines Multi-Function Dog Split SUV Cargo Liner is a must for anyone owning a dog or pet wanting to keep their vehicle nice and tidy."
+      }
+    },
+    "icon-list-h": {
+      "type": "icon-list-h",
+      "blocks": {
+        "9dc0cbe5-3060-4184-ba12-7c38d1b5fdcd": {
+          "type": "item",
+          "settings": {
+            "heading": "High-Quality Products Built to Last",
+            "description": "Our seat covers are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. We offer a lifetime warranty on all 4Knines seat covers and cargo liners.",
+            "icon": "shopify:\/\/shop_images\/icon-quality.png"
+          }
+        },
+        "ea5eae33-ad6d-4524-aa8c-d5a2b66f1941": {
+          "type": "item",
+          "settings": {
+            "heading": "Design and Function Meet Convenience",
+            "description": "Our patented technology is easy to maintain and made with colorfast fabrics that won’t fade. Our proprietary design lets you access all your seat belts and move seats without removing the cover.",
+            "icon": "shopify:\/\/shop_images\/icon-design.png"
+          }
+        },
+        "ddbd8804-3e6d-4f9e-9218-0e4ad588bf84": {
+          "type": "item",
+          "settings": {
+            "heading": "Keeping Pets Safe, Happy and Healthy",
+            "description": "Our pet seat covers feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
+            "icon": "shopify:\/\/shop_images\/icon-house.png"
+          }
+        }
+      },
+      "block_order": [
+        "9dc0cbe5-3060-4184-ba12-7c38d1b5fdcd",
+        "ea5eae33-ad6d-4524-aa8c-d5a2b66f1941",
+        "ddbd8804-3e6d-4f9e-9218-0e4ad588bf84"
+      ],
+      "settings": {
+        "heading": "Products to Provide the Best Possible Life for Your Best Friend"
+      }
+    },
+    "testimonial-and-social": {
+      "type": "testimonial-and-social",
+      "settings": {
+        "rating": 5,
+        "quote": "",
+        "author": "",
+        "show_avatar": true
+      }
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "settings": {
+      }
+    },
+    "zp-product-footer-content": {
+      "type": "product-footer-content-zipifypages",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "zp-product-header-content",
+    "product",
+    "fbt",
+    "product-details-tabs",
+    "product-details-simple",
+    "product-details-3-pack",
+    "icon-list-h",
+    "testimonial-and-social",
+    "product-reviews",
+    "zp-product-footer-content"
+  ]
+}
