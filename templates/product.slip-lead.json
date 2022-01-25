@@ -11,22 +11,22 @@
         "678ebab3-4da3-4e4f-8f41-5b3acc394803": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Durable, Heavy-Duty 18\/8 Stainless Steel",
+            "description": "Durable, Heavy-Duty 1\/2\" Thick Rope",
             "icon": "shopify:\/\/shop_images\/Durable_Icon_1.png"
           }
         },
         "aae9caa4-c958-414c-b54a-9c86f6e1cfc4": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Non-Slip \/ No-Spill Design",
-            "icon": "shopify:\/\/shop_images\/no_spill_icon_1.png"
+            "description": "Unique Metal Slide Toggle",
+            "icon": "shopify:\/\/shop_images\/toggle_icon_3.png"
           }
         },
         "cbc6d7e3-ec49-4ef8-9f87-febb1a22d620": {
           "type": "icon-and-text",
           "settings": {
-            "description": "Large Capacity Holds 64 oz \/ 8 cups Food or Water",
-            "icon": "shopify:\/\/shop_images\/Large_Capacity_icon_18e2e207-2c1b-4352-8d0d-5a2e9949d172.png"
+            "description": "Convenient All In One Leash",
+            "icon": "shopify:\/\/shop_images\/leash_icon_6dacb726-1b1a-42f2-81d2-9579b4e702ee.png"
           }
         }
       },
@@ -142,12 +142,13 @@
     },
     "icon-list-h": {
       "type": "icon-list-h",
+      "disabled": true,
       "blocks": {
         "9dc0cbe5-3060-4184-ba12-7c38d1b5fdcd": {
           "type": "item",
           "settings": {
             "heading": "High-Quality Products Built to Last",
-            "description": "Our seat covers are designed with padded & quilted fabric that’s easy to take care of and can withstand wear and tear. We offer a lifetime warranty on all 4Knines seat covers and cargo liners.",
+            "description": "Our innovative products are built to withstand daily adventures with your pup.",
             "icon": "shopify:\/\/shop_images\/icon-quality.png"
           }
         },
@@ -155,7 +156,7 @@
           "type": "item",
           "settings": {
             "heading": "Design and Function Meet Convenience",
-            "description": "Our patented technology is easy to maintain and made with colorfast fabrics that won’t fade. Our proprietary design lets you access all your seat belts and move seats without removing the cover.",
+            "description": "We constantly update and revise our products based on customer feedback and continued testing.",
             "icon": "shopify:\/\/shop_images\/icon-design.png"
           }
         },
@@ -163,7 +164,7 @@
           "type": "item",
           "settings": {
             "heading": "Keeping Pets Safe, Happy and Healthy",
-            "description": "Our pet seat covers feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
+            "description": "4Knines donates to multiple animal advocacy groups as well as groups that help veterans with service dogs.",
             "icon": "shopify:\/\/shop_images\/icon-house.png"
           }
         }
