@@ -17,7 +17,6 @@
     {%- liquid
       for variant in product.variants
         if variant.title contains value
-          assign sku = variant.sku
           assign swatch = variant.metafields.swatch
         endif
       endfor
@@ -34,7 +33,7 @@
     <label
       class="color-swatch{% if small %} small{% endif %}"
       for="{{ option.name }}-{{ forloop.index }}"
-      title="{{ value }}" data-sku="{{ sku }}"
+      title="{{ value }}"
       {% render 'swatch-style', swatch: swatch %}
     ></label>
   {%- endfor -%}
