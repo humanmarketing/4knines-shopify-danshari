@@ -7,8 +7,36 @@
     },
     "product": {
       "type": "product",
+      "blocks": {
+        "dddb3b45-c5a0-498f-a4b3-5567557c9eff": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Soft, Quiet Material",
+            "icon": "shopify:\/\/shop_images\/icon-pillows.png"
+          }
+        },
+        "6f9ab63a-cb17-4bd6-af2c-5c8b974bbca6": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Machine washable",
+            "icon": "shopify:\/\/shop_images\/icon-washing-machine.png"
+          }
+        },
+        "090d1899-2f52-495a-ae5e-1c06e9ad0566": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Great for dogs with incontinence",
+            "icon": "shopify:\/\/shop_images\/icon-waterproof.png"
+          }
+        }
+      },
+      "block_order": [
+        "dddb3b45-c5a0-498f-a4b3-5567557c9eff",
+        "6f9ab63a-cb17-4bd6-af2c-5c8b974bbca6",
+        "090d1899-2f52-495a-ae5e-1c06e9ad0566"
+      ],
       "settings": {
-        "description_list": "Soft, Quiet Material\nMachine washable\nGreat for dogs with incontinence",
+        "description_list": "",
         "show_dynamic_checkout": false
       }
     },
@@ -71,6 +99,7 @@
         "d5218f2a-bd17-4f2e-bf6f-c16c90f19329"
       ],
       "settings": {
+        "heading": ""
       }
     },
     "product-details-3-pack": {

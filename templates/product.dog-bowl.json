@@ -182,8 +182,7 @@
         "rating": 5,
         "quote": "",
         "author": "",
-        "show_avatar": true,
-        "show_instagram_feed": false
+        "show_avatar": true
       }
     },
     "product-reviews": {

@@ -7,8 +7,36 @@
     },
     "product": {
       "type": "product",
+      "blocks": {
+        "2c59b8dd-6834-45a4-b96d-78c94136bff0": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Waterproof",
+            "icon": "shopify:\/\/shop_images\/icon-waterproof.png"
+          }
+        },
+        "378e2800-7a7e-4bfa-a64e-3f12012baf75": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Machine Washable",
+            "icon": "shopify:\/\/shop_images\/icon-washing-machine.png"
+          }
+        },
+        "91db230f-724a-4de0-89c4-d2f8f705db51": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Coverage for their favorite snuggle spot",
+            "icon": "shopify:\/\/shop_images\/icon-bumper-flap.png"
+          }
+        }
+      },
+      "block_order": [
+        "2c59b8dd-6834-45a4-b96d-78c94136bff0",
+        "378e2800-7a7e-4bfa-a64e-3f12012baf75",
+        "91db230f-724a-4de0-89c4-d2f8f705db51"
+      ],
       "settings": {
-        "description_list": "Waterproof\nMachine Washable\nCoverage for their favorite snuggle spot",
+        "description_list": "",
         "show_dynamic_checkout": false
       }
     },
@@ -71,6 +99,7 @@
         "d5218f2a-bd17-4f2e-bf6f-c16c90f19329"
       ],
       "settings": {
+        "heading": ""
       }
     },
     "product-details-3-pack": {
