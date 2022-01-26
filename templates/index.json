@@ -158,12 +158,28 @@
             "product": "dog-crate-mat-travel-bed",
             "title": ""
           }
+        },
+        "cbea2409-0dd5-4f52-ac47-96438c9c533b": {
+          "type": "product",
+          "settings": {
+            "product": "dog-harness",
+            "title": ""
+          }
+        },
+        "132760ce-8cee-45d1-9712-878a27e5934b": {
+          "type": "product",
+          "settings": {
+            "product": "durable-slip-lead-dog-leash-6ft",
+            "title": "Slip Leash"
+          }
         }
       },
       "block_order": [
         "895b0d60-3577-4683-9467-217317974b59",
         "c78c7096-39f8-49b1-a0f3-805a8298fc6c",
-        "12a225ad-9045-4443-b52c-d1d58953c1e0"
+        "12a225ad-9045-4443-b52c-d1d58953c1e0",
+        "cbea2409-0dd5-4f52-ac47-96438c9c533b",
+        "132760ce-8cee-45d1-9712-878a27e5934b"
       ],
       "settings": {
         "collection": "accessories-for-dogs",
@@ -198,7 +214,7 @@
         "d8faad17-63d7-4d37-92b9-3e41e3cc5bef": {
           "type": "product",
           "settings": {
-            "product": "dog-harness",
+            "product": "stainless-steel-dog-bowl",
             "title": ""
           }
         },
