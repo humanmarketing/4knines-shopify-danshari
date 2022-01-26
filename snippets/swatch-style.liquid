@@ -1,0 +1,11 @@
+{% comment %}
+  swatch
+{% endcomment %}
+
+{%- if swatch.image != blank -%}
+  style="background-image: url({{ swatch.image | img_url: '50x' }});"
+{%- elsif swatch.gradient != blank -%}
+  style="background-image: {{ swatch.gradient }};"
+{%- elsif swatch.color != blank -%}
+  style="background-color: {{ swatch.color }};"
+{%- endif -%}
