@@ -7,8 +7,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "shopify:switch": "shopify switch --store=4knines.myshopify.com",
-    "start": "yarn shopify:switch && shopify theme serve",
+    "shopify": "shopify switch --store=4knines.myshopify.com",
+    "start": "yarn shopify && shopify theme serve",
     "dev": "run-p dev:*",
     "dev:js": "node esbuild.config.js",
     "build": "run-s build:*",
