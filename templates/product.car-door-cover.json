@@ -7,8 +7,36 @@
     },
     "product": {
       "type": "product",
+      "blocks": {
+        "fb3a5746-7a3b-45db-903c-54650ebee2b9": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Heavy duty, easy to clean material",
+            "icon": "shopify:\/\/shop_images\/Durable_Icon_1.png"
+          }
+        },
+        "ac19faa4-cc04-4904-afa4-7453ca4e825b": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Easy to Install",
+            "icon": "shopify:\/\/shop_images\/icon-clean.png"
+          }
+        },
+        "c9ebfbc4-ab42-48dd-9a5c-06301c56b71f": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Matches 4Knines Covers",
+            "icon": "shopify:\/\/shop_images\/icon-check.png"
+          }
+        }
+      },
+      "block_order": [
+        "fb3a5746-7a3b-45db-903c-54650ebee2b9",
+        "ac19faa4-cc04-4904-afa4-7453ca4e825b",
+        "c9ebfbc4-ab42-48dd-9a5c-06301c56b71f"
+      ],
       "settings": {
-        "description_list": "Heavy duty, easy to clean material\nEasy to Install\nMatches 4Knines Covers",
+        "description_list": "",
         "show_dynamic_checkout": false
       }
     },
@@ -71,6 +99,7 @@
         "d5218f2a-bd17-4f2e-bf6f-c16c90f19329"
       ],
       "settings": {
+        "heading": ""
       }
     },
     "product-details-3-pack": {

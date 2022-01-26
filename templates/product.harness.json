@@ -7,8 +7,36 @@
     },
     "product": {
       "type": "product",
+      "blocks": {
+        "0f04e882-4424-46ec-80dc-0b69b53f911b": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "No Pull\/ No Choke Design",
+            "icon": "shopify:\/\/shop_images\/icon-no-hammock.png"
+          }
+        },
+        "63e9ccac-e1cd-4875-a6bd-31b69bc709c5": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Quick Release buckles",
+            "icon": "shopify:\/\/shop_images\/icon-seatbelts.png"
+          }
+        },
+        "28329325-30e1-4558-8e0b-f88cfbaae3f3": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Reflective Straps",
+            "icon": "shopify:\/\/shop_images\/icon-clean.png"
+          }
+        }
+      },
+      "block_order": [
+        "0f04e882-4424-46ec-80dc-0b69b53f911b",
+        "63e9ccac-e1cd-4875-a6bd-31b69bc709c5",
+        "28329325-30e1-4558-8e0b-f88cfbaae3f3"
+      ],
       "settings": {
-        "description_list": "No Pull\/ No Choke Design\nQuick Release buckles\nReflective Straps",
+        "description_list": "",
         "show_dynamic_checkout": false
       }
     },
@@ -71,6 +99,7 @@
         "d5218f2a-bd17-4f2e-bf6f-c16c90f19329"
       ],
       "settings": {
+        "heading": ""
       }
     },
     "product-details-3-pack": {

@@ -7,8 +7,36 @@
     },
     "product": {
       "type": "product",
+      "blocks": {
+        "bfe86852-7cb4-4313-a152-13dadeeeb0f7": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Earth-Friendly Materials",
+            "icon": "shopify:\/\/shop_images\/icon-plant.png"
+          }
+        },
+        "1960f4b1-14bf-4724-8d0e-b44a23189a9e": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Extra Thick",
+            "icon": "shopify:\/\/shop_images\/icon-bumper-flap.png"
+          }
+        },
+        "9f95e0d3-5d62-49de-83c6-6700a5e1f92c": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Great For Big and Small Dogs",
+            "icon": "shopify:\/\/shop_images\/icon-dogs_056d97eb-79d6-4627-be9d-2330714021be.png"
+          }
+        }
+      },
+      "block_order": [
+        "bfe86852-7cb4-4313-a152-13dadeeeb0f7",
+        "1960f4b1-14bf-4724-8d0e-b44a23189a9e",
+        "9f95e0d3-5d62-49de-83c6-6700a5e1f92c"
+      ],
       "settings": {
-        "description_list": "Earth-Friendly Materials\nExtra Thick\nEasy to Tear\nGreat For Big and Small Dogs \n180-Count",
+        "description_list": "",
         "show_dynamic_checkout": false
       }
     },
