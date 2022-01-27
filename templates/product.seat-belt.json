@@ -7,8 +7,36 @@
     },
     "product": {
       "type": "product",
+      "blocks": {
+        "e7a2b285-f659-431b-a54f-0037912b719d": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Heavy Duty and Durable",
+            "icon": "shopify:\/\/shop_images\/Durable_Icon_1.png"
+          }
+        },
+        "ed6ea1fe-b237-4d72-b49d-92f565fe229e": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Easy to Use",
+            "icon": "shopify:\/\/shop_images\/icon-seatbelts.png"
+          }
+        },
+        "359b8f2c-4cc6-40b2-b923-803f279f342e": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Helps keep your pup safe (or in the back seat)",
+            "icon": "shopify:\/\/shop_images\/icon-dog.png"
+          }
+        }
+      },
+      "block_order": [
+        "e7a2b285-f659-431b-a54f-0037912b719d",
+        "ed6ea1fe-b237-4d72-b49d-92f565fe229e",
+        "359b8f2c-4cc6-40b2-b923-803f279f342e"
+      ],
       "settings": {
-        "description_list": "Heavy Duty and Durable\nEasy to Use\nHelps keep your pup safe (or in the back seat)",
+        "description_list": "",
         "show_dynamic_checkout": false
       }
     },
@@ -63,6 +91,7 @@
         "50e93222-8884-4d90-86c5-77351e7c18aa"
       ],
       "settings": {
+        "heading": ""
       }
     },
     "product-details-3-pack": {

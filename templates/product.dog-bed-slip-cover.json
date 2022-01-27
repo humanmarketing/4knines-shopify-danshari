@@ -7,8 +7,36 @@
     },
     "product": {
       "type": "product",
+      "blocks": {
+        "4c7c38ca-c8b7-4f7c-b348-fea29420e464": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Makes washing their bed a breeze",
+            "icon": "shopify:\/\/shop_images\/icon-clean.png"
+          }
+        },
+        "7230cb2e-df2d-4a58-a0ba-81474f42acfa": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Installs\/removes in seconds",
+            "icon": "shopify:\/\/shop_images\/icon-pillows.png"
+          }
+        },
+        "3902beb5-904a-4c39-a93e-e80930c82cd3": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Machine washable",
+            "icon": "shopify:\/\/shop_images\/icon-washing-machine.png"
+          }
+        }
+      },
+      "block_order": [
+        "4c7c38ca-c8b7-4f7c-b348-fea29420e464",
+        "7230cb2e-df2d-4a58-a0ba-81474f42acfa",
+        "3902beb5-904a-4c39-a93e-e80930c82cd3"
+      ],
       "settings": {
-        "description_list": "Makes washing their bed a breeze\nInstalls\/removes in seconds\nMachine washable",
+        "description_list": "",
         "show_dynamic_checkout": false
       }
     },
@@ -71,6 +99,7 @@
         "d5218f2a-bd17-4f2e-bf6f-c16c90f19329"
       ],
       "settings": {
+        "heading": ""
       }
     },
     "product-details-3-pack": {

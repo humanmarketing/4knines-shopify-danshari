@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "shopify": "shopify login; shopify login --store=4knines.myshopify.com",
+    "shopify": "shopify login --store=4knines.myshopify.com",
     "start": "yarn shopify && shopify theme serve",
     "dev": "run-p dev:*",
     "dev:js": "node esbuild.config.js",

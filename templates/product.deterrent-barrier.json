@@ -7,8 +7,36 @@
     },
     "product": {
       "type": "product",
+      "blocks": {
+        "b7f34eeb-0a9d-4533-85b4-c63fa7d73541": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Heavy duty, easy to clean material",
+            "icon": "shopify:\/\/shop_images\/Durable_Icon_1.png"
+          }
+        },
+        "0a7188be-0ade-4859-b558-0f68582c271d": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Easy to Install",
+            "icon": "shopify:\/\/shop_images\/icon-clean.png"
+          }
+        },
+        "4fa043a0-8cef-47cc-921e-754192bd4c08": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Helps keep your pup in the back seat",
+            "icon": "shopify:\/\/shop_images\/icon-dog.png"
+          }
+        }
+      },
+      "block_order": [
+        "b7f34eeb-0a9d-4533-85b4-c63fa7d73541",
+        "0a7188be-0ade-4859-b558-0f68582c271d",
+        "4fa043a0-8cef-47cc-921e-754192bd4c08"
+      ],
       "settings": {
-        "description_list": "Heavy duty, easy to clean material\nEasy to Install\nHelps keep your pup in the back seat",
+        "description_list": "",
         "show_dynamic_checkout": false
       }
     },
@@ -71,6 +99,7 @@
         "d5218f2a-bd17-4f2e-bf6f-c16c90f19329"
       ],
       "settings": {
+        "heading": ""
       }
     },
     "product-details-3-pack": {

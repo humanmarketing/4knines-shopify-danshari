@@ -22,16 +22,11 @@
       %}
     {%- endif -%}
 
-    {%- render 'product-form' -%}
-
-    <ul class="product-mini-features unstyled">
-      <li class="with-icon">{% render 'icon-free' %} Free Shipping</li>
-      <li class="with-icon">{% render 'icon-warranty' %} Lifetime Warranty</li>
-      <li class="with-icon">{% render 'icon-30' %} 30 Day Returns</li>
-    </ul>
+    {% render 'product-form' %}
+    {% render 'product-icons' %}
 
     {%- if product.description != blank-%}
-      <div class="product-description richtext" style="font-size: 0.9em;">
+      <div class="product-description richtext">
         {{ product.description }}
       </div>
     {%- endif -%}
@@ -66,16 +61,7 @@
     font-weight: light;
   }
 
-  .product-mini-features {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .product-mini-features svg {
-    color: var(--accent-3);
-    height: 1.7em;
-  }
-
+  .product-description { font-size: 0.9em; }
   .product-description h1 { font-size: var(--h3); }
 
   .recommendation-product-list {
@@ -94,12 +80,6 @@
 
   /* mobile */
   @media screen and (max-width: 428px) {
-    .product-mini-features {
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .product-mini-features svg { min-width: 3em; }
-
     .recommendation-product-list {
       grid-template-columns: repeat(2, 1fr);
     }

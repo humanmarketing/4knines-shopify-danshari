@@ -7,8 +7,36 @@
     },
     "product": {
       "type": "product",
+      "blocks": {
+        "65cc2031-fd4e-490b-9e42-13b9520860ac": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Heavy Duty and Durable",
+            "icon": "shopify:\/\/shop_images\/Durable_Icon_1.png"
+          }
+        },
+        "b0af4f96-fc0c-4af4-80f0-7f00b6600a49": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Waterproof",
+            "icon": "shopify:\/\/shop_images\/icon-waterproof.png"
+          }
+        },
+        "7784882e-1c3b-4811-a074-d1490792ca9f": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Machine Washable",
+            "icon": "shopify:\/\/shop_images\/icon-washing-machine.png"
+          }
+        }
+      },
+      "block_order": [
+        "65cc2031-fd4e-490b-9e42-13b9520860ac",
+        "b0af4f96-fc0c-4af4-80f0-7f00b6600a49",
+        "7784882e-1c3b-4811-a074-d1490792ca9f"
+      ],
       "settings": {
-        "description_list": "Heavy Duty and Durable\nWaterproof\nMachine Washable",
+        "description_list": "",
         "show_dynamic_checkout": false
       }
     },
@@ -71,6 +99,7 @@
         "d5218f2a-bd17-4f2e-bf6f-c16c90f19329"
       ],
       "settings": {
+        "heading": ""
       }
     },
     "product-details-3-pack": {

@@ -7,8 +7,36 @@
     },
     "product": {
       "type": "product",
+      "blocks": {
+        "db3d7665-eb15-4116-be08-29bdb59cee2e": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Plush Microfiber with special foam padding",
+            "icon": "shopify:\/\/shop_images\/icon-heavy-duty.png"
+          }
+        },
+        "9cd53dcd-f7cf-4833-9447-b3fa74fda35e": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Waterproof Bottom",
+            "icon": "shopify:\/\/shop_images\/icon-waterproof.png"
+          }
+        },
+        "ab19cb41-fa49-4292-adb2-19c94e9aa4c3": {
+          "type": "icon-and-text",
+          "settings": {
+            "description": "Machine Washable",
+            "icon": "shopify:\/\/shop_images\/icon-washing-machine.png"
+          }
+        }
+      },
+      "block_order": [
+        "db3d7665-eb15-4116-be08-29bdb59cee2e",
+        "9cd53dcd-f7cf-4833-9447-b3fa74fda35e",
+        "ab19cb41-fa49-4292-adb2-19c94e9aa4c3"
+      ],
       "settings": {
-        "description_list": "Plush Microfiber with special foam padding\nWaterproof Bottom\nMachine Washable",
+        "description_list": "",
         "show_dynamic_checkout": false
       }
     },
@@ -71,6 +99,7 @@
         "d5218f2a-bd17-4f2e-bf6f-c16c90f19329"
       ],
       "settings": {
+        "heading": ""
       }
     },
     "product-details-3-pack": {
