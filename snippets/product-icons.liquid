@@ -2,7 +2,7 @@
   assign products_with_lifetime_warranty = linklists['dog-seat-covers'].links | map: 'object'
 
   for object in products_with_lifetime_warranty
-    if object.handle == product.handle
+    if object.handle == product.handle and product.handle != 'car-door-covers-for-cars-trucks-and-suvs-two-door-guards-one-for-each-side'
       assign has_lifetime_warranty = true
     endif
 
