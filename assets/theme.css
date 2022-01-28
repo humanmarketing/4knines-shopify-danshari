@@ -597,6 +597,10 @@ summary.unset::-webkit-details-marker { display: none; }
 
 .header-dropdown > li + li { margin-top: 1rem; }
 
+.header-megamenu .questions-menu {
+  padding: 2rem 0;
+}
+
 /* tablet */
 @media screen and (max-width: 768px) {
   .header {
