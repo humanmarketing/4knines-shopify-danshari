@@ -2,7 +2,10 @@
   "sections": {
     "blog": {
       "type": "blog",
-      "settings": {}
+      "settings": {
+        "title": "Welcome to the 4knines Blog",
+        "tag_filters": "Health\nTravel\nBehavior\nCharity Spotlight\nLifestyle\nTraining"
+      }
     }
   },
   "order": [
