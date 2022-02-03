@@ -3,7 +3,7 @@
     "blog": {
       "type": "blog",
       "settings": {
-        "title": "Welcome to the 4knines Blog",
+        "title": "Welcome to the 4Knines Blog",
         "tag_filters": "Health\nTravel\nBehavior\nCharity Spotlight\nLifestyle\nTraining"
       }
     }
