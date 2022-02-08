@@ -36,6 +36,7 @@
         "179523e8-7f0d-4f82-a10f-00c78bae8867"
       ],
       "settings": {
+        "description_list": "",
         "show_dynamic_checkout": false
       }
     },
@@ -61,9 +62,9 @@
           "type": "dimensions",
           "settings": {
             "tab_label": "Dimensions",
-            "diagram_1": "shopify:\/\/shop_images\/size-cargoliner-SM.jpg",
-            "diagram_2": "shopify:\/\/shop_images\/size-cargoliner-LG.jpg",
-            "diagram_3": "shopify:\/\/shop_images\/size-cargoliner-XL.jpg"
+            "diagram_1": "shopify:\/\/shop_images\/size-cargoliner-SM_de603d61-d767-434b-8cba-e67a5bb76d8f.jpg",
+            "diagram_2": "shopify:\/\/shop_images\/size-cargoliner-LG_8cead9c8-5b5f-426c-b2b1-b96db82c1017.jpg",
+            "diagram_3": "shopify:\/\/shop_images\/size-cargoliner-XL_38e96b8b-f5b3-4b99-a4c9-251f7bae9292.jpg"
           }
         },
         "6e4f335d-b9a2-47dc-bd45-8b6b98e52859": {
@@ -114,8 +115,7 @@
             "heading": "Keeping Pets Safe, Happy and Healthy",
             "description": "Our cargo liners feature a non-slip backing and fasten in place with sturdy seat anchors, keeping your dog safe while in motion. Our products are also free of AZO dyes and heavy metals.",
             "cta_label": "",
-            "cta_link": "",
-            "image": "shopify:\/\/shop_images\/keeping-pets-safe-8_d9dfaba7-0b98-4408-9d64-9ee88d94db09.png"
+            "cta_link": ""
           }
         }
       },
