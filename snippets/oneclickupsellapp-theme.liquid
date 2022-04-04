@@ -1,5 +1,5 @@
 {% comment %}
-  Updated: 2022/03/21
+  Updated: 2022/04/04
 {% endcomment %}
 
 {% unless oneclickupsellapp %}
@@ -611,11 +611,14 @@ const FALSE_REDIRECT = { redirect_url: null };
 window.OCUApi = Object.assign(OCUApi, {
     showUpsell: function(params) {
         const dispatcher = this.context.popupDispatcher;
+        const context = this.context;
         dispatcher.context = this.context;
         dispatcher.target = params.form;
 
         return new Promise((resolve, reject) => {
             const callback = function(res) {
+                if (dispatcher._upsellAppInstance()) dispatcher._upsellAppInstance().hide();
+                context.integrations.zipifyPages.clear();
                 const response = r => ({ skip_cart: lqd.skip_cart, ...r });
                 resolve(response(res.detail.response || FALSE_REDIRECT));
             };
@@ -629,7 +632,10 @@ window.OCUApi = Object.assign(OCUApi, {
                 return this.context.integrations.zipifyPages.handleZPOutsidePage(this.context, callback);
             }
 
-            if (!dispatcher.isProductAction) resolve(FALSE_REDIRECT);
+            if (!dispatcher.isProductAction) {
+                context.integrations.zipifyPages.clear();
+                return resolve(FALSE_REDIRECT);
+            }
 
             dispatcher.listenCustomEvent(callback);
             dispatcher._show(null, true);
@@ -670,7 +676,8 @@ PopupDispatcher.prototype = {
 
         const isEventPermitted = (!event.isTrusted && this.secondAttempt)
             || isProductOnCart
-            || this.context.helpers.isDisabledButton(this.event.target);
+            || this.context.helpers.isDisabledButton(this.event.target)
+            || this.context.helpers.termsOfServiceConfirmation(this.event.target);
 
         if (isEventPermitted) return this._clearFlow();
 
@@ -867,7 +874,6 @@ PopupDispatcher.prototype = {
     nativeClick: function() {
         this._clearFlow();
         this.secondAttempt = true;
-        // this.target.submit();
         const button = this.target.querySelector('[type="submit"], [name="add"], [name="checkout"]');
         button.click();
         if (this.bt && this.bt.present) this.bt.endLoadingBtn();
@@ -894,7 +900,6 @@ PopupDispatcher.prototype = {
     },
 
     listenCustomEvent: function(callback) {
-        // this.removeCustomEvents();
         const cb = callback ? callback : this.checkout;
         document.addEventListener('ocuNativeClick', cb.bind(this), { once: true });
     },
@@ -1960,6 +1965,10 @@ function ZipifyPages() {
             });
     }
 
+    this.clear = () => {
+        this.products = null;
+    }
+
     this.isBlockOutsideProductPage = () => !lqd.isPopupTriggerPage && this.products.some(product => product.discountHash);
 
     this.init();
@@ -2052,7 +2061,8 @@ function Bold() {
         event.stopImmediatePropagation();
         BOLD.recurring_orders.app.cartWidget.checkoutEvent = event;
         BOLD.recurring_orders.app.cartWidget.checkRecurringCheckout(event);
-    },
+    };
+
     this.recurring = function(form, token) {
         var cfg = {
             protocol: 'https://',
@@ -3744,6 +3754,12 @@ function Helpers() {
         return entity && (entity.disabled || !!entity.ariaDisabled);
     };
 
+    this.termsOfServiceConfirmation = function(target) {
+        const form = target.closest('form[action="/checkout"], form[action="/cart"]');
+        const termsCheckbox = form && form.querySelector(utils.store.get('termsOfServiceCheckbox').selector);
+        return termsCheckbox && !termsCheckbox.checked;
+    };
+
     this.isCartPopupRedirectsToCart = function(e) {
         if (!e.target.dataset.ocuCheckout) return;
         if (lqd.template_name === 'cart') return;
@@ -3890,6 +3906,9 @@ function Store() {
             },
             chatButton: {
                 selector: '#shopify-chat'
+            },
+            termsOfServiceCheckbox: {
+                selector: '.cart__terms-checkbox'
             },
             productLocation: {
                 variant_id: null,
