@@ -1,5 +1,5 @@
 {% comment %}
-  Updated: 2022/04/04
+  Updated: 2022/04/13
 {% endcomment %}
 
 {% unless oneclickupsellapp %}
@@ -279,6 +279,13 @@
 
 {% assign root_url = routes.root_url %}
 
+{% endcapture %}
+{% capture main_metafields %}
+  {
+    {% for field in shop.metafields.zipifyoneclickupsell %}
+      {{field.first }}: {{field.last}},
+    {% endfor %}
+  }
 {% endcapture %}
 
 <style>.ocu-hidden.ocu-hidden.ocu-hidden,.bold_hidden.bold_hidden.bold_hidden{display:none !important}</style>
@@ -1404,7 +1411,7 @@ window.OCUIncart = {
     },
 
     metafields: {
-        main: {{ shop.metafields.zipifyoneclickupsell | json }} || {},
+        main: {{ main_metafields }} || {},
         get general() {
             return this.main.general || {};
         },
@@ -1536,13 +1543,13 @@ var lqd = {
     path: '{{ fi }}' === 'true' ? 'd56719fefdd75e95ba06caea3d9a3732' : '5965fedc7708e03e1024db4bf2ed5fe6',
     template_name: '{{ template.name }}',
     shop_currency: '{{ shop.currency }}',
-    skip_cart: {{ skip_cart }},
+    skip_cart: OCUIncart.metafields.general.integrations.skip_cart === 'true',
     cart_products_json: JSON.parse({{ cart_products_json | prepend: '[' | append: ']' | json }}),
     cart_collections_json: [{{ cart_collections_json }}],
     cart_variants_json: [{{ cart_variants_json }}],
     customer_id: {{ customer_id }},
     customer: { id: {{ customer_id }}, email: '{{ customer.email }}' },
-    proxy_url: '{{ upsellapp_proxy_url }}',
+    proxy_url: OCUIncart.metafields.general.settings.proxy_url,
     permanent_domain: '{{ shop.permanent_domain }}',
     current_domain: '{{ request.host }}',
     disabled_by_subscription_app: {{ disabled_by_subscription_app }},
@@ -2596,7 +2603,8 @@ function Updater(res) {
         form: 'form[action^="/checkout"], form[action^="/cart"]',
         attributes: '[name^="attributes["]',
         currency: '[name="currency"]',
-        geolocation_currency: 'form[action="/localization"] input[name="currency_code"]',
+        localization: 'form[action="/localization"]',
+        geolocation_currency: 'input[name="currency_code"]',
         updates: '[name^="updates["], [data-cart-item-input-quantity], [data-cart-item-quantity], input[data-line], [name="quantity"], [data-quantity-input]',
         note: '[name="note"]',
         cartItemKey: '[data-cart-item-key], [data-cart-item], [data-variant]'
@@ -2862,7 +2870,12 @@ const UpdaterElements = {
         return this.form.querySelector(this.selectors.note);
     },
     get currencyElement() {
-        return document.querySelector(this.selectors.currency) || document.querySelector(this.selectors.geolocation_currency);
+        return document.querySelector(this.selectors.currency) || this._geolocationElement;
+    },
+    get _geolocationElement() {
+        const geoElements = document.querySelectorAll(this.selectors.localization);
+        const visibleLocalizationForm = this.arrayFrom(geoElements).find(e => e.offsetHeight || this._isVisible(e));
+        return visibleLocalizationForm && visibleLocalizationForm.querySelector(this.selectors.geolocation_currency);
     }
 };
 const UpdaterHelpers = {
@@ -2974,7 +2987,8 @@ function Cart() {
             data = self.serialize(form);
 
             if (noId(data)) {
-                data = self.serialize(document.querySelector('#AddToCartForm'));
+                const customForm = document.querySelector('#AddToCartForm');
+                if (customForm )data = self.serialize(customForm);
             }
 
             if (noId(data)) {
@@ -3215,7 +3229,8 @@ function SkipCart() {
             const buttons = getArr(form.querySelectorAll('*[type="submit"], input[type="button"], button'));
 
             buttons.forEach(function(button) {
-                if (button.dataset.qty) return;
+                if (button.dataset.qty || button.dataset.quantityAction) return;
+                if (button.dataset.pfType && button.dataset.pfType !== 'ProductATC') return;
                 if (button.getAttribute('aria-controls')) return;
                 if (/plus|minus|zpa-quantity/.test(button.className)) return;
                 if (/error_txt|quantity|sold-out/i.test(button.id)) return;
