@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% render 'header-scripts.zipifypages', renderctx: 'lsctn' %}{{ content_for_header }}
-  </head>
+  
+  {% render 'shogun-head' %}
+</head>
   <body>
     {{ content_for_layout }}
     {% render 'page-footer.zipifypages', renderctx: 'lsctn' %}
