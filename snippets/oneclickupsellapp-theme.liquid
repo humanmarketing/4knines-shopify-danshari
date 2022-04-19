@@ -1,5 +1,5 @@
 {% comment %}
-  Updated: 2022/04/13
+  Updated: 2022/04/19
 {% endcomment %}
 
 {% unless oneclickupsellapp %}
@@ -670,6 +670,7 @@ PopupDispatcher.prototype = {
         this.event = event;
         this.appropriateResponse = null;
         this.actualCart = null;
+        this._initDefaults();
         this.listenCustomEvent();
         this.bt = OCUIncart.integrations().bt;
 
@@ -694,7 +695,7 @@ PopupDispatcher.prototype = {
         return this.check(event, target);
     },
 
-    check: function(event, target) {
+    check: function(event, target, isProductLocation = false) {
         const self = this.context;
         return self.cart.get()
             .then(self.cart.update)
@@ -712,6 +713,11 @@ PopupDispatcher.prototype = {
 
                 if ((utils.store.get('amazonPayInitiated') || lqd.is_precheckout) && !utils.cookie.get('ocu_shown_popup')) {
                     return this.show(event, target);
+                }
+
+                if (!lqd.is_precheckout && !isProductLocation) {
+                    return this.trackInitialization()
+                        .finally(this.checkout);
                 }
 
                 this.checkout();
@@ -774,12 +780,8 @@ PopupDispatcher.prototype = {
     },
 
     getIncartConfig: function() {
-        let query = '/pre_purchase/v1/checkout_offers/appropriate?';
+        let query = `${this.API}/appropriate?`;
         const endpoint = window.OCUIncart && OCUIncart.appEndpoint;
-        const headers = {
-            'Content-Type': 'application/json',
-            'Shop-Domain': lqd.permanent_domain
-        };
         const self = this.context;
         const cart = this.actualCart ? this.actualCart : lqd.cart;
         const isSameCart = self.helpers.isSameCart(cart);
@@ -793,7 +795,7 @@ PopupDispatcher.prototype = {
         try {
             if (!this.apiMode) this._endLoading();
             const payload = this._incartPayload();
-            return axios.post(endpoint + query, payload, { headers: headers });
+            return axios.post(endpoint + query, payload, { headers: this.HEADERS });
         } catch (e) {
             this.nativeClick();
             return this._emptyResolve('skip');
@@ -831,6 +833,12 @@ PopupDispatcher.prototype = {
         });
     },
 
+    trackInitialization: function() {
+        let query = `${this.API}/track_source_trigger?`;
+        const endpoint = window.OCUIncart && OCUIncart.appEndpoint;
+        return axios.post(endpoint + query, { triggered_by: 'metafields_were_triggered' }, { headers: this.HEADERS });
+    },
+
     isProductLocationOption: function(target) {
         return lqd.isPopupTriggerPage
             && target.tagName.toLowerCase() === 'form'
@@ -840,7 +848,14 @@ PopupDispatcher.prototype = {
     productLocation: function(event, target) {
         const variantId = this._formVariantId(target);
         if (this.popupAccepted) return this.nativeClick();
-        if (!this._variantWasTrigger(variantId) && !this._productWasTrigger()) return this.breakHandling(event, target); // exit handling if product not trigger
+
+        if (!this._variantWasTrigger(variantId) && !this._productWasTrigger()) {
+            if (event.isTrusted) return this.trackInitialization()
+                .finally(() => {
+                     this.breakHandling(event, target);
+                });
+            return this.breakHandling(event, target); // exit handling if product not trigger
+        }
 
         this.context.prevent(event, true);
         if (this.bt && this.bt.present) this.bt.startLoadingBtn();
@@ -853,9 +868,9 @@ PopupDispatcher.prototype = {
                 this.getIncartConfig({ product_id: lqd.product.id, variant_id: variantId })
                     .then(function(response) {
                         if (response === 'skip') return;
-                        if (lqd.skip_cart || this.context.helpers.isBuyNow(this.event)) return this.addAndCheck();
+                        if (lqd.skip_cart || this.context.helpers.isBuyNow(this.event)) return this.addAndCheck(true);
                         this.appropriateResponse = response;
-                        this.check(this.event, this.target, null);
+                        this.check(this.event, this.target, true);
                     }.bind(this))
                     .catch(this.nativeClick.bind(this));
             }.bind(this))
@@ -869,7 +884,7 @@ PopupDispatcher.prototype = {
     addAndCheck: function() {
         this.context.cart.add(this.target)
             .then(function(response) {
-                this.check(this.event, this.target, response.data);
+                this.check(this.event, this.target, true);
             }.bind(this))
             .catch(this.checkout);
     },
@@ -1006,7 +1021,6 @@ PopupDispatcher.prototype = {
         this.buttonLoading.endLoadingButton();
     },
 
-
     _selectedVariant: function(variants) {
         const variantOfProduct = this._productPageVariant.variant_id;
         let price = 0;
@@ -1019,6 +1033,14 @@ PopupDispatcher.prototype = {
         });
 
         return { price, variantId };
+    },
+
+    _initDefaults: function () {
+        this.API = '/pre_purchase/v1/checkout_offers';
+        this.HEADERS = {
+            'Content-Type': 'application/json',
+            'Shop-Domain': lqd.permanent_domain
+        };
     },
 
     get _productPageVariant() {
@@ -1694,9 +1716,12 @@ Application.prototype = {
         if (!this.allowUpsells(target)) return;
 
         if (lqd.template_name === 'product' && target.name === 'add' && !target.closest('form[action$="/cart/add"]')) {
+            const form = document.querySelector('form[action$="/cart/add"]');
+
+            if (!form) return this.helpers.clearFallback();
+
             event.preventDefault();
             event.stopPropagation();
-            const form = document.querySelector('form[action$="/cart/add"]');
             return form.submit();
         }
         const anyPrePurchases = window.OCUIncart && (OCUIncart.singleUpsells || OCUIncart.multipleUpsells);
