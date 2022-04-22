@@ -1,5 +1,5 @@
 {% comment %}
-  Updated: 2022/04/19
+  Updated: 2022/04/22
 {% endcomment %}
 
 {% unless oneclickupsellapp %}
@@ -621,6 +621,7 @@ window.OCUApi = Object.assign(OCUApi, {
         const context = this.context;
         dispatcher.context = this.context;
         dispatcher.target = params.form;
+        dispatcher._initDefaults();
 
         return new Promise((resolve, reject) => {
             const callback = function(res) {
