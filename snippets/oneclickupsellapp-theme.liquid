@@ -1,5 +1,5 @@
 {% comment %}
-  Updated: 2022/04/22
+  Updated: 2022/04/28
 {% endcomment %}
 
 {% unless oneclickupsellapp %}
@@ -2650,6 +2650,8 @@ function Updater(res) {
         note: null,
         attributes: {}
     };
+
+    this._restoreXMLHttp();
 }
 Updater.prototype = {
     init: function() {
@@ -2995,6 +2997,13 @@ const UpdaterHelpers = {
         return closestKey.dataset[Object.keys(closestKey.dataset).find(function(key) {
             return cartItemKeys.includes(key)
         })];
+    },
+    _restoreXMLHttp: function() {
+        try {
+            XMLHttpRequest.prototype.open = openReplacement;
+        } catch (error) {
+            console.log(error);
+        }
     }
 };
 
@@ -3702,7 +3711,7 @@ function Helpers() {
 
         const prepareItem = function(item) {
             return itemProperties.reduce(function(acc, prop) {
-                acc[prop] = item[prop];
+                acc[prop] = item[prop] ? item[prop] : {};
                 return acc;
             }, {});
         };
@@ -3807,7 +3816,7 @@ function Helpers() {
 
         // handle outofthesandbox themes
         return Shopify.theme_settings && Shopify.theme_settings.go_to_checkout === false;
-    }
+    };
 }
 
 function ApplicationsUtils() {
