@@ -3688,7 +3688,7 @@ function Helpers() {
 
         const prepareItem = function(item) {
             return itemProperties.reduce(function(acc, prop) {
-                acc[prop] = item[prop] ? item[prop] : {};
+                acc[prop] = item[prop] || item[prop] === 0 ? item[prop] : {};
                 return acc;
             }, {});
         };
