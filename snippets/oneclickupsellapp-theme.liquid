@@ -1,5 +1,5 @@
 {% comment %}
-  Updated: 2022/04/28
+  Updated: 2022/05/04
 {% endcomment %}
 
 {% unless oneclickupsellapp %}
@@ -1233,6 +1233,7 @@ class CartDispatcher {
 const cart = new Cart();
 const cartDispatcher = new CartDispatcher();
 const open = window.XMLHttpRequest.prototype.open;
+const originSend = window.XMLHttpRequest.prototype.send;
 
 const openReplacement = function() {
     this.addEventListener('load', function () {
@@ -2978,6 +2979,7 @@ const UpdaterHelpers = {
     _restoreXMLHttp: function() {
         try {
             XMLHttpRequest.prototype.open = openReplacement;
+            XMLHttpRequest.prototype.send = originSend;
         } catch (error) {
             console.log(error);
         }
