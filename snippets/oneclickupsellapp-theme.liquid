@@ -1,5 +1,5 @@
 {% comment %}
-  Updated: 2022/05/04
+  Updated: 2022/05/05
 {% endcomment %}
 
 {% unless oneclickupsellapp %}
@@ -1235,7 +1235,7 @@ const cartDispatcher = new CartDispatcher();
 const open = window.XMLHttpRequest.prototype.open;
 const originSend = window.XMLHttpRequest.prototype.send;
 
-const openReplacement = function() {
+const openReplacement = function(method, url) {
     this.addEventListener('load', function () {
         if (cartDispatcher.shouldRequest(this._url)) {
             cart.get('?ocu')
@@ -1245,6 +1245,7 @@ const openReplacement = function() {
         }
     });
 
+    if (window.simplyInsurance) this._url = url; // integration with Simply Insurance
     return open.apply(this, arguments);
 }
 
@@ -1681,6 +1682,8 @@ Application.prototype = {
 
     init: function(event, target) {
         var self = this;
+
+        if (OCUApi.onCheckout && OCUApi.onCheckout()) return;
 
         if (lqd.template_name === 'cart' && utils.store.get('submitted')) {
             event.stopPropagation();
@@ -2629,7 +2632,7 @@ function Updater(res) {
         attributes: {}
     };
 
-    this._restoreXMLHttp();
+    if (!window.klpixel /*integration with Klickly*/) this._restoreXMLHttp();
 }
 Updater.prototype = {
     init: function() {
@@ -2956,7 +2959,7 @@ const UpdaterHelpers = {
         return this.currencyElement && this.currencyElement.value !== this.data.currency;
     },
     _isDawnTheme: function() {
-        return window.Shopify.theme.name === 'Dawn';
+        return /^Dawn(\s*?\|?|$)/.test(window.Shopify.theme.name);
       },
     _getThemeKey: function(item) {
         const link = item.closest('[id^="CartItem"]').querySelector('[id^="Remove"] a').href;
