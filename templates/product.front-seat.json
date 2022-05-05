@@ -54,7 +54,7 @@
             "tab_label": "Features",
             "heading": "",
             "description": "",
-            "video_html": "<script src=\"\/\/fast.wistia.com\/embed\/medias\/ybdpkir92k.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_embed wistia_async_ybdpkir92k\" style=\"height:349px;width:620px\"> <\/div>",
+            "video_html": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/u4u0CRS2xig\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe>",
             "metafield": ""
           }
         },
@@ -71,7 +71,7 @@
             "tab_label": "Installation & Care",
             "heading": "",
             "description": "",
-            "video_html": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/w2RSUEzju84\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe>",
+            "video_html": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/w2RSUEzju84\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"><\/iframe>",
             "metafield": ""
           }
         }
