@@ -36,6 +36,7 @@
         "5353aec1-f723-4266-9702-f6ad196c4819"
       ],
       "settings": {
+        "description_list": "",
         "show_dynamic_checkout": false
       }
     },
@@ -70,7 +71,7 @@
             "tab_label": "Installation & Care",
             "heading": "",
             "description": "",
-            "video_html": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/5r229r7vwn.jsonp\" async=\"\"><\/script>\n<div class=\"wistia_embed wistia_async_5r229r7vwn\" style=\"height:400px;position:relative;width:400px\">\n  <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/5r229r7vwn\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div>\n<\/div>",
+            "video_html": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/w2RSUEzju84\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"><\/iframe>",
             "metafield": ""
           }
         }
